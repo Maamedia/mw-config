@@ -55,7 +55,7 @@ $wgConf->settings = [
 ],
 
 'wgDBuser' => [
-    'default' => 'maantiet_test',
+    'default' => 'maantiet_mw',
 ],
 
 'wgAuthenticationTokenVersion' => [
