@@ -1,13 +1,6 @@
 <?php
 
 // Global Extensions //
-
-wfLoadSkin( [
-	'Monobook',
-	'Vector',
-	'Timeless',
-] );
-
 wfLoadExtensions( [
 	'AbuseFilter',
 	'AdvancedMeta',
