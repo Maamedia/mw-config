@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/maantiet/
-    - /bin/cp -R /home/maantiet/mediawiki $DEPLOYPATH
+    - /bin/cp -R /home/maantiet/maantietajawiki/mw-config $DEPLOYPATH
