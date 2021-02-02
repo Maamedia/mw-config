@@ -2,7 +2,7 @@
 // Global Skin //
 
 wfLoadSkin( [
-	'Monobook',
+	'MonoBook',
 	'Vector',
 	'Timeless',
 ] );
