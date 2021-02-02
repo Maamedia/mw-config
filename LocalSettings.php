@@ -13,6 +13,10 @@ case
 'beta.maantietaja.org':
 require_once 'wikibeta.php';
 break;
+case
+'community.maantietaja.org':
+require_once 'wikicommunity.php';
+break;
 default:
 header(
 'HTTP/1.1 404 Not Found'
@@ -30,6 +34,7 @@ $wgDBuser = $DBuser;
 $wgLocalDatabases = array(
     'maantiet_test',
     'maantiet_beta',
+    'maantiet_community',
 );
 require_once 'InitialiseSettings.php';
 
