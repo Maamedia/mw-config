@@ -114,7 +114,7 @@ $wgConf->settings = [
 ],
 
 'wgSharedTables' => [
-    'default' => [  'maantiet_test' , 'cn_notices',
+    'default' => [  'maantiet_mw' , 'cn_notices',
                                     'abuse_filter',
                                     'abuse_filter_action',
                                     'abuse_filter_history',
@@ -153,7 +153,8 @@ $wgConf->settings = [
                                     'globaluser',
                                     'global_preferences', 
                                     'global_group_permissions',  
-                                    'global_group_restrictions',  
+                                    'global_group_restrictions',   
+                                    'user', 
                                     'localnames',  
                                     'localuser',  
                                     'oauth2_access_tokens',
