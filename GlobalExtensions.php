@@ -5,7 +5,6 @@
 wfLoadExtensions( [
 	'AbuseFilter',
 	'AdvancedMeta',
-	'AdvancedMeta',
 	'AdvancedSearch',
 	'BetaFeatures',
 	'CategoryTree',
