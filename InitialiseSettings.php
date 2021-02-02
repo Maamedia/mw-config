@@ -14,12 +14,14 @@ $wgConf->settings = [
     'default' => 'https://localhost',
     'maantiet_test' => 'https://test.maantietaja.org',
     'maantiet_beta' => 'https://beta.maantietaja.org',
+    'maantiet_community' => 'https://community.maantietaja.org',
 ],
 
 'wgCanonicalServer' => [
     'default' => 'https://localhost',
     'maantiet_test' => 'https://test.maantietaja.org',
     'maantiet_beta' => 'https://beta.maantietaja.org',
+    'maantiet_community' => 'https://community.maantietaja.org',
 ],
 
 'wgScriptPath' => [
@@ -36,8 +38,9 @@ $wgConf->settings = [
 
 'wgSitename' => [
     'default' => '',
-    'maantiet_test' => 'Test Wiki',
-    'maantiet_beta' => 'Beta Wiki',
+    'maantiet_test' => 'Test Wiki - Deployment',
+    'maantiet_beta' => 'Beta Wiki - Deployment',
+    'maantiet_community' => 'Community Wiki - Deployment',
 ],
 
 'wgLanguageCode' => [
