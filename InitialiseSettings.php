@@ -119,6 +119,8 @@ $wgConf->settings = [
                                     'abuse_filter_action',
                                     'abuse_filter_history',
                                     'abuse_filter_log',
+                                    'cu_changes',
+                                    'cu_log',
                                     'cn_notices',
                                     'cn_notice_countries',
                                     'cn_assignments',
