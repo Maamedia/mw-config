@@ -1,8 +1,6 @@
 <?php
 // Global Skin //
 
-wfLoadSkin( [
-	'MonoBook',
-	'Vector',
-	'Timeless',
-] );
+wfLoadSkin( 'MonoBook' );
+wfLoadSkin( 'Vector' );
+wfLoadSkin( 'Timeless' );
