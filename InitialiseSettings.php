@@ -54,6 +54,17 @@ $wgConf->settings = [
     'default' => '$lang',
 ],
 
+// Debug //
+'wgShowExceptionDetails' => [
+    'default' => true,
+],
+'wgShowDBErrorBacktrace' => [
+    'default' => true,
+],
+'wgShowDebug' => [
+    'default' => false,
+],
+
 // DB Conf //
 
 'wgDBserver' => [
@@ -139,15 +150,6 @@ $wgConf->settings = [
                                     'cn_template_devices',
                                     'cn_known_devices',
                                     'cn_templates',  
-                                    'echo_event',  
-                                    'echo_notification',  
-                                    'echo_target_page',  
-                                    'echo_unread_wikis',  
-                                    'flaggedpages',  
-                                    'flaggedpage_config',   
-                                    'flaggedrevs',  
-                                    'flaggedrevs_statistics',  
-                                    'flaggedrevs_tracking', 
                                     'globalblocking', 
                                     'globalblocks',
                                     'global_block_whitelist',
@@ -155,7 +157,7 @@ $wgConf->settings = [
                                     'globaluser',
                                     'global_preferences', 
                                     'global_group_permissions',  
-                                    'global_group_restrictions',   
+                                    'global_group_restrictions',
                                     'renameuser_queue',
                                     'renameuser_status',
                                     'translate_groupreviews',
@@ -207,19 +209,6 @@ $wgConf->settings = [
    'source' => 'maantiet_test'
 ],
 
-// Echo //
-
-'wgEchoCrossWikiNotifications' => [
-    'default' => true,
-],
-
-'wgEchoSharedTrackingDB' => [
-    'default' => 'maantiet_test'
-],
-
-'wgEchoUseCrossWikiBetaFeature' => [
-    'default' => true,
-],
 // CentralAuth //
 
 'wgCentralAuthDatabase' => [
@@ -270,10 +259,6 @@ $wgConf->settings = [
     'default' =>  true,
 ],
 
-'wgCentralAuthPreventUnattached' => [
-    'default' =>  true,
-],
-
 // Global Blocking //
 
 'wgGlobalBlockingDatabase' => [
@@ -289,14 +274,20 @@ $wgConf->settings = [
     'maantiet_test' => false,
 ],
 
-// Massmessage //
+/////////////////// Mediawiki Gap FOR error ///////////////////
 
-'wgMassMessageAccountUsername' => [
-    'default' =>  'MessengerBot',
+// Echo //
+
+'wgEchoCrossWikiNotifications' => [
+    'default' => true,
 ],
 
-'wgAllowGlobalMessaging' => [
-    'default' =>  true,
+'wgEchoSharedTrackingDB' => [
+    'default' => 'maantiet_test'
+],
+
+'wgEchoUseCrossWikiBetaFeature' => [
+    'default' => true,
 ],
 
 // CentralNotice //
@@ -366,19 +357,14 @@ $wgConf->settings = [
 
 // Translate //
 
-'wgTranslationNotificationsContactMethods' => [
-    'default' => '',
-    'email' => true,
-	'talkpage' => true,
-	'talkpage-elsewhere' => false,
-],
-
 '+wgGroupPermissions' => [
     'default' => [
                       '*' => [
                                         'read' => true,
                                         'edit' => true,
-                                        'autocreateaccount' => true,
+                                        'globalgroupmembership' => true,
+                                        'userrights' => true,
+                                        
                                          ],
                       'bureaucrat' => [
                                         'userrights' => true,
@@ -387,4 +373,7 @@ $wgConf->settings = [
     ],
 ],
 
+'wgSiteNotice' => [
+    'default' => 'Hello All Visitor, We have a new Development [[:wiki:|wiki]], [[:community:|community]], [[:beta:|beta]], [[:test:|test]]',
+],
 ];
