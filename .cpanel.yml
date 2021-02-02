@@ -1,0 +1,4 @@
+deployment:
+      tasks:
+        - export DEPLOYPATH=/home/maantiet/mediawiki  
+        - /bin/cp -R * $DEPLOYPATH
