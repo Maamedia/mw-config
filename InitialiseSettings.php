@@ -115,6 +115,11 @@ $wgConf->settings = [
 
 'wgSharedTables' => [
     'default' => [  'maantiet_test' , 'cn_notices',
+                                    'abuse_filter',
+                                    'abuse_filter_action',
+                                    'abuse_filter_history',
+                                    'abuse_filter_log',
+                                    'cn_notices',
                                     'cn_notice_countries',
                                     'cn_assignments',
                                     'cn_notice_languages',
@@ -130,12 +135,30 @@ $wgConf->settings = [
                                     'cn_template_devices',
                                     'cn_known_devices',
                                     'cn_templates',  
+                                    'echo_event',  
+                                    'echo_notification',  
+                                    'echo_target_page',  
+                                    'echo_unread_wikis',  
+                                    'flaggedpages',  
+                                    'flaggedpage_config',   
+                                    'flaggedrevs',  
+                                    'flaggedrevs_statistics',  
+                                    'flaggedrevs_tracking', 
+                                    'globalblocking', 
                                     'globalblocks',
                                     'global_block_whitelist',
                                     'globalnames',
                                     'globaluser',
-                                    'global_preferences',
-                                    'revtag',
+                                    'global_preferences', 
+                                    'global_group_permissions',  
+                                    'global_group_restrictions',  
+                                    'localnames',  
+                                    'localuser',  
+                                    'oauth2_access_tokens',
+                                    'oauth_accepted_consumer',
+                                    'renameuser_queue',
+                                    'renameuser_status',
+                                    'wikiset',
                 ],
 ],
 
@@ -240,7 +263,7 @@ $wgConf->settings = [
     'default' =>  true,
 ],
 
-// Global B //
+// Global Blocking //
 
 'wgGlobalBlockingDatabase' => [
     'default' =>  'maantiet_centralauth',
@@ -348,16 +371,6 @@ $wgConf->settings = [
                       'bureaucrat' => [
                                         'userrights' => true,
                                         'renameuser' => false,
-                      ],
-                      'steward' => [
-                                        'centralauth-merge' => true,
-                                        'centralauth-oversight' => true,
-                                        'centralauth-rename' => true,
-                                        'userrights' => true,
-                                        'userrights-interwiki' => true,
-                                        'globalgroupmembership' => true,
-                                        'suppress' => true,
-                                        'interwiki' => true,
                       ],
     ],
 ],
