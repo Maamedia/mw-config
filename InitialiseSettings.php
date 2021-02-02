@@ -15,6 +15,7 @@ $wgConf->settings = [
     'maantiet_test' => 'https://test.maantietaja.org',
     'maantiet_beta' => 'https://beta.maantietaja.org',
     'maantiet_community' => 'https://community.maantietaja.org',
+    'maantiet_mainwiki' => 'https://wiki.maantietaja.org',
 ],
 
 'wgCanonicalServer' => [
@@ -22,6 +23,7 @@ $wgConf->settings = [
     'maantiet_test' => 'https://test.maantietaja.org',
     'maantiet_beta' => 'https://beta.maantietaja.org',
     'maantiet_community' => 'https://community.maantietaja.org',
+    'maantiet_mainwiki' => 'https://wiki.maantietaja.org',
 ],
 
 'wgScriptPath' => [
@@ -41,6 +43,7 @@ $wgConf->settings = [
     'maantiet_test' => 'Test Wiki - Deployment',
     'maantiet_beta' => 'Beta Wiki - Deployment',
     'maantiet_community' => 'Community Wiki - Deployment',
+    'maantiet_mainwiki' => 'Main Wiki - Deployment',
 ],
 
 'wgLanguageCode' => [
@@ -265,15 +268,15 @@ $wgConf->settings = [
     'default' =>  'maantiet_test',
 ],
 
-'wgCentralAuthPreventUnattached' => [
-    'default' =>  true,
-],
-
 'wgCentralAuthLoginIcon' => [
     'default' => true,
 ],
 
 'wgCentralAuthSilentLogin' => [
+    'default' =>  true,
+],
+
+'wgCentralAuthPreventUnattached' => [
     'default' =>  true,
 ],
 
@@ -381,6 +384,7 @@ $wgConf->settings = [
                       '*' => [
                                         'read' => true,
                                         'edit' => true,
+                                        'autocreateaccount' => true,
                                          ],
                       'bureaucrat' => [
                                         'userrights' => true,
