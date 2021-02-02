@@ -40,4 +40,5 @@ wfLoadExtensions( [
 	'UniversalLanguageSelector',
 	'UserMerge',
 	'WikiEditor',
+        'MobileFrontend',
 ] );
