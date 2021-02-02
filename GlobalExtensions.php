@@ -1,6 +1,7 @@
 <?php
 
 // Global Extensions //
+
 wfLoadExtensions( [
 	'AbuseFilter',
 	'AdvancedMeta',
