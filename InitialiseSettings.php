@@ -4,6 +4,7 @@
 // Include Global Extensions //
 include('GlobalExtensions.php');
 include('GlobalSkins.php');
+include('GlobalUserPreferences.php');
 // require_once 'ex.php';
 
 // Site Configuration  //
@@ -392,17 +393,24 @@ $wgConf->settings = [
 'wgEchoUseCrossWikiBetaFeature' => [
     'default' => true,
 ],
-
 // CentralNotice //
 'wgNoticeInfrastructure' => [
     'default' => false,
     'maantiet_test' => true,
 ],
 
+// VisualEditor //
+'wgVisualEditorEnableDiffPage' => [
+    'default' => true,
+],
+
+'wgVisualEditorEnableWikitext' => [
+    'default' => true,
+],
 // Logo //
 
 'wgLogo' => [
-    'default' => 'resources/assets/wiki.png',
+    'default' => '/resources/assets/wiki.png',
 ],
 
 // Copyright //
@@ -456,6 +464,11 @@ $wgConf->settings = [
 
 'wgShellLocale' => [
     'default' => 'en_US.utf8',
+],
+
+// Others //
+'wgEdititis' => [
+    'default' => true,
 ],
 
 // Translate //
