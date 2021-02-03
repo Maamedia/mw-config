@@ -1,7 +1,12 @@
 <?php
+// MediaWiki Configuration Set Up by Maantietaja and Symanpuma //
+
+// Include Global Extensions //
 include('GlobalExtensions.php');
 include('GlobalSkins.php');
 // require_once 'ex.php';
+
+// Site Configuration  //
 
 $conf = new SiteConfiguration;
 $wgConf->wikis = $wgLocalDatabases;
@@ -54,18 +59,20 @@ $wgConf->settings = [
     'default' => '$lang',
 ],
 
-// Debug //
+// Debugging //
 'wgShowExceptionDetails' => [
     'default' => true,
 ],
+
 'wgShowDBErrorBacktrace' => [
     'default' => true,
 ],
+
 'wgShowDebug' => [
     'default' => false,
 ],
 
-// DB Conf //
+// Database Configuration //
 
 'wgDBserver' => [
     'default' => 'localhost',
@@ -116,9 +123,53 @@ $wgConf->settings = [
 ],
 
 'wgMemCachedServers' => [
-    'default' => [ '127.0.0.1:23946' ],
+    'default' => [ '127.0.0.1:23946', 
+	[ '127.0.0.1:21169', 2 ]
+],
 ],
 
+# Shared memory settings
+
+'wgCacheDirectory' => [
+    'default' => '$IP/cache',
+],
+
+'wgUseLocalMessageCache' => [
+    'default' => true,
+],
+
+'wgParserCacheType' => [
+    'default' => CACHE_MEMCACHED,
+],
+
+'wgUseGzip' => [
+    'default' => true,
+],
+
+'wgJobRunRate ' => [
+    'default' => 0.01,
+],
+
+'wgDisableCounters ' => [
+    'default' => true,
+],
+
+'wgMiserMode ' => [
+    'default' => true,
+],
+
+'wgEnableSidebarCache ' => [
+    'default' => false,
+],
+
+'wgResourceLoaderMaxage' => [
+	'default' => [
+	'versioned' => 12 * 60 * 60,
+	'unversioned' => 5 * 60,
+	],
+],
+	
+# config cache
 'wgResourceBasePath' => [
     'default' => $wgScriptPath,
 ],
@@ -179,8 +230,60 @@ $wgConf->settings = [
 'wgSharedTables' => [
     'default' => [  'maantiet_test' ,  'globalblocks'  ],
 ],
-
 */
+
+// Extensions Config starterd //
+
+// AbuseFilter //
+'wgAbuseFilterActions' => [
+    'default' => [
+    	'block' => true,
+    	'blockautopromote' => true,
+    	'degroup' => true,
+    	'disallow' => true,
+    	'rangeblock' => false,
+    	'tag' => true,
+    	'throttle' => true,
+    	'warn' => true,
+],
+],
+
+'wgAbuseFilterCentralDB' => [
+	'default' => 'maantiet_test',
+],
+'wgAbuseFilterIsCentral' => [
+	'default' => false,
+	'maantiet_test' => true,
+],
+'wgAbuseFilterBlockDuration' => [
+	'default' => 'indefinte',
+],
+'wgAbuseFilterAnonBlockDuration' => [
+	'default' => 2592000,
+],
+'wgAbuseFilterRestrictions' => [
+	'default' => [
+	'blockautopromote' => true,
+	'block' => true,
+	'degroup' => true,
+	'rangeblock' => true,
+	],
+],
+'wgAbuseFilterNotifications' => [
+	'default' => 'udp',
+],
+'wgAbuseFilterLogPrivateDetailsAccess' => [
+	'default' => true,
+],
+'wgAbuseFilterPrivateDetailsForceReason' => [
+	'default' => true,
+],
+
+// Delete
+'wgDeleteRevisionsLimit' => [
+	'default' => '1000', // databases don't have much memory - let's not overload them in future - set to 1k T5287
+],
+
 
 // GlobalUserPage //
 'wgGlobalUserPageDBname' => [
@@ -299,7 +402,7 @@ $wgConf->settings = [
 // Logo //
 
 'wgLogo' => [
-    'default' => '$wgResourceBasePath/resources/assets/wiki.png',
+    'default' => 'resources/assets/wiki.png',
 ],
 
 // Copyright //
@@ -316,7 +419,7 @@ $wgConf->settings = [
 ],
 
 'wgRightsIcon' => [
-    'default' => '$wgResourceBasePath/resources/assets/licenses/cc-by-sa.png',
+    'default' => 'resources/assets/cc.png',
 ],
 
 'wgDiff3' => [
