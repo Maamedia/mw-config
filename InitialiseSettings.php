@@ -419,7 +419,7 @@ $wgConf->settings = [
 ],
 
 'wgRightsIcon' => [
-    'default' => 'resources/assets/cc.png',
+    'default' => '/resources/assets/cc.png',
 ],
 
 'wgDiff3' => [
