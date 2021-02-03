@@ -35,6 +35,7 @@ wfLoadExtensions( [
 	'Nuke',
 	'Poem',
 	'ParserFunctions', 
+	'ProtectSite',
 	'ReplaceText',
 	'Translate', 
 	'UniversalLanguageSelector',
