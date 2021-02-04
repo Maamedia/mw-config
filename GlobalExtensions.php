@@ -43,4 +43,6 @@ wfLoadExtensions( [
 	'WikiEditor',
 	'VisualEditor',
 	'MobileFrontend',
+        'JsonConfig',
+        'mediawiki-extensions-Scribunto-master',
 ] );
