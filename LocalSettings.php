@@ -1,4 +1,8 @@
 <?php 
+// Don't allow web access.
+if ( !defined( 'MEDIAWIKI' ) ) {
+	die( 'Not an entry point.' );
+}
 $wgShowExceptionDetails = true;
 $wgShowDBErrorBacktrace = true;
 include('Privateinformation.php');
@@ -16,6 +20,18 @@ break;
 case
 'community.maantietaja.org':
 require_once 'wikicommunity.php';
+break;
+case
+'wiki.maantietaja.org':
+require_once 'mainwiki.php';
+break;
+case
+'login.maantietaja.org':
+require_once 'loginwiki.php';
+break;
+case
+'code.maantietaja.org':
+require_once 'codewiki.php';
 break;
 default:
 header(
@@ -35,6 +51,9 @@ $wgLocalDatabases = array(
     'maantiet_test',
     'maantiet_beta',
     'maantiet_community',
+    'maantiet_mainwiki',
+    'maantiet_loginwiki',
+    'maantiet_codewiki',
 );
 require_once 'InitialiseSettings.php';
 
