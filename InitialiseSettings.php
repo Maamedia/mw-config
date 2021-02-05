@@ -5,6 +5,7 @@
 include('GlobalExtensions.php');
 include('GlobalSkins.php');
 include('GlobalUserPreferences.php');
+
 // require_once 'ex.php';
 
 // Site Configuration  //
@@ -22,6 +23,8 @@ $wgConf->settings = [
     'maantiet_beta' => 'https://beta.maantietaja.org',
     'maantiet_community' => 'https://community.maantietaja.org',
     'maantiet_mainwiki' => 'https://wiki.maantietaja.org',
+    'maantiet_loginwiki' => 'https://login.maantietaja.org',
+    'maantiet_codewiki' => 'https://code.maantietaja.org',
 ],
 
 'wgCanonicalServer' => [
@@ -30,6 +33,8 @@ $wgConf->settings = [
     'maantiet_beta' => 'https://beta.maantietaja.org',
     'maantiet_community' => 'https://community.maantietaja.org',
     'maantiet_mainwiki' => 'https://wiki.maantietaja.org',
+    'maantiet_loginwiki' => 'https://login.maantietaja.org',
+    'maantiet_codewiki' => 'https://code.maantietaja.org',
 ],
 
 'wgScriptPath' => [
@@ -50,6 +55,10 @@ $wgConf->settings = [
     'maantiet_beta' => 'Beta Wiki - Deployment',
     'maantiet_community' => 'Community Wiki - Deployment',
     'maantiet_mainwiki' => 'Main Wiki - Deployment',
+    'maantiet_loginwiki' => 'Login Maamedia',
+    'maantiet_codewiki' => 'Code Wiki - Deployment',
+    'maantiet_stewiki' => 'Maamedia Steward Wiki',
+    'maantiet_enwiki' => 'Maantietäjäwiki',
 ],
 
 'wgLanguageCode' => [
@@ -249,6 +258,11 @@ $wgConf->settings = [
 ],
 ],
 
+'wgUseGlobalAbuseFilters' => [
+	'default' => true,
+	
+],
+
 'wgAbuseFilterCentralDB' => [
 	'default' => 'maantiet_test',
 ],
@@ -285,6 +299,13 @@ $wgConf->settings = [
 	'default' => '1000', // databases don't have much memory - let's not overload them in future - set to 1k T5287
 ],
 
+// CodeReview //
+'wgSubversionUser' => [
+    'default' => false,
+],
+'wgSubversionProxy' => [
+    'default' => false,
+],
 
 // GlobalUserPage //
 'wgGlobalUserPageDBname' => [
@@ -298,6 +319,8 @@ $wgConf->settings = [
 // GlobalCssJs //
 'wgUseGlobalSiteCssJs' => [
     'default' => true,
+    'maantiet_test' => true,
+    'maantiet_loginwiki' => false,
 ],
 
 'wgAllowUserCss' => [
@@ -352,11 +375,11 @@ $wgConf->settings = [
 ],
 
 'wgCentralAuthLoginWiki' => [
-    'default' =>  'maantiet_test',
+    'default' =>  'maantiet_loginwiki',
 ],
 
 'wgCentralAuthLoginIcon' => [
-    'default' => true,
+    'default' => false,
 ],
 
 'wgCentralAuthSilentLogin' => [
@@ -393,6 +416,215 @@ $wgConf->settings = [
 'wgEchoUseCrossWikiBetaFeature' => [
     'default' => true,
 ],
+
+'wgEchoPerUserBlacklist' => [
+    'default' => true,
+],
+
+'wgEchoMentionStatusNotifications' => [
+    'default' => true,
+],
+
+'wgEchoEnableEmailBatch' => [
+	'default' => true,
+],
+'wgEchoDefaultUserSubscriptions' => [
+	'default' => [],
+	'officewiki' => [
+		'email' => [
+			// edit-user-talk already defaults to true because enotifusertalkpages does
+			'flow-discussion' => true,
+			'mention' => true
+		]
+	],
+],
+// ContentTranslation //
+'wgContentTranslationDatabase ' => [
+    'default' => 'maantiet_test'
+],
+
+// CirrusSearch //
+'wgCirrusSearchWikimediaExtraPlugin' => [
+	'default' => [
+		'regex' => [
+			'build',
+			'use',
+		],
+		'super_detect_noop' => true,
+		'documentVersion' => true,
+		'token_count_router' => true,
+		'term_freq' => true
+	]
+],
+
+'wgCirrusSearchWMFExtraFeatures' => [
+	'default' => [
+		'ores_articletopics' => [
+			'build' => true,
+			'use' => true,
+		]
+	]
+],
+
+'wgCirrusSearchDropDelayedJobsAfter' => [
+	'default' => 60 * 60 * 2
+],
+
+'wgCirrusSearchUseExperimentalHighlighter' => [
+	'default' => true
+],
+
+'wgCirrusSearchOptimizeIndexForExperimentalHighlighter' => [
+	'default' => true
+],
+
+'wgCirrusSearchTextcatConfig' => [
+	'default' => [
+		'maxNgrams' => 9000,
+		'maxReturnedLanguages' => 1,
+		'resultsRatio' => 1.06,
+		'minInputLength' => 3,
+		'maxProportion' => 0.85,
+		'langBoostScore' => 0.14,
+		'numBoostedLangs' => 2,
+	],
+],
+
+'wgCirrusSearchFiletypeAliases' => [
+	'default' => [
+		"pdf" => "office",
+		"ppt" => "office",
+		"doc" => "office",
+		"jpg" => "bitmap",
+		"image" => "bitmap",
+		"webp" => "bitmap",
+		"mp3" => "audio",
+		"svg" => "drawing"
+	]
+],
+
+'wgCirrusSearchNewCrossProjectPage' => [
+	'default' => true
+],
+
+'wgCirrusSearchNumCrossProjectSearchResults' => [
+	'default' => 1
+],
+
+'wgCirrusSearchFetchConfigFromApi' => [
+	'default' => true
+],
+
+'wgCirrusSearchRescoreProfiles' => [
+	'default' => []
+],
+
+'wgCirrusSearchMasterTimeout' => [
+	'default' => '5m'
+],
+
+'wgCirrusSearchSearchShardTimeout' => [
+	'default' => [
+		"comp_suggest" => "5s",
+		"prefix" => "5s",
+		"default" => "10s",
+		"regex" => "15s",
+	],
+],
+
+
+'wgCirrusSearchClientSideSearchTimeout' => [
+	'default' => [
+		"comp_suggest" => 10,
+		"prefix" => 10,
+		// GET requests timeout at 60s, give some room to treat request timeout (T216860)
+		"default" => 40,
+		"regex" => 50,
+	],
+],
+
+
+'wgCirrusSearchCrossClusterSearch' => [
+	'default' => true
+],
+
+'wgCirrusSearchSanityCheck' => [
+	'default' => true
+],
+
+'wgCirrusSearchClusterOverrides' => [
+	'default' => [],
+],
+
+'wgCirrusSearchWriteClusters' => [
+	'default' => [ 'eqiad', 'codfw', 'cloudelastic' ],
+	'private' => [ 'eqiad', 'codfw' ],
+],
+
+'wgCirrusSearchReplicaGroup' => [
+	'default' => [
+		'type' => 'roundrobin',
+		'groups' => [ 'psi', 'omega' ]
+	],
+	'cirrussearch-big-indices' => 'chi',
+],
+
+'wgCirrusSearchPreferRecentDefaultDecayPortion' => [
+	'default' => 0,
+	'maantiet_test' => 0.6,
+],
+
+'wgCirrusSearchWeights' => [
+	'default' => [],
+	'maantiet_codewiki' => [
+		'title' => 25.0,
+	],
+	'maantiet_community' => [
+		'title' => 25.0,
+	],
+],
+
+'wgCirrusSearchConnectionAttempts' => [
+	'default' => 3
+],
+
+'wgCirrusSearchMoreLikeThisTTL' => [
+	'default' => 86400
+],
+
+'wgGlobalRenameBlacklistRegex' => [
+	'default' => true
+],
+
+'wgGlobalRenameBlacklist' => [
+	'default' => 'https://meta.wikimedia.org/w/index.php?title=Global_rename_blacklist&action=raw'
+],
+
+'wgCirrusSearchRefreshInterval' => [
+	'default' => 30,
+],
+
+'wgCirrusSearchMaxPhraseTokens' => [
+	'default' => 10,
+],
+
+'wgCirrusSearchUseIcuFolding' => [
+	'default' => 'default',
+],
+
+'wgCirrusSearchAllFields' => [
+	'default' => [ 'build' => true, 'use' => true ],
+],
+
+'wgCirrusSearchNearMatchWeight' => [
+	'default' => 10, //T257922
+],
+
+
+// Translate //
+'wgTranslateUseSandbox' => [
+    'default' => true,
+],
 // CentralNotice //
 'wgNoticeInfrastructure' => [
     'default' => false,
@@ -410,7 +642,11 @@ $wgConf->settings = [
 // Logo //
 
 'wgLogo' => [
-    'default' => '/resources/assets/wiki.png',
+    'default' => "{$wgScriptPath}/resources/assets/wiki.png",
+],
+
+'wgGenerateThumbnailOnParse' => [
+    'default' => true,
 ],
 
 // Copyright //
@@ -471,6 +707,20 @@ $wgConf->settings = [
     'default' => true,
 ],
 
+'wgWatchlistExpiry' => [
+	'default' => true,
+],
+
+
+'wgUseCodeReview' => [
+	'default' => false,
+	'maantiet_test' => true,
+],
+
+'wgCodeReviewMaxDiffPaths' => [
+    'default' => 100,
+],
+
 // Translate //
 
 '+wgGroupPermissions' => [
@@ -478,8 +728,6 @@ $wgConf->settings = [
                       '*' => [
                                         'read' => true,
                                         'edit' => true,
-                                        'globalgroupmembership' => true,
-                                        'userrights' => true,
                                         
                                          ],
                       'bureaucrat' => [
@@ -487,7 +735,13 @@ $wgConf->settings = [
                                         'renameuser' => false,
                       ],
     ],
+    'maantiet_loginwiki' => [
+                      '*' => [
+                                        'autocreateaccount' => true,
+                                         ],
+    ],
 ],
+
 
 'wgSiteNotice' => [
     'default' => 'Hello All Visitor, We have a new Development [[:wiki:|wiki]], [[:community:|community]], [[:beta:|beta]], [[:test:|test]]',
