@@ -19,30 +19,22 @@ $wgConf->settings = [
     // if you want to allow also usage of https, just use '//localhost'
     // and set 'http://localhost' at 'wgCanonicalServer'
     'default' => 'https://localhost',
-    'maantiet_test' => 'https://test.maantietaja.org',
-    'maantiet_beta' => 'https://beta.maantietaja.org',
-    'maantiet_community' => 'https://community.maantietaja.org',
+    'maantiet_metawiki' => 'https://meta.maantietaja.org',
+    'maantiet_betawiki' => 'https://beta.maantietaja.org',
+    'maantiet_communitywiki' => 'https://community.maantietaja.org',
     'maantiet_mainwiki' => 'https://wiki.maantietaja.org',
     'maantiet_loginwiki' => 'https://login.maantietaja.org',
     'maantiet_codewiki' => 'https://code.maantietaja.org',
-    'maantiet_mw19416' => 'https://data.maantietaja.org', // mode testing for global SUL
-    'maantiet_dts' => 'https://dts.maantietaja.org', // mode testing for global SUL
 ],
 
 'wgCanonicalServer' => [
     'default' => 'https://localhost',
-    'maantiet_test' => 'https://test.maantietaja.org',
-    'maantiet_beta' => 'https://beta.maantietaja.org',
-    'maantiet_community' => 'https://community.maantietaja.org',
+    'maantiet_metawiki' => 'https://meta.maantietaja.org',
+    'maantiet_betawiki' => 'https://beta.maantietaja.org',
+    'maantiet_communitywiki' => 'https://community.maantietaja.org',
     'maantiet_mainwiki' => 'https://wiki.maantietaja.org',
     'maantiet_loginwiki' => 'https://login.maantietaja.org',
     'maantiet_codewiki' => 'https://code.maantietaja.org',
-    'maantiet_mw19416' => 'https://data.maantietaja.org', // mode testing for global SUL
-    'maantiet_dts' => 'https://dts.maantietaja.org', // mode testing for global SUL
-],
-
-'wgScript' => [
-    'default' => '../',
 ],
 
 'wgScriptPath' => [
@@ -59,9 +51,9 @@ $wgConf->settings = [
 
 'wgSitename' => [
     'default' => '',
-    'maantiet_test' => 'Test Wiki - Deployment',
-    'maantiet_beta' => 'Beta Wiki - Deployment',
-    'maantiet_community' => 'Community Wiki - Deployment',
+    'maantiet_metawiki' => 'meta Wiki - Deployment',
+    'maantiet_betawiki' => 'Beta Wiki - Deployment',
+    'maantiet_communitywiki' => 'Community Wiki - Deployment',
     'maantiet_mainwiki' => 'Main Wiki - Deployment',
     'maantiet_loginwiki' => 'Login Maamedia', 
     'maantiet_codewiki' => 'Code Wiki - Deployment',
@@ -73,6 +65,10 @@ $wgConf->settings = [
 
 'wgLocalInterwiki' => [
     'default' => '$lang',
+],
+
+'wgForceHTTPS' => [
+    'default' => true,
 ],
 
 // Debugging //
@@ -139,7 +135,9 @@ $wgConf->settings = [
 ],
 
 'wgMemCachedServers' => [
-    'default' => [ '127.0.0.1:25583' ],
+    'default' => [ '127.0.0.1:25583',
+    ['127.0.0.1:23149', 2 ],
+    ],
 ],
 
 # Shared memory settings
@@ -243,7 +241,7 @@ $wgConf->settings = [
 
 /*
 'wgSharedTables' => [
-    'default' => [  'maantiet_test' ,  'globalblocks'  ],
+    'default' => [  'maantiet_metawiki' ,  'globalblocks'  ],
 ],
 */
 
@@ -269,11 +267,11 @@ $wgConf->settings = [
 ],
 
 'wgAbuseFilterCentralDB' => [
-	'default' => 'maantiet_test',
+	'default' => 'maantiet_metawiki',
 ],
 'wgAbuseFilterIsCentral' => [
 	'default' => false,
-	'maantiet_test' => true,
+	'maantiet_metawiki' => true,
 ],
 'wgAbuseFilterBlockDuration' => [
 	'default' => 'indefinte',
@@ -298,28 +296,9 @@ $wgConf->settings = [
 'wgAbuseFilterPrivateDetailsForceReason' => [
 	'default' => true,
 ],
-'wgBetaFeaturesWhitelist' => [
-	'default' => [
-		'visualeditor-enable',			   // [Editing] On-going (special permission) – VisualEditor
-		'beta-feature-flow-user-talk-page',  // [Growth*] On-going (special permission) – Flow opt-in
-		'visualeditor-newwikitext',		  // [Editing] On-going (special permission) – New wikitext editor
-		'uls-compact-links',				 // [LangEng] 2018-09-13 – Compact language links (Wikisource only)
-		'popups',							// [WebTeam] 2019-10-04 – Page Previews
-		'popupsreferencepreviews',		   // [WMDE TW] 2019-10-04 – Reference Previews
-		'cx',								// [LangEng] 2019-11-07 - ContentTranslation
-		'twocolconflict',					// [WMDE TW] 2019-10-30 – New edit conflict view
-		'visualeditor-visualdiffpage',	   // [Editing] 2019-11-06 – Visual diffs
-		'tmh-videojs',					   // [Readers] 2019-12-12 - New video player
-		'discussiontools-betaenable',		// [Editing] 2020-09-12 – Reply tool
-	],
-],
 
 // BetaFeatures //
 'wgVisualEditorEnableWikitextBetaFeature' => [
-    'default' => true,
-],
-
-'wgVisualEditorEnableWikitext' => [
     'default' => true,
 ],
 
@@ -335,25 +314,10 @@ $wgConf->settings = [
     'default' => true,
 ],
 
-'wgContentTranslationAsBetaFeature' => [
-    'default' => true,
-],
-
-'wgFileExporterBetaFeature' => [
-    'default' => true,
-],
-
-'wgFileImporterInBeta' => [
-    'default' => true,
-],
-
 'wgMediaViewerIsInBeta' => [
     'default' => true,
 ],
-// VisualEditor //
-'wgVisualEditorEnableDiffPage' => [
-    'default' => true,
-],
+
 // Delete
 'wgDeleteRevisionsLimit' => [
 	'default' => '1000',
@@ -369,22 +333,22 @@ $wgConf->settings = [
 
 // GlobalUsage //
 'wgGlobalUsageDatabase' => [
-    'default' => 'maantiet_test',
+    'default' => 'maantiet_metawiki',
 ],
 
 // GlobalUserPage //
 'wgGlobalUserPageDBname' => [
-    'default' => 'maantiet_test'
+    'default' => 'maantiet_metawiki'
 ],
 
 'wgGlobalUserPageAPIUrl' => [
-    'default' => 'https://test.maantietaja.org/api.php'
+    'default' => 'https://meta.maantietaja.org/api.php'
 ],
 
 // GlobalCssJs //
 'wgUseGlobalSiteCssJs' => [
     'default' => true,
-    'maantiet_test' => true,
+    'maantiet_metawiki' => true,
     'maantiet_loginwiki' => false,
 ],
 
@@ -397,8 +361,8 @@ $wgConf->settings = [
 ],
 
 'wgGlobalCssJsConfig' => [
-   'wiki' => 'maantiet_test', 
-   'source' => 'maantiet_test'
+   'wiki' => 'maantiet_metawiki', 
+   'source' => 'maantiet_metawiki'
 ],
 
 // CentralAuth //
@@ -463,7 +427,7 @@ $wgConf->settings = [
 
 'wgApplyGlobalBlocks' => [
     'default' => true,
-    'maantiet_test' => false,
+    'maantiet_metawiki' => false,
 ],
 
 /////////////////// Mediawiki Gap FOR error ///////////////////
@@ -475,7 +439,7 @@ $wgConf->settings = [
 ],
 
 'wgEchoSharedTrackingDB' => [
-    'default' => 'maantiet_test'
+    'default' => 'maantiet_metawiki'
 ],
 
 'wgEchoUseCrossWikiBetaFeature' => [
@@ -505,7 +469,7 @@ $wgConf->settings = [
 ],
 // ContentTranslation //
 'wgContentTranslationDatabase ' => [
-    'default' => 'maantiet_test'
+    'default' => 'maantiet_metawiki'
 ],
 
 // CirrusSearch //
@@ -636,7 +600,7 @@ $wgConf->settings = [
 
 'wgCirrusSearchPreferRecentDefaultDecayPortion' => [
 	'default' => 0,
-	'maantiet_test' => 0.6,
+	'maantiet_metawiki' => 0.6,
 ],
 
 'wgCirrusSearchWeights' => [
@@ -644,7 +608,7 @@ $wgConf->settings = [
 	'maantiet_codewiki' => [
 		'title' => 25.0,
 	],
-	'maantiet_community' => [
+	'maantiet_communitywiki' => [
 		'title' => 25.0,
 	],
 ],
@@ -693,7 +657,7 @@ $wgConf->settings = [
 // CentralNotice //
 'wgNoticeInfrastructure' => [
     'default' => false,
-    'maantiet_test' => true,
+    'maantiet_metawiki' => true,
 ],
 
 // VisualEditor //
@@ -823,7 +787,7 @@ $wgConf->settings = [
 
 'wgUseCodeReview' => [
 	'default' => false,
-	'maantiet_test' => true,
+	'maantiet_metawiki' => true,
 ],
 
 'wgCodeReviewMaxDiffPaths' => [
@@ -831,10 +795,6 @@ $wgConf->settings = [
 ],
 
 'wgMinervaAlwaysShowLanguageButton' => [
-    'default' => true,
-],
-
-'wgVisualEditorEnableVisualSectionEditing' => [
     'default' => true,
 ],
 
@@ -861,6 +821,6 @@ $wgConf->settings = [
 
 
 'wgSiteNotice' => [
-    'default' => 'Hello All Visitor, We have a new Development [[:wiki:|wiki]], [[:community:|community]], [[:beta:|beta]], [[:test:|test]]',
+    'default' => 'Hello All Visitor, We have a new Development [[:wiki:|wiki]], [[:community:|community]], [[:beta:|beta]], [[:meta:|meta]]',
 ],
 ];
