@@ -25,6 +25,8 @@ $wgConf->settings = [
     'maantiet_mainwiki' => 'https://wiki.maantietaja.org',
     'maantiet_loginwiki' => 'https://login.maantietaja.org',
     'maantiet_codewiki' => 'https://code.maantietaja.org',
+    'maantiet_mw19416' => 'https://data.maantietaja.org', // mode testing for global SUL
+    'maantiet_dts' => 'https://dts.maantietaja.org', // mode testing for global SUL
 ],
 
 'wgCanonicalServer' => [
@@ -35,6 +37,12 @@ $wgConf->settings = [
     'maantiet_mainwiki' => 'https://wiki.maantietaja.org',
     'maantiet_loginwiki' => 'https://login.maantietaja.org',
     'maantiet_codewiki' => 'https://code.maantietaja.org',
+    'maantiet_mw19416' => 'https://data.maantietaja.org', // mode testing for global SUL
+    'maantiet_dts' => 'https://dts.maantietaja.org', // mode testing for global SUL
+],
+
+'wgScript' => [
+    'default' => '../',
 ],
 
 'wgScriptPath' => [
@@ -55,10 +63,8 @@ $wgConf->settings = [
     'maantiet_beta' => 'Beta Wiki - Deployment',
     'maantiet_community' => 'Community Wiki - Deployment',
     'maantiet_mainwiki' => 'Main Wiki - Deployment',
-    'maantiet_loginwiki' => 'Login Maamedia',
+    'maantiet_loginwiki' => 'Login Maamedia', 
     'maantiet_codewiki' => 'Code Wiki - Deployment',
-    'maantiet_stewiki' => 'Maamedia Steward Wiki',
-    'maantiet_enwiki' => 'Maantietäjäwiki',
 ],
 
 'wgLanguageCode' => [
@@ -133,9 +139,7 @@ $wgConf->settings = [
 ],
 
 'wgMemCachedServers' => [
-    'default' => [ '127.0.0.1:23946', 
-	[ '127.0.0.1:21169', 2 ]
-],
+    'default' => [ '127.0.0.1:25583' ],
 ],
 
 # Shared memory settings
@@ -181,7 +185,7 @@ $wgConf->settings = [
 	
 # config cache
 'wgResourceBasePath' => [
-    'default' => $wgScriptPath,
+    'default' => '',
 ],
 
 'wgSharedDB' => [
@@ -221,6 +225,7 @@ $wgConf->settings = [
                                     'global_group_restrictions',
                                     'renameuser_queue',
                                     'renameuser_status',
+                                    'spoofuser',
                                     'translate_groupreviews',
                                     'translate_groupstats',
                                     'translate_messageindex',
@@ -293,10 +298,65 @@ $wgConf->settings = [
 'wgAbuseFilterPrivateDetailsForceReason' => [
 	'default' => true,
 ],
+'wgBetaFeaturesWhitelist' => [
+	'default' => [
+		'visualeditor-enable',			   // [Editing] On-going (special permission) – VisualEditor
+		'beta-feature-flow-user-talk-page',  // [Growth*] On-going (special permission) – Flow opt-in
+		'visualeditor-newwikitext',		  // [Editing] On-going (special permission) – New wikitext editor
+		'uls-compact-links',				 // [LangEng] 2018-09-13 – Compact language links (Wikisource only)
+		'popups',							// [WebTeam] 2019-10-04 – Page Previews
+		'popupsreferencepreviews',		   // [WMDE TW] 2019-10-04 – Reference Previews
+		'cx',								// [LangEng] 2019-11-07 - ContentTranslation
+		'twocolconflict',					// [WMDE TW] 2019-10-30 – New edit conflict view
+		'visualeditor-visualdiffpage',	   // [Editing] 2019-11-06 – Visual diffs
+		'tmh-videojs',					   // [Readers] 2019-12-12 - New video player
+		'discussiontools-betaenable',		// [Editing] 2020-09-12 – Reply tool
+	],
+],
 
+// BetaFeatures //
+'wgVisualEditorEnableWikitextBetaFeature' => [
+    'default' => true,
+],
+
+'wgVisualEditorEnableWikitext' => [
+    'default' => true,
+],
+
+'wgVisualEditorEnableBetaFeature' => [
+    'default' => true,
+],
+
+'wgVisualEditorEnableDiffPageBetaFeature' => [
+    'default' => true,
+],
+
+'wgFlowEnableOptInBetaFeature' => [
+    'default' => true,
+],
+
+'wgContentTranslationAsBetaFeature' => [
+    'default' => true,
+],
+
+'wgFileExporterBetaFeature' => [
+    'default' => true,
+],
+
+'wgFileImporterInBeta' => [
+    'default' => true,
+],
+
+'wgMediaViewerIsInBeta' => [
+    'default' => true,
+],
+// VisualEditor //
+'wgVisualEditorEnableDiffPage' => [
+    'default' => true,
+],
 // Delete
 'wgDeleteRevisionsLimit' => [
-	'default' => '1000', // databases don't have much memory - let's not overload them in future - set to 1k T5287
+	'default' => '1000',
 ],
 
 // CodeReview //
@@ -305,6 +365,11 @@ $wgConf->settings = [
 ],
 'wgSubversionProxy' => [
     'default' => false,
+],
+
+// GlobalUsage //
+'wgGlobalUsageDatabase' => [
+    'default' => 'maantiet_test',
 ],
 
 // GlobalUserPage //
@@ -379,7 +444,7 @@ $wgConf->settings = [
 ],
 
 'wgCentralAuthLoginIcon' => [
-    'default' => false,
+    'default' => true,
 ],
 
 'wgCentralAuthSilentLogin' => [
@@ -642,13 +707,57 @@ $wgConf->settings = [
 // Logo //
 
 'wgLogo' => [
-    'default' => "{$wgScriptPath}/resources/assets/wiki.png",
+    'default' => '/resources/assets/wiki.png',
+],
+
+'wgFooterIcons' => [
+    'poweredby' => [ 
+        'mediawiki' => [
+            'src' => '../resources/assets/poweredby_mediawiki_88x31.png',
+            'srcset' => '../resources/assets/poweredby_mediawiki_88x31.png',
+            'height' => '31',
+            'width' => '88',
+        ],
+    ],
 ],
 
 'wgGenerateThumbnailOnParse' => [
     'default' => true,
 ],
 
+// UPO means: this is also a user preference option
+'wgEnableEmail' => [
+    'default' => true,
+],
+
+'wgEnableUserEmail' => [
+    'default' => true,
+],
+
+'wgEmergencyContact' => [
+    'default' => 'stewards@maantietaja.org',
+],
+
+'wgPasswordSender' => [
+    'default' => 'wiki@maantietaja.org',
+],
+
+'wgEnotifUserTalk' => [
+    'default' => true,
+],
+
+'wgEnotifWatchlist' => [
+    'default' => false,
+],
+
+'wgEmailAuthentication' => [
+    'default' => true,
+],
+
+'wgThumbnailScriptPath' => [
+    'default' => 'thumb.php',
+],
+ 
 // Copyright //
 'wgRightsPage' => [
     'default' => '',
@@ -719,6 +828,14 @@ $wgConf->settings = [
 
 'wgCodeReviewMaxDiffPaths' => [
     'default' => 100,
+],
+
+'wgMinervaAlwaysShowLanguageButton' => [
+    'default' => true,
+],
+
+'wgVisualEditorEnableVisualSectionEditing' => [
+    'default' => true,
 ],
 
 // Translate //
