@@ -7,7 +7,7 @@ include('GlobalSkins.php');
 include('GlobalUserPreferences.php');
 
 // require_once 'ex.php';
-
+// Namespace Config //
 // Site Configuration  //
 
 $conf = new SiteConfiguration;
@@ -25,6 +25,7 @@ $wgConf->settings = [
     'maantiet_mainwiki' => 'https://wiki.maantietaja.org',
     'maantiet_loginwiki' => 'https://login.maantietaja.org',
     'maantiet_codewiki' => 'https://code.maantietaja.org',
+    'maantiet_stewardwiki' => 'https://steward.maantietaja.org',
 ],
 
 'wgCanonicalServer' => [
@@ -35,6 +36,7 @@ $wgConf->settings = [
     'maantiet_mainwiki' => 'https://wiki.maantietaja.org',
     'maantiet_loginwiki' => 'https://login.maantietaja.org',
     'maantiet_codewiki' => 'https://code.maantietaja.org',
+    'maantiet_stewardwiki' => 'https://steward.maantietaja.org',
 ],
 
 'wgScriptPath' => [
@@ -51,12 +53,13 @@ $wgConf->settings = [
 
 'wgSitename' => [
     'default' => '',
-    'maantiet_metawiki' => 'meta Wiki - Deployment',
+    'maantiet_metawiki' => 'Meta Wiki - Deployment',
     'maantiet_betawiki' => 'Beta Wiki - Deployment',
     'maantiet_communitywiki' => 'Community Wiki - Deployment',
     'maantiet_mainwiki' => 'Main Wiki - Deployment',
     'maantiet_loginwiki' => 'Login Maamedia', 
     'maantiet_codewiki' => 'Code Wiki - Deployment',
+    'maantiet_stewardwiki' => 'Steward Wiki - Deployment',
 ],
 
 'wgLanguageCode' => [
@@ -137,13 +140,14 @@ $wgConf->settings = [
 'wgMemCachedServers' => [
     'default' => [ '127.0.0.1:25583',
     ['127.0.0.1:23149', 2 ],
+    ['127.0.0.1:29984', 3],
     ],
 ],
 
 # Shared memory settings
 
 'wgCacheDirectory' => [
-    'default' => '$IP/cache',
+    'default' => 'cache',
 ],
 
 'wgUseLocalMessageCache' => [
@@ -245,6 +249,40 @@ $wgConf->settings = [
 ],
 */
 
+// Images //
+
+'wgSharedUploadBaseUrl' => [
+    'default' => 'https://test.maantietaja.org',
+],
+
+'wgUseSharedUploads' => [
+    'default' => true,
+],
+
+'wgSharedUploadPath' => [
+    'default' => 'https://meta.maantietaja.org/images',
+],
+
+'wgSharedUploadDBname' => [
+    'default' => 'maantiet_metawiki',
+],
+
+'wgSharedUploadDirectory' => [
+    'default' => 'images',
+],
+
+'wgRepositoryBaseUrl' => [
+    'default' => 'https://meta.maantietaja.org/wiki/File:',
+],
+
+'wgFileExtensions' => [
+    'default' => [
+        'svg',
+        'png',
+        'jpg',
+        'jpeg',
+    ],
+],
 // Extensions Config starterd //
 
 // AbuseFilter //
@@ -258,14 +296,11 @@ $wgConf->settings = [
     	'tag' => true,
     	'throttle' => true,
     	'warn' => true,
+    ],
 ],
-],
-
 'wgUseGlobalAbuseFilters' => [
 	'default' => true,
-	
 ],
-
 'wgAbuseFilterCentralDB' => [
 	'default' => 'maantiet_metawiki',
 ],
@@ -296,6 +331,10 @@ $wgConf->settings = [
 'wgAbuseFilterPrivateDetailsForceReason' => [
 	'default' => true,
 ],
+'wgAbuseFilterDefaultWarningMessage' => [
+    'default' => 'abusefilter-warning',
+],
+
 
 // BetaFeatures //
 'wgVisualEditorEnableWikitextBetaFeature' => [
@@ -318,9 +357,22 @@ $wgConf->settings = [
     'default' => true,
 ],
 
+// CodeEditor //
+'wgCodeEditorEnableCore' => [
+    'default' => true,
+],
+'wgScribuntoUseCodeEditor' => [
+    'default' => true,
+],
+
 // Delete
 'wgDeleteRevisionsLimit' => [
 	'default' => '1000',
+],
+
+// GlobalContributions //
+'wgGUCWikis' => [
+    'default' => 'wgLocalDatabases',
 ],
 
 // CodeReview //
@@ -363,6 +415,11 @@ $wgConf->settings = [
 'wgGlobalCssJsConfig' => [
    'wiki' => 'maantiet_metawiki', 
    'source' => 'maantiet_metawiki'
+],
+
+'wgResourceLoaderSources' => [
+   'apiScript' => 'https://meta.maantietaja.org/w/api.php', 
+   'loadScript' => 'https://meta.maantietaja.org/w/load.php'
 ],
 
 // CentralAuth //
@@ -649,15 +706,96 @@ $wgConf->settings = [
 	'default' => 10, //T257922
 ],
 
+// SiteMatrix //
+
+// Scribunto //
+'wgScribuntoDefaultEngine' => [
+    'default' => 'luastandalone',
+],
+
+'wgScribuntoUseGeSHi' => [
+    'default' => true,
+],
+
+'wgScribuntoUseCodeEditor' => [
+    'default' => true,
+],
+
+
+
+// SpamBlacklist //
+'wgBlacklistSettings' => [
+	'spam' => [
+		'files' => [
+			"https://meta.maantietaja.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1",
+		],
+	],
+],
+
+
+
+// TitleBlacklist //
+'wgBlacklistSettings' => [
+    [
+         'type' => 'localpage',
+         'src'  => 'MediaWiki:Titleblacklist'
+    ],
+],
 
 // Translate //
 'wgTranslateUseSandbox' => [
+    'default' => true,
+],
+
+'wgTranslateDocumentationLanguageCode' => [
+    'default' => true,
+],
+
+'wgNoticeUseTranslateExtension' => [
+    'default' => true,  
+],
+
+'wgTranslateNewsletterPreference' => [
+    'default' => true,
+],
+
+'wgContentTranslationTranslateInTarget' => [
+    'default' => true,
+],
+
+'wgTranslateTranslationDefaultService' => [
+    'default' => true,
+],
+
+'wgTranslationNotificationsContactMethods' => [
+    'email' => true,
+    'talkpage' => true,
+    'talkpage-elsewhere' => false,
+],
+
+'wgTranslateCheckBlacklist' => [
+    'default' => true,
+],
+
+'wgTranslateWorkflowStates' => [
+    'default' => true,
+],
+
+'wgTranslateDelayedMessageIndexRebuild' => [
+    'default' => true,
+],
+
+'wgTranslateUsePreSaveTransform' => [
     'default' => true,
 ],
 // CentralNotice //
 'wgNoticeInfrastructure' => [
     'default' => false,
     'maantiet_metawiki' => true,
+],
+
+'wgCentralDBname' => [
+    'default' => 'maantiet_metawiki',
 ],
 
 // VisualEditor //
@@ -668,10 +806,21 @@ $wgConf->settings = [
 'wgVisualEditorEnableWikitext' => [
     'default' => true,
 ],
+
+// WikiEditor //
+'wgHiddenPrefs' => [
+    'usebetatoolbar' => true,
+],
+
 // Logo //
 
 'wgLogo' => [
-    'default' => '/resources/assets/wiki.png',
+    'default' => [
+        '1x' => '/resources/assets/wiki.png',
+        ],
+    'maantiet_metawiki' => [
+        '1x' => '/images/b/bc/Wiki.png',
+    ],
 ],
 
 'wgFooterIcons' => [
@@ -683,10 +832,6 @@ $wgConf->settings = [
             'width' => '88',
         ],
     ],
-],
-
-'wgGenerateThumbnailOnParse' => [
-    'default' => true,
 ],
 
 // UPO means: this is also a user preference option
@@ -718,9 +863,6 @@ $wgConf->settings = [
     'default' => true,
 ],
 
-'wgThumbnailScriptPath' => [
-    'default' => 'thumb.php',
-],
  
 // Copyright //
 'wgRightsPage' => [
@@ -752,7 +894,7 @@ $wgConf->settings = [
 ],
 
 'wgUploadDirectory' => [
-    'default' => '$IP/images',
+    'default' => 'images',
 ],
 
 'wgUseImageMagick' => [
@@ -761,6 +903,26 @@ $wgConf->settings = [
 
 'wgImageMagickConvertCommand' => [
     'default' => '/usr/bin/convert',
+],
+
+'wgSVGConverter' => [
+    'default' => 'ImageMagick',
+],
+
+'wgUseImageResize' => [
+    'default' => true,
+],
+
+'wgMemoryLimit' => [
+    'default' => '50M',
+],
+
+'wgMaxImageArea' => [
+    'default' => 1.25e7,
+],
+
+'wgGenerateThumbnailOnParse' => [
+    'default' => true,
 ],
 
 'wgUseInstantCommons' => [
@@ -798,27 +960,65 @@ $wgConf->settings = [
     'default' => true,
 ],
 
-// Translate //
+// Namespace //
 
-'+wgGroupPermissions' => [
-    'default' => [
-                      '*' => [
-                                        'read' => true,
-                                        'edit' => true,
-                                        
-                                         ],
-                      'bureaucrat' => [
-                                        'userrights' => true,
-                                        'renameuser' => false,
-                      ],
-    ],
-    'maantiet_loginwiki' => [
-                      '*' => [
-                                        'autocreateaccount' => true,
-                                         ],
+'wgRemoveGroups' => [
+    'default' => '',
+    'maantiet_metawiki' => [
+        'bureaucrat' => [
+            'sysop'
+            ],
     ],
 ],
 
+// Restriction types
+
+
+'wgRestrictionLevels' => [
+    'default' => [
+        'user' 
+        ],
+    'maantiet_metawiki' => [
+        '',
+        'user',
+        'autoconfirmed',
+        'sysop',
+        'bureaucrat',
+        'steward',
+    ],
+],
+'wgRestrictionTypes' => [
+    'default' => [
+        'read',
+        'create',
+        'edit',
+        'move',
+        'upload',
+        'delete',
+        'protect',
+        ],
+    'maantiet_metawiki' => [
+        'read',
+        'create',
+        'edit',
+        'move',
+        'upload',
+        'delete',
+        'protect',
+    ],
+],
+'wgCascadingRestrictionLevels' => [
+    'default' => [
+        'sysop',
+        'bureaucrat',
+        'steward',
+        ],
+    'maantiet_metawiki' => [
+        'sysop',
+        'bureaucrat',
+        'steward',
+    ],
+],
 
 'wgSiteNotice' => [
     'default' => 'Hello All Visitor, We have a new Development [[:wiki:|wiki]], [[:community:|community]], [[:beta:|beta]], [[:meta:|meta]]',
