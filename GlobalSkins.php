@@ -1,7 +1,12 @@
 <?php
-// Global Skin //
+wfLoadSkins( [
+    'MonoBook',
+    'Vector',
+    'Timeless',
+    'MinervaNeue',
+    'Modern',
+] );
 
-wfLoadSkin( 'MonoBook' );
-wfLoadSkin( 'Vector' );
-wfLoadSkin( 'Timeless' );
-wfLoadSkin( 'MinervaNeue' );
+// $wgMFDefaultSkinClass = "SkinMinerva";
+// $wgDefaultSkin = 'minerva';
+// $wgMFAutodetectMobileView = true;
