@@ -1,42 +1,65 @@
 <?php
-// MediaWiki Configuration Set Up by Maantietaja and Symanpuma //
-
-// Include Global Extensions //
-include('GlobalExtensions.php');
-include('GlobalSkins.php');
-include('GlobalUserPreferences.php');
-
-// require_once 'ex.php';
-// Namespace Config //
-// Site Configuration  //
-
-$conf = new SiteConfiguration;
-$wgConf->wikis = $wgLocalDatabases;
-$wgConf->suffixes = [ 'wiki' ];
-$wgConf->localVHosts = [ 'localhost' ];
+// MW-Setting
 $wgConf->settings = [
 'wgServer' => [
     // if you want to allow also usage of https, just use '//localhost'
     // and set 'http://localhost' at 'wgCanonicalServer'
     'default' => 'https://localhost',
-    'maantiet_metawiki' => 'https://meta.maantietaja.org',
-    'maantiet_betawiki' => 'https://beta.maantietaja.org',
-    'maantiet_communitywiki' => 'https://community.maantietaja.org',
-    'maantiet_mainwiki' => 'https://wiki.maantietaja.org',
-    'maantiet_loginwiki' => 'https://login.maantietaja.org',
-    'maantiet_codewiki' => 'https://code.maantietaja.org',
-    'maantiet_stewardwiki' => 'https://steward.maantietaja.org',
+    'metawiki' => 'https://meta.maamedia.org',
+    'loginwiki' => 'https://login.maamedia.org',
+    'stewardwiki' => 'https://steward.maamedia.org',
+    'testwiki' => 'https://test.maamedia.org',
+    'codewiki' => 'https://code.maamedia.org',
+    'commonswiki' => 'https://commons.maamedia.org',
+    'datawiki' => 'https://data.maamedia.org',
+    'enwiki' => 'https://en.masymanwiki.org',
+    'eswiki' => 'https://es.masymanwiki.org',
+    'dewiki' => 'https://de.masymanwiki.org',
+    'idwiki' => 'https://id.masymanwiki.org',
+    'fiwiki' => 'https://fi.masymanwiki.org',
+    'svwiki' => 'https://sv.masymanwiki.org',
+    'nowiki' => 'https://no.masymanwiki.org',
 ],
-
 'wgCanonicalServer' => [
     'default' => 'https://localhost',
-    'maantiet_metawiki' => 'https://meta.maantietaja.org',
-    'maantiet_betawiki' => 'https://beta.maantietaja.org',
-    'maantiet_communitywiki' => 'https://community.maantietaja.org',
-    'maantiet_mainwiki' => 'https://wiki.maantietaja.org',
-    'maantiet_loginwiki' => 'https://login.maantietaja.org',
-    'maantiet_codewiki' => 'https://code.maantietaja.org',
-    'maantiet_stewardwiki' => 'https://steward.maantietaja.org',
+    'metawiki' => 'https://meta.maamedia.org',
+    'loginwiki' => 'https://login.maamedia.org',
+    'stewardwiki' => 'https://steward.maamedia.org',
+    'testwiki' => 'https://test.maamedia.org',
+    'codewiki' => 'https://code.maamedia.org',
+    'commonswiki' => 'https://commons.maamedia.org',
+    'datawiki' => 'https://data.maamedia.org',
+    'enwiki' => 'https://en.masymanwiki.org',
+    'eswiki' => 'https://es.masymanwiki.org',
+    'dewiki' => 'https://de.masymanwiki.org',
+    'idwiki' => 'https://id.masymanwiki.org',
+    'fiwiki' => 'https://fi.masymanwiki.org',
+    'svwiki' => 'https://sv.masymanwiki.org',
+    'nowiki' => 'https://no.masymanwiki.org',
+],
+'wgSitename' => [
+    'default' => '',
+    'metawiki' => 'Meta',
+    'loginwiki' => 'Login',
+    'stewardwiki' => 'Steward',
+    'testwiki' => 'Code',
+    'commonswiki' => 'Commons',
+    'enwiki' => 'Masymanwiki',
+    'eswiki' => 'Masymanwiki',
+    'dewiki' => 'Masymanwiki',
+    'idwiki' => 'Masymanwiki',
+    'fiwiki' => 'Masymanwiki',
+    'svwiki' => 'Masymanwiki',
+    'nowiki' => 'Masymanwiki',
+    'datawiki' => 'Data Wiki',
+],
+'wgLanguageCode' => [
+    'default' => 'en',
+    'fiwiki' => 'fi',
+],
+
+'wgLocalInterwiki' => [
+    'default' => '$lang',
 ],
 
 'wgScriptPath' => [
@@ -49,29 +72,6 @@ $wgConf->settings = [
 
 'wgDefaultSkin' => [
     'default' => 'vector',
-],
-
-'wgSitename' => [
-    'default' => '',
-    'maantiet_metawiki' => 'Meta Wiki - Deployment',
-    'maantiet_betawiki' => 'Beta Wiki - Deployment',
-    'maantiet_communitywiki' => 'Community Wiki - Deployment',
-    'maantiet_mainwiki' => 'Main Wiki - Deployment',
-    'maantiet_loginwiki' => 'Login Maamedia', 
-    'maantiet_codewiki' => 'Code Wiki - Deployment',
-    'maantiet_stewardwiki' => 'Steward Wiki - Deployment',
-],
-
-'wgLanguageCode' => [
-    'default' => 'en',
-],
-
-'wgLocalInterwiki' => [
-    'default' => '$lang',
-],
-
-'wgForceHTTPS' => [
-    'default' => true,
 ],
 
 // Debugging //
@@ -90,11 +90,11 @@ $wgConf->settings = [
 // Database Configuration //
 
 'wgDBserver' => [
-    'default' => 'localhost',
+    'default' => '127.0.0.1',
 ],
 
 'wgDBuser' => [
-    'default' => 'maantiet_mw',
+    'default' => 'wikiuser',
 ],
 
 'wgAuthenticationTokenVersion' => [
@@ -103,6 +103,22 @@ $wgConf->settings = [
 
 'wgDBprefix' => [
     'default' => '',
+],
+
+'wgAllowSchemaUpdates' => [
+    'default' => false,
+],
+
+'wgCompressRevisions' => [
+    'default' => false,
+],
+
+'+wgResourceLoaderSources' => [
+    'default' => [ 'metawiki' => [
+				'apiScript' => '//meta.maamedia.org/api.php',
+				'loadScript' => '//meta.maamedia.org/load.php',
+			],
+ ],
 ],
 
 'wgDBTableOptions' => [
@@ -118,15 +134,15 @@ $wgConf->settings = [
 ],
 
 'wgMainCacheType' => [
-    'default' => CACHE_MEMCACHED,
+    "redis",
 ],
 
 'wgParserCacheType' => [
-    'default' => CACHE_MEMCACHED,
+    "redis",
 ],
 
 'wgMessageCacheType' => [
-    'default' => CACHE_MEMCACHED,
+    "redis",
 ],
 
 'wgSessionsInObjectCache ' => [
@@ -138,11 +154,19 @@ $wgConf->settings = [
 ],
 
 'wgMemCachedServers' => [
-    'default' => [ '127.0.0.1:25583',
-    ['127.0.0.1:23149', 2 ],
-    ['127.0.0.1:29984', 3],
-    ],
+    'default' => ['127.0.0.1:11211'],
 ],
+
+'wgObjectCaches' => [
+    "redis" => [
+		'class'	   => 'RedisBagOStuff',
+		'servers'	 => [ "/var/run/redis/redis.sock" ],
+		// 'password'	=> $wmgRedisPassword,
+		'loggroup'	=> 'redis',
+		'reportDupes' => false,
+		],
+],
+
 
 # Shared memory settings
 
@@ -150,12 +174,28 @@ $wgConf->settings = [
     'default' => 'cache',
 ],
 
+'wgFileCacheDirectory' => [
+    'default' => 'cache',
+],
+
+'wgShowIPinHeader' => [
+    'default' => false,
+],
+
+'wgEnableParserCache' => [
+    'default' => true,
+],
+
+'wgCachePages' => [
+    'default' => true,
+],
+
 'wgUseLocalMessageCache' => [
     'default' => true,
 ],
 
-'wgParserCacheType' => [
-    'default' => CACHE_MEMCACHED,
+'wgUseFileCache' => [
+    'default' => true,
 ],
 
 'wgUseGzip' => [
@@ -174,8 +214,12 @@ $wgConf->settings = [
     'default' => true,
 ],
 
+'wgHitcounterUpdateFreq' => [
+    'default' => 500,
+],
+
 'wgEnableSidebarCache ' => [
-    'default' => false,
+    'default' => true,
 ],
 
 'wgResourceLoaderMaxage' => [
@@ -190,12 +234,16 @@ $wgConf->settings = [
     'default' => '',
 ],
 
+// 'wgSharedDB' => [
+//     'default' => 'centralauth',
+// ],
+
 'wgSharedDB' => [
-    'default' => 'maantiet_centralauth',
+    'default' => 'centralauth',
 ],
 
 'wgSharedTables' => [
-    'default' => [  'maantiet_mw' , 'abuse_filter',
+    'default' => [  'wikiuser',    'abuse_filter',
                                     'abuse_filter_action',
                                     'abuse_filter_history',
                                     'abuse_filter_log',
@@ -225,34 +273,63 @@ $wgConf->settings = [
                                     'global_preferences', 
                                     'global_group_permissions',  
                                     'global_group_restrictions',
+                                    'interwiki',
                                     'renameuser_queue',
                                     'renameuser_status',
                                     'spoofuser',
-                                    'translate_groupreviews',
-                                    'translate_groupstats',
-                                    'translate_messageindex',
-                                    'translate_metadata',
-                                    'translate_reviews',
-                                    'translate_sections',
-                                    'translate_stash',
-                                    'translate_tmf',
-                                    'translate_tmf',
-                                    'translate_tms',
-                                    'translate_tmt',
                                     'wikiset',
                 ],
 ],
 
-/*
-'wgSharedTables' => [
-    'default' => [  'maantiet_metawiki' ,  'globalblocks'  ],
+// Namespaces
+'wgExtraNamespaces' => [
+	'metawiki' => [
+		200 => 'Grants', 
+		201 => 'Grants_talk',
+		202 => 'Research',
+		203 => 'Research_talk',
+		206 => 'Iberocoop',
+		207 => 'Iberocoop_talk',
+	    208 => 'Meta',
+	    209 => 'Meta_talk',
+	    210 => 'Bug',
+	    211 => 'Bug_talk',
+	    212 => 'Feedback',
+	    213 => 'Feedback_talk',
+    ],
+    'fiwiki' => [
+        222 => 'Aihe',
+        223 => 'Keskustelu_aiheesta',
+    ],
 ],
-*/
+
+'wgMetaNamespace' => [
+	// Defaults
+	'metawiki' => 'Meta',
+],
+
+// Skin //
+'wgUseCombinedLoginLink' => [
+    'default' => true,
+],
+
+'wgVectorUseIconWatch' => [
+    'default' => true,
+],
+
+'wgVectorUseSimpleSearch' => [
+    'default' => true,
+],
+
+'wgAdvancedSearchHighlighting' => [
+    'default' => true,
+],
+
 
 // Images //
 
 'wgSharedUploadBaseUrl' => [
-    'default' => 'https://test.maantietaja.org',
+    'default' => 'https://commons.maamedia.org',
 ],
 
 'wgUseSharedUploads' => [
@@ -260,11 +337,11 @@ $wgConf->settings = [
 ],
 
 'wgSharedUploadPath' => [
-    'default' => 'https://meta.maantietaja.org/images',
+    'default' => 'https://commons.maamedia.org/images',
 ],
 
 'wgSharedUploadDBname' => [
-    'default' => 'maantiet_metawiki',
+    'default' => 'commonswiki',
 ],
 
 'wgSharedUploadDirectory' => [
@@ -272,7 +349,7 @@ $wgConf->settings = [
 ],
 
 'wgRepositoryBaseUrl' => [
-    'default' => 'https://meta.maantietaja.org/wiki/File:',
+    'default' => 'https://commons.maamedia.org/wiki/File:',
 ],
 
 'wgFileExtensions' => [
@@ -281,11 +358,24 @@ $wgConf->settings = [
         'png',
         'jpg',
         'jpeg',
+        'pdf',
     ],
 ],
-// Extensions Config starterd //
 
-// AbuseFilter //
+'wgUploadNavigationUrl' => [
+    'default' => false,
+    'commonswiki' => 'https://commons.maamedia.org/wiki/Special:UploadWizard?uselang=$lang',
+],
+
+// Recent Changes
+'wgUseRCPatrol' => [
+    'default' => true,
+    
+],
+
+// Extensions Config Starterd
+
+// AbuseFilter
 'wgAbuseFilterActions' => [
     'default' => [
     	'block' => true,
@@ -302,11 +392,11 @@ $wgConf->settings = [
 	'default' => true,
 ],
 'wgAbuseFilterCentralDB' => [
-	'default' => 'maantiet_metawiki',
+	'default' => 'metawiki',
 ],
 'wgAbuseFilterIsCentral' => [
 	'default' => false,
-	'maantiet_metawiki' => true,
+	'metawiki' => true,
 ],
 'wgAbuseFilterBlockDuration' => [
 	'default' => 'indefinte',
@@ -335,7 +425,48 @@ $wgConf->settings = [
     'default' => 'abusefilter-warning',
 ],
 
+// AdvancedMeta
+'wgDefaultRobotPolic' => [
+    'default' => 'index,follow',
+],
+'wgNamespaceRobotPolicies' => [
+    NS_TALK => 'noindex',
+],
+'wgArticleRobotPolicies ' => [
+    'Main Page' => 'index',
+],
 
+// Babel
+'wgUseBabel' => [
+    'default' => true,
+],
+'wgBabelCategoryNames' => [
+	'default' => [ // T66168
+		'0' => 'User %code%-0',
+		'1' => 'User %code%-1',
+		'2' => 'User %code%-2',
+		'3' => 'User %code%-3',
+		'4' => 'User %code%-4',
+		'5' => 'User %code%-5',
+		'N' => 'User %code%-N',
+	],
+],
+'wgBabelMainCategory' => [
+	'default' => false,
+	'metawiki' => 'User %code%',
+],
+'wgBabelDefaultLevel' => [
+	'default' => 'N',
+],
+
+'wgRightsText' => [
+    'default' => 'Mdsdlkfj'
+],
+
+// RatePage //
+'wgRPAddSidebarSection' => [
+    'default' => true,
+],
 // BetaFeatures //
 'wgVisualEditorEnableWikitextBetaFeature' => [
     'default' => true,
@@ -357,179 +488,40 @@ $wgConf->settings = [
     'default' => true,
 ],
 
-// CodeEditor //
-'wgCodeEditorEnableCore' => [
-    'default' => true,
-],
-'wgScribuntoUseCodeEditor' => [
-    'default' => true,
+// Checkuser
+'wgCheckUserGBtoollink' => [
+	'centralDB' => 'metawiki',
+	'groups' => [ 'steward', 'staff' ]
 ],
 
-// Delete
-'wgDeleteRevisionsLimit' => [
-	'default' => '1000',
-],
-
-// GlobalContributions //
-'wgGUCWikis' => [
-    'default' => 'wgLocalDatabases',
-],
-
-// CodeReview //
-'wgSubversionUser' => [
-    'default' => false,
-],
-'wgSubversionProxy' => [
-    'default' => false,
-],
-
-// GlobalUsage //
-'wgGlobalUsageDatabase' => [
-    'default' => 'maantiet_metawiki',
-],
-
-// GlobalUserPage //
-'wgGlobalUserPageDBname' => [
-    'default' => 'maantiet_metawiki'
-],
-
-'wgGlobalUserPageAPIUrl' => [
-    'default' => 'https://meta.maantietaja.org/api.php'
-],
-
-// GlobalCssJs //
-'wgUseGlobalSiteCssJs' => [
-    'default' => true,
-    'maantiet_metawiki' => true,
-    'maantiet_loginwiki' => false,
-],
-
-'wgAllowUserCss' => [
-   'default' => true, 
-],
-
-'wgAllowUserJs' => [
-   'default' => true, 
-],
-
-'wgGlobalCssJsConfig' => [
-   'wiki' => 'maantiet_metawiki', 
-   'source' => 'maantiet_metawiki'
-],
-
-'wgResourceLoaderSources' => [
-   'apiScript' => 'https://meta.maantietaja.org/w/api.php', 
-   'loadScript' => 'https://meta.maantietaja.org/w/load.php'
-],
-
-// CentralAuth //
-
-'wgCentralAuthDatabase' => [
-    'default' => 'maantiet_centralauth',
-],
-
-'wgCentralAuthAutoNew' => [
+'wgCheckUserForceSummary' => [
     'default' => true,
 ],
 
-'wgCentralAuthAutoMigrate' => [
+'wgCheckUserCIDRLimit' => [ 
+    'IPv4' => 16,
+    'IPv6' => 32
+],
+
+'wgCheckUserCAMultiLock' => [
+    'centralDB' => 'metawiki',
+    'groups' => [ 'steward' ]
+],
+
+'wgCheckUserCAtoollink ' => [ 
+    'default' => 'metawiki',
+],
+
+'wgCheckUserEnableSpecialInvestigate' => [
     'default' => true,
 ],
 
-'wgCentralAuthAutoMigrateNonGlobalAccounts' => [
-    'default' => true,
+// Timezone //
+'wgLocaltimezone' => [
+	'default' => 'UTC'
 ],
 
-'wgCentralAuthCookies' => [
-    'default' => true,
-],
-
-'wgCentralAuthCookieDomain' => [
-    'default' => '.maantietaja.org',
-],
-
-'wgCentralAuthCreateOnView' => [
-    'default' =>  true,
-],
-
-'wgCentralAuthEnableGlobalRenameRequest' => [
-    'default' =>  true,
-],
-
-'wgCentralAuthEnableUserMerge' => [
-    'default' =>  true,
-],
-
-'wgCentralAuthLoginWiki' => [
-    'default' =>  'maantiet_loginwiki',
-],
-
-'wgCentralAuthLoginIcon' => [
-    'default' => true,
-],
-
-'wgCentralAuthSilentLogin' => [
-    'default' =>  true,
-],
-
-// Global Blocking //
-
-'wgGlobalBlockingDatabase' => [
-    'default' =>  'maantiet_centralauth',
-],
-
-'wgGlobalBlockingBlockXFF' => [
-    'default' =>  true,
-],
-
-'wgApplyGlobalBlocks' => [
-    'default' => true,
-    'maantiet_metawiki' => false,
-],
-
-/////////////////// Mediawiki Gap FOR error ///////////////////
-
-// Echo //
-
-'wgEchoCrossWikiNotifications' => [
-    'default' => true,
-],
-
-'wgEchoSharedTrackingDB' => [
-    'default' => 'maantiet_metawiki'
-],
-
-'wgEchoUseCrossWikiBetaFeature' => [
-    'default' => true,
-],
-
-'wgEchoPerUserBlacklist' => [
-    'default' => true,
-],
-
-'wgEchoMentionStatusNotifications' => [
-    'default' => true,
-],
-
-'wgEchoEnableEmailBatch' => [
-	'default' => true,
-],
-'wgEchoDefaultUserSubscriptions' => [
-	'default' => [],
-	'officewiki' => [
-		'email' => [
-			// edit-user-talk already defaults to true because enotifusertalkpages does
-			'flow-discussion' => true,
-			'mention' => true
-		]
-	],
-],
-// ContentTranslation //
-'wgContentTranslationDatabase ' => [
-    'default' => 'maantiet_metawiki'
-],
-
-// CirrusSearch //
+// CirrusSearch
 'wgCirrusSearchWikimediaExtraPlugin' => [
 	'default' => [
 		'regex' => [
@@ -657,15 +649,12 @@ $wgConf->settings = [
 
 'wgCirrusSearchPreferRecentDefaultDecayPortion' => [
 	'default' => 0,
-	'maantiet_metawiki' => 0.6,
+	'metawiki' => 0.6,
 ],
 
 'wgCirrusSearchWeights' => [
 	'default' => [],
-	'maantiet_codewiki' => [
-		'title' => 25.0,
-	],
-	'maantiet_communitywiki' => [
+	'codewiki' => [
 		'title' => 25.0,
 	],
 ],
@@ -676,14 +665,6 @@ $wgConf->settings = [
 
 'wgCirrusSearchMoreLikeThisTTL' => [
 	'default' => 86400
-],
-
-'wgGlobalRenameBlacklistRegex' => [
-	'default' => true
-],
-
-'wgGlobalRenameBlacklist' => [
-	'default' => 'https://meta.wikimedia.org/w/index.php?title=Global_rename_blacklist&action=raw'
 ],
 
 'wgCirrusSearchRefreshInterval' => [
@@ -706,7 +687,204 @@ $wgConf->settings = [
 	'default' => 10, //T257922
 ],
 
-// SiteMatrix //
+// CodeEditor
+'wgCodeEditorEnableCore' => [
+    'default' => true,
+],
+'wgScribuntoUseCodeEditor' => [
+    'default' => true,
+],
+
+// CodeReview
+'wgSubversionUser' => [
+    'default' => false,
+],
+'wgSubversionProxy' => [
+    'default' => false,
+],
+
+// ContentTranslation
+'wgContentTranslationDatabase ' => [
+    'default' => 'metawiki'
+],
+
+// Delete
+'wgDeleteRevisionsLimit' => [
+	'default' => '1000',
+],
+
+// Echo
+
+'wgEchoCrossWikiNotifications' => [
+    'default' => true,
+],
+
+'wgEchoSharedTrackingDB' => [
+    'default' => 'metawiki'
+],
+
+'wgEchoUseCrossWikiBetaFeature' => [
+    'default' => true,
+],
+
+'wgEchoPerUserBlacklist' => [
+    'default' => true,
+],
+
+'wgEchoMentionStatusNotifications' => [
+    'default' => true,
+],
+
+'wgEchoEnableEmailBatch' => [
+	'default' => true,
+],
+'wgEchoDefaultUserSubscriptions' => [
+	'default' => [],
+],
+
+
+// GlobalContributions
+'wgGUCWikis' => [
+    'default' => $wgLocalDatabases,
+],
+
+
+// GlobalUsage //
+'wgGlobalUsageDatabase' => [
+    'default' => 'metawiki',
+],
+
+// GlobalUserPage //
+'wgGlobalUserPageDBname' => [
+    'default' => 'metawiki'
+],
+
+'wgGlobalUserPageAPIUrl' => [
+    'default' => 'https://meta.maamedia.org/api.php'
+],
+
+// GlobalCssJs //
+'wgUseGlobalSiteCssJs' => [
+    'default' => true,
+],
+
+'wgAllowUserCss' => [
+   'default' => true, 
+],
+
+'wgAllowUserJs' => [
+   'default' => true, 
+],
+
+'wgResourceLoaderSources' => [
+   'apiScript' => 'https://meta.maamedia.org/api.php', 
+   'loadScript' => 'https://meta.maamedia.org/load.php'
+],
+
+// Global Blocking //
+
+'wgGlobalBlockingDatabase' => [
+    'default' =>  'centralauth',
+],
+
+'wgGlobalBlockingBlockXFF' => [
+    'default' =>  true,
+],
+
+'wgApplyGlobalBlocks' => [
+    'default' => true,
+    'metawiki' => true,
+],
+
+// RelatedArticles //
+'wgRelatedArticlesUseCirrusSearch' => [
+    'default' => true,
+],
+
+'wgRelatedArticlesOnlyUseCirrusSearch' => [
+    'default' => true,
+],
+
+'wgRelatedArticlesDescriptionSource' => [
+    'default' => 'metawiki',
+],
+
+
+// CentralAuth // !becarefull
+
+'wgCentralAuthDatabase' => [
+    'default' => 'centralauth',
+],
+
+'wgCentralAuthAutoNew' => [
+    'default' => true,
+],
+
+'wgCentralAuthAutoMigrate' => [
+    'default' => true,
+],
+
+'wgCentralAuthAutoMigrateNonGlobalAccounts' => [
+    'default' => true,
+],
+
+'wgCentralAuthCookies' => [
+    'default' => true,
+],
+
+'wgCentralAuthCookieDomain' => [
+    'default' => '',
+
+],
+'wgCentralAuthCreateOnView' => [
+    'default' =>  true,
+],
+
+'wgCentralAuthAutoLoginWikis' => [
+    'meta.maamedia.org' => 'metawiki',
+    'login.maamedia.org' => 'loginwiki',
+    'steward.maamedia.org' => 'stewardwiki',
+    'test.maamedia.org' => 'testwiki',
+    'code.maamedia.org' => 'codewiki',
+    'commons.maamedia.org' => 'commonswiki',
+    'data.maamedia.org' => 'datawiki',
+    'en.masymanwiki.org' => 'enwiki',
+    'es.masymanwiki.org' => 'eswiki',
+    'de.masymanwiki.org' => 'dewiki',
+    'id.masymanwiki.org' => 'idwiki',
+    'fi.masymanwiki.org' => 'fiwiki',
+    'sv.masymanwiki.org' => 'svwiki',
+    'no.masymanwiki.org' => 'nowiki',
+],
+
+/*
+'wgCentralAuthAutoLoginWikis' => [
+
+],
+*/
+'wgCentralAuthEnableGlobalRenameRequest' => [
+    'default' =>  true,
+],
+
+'wgCentralAuthEnableUserMerge' => [
+    'default' =>  true,
+],
+/*
+'wgCentralAuthLoginWiki' => [
+    'default' =>  'loginwiki',
+],
+*/
+'wgCentralAuthLoginIcon' => [
+    'default' => true,
+],
+
+'wgCentralAuthSilentLogin' => [
+    'default' =>  true,
+],
+
+'wgGlobalRenameBlacklistRegex' => [
+	'default' => true
+],
 
 // Scribunto //
 'wgScribuntoDefaultEngine' => [
@@ -721,19 +899,63 @@ $wgConf->settings = [
     'default' => true,
 ],
 
+'wgPygmentizePath' => [
+    'default' => 'extensions/SyntaxHighlight_GeSHi/pygments/pygmentize',
+],
+// Interwiki //
 
+'wgInterwikiCentralDB' => [
+    'default' => 'metawiki',
+],
 
 // SpamBlacklist //
 'wgBlacklistSettings' => [
 	'spam' => [
 		'files' => [
-			"https://meta.maantietaja.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1",
+			"https://meta.maamedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1",
 		],
 	],
 ],
 
+// Kartographer // 
+'wgKartographerWikivoyageMode' => [
+	'default' => false,
+	'metawiki' => true,
+],
+
+'wgKartographerUseMarkerStyle' => [
+	'default' => false,
+	'metawiki' => true,
+],
+
+'wgKartographerStaticMapframe' => [
+	'default' => false,
+	'metawiki' => true,
+],
+
+'wgKartographerEnableMapFrame' => [
+	'default' => true,
+	'metawiki' => false,
+],
+
+'wgKartographerUsePageLanguage' => [
+	'default' => true,
+],
+
+'wgUseMediaModeration' => [
+	'default' => true,
+],
 
 
+'wgUseKartographer' => [
+	'default' => true,
+	'metawiki' => false,
+],
+
+'wgUseMapSources' => [
+	'default' => false,
+	'metawiki' => true,
+],
 // TitleBlacklist //
 'wgBlacklistSettings' => [
     [
@@ -742,7 +964,8 @@ $wgConf->settings = [
     ],
 ],
 
-// Translate //
+// Translate
+
 'wgTranslateUseSandbox' => [
     'default' => true,
 ],
@@ -788,15 +1011,7 @@ $wgConf->settings = [
 'wgTranslateUsePreSaveTransform' => [
     'default' => true,
 ],
-// CentralNotice //
-'wgNoticeInfrastructure' => [
-    'default' => false,
-    'maantiet_metawiki' => true,
-],
 
-'wgCentralDBname' => [
-    'default' => 'maantiet_metawiki',
-],
 
 // VisualEditor //
 'wgVisualEditorEnableDiffPage' => [
@@ -815,79 +1030,57 @@ $wgConf->settings = [
 // Logo //
 
 'wgLogo' => [
-    'default' => [
-        '1x' => '/resources/assets/wiki.png',
-        ],
-    'maantiet_metawiki' => [
-        '1x' => '/images/b/bc/Wiki.png',
-    ],
+    'default' => '/images/1/1a/Maamedia_Logo.png',
+    'metawiki' => '/images/b/bc/Wiki.png',
+    'codewiki' => '/images/5/5b/Maamedia_Code-Wiki_Logo.png',
+    'commonswiki' => '/images/c/cb/Maamedia_Commons_Logo.png',
+    'communitywiki' => '/images/0/06/Maamedia_Community_logo.png',
+    'datawiki' => '/images/6/62/Maamedia_Data-Wiki_Logo.png',
+//    'newswiki' => '/images/1/11/Maamedia_News-Logo.png',
+//    'outreachwiki' => '/images/b/b9/Maamedia_Outreach.png',
+//    'stewardwiki' => '/images/1/1a/Maamedia_Logo.png',
+//    'loginwiki' => '/images/1/1a/Maamedia_Logo.png',
+//    'wikiwiki' => '/images/1/1a/Maamedia_Logo.png',
+//    'enwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+//    'eswiki' => '/images/b/b0/Masymanwiki_Logo.png',
+//    'fiwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+//    'frwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+//    'idwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+//    'nowiki' => '/images/b/b0/Masymanwiki_Logo.png',
+//    'dewiki' => '/images/b/b0/Masymanwiki_Logo.png',
+//    'svwiki' => '/images/b/b0/Masymanwiki_Logo.png'
+],
+'wgFavicon' => [
+    'default' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
+    'metawiki' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
+    'codewiki' => '/images/5/5b/Maamedia_Code-Wiki_Logo.png',
+    'commonswiki' => '/images/4/4a/Maamedia_Commons_Logo-2.png',
+    'communitywiki' => '/images/0/06/Maamedia_Community_logo.png',
+    'datawiki' => '/images/6/62/Maamedia_Data-Wiki_Logo.png',
+//    'newswiki' => '/images/a/a2/Maamedia_News-logo2.png',
+//    'outreachwiki' => '/images/8/8f/Maamedia_Outreach-2.png',
+//    'stewardwiki' => '/images/1/1a/Maamedia_Logo.png',
+    'enwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+//    'eswiki' => '/images/b/b0/Masymanwiki_Logo.png',
+      'fiwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+//    'frwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+//    'idwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+//    'dewiki' => '/images/b/b0/Masymanwiki_Logo.png',
+//    'nowiki' => '/images/b/b0/Masymanwiki_Logo.png',
+//    'svwiki' => '/images/b/b0/Masymanwiki_Logo.png',
 ],
 
-'wgFooterIcons' => [
-    'poweredby' => [ 
-        'mediawiki' => [
-            'src' => '../resources/assets/poweredby_mediawiki_88x31.png',
-            'srcset' => '../resources/assets/poweredby_mediawiki_88x31.png',
-            'height' => '31',
-            'width' => '88',
-        ],
-    ],
-],
 
-// UPO means: this is also a user preference option
-'wgEnableEmail' => [
-    'default' => true,
-],
 
-'wgEnableUserEmail' => [
-    'default' => true,
-],
-
-'wgEmergencyContact' => [
-    'default' => 'stewards@maantietaja.org',
-],
-
-'wgPasswordSender' => [
-    'default' => 'wiki@maantietaja.org',
-],
-
-'wgEnotifUserTalk' => [
-    'default' => true,
-],
-
-'wgEnotifWatchlist' => [
-    'default' => false,
-],
-
-'wgEmailAuthentication' => [
-    'default' => true,
-],
-
- 
-// Copyright //
+// Copyright
 'wgRightsPage' => [
     'default' => '',
-],
-
-'wgRightsUrl' => [
-    'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
-],
-
-'wgRightsText' => [
-    'default' => 'Creative Commons Atribusi Berbagi Serupa',
-],
-
-'wgRightsIcon' => [
-    'default' => '/resources/assets/cc.png',
 ],
 
 'wgDiff3' => [
     'default' => '/usr/bin/diff3',
 ],
 
-'wgDefaultSkin' => [
-    'default' => 'vector',
-],
 
 'wgEnableUploads' => [
     'default' => true,
@@ -937,90 +1130,411 @@ $wgConf->settings = [
     'default' => 'en_US.utf8',
 ],
 
-// Others //
-'wgEdititis' => [
-    'default' => true,
+
+
+// Thumbnail prerendering at upload time
+'wgUploadThumbnailRenderMap' => [
+	'default' => [ 320, 640, 800, 1024, 1280, 1920 ],
+	'private' => [],
 ],
 
-'wgWatchlistExpiry' => [
+'wgUploadThumbnailRenderMethod' => [
+	'default' => 'http',
+],
+
+'wgWPBEnablePageImagesBanners' => [
+	'default' => false,
+],
+
+'wgWPBEnableHeadingOverride' => [
 	'default' => true,
 ],
 
-
-'wgUseCodeReview' => [
-	'default' => false,
-	'maantiet_metawiki' => true,
-],
-
-'wgCodeReviewMaxDiffPaths' => [
-    'default' => 100,
-],
-
-'wgMinervaAlwaysShowLanguageButton' => [
+// Email //
+'wgEnableEmail' => [
     'default' => true,
 ],
 
+'wgEnableUserEmail' => [
+    'default' => true,
+],
+
+'wgEmergencyContact' => [
+    'default' => 'stewards@maamedia.org',
+],
+
+'wgPasswordSender' => [
+    'default' => 'wiki@maamedia.org',
+],
+
+'wgEnotifUserTalk' => [
+    'default' => true,
+],
+
+'wgEnotifWatchlist' => [
+    'default' => true,
+],
+
+'wgEmailAuthentication' => [
+    'default' => true,
+],
+
+'wgUserEmailUseReplyTo' => [
+    'default' => true,
+],
+'wgEnableUserEmailBlacklist' => [
+    'default' => true,
+],
+
+'wgEnotifUserTalk' => [
+    'default' => true,
+],
+
+'wgEnotifRevealEditorAddress' => [
+    'default' => true,
+],
+
+'wgEnotifFromEditor' => [
+    'default' => true,
+],
+
+'wgNoReplyAddress' => [
+    'default' => 'wiki@maamedia.org',
+
+],
+
+'wgEmergencyContact' => [
+    'default' => 'stewards@maamedia.org',
+],
+
+'wgEnotifImpersonal' => [
+    'default' => true,
+],
+
+
 // Namespace //
 
-'wgRemoveGroups' => [
-    'default' => '',
-    'maantiet_metawiki' => [
-        'bureaucrat' => [
-            'sysop'
-            ],
-    ],
+'wgSiteNotice' => [
+    'default' => 'We would to reboot the wiki, please logout for solutions. Thanks for attentions',
 ],
 
-// Restriction types
+// Permissions
+'wgAddGroups' => [
+	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
+	// changes to the default across all overrides --Andrew 2009-04-28
+	'default' => [
+		'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'reviewer', 'editor', 'flow-bot' , 'ipblock-exempt', 'translation-admin'],
+		'sysop' => [ 'rollbacker', 'editor', 'reviewer', 'confirmed', 'autoreview' ],
+		],
+		
+	'+commonswiki' => [
+	    'checkuser' => [ 'ipblock-exempt' ],
+	    'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'reviewer', 'editor', 'flow-bot', 'image-reviewer', 'ipblock-exempt' ],
+	    'image-reviewer' => [ 'image-reviewer' ],
+	    ],
+],
 
+'wgRemoveGroups' => [
+	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
+	// changes to the default across all overrides --Andrew 2009-04-28
+	'default' => [
+		'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bot', 'confirmed', 'flow-bot', 'editor', 'reviewer', 'ipblock-exempt', 'translation-admin' ],
+		'sysop' => [ 'autoreview', 'editor', 'rollbacker', 'confirmed' ]
+		],
+		
+	'commonswiki' => [
+	    'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bot', 'confirmed', 'flow-bot', 'editor', 'reviewer', 'ipblock-exempt', 'image-reviewer' ],
+	    'checkuser' => [ 'ipblock-exempt' ],
+	    ],
+],
+
+'+wgGroupPermissions' => [
+    'default' => [
+        '*' => [
+		    'autocreateaccount' => true,
+		    'move' => false,
+		    'abusefilter-log' => false,
+		    'abusefilter-hide-log' => false,
+		    'abusefilter-hidden-log' => false,
+		    'flow-hide' => false,
+		    'centralauth-merge' => false,
+		    'writeapi' => false,
+		    'codereview-use' => false,
+		    'move' => false,
+		    'createtalk' => false,
+		    'abusefilter-view' => false,
+		],
+		'user' => [
+		    'codereview-add-tag' => false,
+		    'reupload-shared' => false,
+		    'changetags' => false,
+		    'editcontentmodel' => false,
+		    'torunblocked' => false,
+		    'codereview-set-status' => false,
+		    'move-rootuserpages' => false,
+		    'move-categorypages' => false,
+		    'reupload' => false,
+		    'mwoauthmanagemygrants' => false,
+		    'codereview-link-user' => false,
+		    'codereview-remove-tag' => false,
+		    'movefile' => false,
+		    'flow-lock' => false,
+		    'codereview-signoff' => false,
+		    'move' => false,
+		    'autocreateaccount' => true,
+		    'createaccount' => false,
+		    'noratelimit' => false,
+		    'noratelimit' => false,
+		    'noratelimit' => false,
+		    'noratelimit' => false,
+		],
+        'autoconfirmed' => [
+		    'autoconfirmed' => true,
+		    'abusefilter-log-detail' => true,
+		    'transcode-reset' => true,
+		    'skipcaptcha' => true,
+		    'autopatrol' => true,true
+		],
+		'bot' => [
+		    'autoreview' => false,
+		    'noratelimit' => true,
+		    'changetags' => true,
+		    'move-rootuserpages' => true,
+		],
+		'rollbacker' => [
+		    'rollback' => true,
+		],
+		'checkuser' => [
+		    'oathauth-enable' => true,
+		    'abusefilter-privatedetails' => true,
+		    'abusefilter-privatedetails-log' => true,
+		    'checkuser-log' => true,
+		    'checkuser' => true,
+		],
+		'sysop' => [
+		    'abusefilter-log' => true,
+		    'oathauth-verify-user' => false,
+		    'unblockself' => false,
+		    'newsletter-restore' => false,
+		    'newsletter-create' => true,
+		    'reupload-own' => true,
+		    'edituser-exempt' => false,
+		    'override-antispoof' => true,
+		    'newsticker' => false,
+		    'advancedmeta-edit' => false,
+		    'centralnotice-admin' => false,
+		    'oathauth-disable-for-user' => false,
+		],
+		'bureaucrat' => [
+		    'override-antispoof' => true,
+		    'renameuser' => false,
+		    'userrights' => false,
+		    'edituser' => false,
+		    'protectsite' => false,
+		    'advancedmeta-edit' => false,
+		],
+		'ipblock-exempt' => [
+		    'ipblock-exempt' => true,
+		    'torunblocked' => true,
+		],
+	],
+	'metawiki' => [
+        'centralnoticeadmin' => [
+            'centralnotice-admin' => true,
+		    'autoreview' => true,
+		    'editinterface' => true,
+		    'noratelimit' => true,
+		    'protect' => true,
+		    'oathauth-enable' => true,
+		    'banner-protect' => true,
+        ],
+        'transwiki' => [
+            'oathauth-enable' => true,
+            'import' => true,
+        ],
+        'steward' => [
+            'renameuser' => true,
+		    'globalblock' => true,
+		    'globalgrouppermissions' => true,
+		    'globalgroupmembership' => true,
+		    'centralauth-lock' => true,
+		    'browsearchive' => true,
+		    'centralauth-usermerge' => true,
+		    'centralauth-rename' => true,
+		    'centralauth-unmerge' => true,
+		    'centralauth-merge' => true,
+		    'centralauth-oversight' => true,
+		    'userrights' => true,
+		    'userrights-interwiki' => true,
+		    'centralauth-createlocal' => true,
+		    'noratelimit' => true,
+		    'oathauth-verify-user' => true,
+		    'abusefilter-privatedetails' => true,
+		    'bigdelete' => true,
+		    'abusefilter-modify-global' => true,
+		    'oathauth-view-log' => true,
+		  ],
+		 'ipblock-exempt' => [
+		     'ipblock-exempt' => true,
+		     'torunblocked' => true,
+		  ], 
+		 'checkuser' => [
+		     'oathauth-enable' => true,
+		     'abusefilter-privatedetails' => true,
+		     'abusefilter-privatedetails-log' => true
+		  ],
+		  
+		  'autopatroller' => [
+		      'autopatrol' => true,
+		      
+		  ],
+		  'translation-admin' => [
+		      'pagelang' => true,
+		      'translate-manage' => true,
+		      'oathauth-enable' => true,
+		      'autopatrol' => true,
+		      'translate-import' => true,
+		      'pagetranslation' => true,
+		      'banner-protect' => true,
+ 		  ],
+ 		  
+ 		  'confirmed' => [
+ 		      'editsemiprotected' => true,
+ 		      'move' => true,
+ 		      'autoconfirmed' => true,
+ 		      'skipcaptcha' => true,
+ 		      'transcode-reset' => true,
+ 		      'abusefilter-log-detail' => true,
+ 		 ],
+ 		 
+ 		 'interface-admin' => [
+ 		     'oathauth-enable' => true,
+ 		 ],
+ 		 
+ 		 'oauthadmin' => [
+ 		     'oathauth-enable' => true,
+ 		     'autopatrol' => true,
+ 		     'mwoauthmanageconsumer' => true,
+ 		 ],
+ 		 
+ 		 'suppress' => [
+ 		     'oathauth-enable' => true,
+ 		 ],
+ 		 
+ 		 'patroller' => [
+ 		     'autopatrol' => true,
+ 		     'patrol' => true,
+ 		     'rollback' => true,
+ 		     'patrolmarks' => true,
+ 		 ],
+    ],
+	'codewiki' => [
+        'database-admin' => [
+		    'autocreateaccount' => true,
+        ],
+        'sysop' => [
+		    'edit' => true,
+        ],
+    ],
+	'commonswiki' => [
+        'filemover' => [
+            'movefile' => true,
+		    'suppressredirect' => true,
+        ],
+        'autopatrolled' => [
+            'mass-upload' => true,
+		    'move-rootuserpages' => true,
+        ],
+        'image-reviewer' => [
+            'mass-upload' => true,
+		    'move-rootuserpages' => true,
+            'autopatrol' => true,
+            'patrol' => true,
+        ],
+        'confirmed' => [
+            'flow-edit-post' => true,
+		    'editsemiprotected' => true,
+		    'move' => true,
+		    'autoconfirmed' => true,
+		    'reupload' => true,
+		    'skipcaptcha' => true,
+		    'transcode-reset' => true,
+		    'upload' => true,
+		    'abusefilter-log-detail' => true,
+        ],
+    ],
+//    'enwiki' => [
+//        'transwiki' => [
+//            'oathauth-enable' => true,
+//            'import' => true,
+//        ],
+//    ],
+	'loginwiki' => [
+        '*' => [
+		    'createaccount' => false,
+        ],
+    ],
+//	'stewardwiki' => [
+//        '*' => [
+//		    'createaccount' => false,
+//        ],
+//        'user' => [
+//		    'createaccount' => false,
+//        ],
+//    ],
+],
+
+'+wgRevokePermissions' => [
+    'default' => [],
+	'codewiki' => [
+        '*' => [
+		    'edit' => true,
+        ],
+        'user' => [
+		    'edit' => true,
+        ],
+    ],
+//    'annotationwiki' => [
+//        '*' => [
+//		    'edit' => true,
+//		    'createaccount' => true,
+//		    'createpage' => true,
+//		    'createtalk' => true,
+//        ],
+//        'user' => [
+//		    'edit' => true,
+//        ],
+//    ],
+	'loginwiki' => [
+        '*' => [
+		    'edit' => true,
+        ],
+        'user' => [
+		    'edit' => true,
+        ],
+    ],
+//	'stewardwiki' => [
+//        '*' => [
+//		    'edit' => true,
+//		    'read' => true,
+//		    'autocreateaccount' => false,
+//        ],
+//        'user' => [
+//		    'edit' => true,
+//		    'read' => true,
+//		    'autocreateaccount' => true,
+//        ],
+//    ],
+],
 
 'wgRestrictionLevels' => [
-    'default' => [
-        'user' 
-        ],
-    'maantiet_metawiki' => [
-        '',
-        'user',
-        'autoconfirmed',
-        'sysop',
-        'bureaucrat',
-        'steward',
-    ],
-],
-'wgRestrictionTypes' => [
-    'default' => [
-        'read',
-        'create',
-        'edit',
-        'move',
-        'upload',
-        'delete',
-        'protect',
-        ],
-    'maantiet_metawiki' => [
-        'read',
-        'create',
-        'edit',
-        'move',
-        'upload',
-        'delete',
-        'protect',
-    ],
-],
-'wgCascadingRestrictionLevels' => [
-    'default' => [
-        'sysop',
-        'bureaucrat',
-        'steward',
-        ],
-    'maantiet_metawiki' => [
-        'sysop',
-        'bureaucrat',
-        'steward',
-    ],
+	'default' => [
+		'',
+		'autoconfirmed', // semi-protection level on
+		'sysop',
+	],
+        'metawiki' => [ '', 'autoconfirmed', 'autopatrol', 'patrol', 'rollback', 'bot', 'sysop' ],
 ],
 
-'wgSiteNotice' => [
-    'default' => 'Hello All Visitor, We have a new Development [[:wiki:|wiki]], [[:community:|community]], [[:beta:|beta]], [[:meta:|meta]]',
-],
+
 ];
