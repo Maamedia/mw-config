@@ -1,5 +1,5 @@
 <?php
-// MW-Setting
+// MW-Setting ss
 $wgConf->settings = [
 'wgServer' => [
     // if you want to allow also usage of https, just use '//localhost'
