@@ -44,6 +44,7 @@ wfLoadExtensions( [
 	'GuidedTour',
 	'Graph',
 	'HoverGallery',
+	'InputBox',
 //      'JsonConfig',
 //	'Kartographer',
 	'MassMessage',
