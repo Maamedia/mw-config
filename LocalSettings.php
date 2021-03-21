@@ -171,20 +171,3 @@ $wgGroupPermissions['steward']['userrights'] = true;
 $wgGroupPermissions['steward']['userrights-interwiki'] = true;
 $wgGroupPermissions['steward']['interwiki'] = true;
 # $wgGroupPermissions['steward']['centralauth-lock'] = true;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
