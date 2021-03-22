@@ -23,6 +23,19 @@ if ( $wikiId == 'loginwiki' ) {
 } elseif ( $wikiId == 'enwiki' ) {  
     $wgSecretKey = $wgSecretKeyenwiki;
     $wgUpgradeKey = $wgUpgradeKeyenwiki;
+    // Wikibase
+    $wgEnableWikibaseRepo = false;
+    $wgEnableWikibaseClient = true;
+    require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
+    require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
+    $wgWBClientSettings['repoUrl'] = 'https://data.maamedia.org';
+    $wgWBClientSettings['repoScriptPath'] = '';
+    $wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
+    $wgWBClientSettings['repositories']['']['repoDatabase'] = 'datawiki';
+    $wgWBClientSettings['repositories']['']['changesDatabase'] = 'datawiki';
+    $wgWBClientSettings['siteLinkGroups'] = [ 'datawiki' ];
+    $wgWBClientSettings['siteGlobalID'] = 'enwiki';
+
 } elseif ( $wikiId == 'eswiki' ) {  
     $wgSecretKey = $wgSecretKeyeswiki;
     $wgUpgradeKey = $wgUpgradeKeyeswiki;
@@ -57,6 +70,6 @@ if ( $wikiId == 'loginwiki' ) {
     $wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
     $wgWBClientSettings['repositories']['']['repoDatabase'] = 'datawiki';
     $wgWBClientSettings['repositories']['']['changesDatabase'] = 'datawiki';
-    $wgWBClientSettings['siteLinkGroups'] = [ 'Wikidata' ];
+    $wgWBClientSettings['siteLinkGroups'] = [ 'datawiki' ];
     $wgWBClientSettings['siteGlobalID'] = 'en';
 }
