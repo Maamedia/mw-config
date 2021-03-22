@@ -1215,7 +1215,7 @@ $wgConf->settings = [
 // Namespace //
 
 'wgSiteNotice' => [
-    'default' => 'We would to reboot the wiki, please logout for solutions. Thanks for attentions',
+    'default' => '',
 ],
 
 // Permissions
