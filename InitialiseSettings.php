@@ -1215,7 +1215,7 @@ $wgConf->settings = [
 // Namespace //
 
 'wgSiteNotice' => [
-    'default' => '',
+    'default' => 'If you have bug or problem, please wait we still maintenance!',
 ],
 
 // Permissions
