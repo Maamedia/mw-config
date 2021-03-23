@@ -31,7 +31,7 @@ wfLoadExtensions( [
 	'Linter',
 	'Echo',
 	'EditUser',
-//	'EntitySchema',
+	'EntitySchema',
 	'Gadgets',
 	'Elastica',
 	'EventLogging',
