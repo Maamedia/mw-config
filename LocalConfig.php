@@ -11,6 +11,23 @@ if ( $wikiId == 'loginwiki' ) {
     $wgEnableWikibaseClient = false;
     require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
     require_once "$IP/extensions/Wikibase/repo/ExampleSettings.php";
+    $wgWBRepoSettings['siteLinkGroups'] = [ 'datawiki' ];
+    $wgLocalDatabases = $wgWBRepoSettings['localClientDatabases'] = [
+    'metawiki',
+    'loginwiki',
+    'stewardwiki',
+    'testwiki',
+    'codewiki',
+    'commonswiki',
+    'datawiki',
+    'enwiki',
+    'eswiki',
+    'dewiki',
+    'idwiki',
+    'fiwiki',
+    'svwiki',
+    'nowiki',
+    ];
 } elseif ( $wikiId == 'testwiki' ) {  
     $wgSecretKey = $wgSecretKeytestwiki;
     $wgUpgradeKey = $wgUpgradeKeytestwiki;
@@ -29,6 +46,7 @@ if ( $wikiId == 'loginwiki' ) {
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['repoUrl'] = 'https://data.maamedia.org';
+    $wgWBClientSettings['repoSiteName'] = 'datawiki';
     $wgWBClientSettings['repoScriptPath'] = '';
     $wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
     $wgWBClientSettings['repositories']['']['repoDatabase'] = 'datawiki';
