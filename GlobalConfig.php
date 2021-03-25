@@ -11,36 +11,3 @@ include('/var/www/privateinfo.php');
     $wgWBClientSettings['repositories']['']['changesDatabase'] = 'datawiki';
     $wgWBClientSettings['siteLinkGroups'] = [ 'datawiki' ];
     $wgWBClientSettings['TOOLBAR'] = [ 'Wiki' ];
-$wgLocalDatabases = $wgWBRepoSettings['localClientDatabases'] = [
-    'metawiki',
-    'loginwiki',
-    'stewardwiki',
-    'testwiki',
-    'codewiki',
-    'commonswiki',
-    'datawiki',
-    'enwiki',
-    'eswiki',
-    'dewiki',
-    'idwiki',
-    'fiwiki',
-    'svwiki',
-    'nowiki',
-];
-$wgExtraInterlanguageLinkPrefixes = [
-    'metawiki',
-    'loginwiki',
-    'stewardwiki',
-    'testwiki',
-    'codewiki',
-    'commonswiki',
-    'datawiki',
-    'enwiki',
-    'eswiki',
-    'dewiki',
-    'idwiki',
-    'fiwiki',
-    'svwiki',
-    'nowiki',
-];
-
