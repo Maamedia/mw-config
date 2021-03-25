@@ -41,17 +41,6 @@ if ( $wikiId == 'loginwiki' ) {
     $wgSecretKey = $wgSecretKeyenwiki;
     $wgUpgradeKey = $wgUpgradeKeyenwiki;
     // Wikibase
-    $wgEnableWikibaseRepo = false;
-    $wgEnableWikibaseClient = true;
-    require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
-    require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
-    $wgWBClientSettings['repoUrl'] = 'https://data.maamedia.org';
-    $wgWBClientSettings['repoSiteName'] = 'datawiki';
-    $wgWBClientSettings['repoScriptPath'] = '';
-    $wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
-    $wgWBClientSettings['repositories']['']['repoDatabase'] = 'datawiki';
-    $wgWBClientSettings['repositories']['']['changesDatabase'] = 'datawiki';
-    $wgWBClientSettings['siteLinkGroups'] = [ 'datawiki' ];
     $wgWBClientSettings['siteGlobalID'] = 'en';
 
 } elseif ( $wikiId == 'eswiki' ) {  
@@ -64,16 +53,6 @@ if ( $wikiId == 'loginwiki' ) {
     $wgSecretKey = $wgSecretKeyidwiki;
     $wgUpgradeKey = $wgUpgradeKeyidwiki;
     // Wikibase
-    $wgEnableWikibaseRepo = false;
-    $wgEnableWikibaseClient = true;
-    require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
-    require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
-    $wgWBClientSettings['repoUrl'] = 'https://data.maamedia.org';
-    $wgWBClientSettings['repoScriptPath'] = '';
-    $wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
-    $wgWBClientSettings['repositories']['']['repoDatabase'] = 'datawiki';
-    $wgWBClientSettings['repositories']['']['changesDatabase'] = 'datawiki';
-    $wgWBClientSettings['siteLinkGroups'] = [ 'datawiki' ];
     $wgWBClientSettings['siteGlobalID'] = 'id';
 
 } elseif ( $wikiId == 'fiwiki' ) {  
@@ -91,16 +70,5 @@ if ( $wikiId == 'loginwiki' ) {
 } else { #metawiki  
     $wgSecretKey = $wgSecretKeymetawiki;
     $wgUpgradeKey = $wgUpgradeKeymetawiki;
-
-    $wgEnableWikibaseRepo = false;
-    $wgEnableWikibaseClient = true;
-    require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
-    require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
-    $wgWBClientSettings['repoUrl'] = 'https://data.maamedia.org';
-    $wgWBClientSettings['repoScriptPath'] = '';
-    $wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
-    $wgWBClientSettings['repositories']['']['repoDatabase'] = 'datawiki';
-    $wgWBClientSettings['repositories']['']['changesDatabase'] = 'datawiki';
-    $wgWBClientSettings['siteLinkGroups'] = [ 'datawiki' ];
     $wgWBClientSettings['siteGlobalID'] = 'meta';
 }
