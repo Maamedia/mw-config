@@ -28,6 +28,22 @@ if ( $wikiId == 'loginwiki' ) {
     'svwiki',
     'nowiki',
     ];
+    $wgExtraInterlanguageLinkPrefixes = [
+    'metawiki',
+    'loginwiki',
+    'stewardwiki',
+    'testwiki',
+    'codewiki',
+    'commonswiki',
+    'datawiki',
+    'enwiki',
+    'eswiki',
+    'dewiki',
+    'idwiki',
+    'fiwiki',
+    'svwiki',
+    'nowiki',
+    ];
 } elseif ( $wikiId == 'testwiki' ) {  
     $wgSecretKey = $wgSecretKeytestwiki;
     $wgUpgradeKey = $wgUpgradeKeytestwiki;
