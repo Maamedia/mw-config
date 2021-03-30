@@ -7,6 +7,10 @@ if ( $wikiId == 'loginwiki' ) {
 } elseif ( $wikiId == 'datawiki' ) {
     $wgSecretKey = $wgSecretKeydatawiki;
     $wgUpgradeKey = $wgUpgradeKeydatawiki;
+    wfLoadExtension( 'WikibaseMediaInfo' );
+    wfLoadExtension( 'WikibaseCirrusSearch' );
+    wfLoadExtension( 'WikibaseLexeme' );
+    wfLoadExtension( 'WikibaseQualityConstraints' );
     $wgEnableWikibaseRepo = true;
     $wgEnableWikibaseClient = false;
     require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
