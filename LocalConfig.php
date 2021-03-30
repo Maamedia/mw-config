@@ -14,7 +14,7 @@ if ( $wikiId == 'loginwiki' ) {
     $wgEnableWikibaseClient = false;
     require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
     require_once "$IP/extensions/Wikibase/repo/ExampleSettings.php";
-    $wgWBRepoSettings['siteLinkGroups'] = [ 'datawiki' ];
+    $wgWBRepoSettings['siteLinkGroups'] = [ 'Datawiki' ];
     $wgLocalDatabases = $wgWBRepoSettings['localClientDatabases'] = [
     'metawiki',
     'loginwiki',
@@ -64,7 +64,7 @@ if ( $wikiId == 'loginwiki' ) {
     $wgEnableWikibaseClient = false;
     require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
     require_once "$IP/extensions/Wikibase/repo/ExampleSettings.php";
-    $wgWBRepoSettings['siteLinkGroups'] = [ 'Commonswiki' ];
+    $wgWBRepoSettings['siteLinkGroups'] = [ 'Datawiki' ];
     $wgLocalDatabases = $wgWBRepoSettings['localClientDatabases'] = [
     'metawiki',
     'loginwiki',
