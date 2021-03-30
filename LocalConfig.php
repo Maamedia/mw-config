@@ -4,6 +4,7 @@ include('/var/www/privateinfo.php');
 if ( $wikiId == 'loginwiki' ) {
     $wgSecretKey = $wgSecretKeyloginwiki;
     $wgUpgradeKey = $wgUpgradeKeyloginwiki;
+    $wgWBClientSettings['siteGlobalID'] = 'login';
 } elseif ( $wikiId == 'datawiki' ) {
     $wgSecretKey = $wgSecretKeydatawiki;
     $wgUpgradeKey = $wgUpgradeKeydatawiki;
@@ -15,6 +16,7 @@ if ( $wikiId == 'loginwiki' ) {
     require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
     require_once "$IP/extensions/Wikibase/repo/ExampleSettings.php";
     $wgWBRepoSettings['siteLinkGroups'] = [ 'Datawiki' ];
+    $wgWBClientSettings['siteGlobalID'] = 'data';
     $wgLocalDatabases = $wgWBRepoSettings['localClientDatabases'] = [
     'metawiki',
     'loginwiki',
@@ -50,12 +52,15 @@ if ( $wikiId == 'loginwiki' ) {
 } elseif ( $wikiId == 'testwiki' ) {  
     $wgSecretKey = $wgSecretKeytestwiki;
     $wgUpgradeKey = $wgUpgradeKeytestwiki;
+    $wgWBClientSettings['siteGlobalID'] = 'test';
 } elseif ( $wikiId == 'codewiki' ) {  
     $wgSecretKey = $wgSecretKeycodewiki;
     $wgUpgradeKey = $wgUpgradeKeycodewiki;
+    $wgWBClientSettings['siteGlobalID'] = 'code';
 } elseif ( $wikiId == 'commonswiki' ) {  
     $wgSecretKey = $wgSecretKeycommonswiki;
     $wgUpgradeKey = $wgUpgradeKeycommonswiki;
+    $wgWBClientSettings['siteGlobalID'] = 'commons';
     wfLoadExtension( 'WikibaseMediaInfo' );
     wfLoadExtension( 'WikibaseCirrusSearch' );
     wfLoadExtension( 'WikibaseLexeme' );
@@ -151,7 +156,7 @@ if ( $wikiId == 'loginwiki' ) {
     $wgEnableWikibaseClient = true;
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
-    $wgWBClientSettings['siteGlobalID'] = 'fi';
+    $wgWBClientSettings['siteGlobalID'] = 'sv';
 } elseif ( $wikiId == 'nowiki' ) {  
     $wgSecretKey = $wgSecretKeynowiki;
     $wgUpgradeKey = $wgUpgradeKeynowiki;
