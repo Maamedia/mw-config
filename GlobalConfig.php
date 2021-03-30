@@ -4,5 +4,5 @@ $wgWBClientSettings['repoScriptPath'] = '';
 $wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
 $wgWBClientSettings['repositories']['']['repoDatabase'] = 'datawiki';
 $wgWBClientSettings['repositories']['']['changesDatabase'] = 'datawiki';
-$wgWBClientSettings['siteLinkGroups'] = [ 'datawiki' ];
+$wgWBClientSettings['siteLinkGroups'] = [ 'Datawiki' ];
 $wgWBClientSettings['TOOLBAR'] = [ 'Wiki' ];
