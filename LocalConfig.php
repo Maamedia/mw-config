@@ -66,7 +66,7 @@ if ( $wikiId == 'loginwiki' ) {
     wfLoadExtension( 'WikibaseLexeme' );
     wfLoadExtension( 'WikibaseQualityConstraints' );
     $wgEnableWikibaseRepo = true;
-    $wgEnableWikibaseClient = false;
+    $wgEnableWikibaseClient = true;
     require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
     require_once "$IP/extensions/Wikibase/repo/ExampleSettings.php";
     $wgWBRepoSettings['siteLinkGroups'] = [ 'Datawiki' ];
