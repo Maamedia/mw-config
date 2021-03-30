@@ -53,6 +53,43 @@ if ( $wikiId == 'loginwiki' ) {
 } elseif ( $wikiId == 'commonswiki' ) {  
     $wgSecretKey = $wgSecretKeycommonswiki;
     $wgUpgradeKey = $wgUpgradeKeycommonswiki;
+    $wgEnableWikibaseRepo = true;
+    $wgEnableWikibaseClient = false;
+    require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
+    require_once "$IP/extensions/Wikibase/repo/ExampleSettings.php";
+    $wgWBRepoSettings['siteLinkGroups'] = [ 'Commonswiki' ];
+    $wgLocalDatabases = $wgWBRepoSettings['localClientDatabases'] = [
+    'metawiki',
+    'loginwiki',
+    'stewardwiki',
+    'testwiki',
+    'codewiki',
+    'commonswiki',
+    'datawiki',
+    'enwiki',
+    'eswiki',
+    'dewiki',
+    'idwiki',
+    'fiwiki',
+    'svwiki',
+    'nowiki',
+    ];
+    $wgExtraInterlanguageLinkPrefixes = [
+    'metawiki',
+    'loginwiki',
+    'stewardwiki',
+    'testwiki',
+    'codewiki',
+    'commonswiki',
+    'datawiki',
+    'enwiki',
+    'eswiki',
+    'dewiki',
+    'idwiki',
+    'fiwiki',
+    'svwiki',
+    'nowiki',
+    ];
 } elseif ( $wikiId == 'enwiki' ) {  
     $wgSecretKey = $wgSecretKeyenwiki;
     $wgUpgradeKey = $wgUpgradeKeyenwiki;
