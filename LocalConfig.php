@@ -4,7 +4,7 @@ include('/var/www/privateinfo.php');
 if ( $wikiId == 'loginwiki' ) {
     $wgSecretKey = $wgSecretKeyloginwiki;
     $wgUpgradeKey = $wgUpgradeKeyloginwiki;
-    $wgWBClientSettings['siteGlobalID'] = 'login';
+    $wgWBClientSettings['siteGlobalID'] = 'loginwiki';
 } elseif ( $wikiId == 'datawiki' ) {
     $wgSecretKey = $wgSecretKeydatawiki;
     $wgUpgradeKey = $wgUpgradeKeydatawiki;
@@ -16,7 +16,7 @@ if ( $wikiId == 'loginwiki' ) {
     require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
     require_once "$IP/extensions/Wikibase/repo/ExampleSettings.php";
     $wgWBRepoSettings['siteLinkGroups'] = [ 'Datawiki' ];
-    $wgWBClientSettings['siteGlobalID'] = 'data';
+    $wgWBClientSettings['siteGlobalID'] = 'datawiki';
     $wgLocalDatabases = $wgWBRepoSettings['localClientDatabases'] = [
     'metawiki',
     'loginwiki',
@@ -52,15 +52,15 @@ if ( $wikiId == 'loginwiki' ) {
 } elseif ( $wikiId == 'testwiki' ) {  
     $wgSecretKey = $wgSecretKeytestwiki;
     $wgUpgradeKey = $wgUpgradeKeytestwiki;
-    $wgWBClientSettings['siteGlobalID'] = 'test';
+    $wgWBClientSettings['siteGlobalID'] = 'testwiki';
 } elseif ( $wikiId == 'codewiki' ) {  
     $wgSecretKey = $wgSecretKeycodewiki;
     $wgUpgradeKey = $wgUpgradeKeycodewiki;
-    $wgWBClientSettings['siteGlobalID'] = 'code';
+    $wgWBClientSettings['siteGlobalID'] = 'codewiki';
 } elseif ( $wikiId == 'commonswiki' ) {  
     $wgSecretKey = $wgSecretKeycommonswiki;
     $wgUpgradeKey = $wgUpgradeKeycommonswiki;
-    $wgWBClientSettings['siteGlobalID'] = 'commons';
+    $wgWBClientSettings['siteGlobalID'] = 'commonswiki';
     wfLoadExtension( 'WikibaseMediaInfo' );
     wfLoadExtension( 'WikibaseCirrusSearch' );
     wfLoadExtension( 'WikibaseLexeme' );
@@ -110,7 +110,7 @@ if ( $wikiId == 'loginwiki' ) {
     $wgEnableWikibaseClient = true;
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
-    $wgWBClientSettings['siteGlobalID'] = 'en';
+    $wgWBClientSettings['siteGlobalID'] = 'enwiki';
 
 } elseif ( $wikiId == 'eswiki' ) {  
     $wgSecretKey = $wgSecretKeyeswiki;
@@ -120,7 +120,7 @@ if ( $wikiId == 'loginwiki' ) {
     $wgEnableWikibaseClient = true;
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
-    $wgWBClientSettings['siteGlobalID'] = 'es';
+    $wgWBClientSettings['siteGlobalID'] = 'eswiki';
 } elseif ( $wikiId == 'dewiki' ) {  
     $wgSecretKey = $wgSecretKeydewiki;
     $wgUpgradeKey = $wgUpgradeKeydewiki;
@@ -129,7 +129,7 @@ if ( $wikiId == 'loginwiki' ) {
     $wgEnableWikibaseClient = true;
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
-    $wgWBClientSettings['siteGlobalID'] = 'de';
+    $wgWBClientSettings['siteGlobalID'] = 'dewiki';
 } elseif ( $wikiId == 'idwiki' ) {  
     $wgSecretKey = $wgSecretKeyidwiki;
     $wgUpgradeKey = $wgUpgradeKeyidwiki;
@@ -138,7 +138,7 @@ if ( $wikiId == 'loginwiki' ) {
     $wgEnableWikibaseClient = true;
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
-    $wgWBClientSettings['siteGlobalID'] = 'id';
+    $wgWBClientSettings['siteGlobalID'] = 'idwiki';
 } elseif ( $wikiId == 'fiwiki' ) {  
     $wgSecretKey = $wgSecretKeyfiwiki;
     $wgUpgradeKey = $wgUpgradeKeyfiwiki;
@@ -147,7 +147,7 @@ if ( $wikiId == 'loginwiki' ) {
     $wgEnableWikibaseClient = true;
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
-    $wgWBClientSettings['siteGlobalID'] = 'fi';
+    $wgWBClientSettings['siteGlobalID'] = 'fiwiki';
 } elseif ( $wikiId == 'svwiki' ) {  
     $wgSecretKey = $wgSecretKeysvwiki;
     $wgUpgradeKey = $wgUpgradeKeysvwiki;
@@ -156,7 +156,7 @@ if ( $wikiId == 'loginwiki' ) {
     $wgEnableWikibaseClient = true;
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
-    $wgWBClientSettings['siteGlobalID'] = 'sv';
+    $wgWBClientSettings['siteGlobalID'] = 'svwiki';
 } elseif ( $wikiId == 'nowiki' ) {  
     $wgSecretKey = $wgSecretKeynowiki;
     $wgUpgradeKey = $wgUpgradeKeynowiki;
@@ -165,12 +165,12 @@ if ( $wikiId == 'loginwiki' ) {
     $wgEnableWikibaseClient = true;
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
-    $wgWBClientSettings['siteGlobalID'] = 'no';
+    $wgWBClientSettings['siteGlobalID'] = 'nowiki';
 } elseif ( $wikiId == 'stewardwiki' ) {  
     $wgSecretKey = $wgSecretKeystewardwiki;
     $wgUpgradeKey = $wgUpgradeKeystewardwiki;
 } else { #metawiki  
     $wgSecretKey = $wgSecretKeymetawiki;
     $wgUpgradeKey = $wgUpgradeKeymetawiki;
-    $wgWBClientSettings['siteGlobalID'] = 'meta';
+    $wgWBClientSettings['siteGlobalID'] = 'metawiki';
 }
