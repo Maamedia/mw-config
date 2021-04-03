@@ -5,57 +5,35 @@ $wgConf->settings = [
     // if you want to allow also usage of https, just use '//localhost'
     // and set 'http://localhost' at 'wgCanonicalServer'
     'default' => 'https://localhost',
-    'metawiki' => 'https://meta.maamedia.org',
-    'loginwiki' => 'https://login.maamedia.org',
-    'stewardwiki' => 'https://steward.maamedia.org',
-    'testwiki' => 'https://test.maamedia.org',
-    'codewiki' => 'https://code.maamedia.org',
     'commonswiki' => 'https://commons.maamedia.org',
     'datawiki' => 'https://data.maamedia.org',
+    'metawiki' => 'https://meta.maamedia.org',
     'enwiki' => 'https://en.masymanwiki.org',
-    'eswiki' => 'https://es.masymanwiki.org',
-    'dewiki' => 'https://de.masymanwiki.org',
-    'idwiki' => 'https://id.masymanwiki.org',
     'fiwiki' => 'https://fi.masymanwiki.org',
-    'svwiki' => 'https://sv.masymanwiki.org',
-    'nowiki' => 'https://no.masymanwiki.org',
+    'idwiki' => 'https://id.masymanwiki.org',
 ],
 'wgCanonicalServer' => [
     'default' => 'https://localhost',
-    'metawiki' => 'https://meta.maamedia.org',
-    'loginwiki' => 'https://login.maamedia.org',
-    'stewardwiki' => 'https://steward.maamedia.org',
-    'testwiki' => 'https://test.maamedia.org',
-    'codewiki' => 'https://code.maamedia.org',
     'commonswiki' => 'https://commons.maamedia.org',
     'datawiki' => 'https://data.maamedia.org',
+    'metawiki' => 'https://meta.maamedia.org',
     'enwiki' => 'https://en.masymanwiki.org',
-    'eswiki' => 'https://es.masymanwiki.org',
-    'dewiki' => 'https://de.masymanwiki.org',
-    'idwiki' => 'https://id.masymanwiki.org',
     'fiwiki' => 'https://fi.masymanwiki.org',
-    'svwiki' => 'https://sv.masymanwiki.org',
-    'nowiki' => 'https://no.masymanwiki.org',
+    'idwiki' => 'https://id.masymanwiki.org',
 ],
 'wgSitename' => [
     'default' => '',
-    'metawiki' => 'Meta',
-    'loginwiki' => 'Login',
-    'stewardwiki' => 'Steward',
-    'testwiki' => 'Code',
-    'commonswiki' => 'Commons',
-    'enwiki' => 'Masymanwiki',
-    'eswiki' => 'Masymanwiki',
-    'dewiki' => 'Masymanwiki',
-    'idwiki' => 'Masymanwiki',
-    'fiwiki' => 'Masymanwiki',
-    'svwiki' => 'Masymanwiki',
-    'nowiki' => 'Masymanwiki',
+    'commonswiki' => 'Commons Wiki',
     'datawiki' => 'Data Wiki',
+    'metawiki' => 'Meta Wiki',
+    'enwiki' => 'English Masymanwiki',
+    'fiwiki' => 'Finnish Masymanwiki',
+    'idwiki' => 'Indonesian Masymanwiki',
 ],
 'wgLanguageCode' => [
     'default' => 'en',
     'fiwiki' => 'fi',
+    'idwiki' => 'id',
 ],
 
 'wgLocalInterwiki' => [
@@ -841,20 +819,12 @@ $wgConf->settings = [
 ],
 
 'wgCentralAuthAutoLoginWikis' => [
-    'meta.maamedia.org' => 'metawiki',
-    'login.maamedia.org' => 'loginwiki',
-    'steward.maamedia.org' => 'stewardwiki',
-    'test.maamedia.org' => 'testwiki',
-    'code.maamedia.org' => 'codewiki',
     'commons.maamedia.org' => 'commonswiki',
     'data.maamedia.org' => 'datawiki',
+    'meta.maamedia.org' => 'metawiki',
     'en.masymanwiki.org' => 'enwiki',
-    'es.masymanwiki.org' => 'eswiki',
-    'de.masymanwiki.org' => 'dewiki',
-    'id.masymanwiki.org' => 'idwiki',
     'fi.masymanwiki.org' => 'fiwiki',
-    'sv.masymanwiki.org' => 'svwiki',
-    'no.masymanwiki.org' => 'nowiki',
+    'id.masymanwiki.org' => 'idwiki',
 ],
 
 /*
@@ -1031,43 +1001,21 @@ $wgConf->settings = [
 
 'wgLogo' => [
     'default' => '/images/1/1a/Maamedia_Logo.png',
-    'metawiki' => '/images/b/bc/Wiki.png',
-    'codewiki' => '/images/5/5b/Maamedia_Code-Wiki_Logo.png',
     'commonswiki' => '/images/c/cb/Maamedia_Commons_Logo.png',
-    'communitywiki' => '/images/0/06/Maamedia_Community_logo.png',
     'datawiki' => '/images/6/62/Maamedia_Data-Wiki_Logo.png',
-//    'newswiki' => '/images/1/11/Maamedia_News-Logo.png',
-//    'outreachwiki' => '/images/b/b9/Maamedia_Outreach.png',
-//    'stewardwiki' => '/images/1/1a/Maamedia_Logo.png',
-//    'loginwiki' => '/images/1/1a/Maamedia_Logo.png',
-//    'wikiwiki' => '/images/1/1a/Maamedia_Logo.png',
-//    'enwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-//    'eswiki' => '/images/b/b0/Masymanwiki_Logo.png',
-//    'fiwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-//    'frwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-//    'idwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-//    'nowiki' => '/images/b/b0/Masymanwiki_Logo.png',
-//    'dewiki' => '/images/b/b0/Masymanwiki_Logo.png',
-//    'svwiki' => '/images/b/b0/Masymanwiki_Logo.png'
+    'metawiki' => '/images/b/bc/Wiki.png',
+    'enwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+    'fiwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+    'idwiki' => '/images/b/b0/Masymanwiki_Logo.png',
 ],
 'wgFavicon' => [
     'default' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
-    'metawiki' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
-    'codewiki' => '/images/5/5b/Maamedia_Code-Wiki_Logo.png',
     'commonswiki' => '/images/4/4a/Maamedia_Commons_Logo-2.png',
-    'communitywiki' => '/images/0/06/Maamedia_Community_logo.png',
     'datawiki' => '/images/6/62/Maamedia_Data-Wiki_Logo.png',
-//    'newswiki' => '/images/a/a2/Maamedia_News-logo2.png',
-//    'outreachwiki' => '/images/8/8f/Maamedia_Outreach-2.png',
-//    'stewardwiki' => '/images/1/1a/Maamedia_Logo.png',
+    'metawiki' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
     'enwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-//    'eswiki' => '/images/b/b0/Masymanwiki_Logo.png',
-      'fiwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-//    'frwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-//    'idwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-//    'dewiki' => '/images/b/b0/Masymanwiki_Logo.png',
-//    'nowiki' => '/images/b/b0/Masymanwiki_Logo.png',
-//    'svwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+    'fiwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+    'idwiki' => '/images/b/b0/Masymanwiki_Logo.png',
 ],
 
 
@@ -1428,14 +1376,6 @@ $wgConf->settings = [
  		     'patrolmarks' => true,
  		 ],
     ],
-	'codewiki' => [
-        'database-admin' => [
-		    'autocreateaccount' => true,
-        ],
-        'sysop' => [
-		    'edit' => true,
-        ],
-    ],
 	'commonswiki' => [
         'filemover' => [
             'movefile' => true,
@@ -1463,68 +1403,16 @@ $wgConf->settings = [
 		    'abusefilter-log-detail' => true,
         ],
     ],
-//    'enwiki' => [
-//        'transwiki' => [
-//            'oathauth-enable' => true,
-//            'import' => true,
-//        ],
-//    ],
-	'loginwiki' => [
-        '*' => [
-		    'createaccount' => false,
+    'enwiki' => [
+        'transwiki' => [
+            'oathauth-enable' => true,
+            'import' => true,
         ],
     ],
-//	'stewardwiki' => [
-//        '*' => [
-//		    'createaccount' => false,
-//        ],
-//        'user' => [
-//		    'createaccount' => false,
-//        ],
-//    ],
 ],
 
 '+wgRevokePermissions' => [
     'default' => [],
-	'codewiki' => [
-        '*' => [
-		    'edit' => true,
-        ],
-        'user' => [
-		    'edit' => true,
-        ],
-    ],
-//    'annotationwiki' => [
-//        '*' => [
-//		    'edit' => true,
-//		    'createaccount' => true,
-//		    'createpage' => true,
-//		    'createtalk' => true,
-//        ],
-//        'user' => [
-//		    'edit' => true,
-//        ],
-//    ],
-	'loginwiki' => [
-        '*' => [
-		    'edit' => true,
-        ],
-        'user' => [
-		    'edit' => true,
-        ],
-    ],
-//	'stewardwiki' => [
-//        '*' => [
-//		    'edit' => true,
-//		    'read' => true,
-//		    'autocreateaccount' => false,
-//        ],
-//        'user' => [
-//		    'edit' => true,
-//		    'read' => true,
-//		    'autocreateaccount' => true,
-//        ],
-//    ],
 ],
 
 'wgRestrictionLevels' => [
