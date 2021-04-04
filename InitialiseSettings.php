@@ -605,404 +605,338 @@ $wgConf->settings = [
 'wgDeleteRevisionsLimit' => [
 	'default' => '1000',
 ],
+	// Echo
+	'wgEchoCrossWikiNotifications' => [
+		'default' => true,
+	],
+	'wgEchoSharedTrackingDB' => [
+		'default' => 'metawiki'
+	],
+	'wgEchoUseCrossWikiBetaFeature' => [
+		'default' => true,
+	],
+	'wgEchoPerUserBlacklist' => [
+		'default' => true,
+	],
+	'wgEchoMentionStatusNotifications' => [
+		'default' => true,
+	],
+	'wgEchoEnableEmailBatch' => [
+		'default' => true,
+	],
+	'wgEchoDefaultUserSubscriptions' => [
+		'default' => [],
+	],
 
-// Echo
+	// GlobalContributions
+	'wgGUCWikis' => [
+		'default' => $wgLocalDatabases,
+	],
+	// GlobalUsage //
+	'wgGlobalUsageDatabase' => [
+		'default' => 'metawiki',
+	],
 
-'wgEchoCrossWikiNotifications' => [
-    'default' => true,
-],
+	// GlobalUserPage //
+	'wgGlobalUserPageDBname' => [
+		'default' => 'metawiki',
+	],
+	'wgGlobalUserPageAPIUrl' => [
+		'default' => 'https://meta.maamedia.org/api.php',
+	],
 
-'wgEchoSharedTrackingDB' => [
-    'default' => 'metawiki'
-],
+	// GlobalCssJs //
+	'wgUseGlobalSiteCssJs' => [
+		'default' => true,
+	],
+	'wgAllowUserCss' => [
+		'default' => true, 
+	],
+	'wgAllowUserJs' => [
+		'default' => true, 
+	],
+	'wgResourceLoaderSources' => [
+		'apiScript' => 'https://meta.maamedia.org/api.php', 
+		'loadScript' => 'https://meta.maamedia.org/load.php'
+	],
 
-'wgEchoUseCrossWikiBetaFeature' => [
-    'default' => true,
-],
+	// Global Blocking //
+	'wgGlobalBlockingDatabase' => [
+		'default' =>  'centralauth',
+	],
+	'wgGlobalBlockingBlockXFF' => [
+		'default' =>  true,
+	],
+	'wgApplyGlobalBlocks' => [
+		'default' => true,
+		'metawiki' => true,
+	],
 
-'wgEchoPerUserBlacklist' => [
-    'default' => true,
-],
-
-'wgEchoMentionStatusNotifications' => [
-    'default' => true,
-],
-
-'wgEchoEnableEmailBatch' => [
-	'default' => true,
-],
-'wgEchoDefaultUserSubscriptions' => [
-	'default' => [],
-],
-
-
-// GlobalContributions
-'wgGUCWikis' => [
-    'default' => $wgLocalDatabases,
-],
-
-
-// GlobalUsage //
-'wgGlobalUsageDatabase' => [
-    'default' => 'metawiki',
-],
-
-// GlobalUserPage //
-'wgGlobalUserPageDBname' => [
-    'default' => 'metawiki'
-],
-
-'wgGlobalUserPageAPIUrl' => [
-    'default' => 'https://meta.maamedia.org/api.php'
-],
-
-// GlobalCssJs //
-'wgUseGlobalSiteCssJs' => [
-    'default' => true,
-],
-
-'wgAllowUserCss' => [
-   'default' => true, 
-],
-
-'wgAllowUserJs' => [
-   'default' => true, 
-],
-
-'wgResourceLoaderSources' => [
-   'apiScript' => 'https://meta.maamedia.org/api.php', 
-   'loadScript' => 'https://meta.maamedia.org/load.php'
-],
-
-// Global Blocking //
-
-'wgGlobalBlockingDatabase' => [
-    'default' =>  'centralauth',
-],
-
-'wgGlobalBlockingBlockXFF' => [
-    'default' =>  true,
-],
-
-'wgApplyGlobalBlocks' => [
-    'default' => true,
-    'metawiki' => true,
-],
-
-// RelatedArticles //
-'wgRelatedArticlesUseCirrusSearch' => [
-    'default' => true,
-],
-
-'wgRelatedArticlesOnlyUseCirrusSearch' => [
-    'default' => true,
-],
-
-'wgRelatedArticlesDescriptionSource' => [
-    'default' => 'metawiki',
-],
-
-
-// CentralAuth // !becarefull
+	// RelatedArticles //
+	'wgRelatedArticlesUseCirrusSearch' => [
+		'default' => true,
+	],
+	'wgRelatedArticlesOnlyUseCirrusSearch' => [
+		'default' => true,
+	],
+	'wgRelatedArticlesDescriptionSource' => [
+		'default' => 'metawiki',
+	],
+	
+	// CentralAuth // !becarefull
 	
 
 	'wmgUseCentralAuth' => [
 		'default' => true,
 		'ldapwikiwiki' => false,
 	],
+	'wgCentralAuthDatabase' => [
+		'default' => 'centralauth',
+	],
+	'wgCentralAuthAutoNew' => [
+		'default' => true,
+	],
+	'wgCentralAuthAutoMigrate' => [
+		'default' => true,
+	],
+	'wgCentralAuthAutoMigrateNonGlobalAccounts' => [
+		'default' => true,
+	],
+	'wgCentralAuthCookies' => [
+		'default' => true,
+	],
+	'wgCentralAuthCookieDomain' => [
+		'default' => '',
+	],
+	'wgCentralAuthCreateOnView' => [
+		'default' =>  true,
+	],
 
-'wgCentralAuthDatabase' => [
-    'default' => 'centralauth',
-],
+	'wgCentralAuthAutoLoginWikis' => [
+		'commons.maamedia.org' => 'commonswiki',
+		'data.maamedia.org' => 'datawiki',
+		'meta.maamedia.org' => 'metawiki',
+		'test.maamedia.org' => 'testwiki',
+		'en.masymanwiki.org' => 'enwiki',
+		'fi.masymanwiki.org' => 'fiwiki',
+		'id.masymanwiki.org' => 'idwiki',
+	],
 
-'wgCentralAuthAutoNew' => [
-    'default' => true,
-],
+	/*
+	'wgCentralAuthAutoLoginWikis' => [
+	],
+	*/
+	
+	'wgCentralAuthEnableGlobalRenameRequest' => [
+		'default' =>  true,
+	],
 
-'wgCentralAuthAutoMigrate' => [
-    'default' => true,
-],
+	'wgCentralAuthEnableUserMerge' => [
+		'default' =>  true,
+	],
+	
+	/*
+	'wgCentralAuthLoginWiki' => [
+	'default' =>  'loginwiki',
+	],
+	*/
+	
+	'wgCentralAuthLoginIcon' => [
+		'default' => true,
+	],
 
-'wgCentralAuthAutoMigrateNonGlobalAccounts' => [
-    'default' => true,
-],
+	'wgCentralAuthSilentLogin' => [
+		'default' =>  true,
+	],
 
-'wgCentralAuthCookies' => [
-    'default' => true,
-],
+	'wgGlobalRenameBlacklistRegex' => [
+		'default' => true
+	],
 
-'wgCentralAuthCookieDomain' => [
-    'default' => '',
+	// Scribunto //
+	'wgScribuntoDefaultEngine' => [
+		'default' => 'luastandalone',
+	],
+	'wgScribuntoUseGeSHi' => [
+		'default' => true,
+	],
+	'wgScribuntoUseCodeEditor' => [
+		'default' => true,
+	],
+	'wgPygmentizePath' => [
+		'default' => 'extensions/SyntaxHighlight_GeSHi/pygments/pygmentize',
+	],
+	// Interwiki //
 
-],
-'wgCentralAuthCreateOnView' => [
-    'default' =>  true,
-],
+	'wgInterwikiCentralDB' => [
+		'default' => 'metawiki',
+	],
 
-'wgCentralAuthAutoLoginWikis' => [
-    'commons.maamedia.org' => 'commonswiki',
-    'data.maamedia.org' => 'datawiki',
-    'meta.maamedia.org' => 'metawiki',
-    'test.maamedia.org' => 'testwiki',
-    'en.masymanwiki.org' => 'enwiki',
-    'fi.masymanwiki.org' => 'fiwiki',
-    'id.masymanwiki.org' => 'idwiki',
-],
-
-/*
-'wgCentralAuthAutoLoginWikis' => [
-
-],
-*/
-'wgCentralAuthEnableGlobalRenameRequest' => [
-    'default' =>  true,
-],
-
-'wgCentralAuthEnableUserMerge' => [
-    'default' =>  true,
-],
-/*
-'wgCentralAuthLoginWiki' => [
-    'default' =>  'loginwiki',
-],
-*/
-'wgCentralAuthLoginIcon' => [
-    'default' => true,
-],
-
-'wgCentralAuthSilentLogin' => [
-    'default' =>  true,
-],
-
-'wgGlobalRenameBlacklistRegex' => [
-	'default' => true
-],
-
-// Scribunto //
-'wgScribuntoDefaultEngine' => [
-    'default' => 'luastandalone',
-],
-
-'wgScribuntoUseGeSHi' => [
-    'default' => true,
-],
-
-'wgScribuntoUseCodeEditor' => [
-    'default' => true,
-],
-
-'wgPygmentizePath' => [
-    'default' => 'extensions/SyntaxHighlight_GeSHi/pygments/pygmentize',
-],
-// Interwiki //
-
-'wgInterwikiCentralDB' => [
-    'default' => 'metawiki',
-],
-
-// SpamBlacklist //
-'wgBlacklistSettings' => [
-	'spam' => [
-		'files' => [
-			"https://meta.maamedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1",
+	// SpamBlacklist //
+	'wgBlacklistSettings' => [
+		'spam' => [
+			'files' => [
+				"https://meta.maamedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1",
+			],
 		],
 	],
-],
 
-// Kartographer // 
-'wgKartographerWikivoyageMode' => [
-	'default' => false,
-	'metawiki' => true,
-],
+	// Kartographer // 
 
-'wgKartographerUseMarkerStyle' => [
-	'default' => false,
-	'metawiki' => true,
-],
+	'wgKartographerWikivoyageMode' => [
+		'default' => false,
+		'metawiki' => true,
+	],
+	'wgKartographerUseMarkerStyle' => [
+		'default' => false,
+		'metawiki' => true,
+	],
+	'wgKartographerStaticMapframe' => [
+		'default' => false,
+		'metawiki' => true,
+	],
+	'wgKartographerEnableMapFrame' => [
+		'default' => true,
+		'metawiki' => false,
+	],
+	'wgKartographerUsePageLanguage' => [
+		'default' => true,
+	],
+	'wgUseMediaModeration' => [
+		'default' => true,
+	],
 
-'wgKartographerStaticMapframe' => [
-	'default' => false,
-	'metawiki' => true,
-],
+	'wgUseKartographer' => [
+		'default' => true,
+		'metawiki' => false,
+	],
+	'wgUseMapSources' => [
+		'default' => false,
+		'metawiki' => true,
+	],
+	// TitleBlacklist //
+	'wgBlacklistSettings' => [
+		[
+			'type' => 'localpage',
+			'src'  => 'MediaWiki:Titleblacklist'
+		],
+	],
+	// Transle
+	'wgTranslateUseSandbox' => [
+		'default' => true,
+	],
+	'wgTranslateDocumentationLanguageCode' => [
+		'default' => true,
+	],
+	'wgNoticeUseTranslateExtension' => [
+		'default' => true,  
+	],
+	'wgTranslateNewsletterPreference' => [
+		'default' => true,
+	],
+	
+	'wgContentTranslationTranslateInTarget' => [
+		'default' => true,
+	],
+	
+	'wgTranslateTranslationDefaultService' => [
+		'default' => true,
+	],
+	
+	'wgTranslationNotificationsContactMethods' => [
+		'email' => true,
+		'talkpage' => true,
+		'talkpage-elsewhere' => false,
+	],
+	'wgTranslateCheckBlacklist' => [
+		'default' => true,
+	],
+	'wgTranslateWorkflowStates' => [
+		'default' => true,
+	],
+	'wgTranslateDelayedMessageIndexRebuild' => [
+		'default' => true,
+	],
+	'wgTranslateUsePreSaveTransform' => [
+		'default' => true,
+	],
 
-'wgKartographerEnableMapFrame' => [
-	'default' => true,
-	'metawiki' => false,
-],
+	// VisualEditor //
+	'wgVisualEditorEnableDiffPage' => [
+		'default' => true,
+	],
+	'wgVisualEditorEnableWikitext' => [
+		'default' => true,
+	],
+	// WikiEditor //
+	'wgHiddenPrefs' => [
+		'usebetatoolbar' => true,
+	],
+	// Logo //
+	'wgLogo' => [
+		'default' => '/images/1/1a/Maamedia_Logo.png',
+		'commonswiki' => '/images/c/cb/Maamedia_Commons_Logo.png',
+		'datawiki' => '/images/6/62/Maamedia_Data-Wiki_Logo.png',
+		'metawiki' => '/images/b/bc/Wiki.png',
+		'enwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+		'fiwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+		'idwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+	],
+	'wgFavicon' => [
+		'default' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
+		'commonswiki' => '/images/4/4a/Maamedia_Commons_Logo-2.png',
+		'datawiki' => '/images/6/62/Maamedia_Data-Wiki_Logo.png',
+		'metawiki' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
+		'enwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+		'fiwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+		'idwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+	],
 
-'wgKartographerUsePageLanguage' => [
-	'default' => true,
-],
+	// Copyright
+	'wgRightsPage' => [
+		'default' => '',
+	],
+	'wgDiff3' => [
+		'default' => '/usr/bin/diff3',
+	],
 
-'wgUseMediaModeration' => [
-	'default' => true,
-],
-
-
-'wgUseKartographer' => [
-	'default' => true,
-	'metawiki' => false,
-],
-
-'wgUseMapSources' => [
-	'default' => false,
-	'metawiki' => true,
-],
-// TitleBlacklist //
-'wgBlacklistSettings' => [
-    [
-         'type' => 'localpage',
-         'src'  => 'MediaWiki:Titleblacklist'
-    ],
-],
-
-// Translate
-
-'wgTranslateUseSandbox' => [
-    'default' => true,
-],
-
-'wgTranslateDocumentationLanguageCode' => [
-    'default' => true,
-],
-
-'wgNoticeUseTranslateExtension' => [
-    'default' => true,  
-],
-
-'wgTranslateNewsletterPreference' => [
-    'default' => true,
-],
-
-'wgContentTranslationTranslateInTarget' => [
-    'default' => true,
-],
-
-'wgTranslateTranslationDefaultService' => [
-    'default' => true,
-],
-
-'wgTranslationNotificationsContactMethods' => [
-    'email' => true,
-    'talkpage' => true,
-    'talkpage-elsewhere' => false,
-],
-
-'wgTranslateCheckBlacklist' => [
-    'default' => true,
-],
-
-'wgTranslateWorkflowStates' => [
-    'default' => true,
-],
-
-'wgTranslateDelayedMessageIndexRebuild' => [
-    'default' => true,
-],
-
-'wgTranslateUsePreSaveTransform' => [
-    'default' => true,
-],
-
-
-// VisualEditor //
-'wgVisualEditorEnableDiffPage' => [
-    'default' => true,
-],
-
-'wgVisualEditorEnableWikitext' => [
-    'default' => true,
-],
-
-// WikiEditor //
-'wgHiddenPrefs' => [
-    'usebetatoolbar' => true,
-],
-
-// Logo //
-
-'wgLogo' => [
-    'default' => '/images/1/1a/Maamedia_Logo.png',
-    'commonswiki' => '/images/c/cb/Maamedia_Commons_Logo.png',
-    'datawiki' => '/images/6/62/Maamedia_Data-Wiki_Logo.png',
-    'metawiki' => '/images/b/bc/Wiki.png',
-    'enwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-    'fiwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-    'idwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-],
-'wgFavicon' => [
-    'default' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
-    'commonswiki' => '/images/4/4a/Maamedia_Commons_Logo-2.png',
-    'datawiki' => '/images/6/62/Maamedia_Data-Wiki_Logo.png',
-    'metawiki' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
-    'enwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-    'fiwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-    'idwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-],
-
-
-
-// Copyright
-'wgRightsPage' => [
-    'default' => '',
-],
-
-'wgDiff3' => [
-    'default' => '/usr/bin/diff3',
-],
-
-
-'wgEnableUploads' => [
-    'default' => true,
-],
-
-'wgUploadDirectory' => [
-    'default' => 'images',
-],
-
-'wgUseImageMagick' => [
-    'default' => true,
-],
-
-'wgImageMagickConvertCommand' => [
-    'default' => '/usr/bin/convert',
-],
-
-'wgSVGConverter' => [
-    'default' => 'ImageMagick',
-],
-
-'wgUseImageResize' => [
-    'default' => true,
-],
-
-'wgMemoryLimit' => [
-    'default' => '50M',
-],
-
-'wgMaxImageArea' => [
-    'default' => 1.25e7,
-],
-
-'wgGenerateThumbnailOnParse' => [
-    'default' => true,
-],
-
-'wgUseInstantCommons' => [
-    'default' => true,
-],
-
-'wgPingback' => [
-    'default' => true,
-],
-
-'wgShellLocale' => [
-    'default' => 'en_US.utf8',
-],
-
-
-
-// Thumbnail prerendering at upload time
+	'wgEnableUploads' => [
+		'default' => true,
+	],
+	'wgUploadDirectory' => [
+		'default' => 'images',
+	],
+	'wgUseImageMagick' => [
+		'default' => true,
+	],
+	'wgImageMagickConvertCommand' => [
+		'default' => '/usr/bin/convert',
+	],
+	'wgSVGConverter' => [
+		'default' => 'ImageMagick',
+	],
+	'wgUseImageResize' => [
+		'default' => true,
+	],
+	'wgMemoryLimit' => [
+		'default' => '50M',
+	],
+	'wgMaxImageArea' => [
+		'default' => 1.25e7,
+	],
+	'wgGenerateThumbnailOnParse' => [
+		'default' => true,
+	],
+	'wgUseInstantCommons' => [
+		'default' => true,
+	],
+	'wgPingback' => [
+		'default' => true,
+	],
+	'wgShellLocale' => [
+		'default' => 'en_US.utf8',
+	],
+	// Thumbnail prerendering at upload time
 	'wgUploadThumbnailRenderMap' => [
 		'default' => [ 320, 640, 800, 1024, 1280, 1920 ],
 		'private' => [],
