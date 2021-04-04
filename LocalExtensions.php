@@ -219,13 +219,6 @@ if ( $wmgUseUploadsLink ) {
 
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
-	
-	if ( $wmgVisualEditorEnableDefault ) {
-		$wgConf->settings = ['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
-		$wgConf->settings = ['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
-	} else {
-		$wgConf->settings = ['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
-	}
 }
 
 
