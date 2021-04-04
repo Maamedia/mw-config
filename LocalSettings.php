@@ -93,6 +93,7 @@ $wgConf->suffixes = [ 'wiki' ];
 $wgConf->localVHosts = [ 'localhost', $wgHostCentral ];
 $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefined';
 include('cachesystem.php');
+include('LocalExtensions.php');
 include('GlobalSkins.php');
 include('GlobalExtensions.php');
 include('GlobalConfig.php');
