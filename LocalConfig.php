@@ -92,6 +92,15 @@ if ( $wikiId == 'datawiki' ) {
     'svwiki',
     'nowiki',
     ];
+} elseif ( $wikiId == 'testwiki' ) {  
+    $wgSecretKey = $wgSecretKeytestwiki;
+    $wgUpgradeKey = $wgUpgradeKeytestwiki;
+    // Wikibase
+    $wgEnableWikibaseRepo = false;
+    $wgEnableWikibaseClient = true;
+    require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
+    require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
+    $wgWBClientSettings['siteGlobalID'] = 'testwiki';
 } elseif ( $wikiId == 'enwiki' ) {  
     $wgSecretKey = $wgSecretKeyenwiki;
     $wgUpgradeKey = $wgUpgradeKeyenwiki;
