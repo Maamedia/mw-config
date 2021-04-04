@@ -70,15 +70,6 @@ $wgDBprefix = "";
 # MySQL table options to use during installation or update
 $wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
 
-$wgObjectCaches["redis"] = [
-		'class'	   => 'RedisBagOStuff',
-		'servers'	 => [ "/var/run/redis/redis.sock" ],
-		// 'password'	=> $wmgRedisPassword,
-		'loggroup'	=> 'redis',
-		'reportDupes' => false
-];
-
-
 # Experimental charset support for MySQL 5.0.
 $wgDBmysql5 = false;
 
@@ -101,6 +92,7 @@ $wgConf->wikis = $wgLocalDatabases;
 $wgConf->suffixes = [ 'wiki' ];
 $wgConf->localVHosts = [ 'localhost', $wgHostCentral ];
 $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefined';
+include('cachesystem.php');
 include('GlobalSkins.php');
 include('GlobalExtensions.php');
 include('GlobalConfig.php');
