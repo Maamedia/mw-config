@@ -29,7 +29,6 @@ wfLoadExtensions( [
 	'SyntaxHighlight_GeSHi',
 	'TorBlock',
 	'UserMerge',
-	'WikiDiscover',
 	'WikiEditor',
 	'cldr'
 ] );
