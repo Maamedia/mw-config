@@ -221,10 +221,10 @@ if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 	
 	if ( $wmgVisualEditorEnableDefault ) {
-		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
-		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
+		$wgConf->settings = ['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
+		$wgConf->settings = ['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
 	} else {
-		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
+		$wgConf->settings = ['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
 	}
 }
 
