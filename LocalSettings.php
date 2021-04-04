@@ -85,6 +85,7 @@ $wgLocalDatabases = array(
 );
 
 // require_once( '/srv/mediawiki/config/LocalExtensions.php' );
+require_once( '/var/www/mediawiki/te.php' );
 include('LocalConfig.php');
 $wgCentralAuthDatabase = 'centralauth';
 
