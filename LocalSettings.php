@@ -84,7 +84,7 @@ $wgLocalDatabases = array(
     'idwiki',
 );
 
-require_once( '/var/www/mediawiki/LocalExtensions.php' );
+// require_once( '/srv/mediawiki/config/LocalExtensions.php' );
 include('LocalConfig.php');
 $wgCentralAuthDatabase = 'centralauth';
 
