@@ -2,192 +2,157 @@
 // MW-Setting //
 include('cachesystem.php');
 $wgConf->settings = [
-'wgServer' => [
-    // if you want to allow also usage of https, just use '//localhost'
-    // and set 'http://localhost' at 'wgCanonicalServer'
-    'default' => 'https://localhost',
-    'commonswiki' => 'https://commons.maamedia.org',
-    'datawiki' => 'https://data.maamedia.org',
-    'metawiki' => 'https://meta.maamedia.org',
-    'testwiki' => 'https://test.maamedia.org',
-    'enwiki' => 'https://en.masymanwiki.org',
-    'fiwiki' => 'https://fi.masymanwiki.org',
-    'idwiki' => 'https://id.masymanwiki.org',
-],
-'wgCanonicalServer' => [
-    'default' => 'https://localhost',
-    'commonswiki' => 'https://commons.maamedia.org',
-    'datawiki' => 'https://data.maamedia.org',
-    'metawiki' => 'https://meta.maamedia.org',
-    'testwiki' => 'https://test.maamedia.org',
-    'enwiki' => 'https://en.masymanwiki.org',
-    'fiwiki' => 'https://fi.masymanwiki.org',
-    'idwiki' => 'https://id.masymanwiki.org',
-],
-'wgSitename' => [
-    'default' => '',
-    'commonswiki' => 'Commons Wiki',
-    'datawiki' => 'Data Wiki',
-    'metawiki' => 'Meta Wiki',
-    'testwiki' => 'Test Wiki',
-    'enwiki' => 'English Masymanwiki',
-    'fiwiki' => 'Finnish Masymanwiki',
-    'idwiki' => 'Indonesian Masymanwiki',
-],
-'wgLanguageCode' => [
-    'default' => 'en',
-    'fiwiki' => 'fi',
-    'idwiki' => 'id',
-],
-
-'wgLocalInterwiki' => [
-    'default' => '$lang',
-],
-
-'wgScriptPath' => [
-    'default' => '',
-],
-
-'wgArticlePath' => [
-    'default' => '/wiki/$1',
-],
-
-'wgDefaultSkin' => [
-    'default' => 'vector',
-],
-
-// Debugging //
-'wgShowExceptionDetails' => [
-    'default' => true,
-],
-
-'wgShowDBErrorBacktrace' => [
-    'default' => true,
-],
-
-'wgShowDebug' => [
-    'default' => false,
-],
-
-// Database Configuration //
-
-'wgDBserver' => [
-    'default' => '127.0.0.1',
-],
-
-'wgDBuser' => [
-    'default' => 'wikiuser',
-],
-
-'wgAuthenticationTokenVersion' => [
-    'default' => '1',
-],
-
-'wgDBprefix' => [
-    'default' => '',
-],
-
-'wgAllowSchemaUpdates' => [
-    'default' => false,
-],
-
-'wgCompressRevisions' => [
-    'default' => false,
-],
-
-'+wgResourceLoaderSources' => [
-    'default' => [ 'metawiki' => [
+	'wgServer' => [
+		// if you want to allow also usage of https, just use '//localhost'
+		// and set 'http://localhost' at 'wgCanonicalServer'
+		'default' => 'https://localhost',
+		'commonswiki' => 'https://commons.maamedia.org',
+		'datawiki' => 'https://data.maamedia.org',
+		'metawiki' => 'https://meta.maamedia.org',
+		'testwiki' => 'https://test.maamedia.org',
+		'enwiki' => 'https://en.masymanwiki.org',
+		'fiwiki' => 'https://fi.masymanwiki.org',
+		'idwiki' => 'https://id.masymanwiki.org',
+		],
+	'wgCanonicalServer' => [
+		'default' => 'https://localhost',
+		'commonswiki' => 'https://commons.maamedia.org',
+		'datawiki' => 'https://data.maamedia.org',
+		'metawiki' => 'https://meta.maamedia.org',
+		'testwiki' => 'https://test.maamedia.org',
+		'enwiki' => 'https://en.masymanwiki.org',
+		'fiwiki' => 'https://fi.masymanwiki.org',
+		'idwiki' => 'https://id.masymanwiki.org',
+	],
+	'wgSitename' => [
+		'default' => '',
+		'commonswiki' => 'Commons Wiki',
+		'datawiki' => 'Data Wiki',
+		'metawiki' => 'Meta Wiki',
+		'testwiki' => 'Test Wiki',
+		'enwiki' => 'English Masymanwiki',
+		'fiwiki' => 'Finnish Masymanwiki',
+		'idwiki' => 'Indonesian Masymanwiki',
+	],
+	'wgLanguageCode' => [
+		'default' => 'en',
+		'fiwiki' => 'fi',
+		'idwiki' => 'id',
+	],
+	'wgLocalInterwiki' => [
+		'default' => '$lang',
+	],
+	'wgScriptPath' => [
+		'default' => '',
+	],
+	'wgArticlePath' => [
+		'default' => '/wiki/$1',
+	],
+	'wgDefaultSkin' => [
+		'default' => 'vector',
+	],
+	// Debugging //
+	'wgShowExceptionDetails' => [
+		'default' => true,
+	],
+	'wgShowDBErrorBacktrace' => [
+		'default' => true,
+	],
+	'wgShowDebug' => [
+		'default' => false,
+	],
+	// Database Configuration //
+	'wgDBserver' => [
+		'default' => '127.0.0.1',
+	],
+	'wgDBuser' => [
+		'default' => 'wikiuser',
+	],
+	'wgAuthenticationTokenVersion' => [
+		'default' => '1',
+	],
+	'wgDBprefix' => [
+		'default' => '',
+	],
+	'wgAllowSchemaUpdates' => [
+		'default' => false,
+	],
+	'wgCompressRevisions' => [
+		'default' => false,
+	],
+	'+wgResourceLoaderSources' => [
+		'default' => [ 
+			'metawiki' => [
 				'apiScript' => '//meta.maamedia.org/api.php',
 				'loadScript' => '//meta.maamedia.org/load.php',
 			],
- ],
-],
-
-'wgDBTableOptions' => [
-    'default' => 'ENGINE=InnoDB, DEFAULT CHARSET=binary',
-],
-
-'wgDBmysql5' => [
-    'default' => false,
-],
-
-'wgDBtype' => [
-    'default' => 'mysql',
-],
-
-'wgMemCachedServers' => [
-    'default' => [ $wgMemCachedServersIP ],
-],
-
-# Shared memory settings
-
-'wgCacheDirectory' => [
-    'default' => 'cache',
-],
-
-'wgFileCacheDirectory' => [
-    'default' => 'cache',
-],
-
-'wgShowIPinHeader' => [
-    'default' => false,
-],
-
-'wgEnableParserCache' => [
-    'default' => true,
-],
-
-'wgCachePages' => [
-    'default' => true,
-],
-
-'wgUseLocalMessageCache' => [
-    'default' => true,
-],
-
-'wgUseFileCache' => [
-    'default' => true,
-],
-
-'wgUseGzip' => [
-    'default' => true,
-],
-
-'wgJobRunRate ' => [
-    'default' => 0.01,
-],
-
-'wgDisableCounters ' => [
-    'default' => true,
-],
-
-'wgMiserMode ' => [
-    'default' => true,
-],
-
-'wgHitcounterUpdateFreq' => [
-    'default' => 500,
-],
-
-'wgEnableSidebarCache ' => [
-    'default' => true,
-],
-
-'wgResourceLoaderMaxage' => [
-	'default' => [
-	'versioned' => 12 * 60 * 60,
-	'unversioned' => 5 * 60,
+		],
 	],
-],
-	
-# config cache
-'wgResourceBasePath' => [
-    'default' => '',
-],
-
-// 'wgSharedDB' => [
-//     'default' => 'centralauth',
-// ],
+	'wgDBTableOptions' => [
+		'default' => 'ENGINE=InnoDB, DEFAULT CHARSET=binary',
+	],
+	'wgDBmysql5' => [
+		'default' => false,
+	],
+	'wgDBtype' => [
+		'default' => 'mysql',
+	],
+	'wgMemCachedServers' => [
+		'default' => [ $wgMemCachedServersIP ],
+	],
+	# Shared memory settings
+	'wgCacheDirectory' => [
+		'default' => 'cache',
+	],
+	'wgFileCacheDirectory' => [
+		'default' => 'cache',
+	],
+	'wgShowIPinHeader' => [
+		'default' => false,
+	],
+	'wgEnableParserCache' => [
+		'default' => true,
+	],
+	'wgCachePages' => [
+		'default' => true,
+	],
+	'wgUseLocalMessageCache' => [
+		'default' => true,
+	],
+	'wgUseFileCache' => [
+		'default' => true,
+	],
+	'wgUseGzip' => [
+		'default' => true,
+	],
+	'wgJobRunRate ' => [
+		'default' => 0.01,
+	],
+	'wgDisableCounters ' => [
+		'default' => true,
+	],
+	'wgMiserMode ' => [
+		'default' => true,
+	],
+	'wgHitcounterUpdateFreq' => [
+		'default' => 500,
+	],
+	'wgEnableSidebarCache ' => [
+		'default' => true,
+	],
+	'wgResourceLoaderMaxage' => [
+		'default' => [
+			'versioned' => 12 * 60 * 60,
+			'unversioned' => 5 * 60,
+		],
+	],	
+	# config cache
+	'wgResourceBasePath' => [
+		'default' => '',
+	],
+	// 'wgSharedDB' => [
+	//     'default' => 'centralauth',
+	// ],
 
 'wgSharedDB' => [
     'default' => 'centralauth',
@@ -762,6 +727,12 @@ $wgConf->settings = [
 
 
 // CentralAuth // !becarefull
+	
+
+	'wmgUseCentralAuth' => [
+		'default' => true,
+		'ldapwikiwiki' => false,
+	],
 
 'wgCentralAuthDatabase' => [
     'default' => 'centralauth',
