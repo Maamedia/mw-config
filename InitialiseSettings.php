@@ -696,7 +696,7 @@ $wgConf->settings = [
 		'default' => true,
 	],
 	'wgCentralAuthCookieDomain' => [
-		'default' => '',
+		'default' => '.maamedia.org',
 	],
 	'wgCentralAuthCreateOnView' => [
 		'default' =>  true,
