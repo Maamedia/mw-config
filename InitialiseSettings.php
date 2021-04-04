@@ -402,7 +402,7 @@ $wgConf->settings = [
 
 	// Checkuser
 	'wgCheckUserGBtoollink' => [
-	'centralDB' => 'metawiki'
+	'centralDB' => 'metawiki',
 	'groups' => [ 'steward', 'staff' 
 		    ],
 	],
