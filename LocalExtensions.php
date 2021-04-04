@@ -5,6 +5,10 @@ if ( $wmgUseAbuseFilter ) {
 	wfLoadExtension( 'AbuseFilter' );
 }
 
+if ( $wmgUseAntiSpoof ) {
+	wfLoadExtension( 'AntiSpoof' );
+}
+
 if ( $wmgUseAdvancedMeta ) {
 	wfLoadExtension( 'AdvancedMeta' );
 }
@@ -21,14 +25,6 @@ if ( $wmgUseBetaFeatures ) {
 	wfLoadExtension( 'BetaFeatures' );
 }
 
-if ( $wmgUseCentralAuth ) {
-	wfLoadExtension( 'CentralAuth' );
-}
-
-if ( $wmgUseContactPage ) {
-	wfLoadExtension( 'ContactPage' );
-}
-
 if ( $wmgUseCategoryTree ) {
 	wfLoadExtension( 'CategoryTree' );
 }
@@ -37,12 +33,20 @@ if ( $wmgUseCapiunto ) {
 	wfLoadExtension( 'Capiunto' );
 }
 
+if ( $wmgUseCentralAuth ) {
+	wfLoadExtension( 'CentralAuth' );
+}
+
 if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
 }
 
 if ( $wmgUseCite ) {
 	wfLoadExtension( 'Cite' );
+}
+
+if ( $wmgUseCirrusSearch ) {
+	wfLoadExtension( 'CirrusSearch' );
 }
 
 if ( $wmgUseCiteThisPage ) {
@@ -57,12 +61,16 @@ if ( $wmgUseCodeMirror ) {
 	wfLoadExtension( 'CodeMirror' );
 }
 
-if ( $wmgUseCollapsibleVector ) {
-	wfLoadExtension( 'CollapsibleVector' );
+if ( $wmgUseCodeReview ) {
+	wfLoadExtension( 'CodeReview' );
 }
 
-if ( $wmgUseCSS ) {
-	wfLoadExtension( 'CSS' );
+if ( $wmgUseConfirmAccount ) {
+	wfLoadExtension( 'ConfirmAccount' );
+}
+
+if ( $wmgUseContactPage ) {
+	wfLoadExtension( 'ContactPage' );
 }
 
 if ( $wmgUseDisambiguator ) {
@@ -73,16 +81,20 @@ if ( $wmgUseDiscussionTools ) {
 	wfLoadExtension( 'DiscussionTools' );
 }
 
+if ( $wmgUseEntitySchema ) {
+	wfLoadExtension( 'EntitySchema' );
+}
+
+if ( $wmgUseElastica ) {
+	wfLoadExtension( 'Elastica' );
+}
+
 if ( $wmgUseFlow ) {
 	wfLoadExtension( 'Flow' );
 }
 
 if ( $wmgUseGadgets ) {
 	wfLoadExtension( 'Gadgets' );
-}
-
-if ( $wgMirahezeCommons && !$cwPrivate ) {
-	wfLoadExtension( 'GlobalUsage' );
 }
 
 if ( $wmgUseGlobalUserPage ) {
@@ -93,16 +105,8 @@ if ( $wmgUseGraph ) {
 	wfLoadExtension( 'Graph' );
 }
 
-if ( $wmgUseHighlightLinksInCategory ) {
-	wfLoadExtension( 'HighlightLinksInCategory' );
-}
-
-if ( $wmgUseImageMap ) {
-	wfLoadExtension( 'ImageMap' );
-}
-
-if ( $wmgUseImageRating ) {
-	wfLoadExtension( 'ImageRating' );
+if ( $wmgUseHoverGallery ) {
+	wfLoadExtension( 'HoverGallery' );
 }
 
 if ( $wmgUseInputBox ) {
@@ -125,24 +129,8 @@ if ( $wmgUseMassMessage ) {
 	wfLoadExtension( 'MassMessage' );
 }
 
-if ( $wmgUseMetrolook ) {
-	wfLoadSkin( 'Metrolook' );
-}
-
-if ( $wmgUseMinervaNeue ) {
-	wfLoadSkin( 'MinervaNeue' );
-}
-
-if ( $wmgUseMobileFrontend ) {
-	wfLoadExtension( 'MobileFrontend' );
-}
-
 if ( $wmgUseMultimediaViewer ) {
 	wfLoadExtension( 'MultimediaViewer' );
-	
-	if ( $wmgUse3D ) {
-		$wgMediaViewerExtensions['stl'] = 'mmv.3d';
-	}
 }
 
 if ( $wmgUseNewsletter ) {
@@ -167,10 +155,6 @@ if ( $wmgUsePageTriage ) {
 
 if ( $wmgUsePdfHandler ) {
 	wfLoadExtension( 'PdfHandler' );
-}
-
-if ( $wmgUsePoem ) {
-	wfLoadExtension( 'Poem' );
 }
 
 if ( $wmgUseRelatedArticles ) {
@@ -264,4 +248,17 @@ if ( $wmgUseWikibaseRepository ) {
 if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
 	require_once "/var/www/mediawiki/Wikibase.php";
+}
+// Skin only
+
+if ( $wmgUseMetrolook ) {
+	wfLoadSkin( 'Metrolook' );
+}
+
+if ( $wmgUseMinervaNeue ) {
+	wfLoadSkin( 'MinervaNeue' );
+}
+
+if ( $wmgUseMobileFrontend ) {
+	wfLoadExtension( 'MobileFrontend' );
 }
