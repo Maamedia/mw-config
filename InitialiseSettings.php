@@ -100,6 +100,7 @@ $wgConf->settings = [
 	'wgMemCachedServers' => [
 		'default' => [ $wgMemCachedServersIP ],
 	],
+	
 	# Shared memory settings
 	'wgCacheDirectory' => [
 		'default' => 'cache',
@@ -150,9 +151,7 @@ $wgConf->settings = [
 	'wgResourceBasePath' => [
 		'default' => '',
 	],
-	// 'wgSharedDB' => [
-	//     'default' => 'centralauth',
-	// ],
+	
 	'wgSharedDB' => [
 		'default' => 'centralauth',
 	],
@@ -268,7 +267,8 @@ $wgConf->settings = [
 	'wgUseRCPatrol' => [
 		'default' => true,
 	],
-	// Extensions Config Starterd
+	
+	// All Extensions Started bellow
 	// AbuseFilter
 	'wgAbuseFilterActions' => [
 		'default' => [
@@ -318,7 +318,15 @@ $wgConf->settings = [
 	'wgAbuseFilterDefaultWarningMessage' => [
 		'default' => 'abusefilter-warning',
 	],
+	
 	// AdvancedMeta
+	'wmgUseAdvancedMeta' => [
+		'default' => false,
+		'commonswiki' => true,
+		'datawiki' => true,
+		'enwiki' => true,
+		'metawiki' => true,
+	],
 	'wgDefaultRobotPolic' => [
 		'default' => 'index,follow',
 	],
@@ -328,8 +336,23 @@ $wgConf->settings = [
 	'wgArticleRobotPolicies ' => [
 		'Main Page' => 'index',
 	],
+	// AdvancedSearch
+	'wmgUseAdvancedSearch' => [
+		'default' => false,
+		'commonswiki' => true,
+		'datawiki' => true,
+		'enwiki' => true,
+		'metawiki' => true,
+	],
 
 	// Babel
+	'wmgUseBabel' => [
+		'default' => false,
+		'commonswiki' => true,
+		'datawiki' => true,
+		'enwiki' => true,
+		'metawiki' => true,
+	],
 	'wgUseBabel' => [
 		'default' => true,
 	],
