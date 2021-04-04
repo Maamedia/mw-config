@@ -30,7 +30,7 @@ wfLoadExtensions( [
 	'TorBlock',
 	'UserMerge',
 	'WikiEditor',
-	'cldr'
+	// 'cldr'
 ] );
 $wgScribuntoDefaultEngine = 'luastandalone';
 $wgScribuntoUseGeSHi = true;
