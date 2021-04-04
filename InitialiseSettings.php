@@ -1058,7 +1058,7 @@ $wgConf->settings = [
 				'abusefilter-log-detail' => true,
 				'transcode-reset' => true,
 				'skipcaptcha' => true,
-				'autopatrol' => tr
+				'autopatrol' => true,
 				
 			],
 			'bot' => [
