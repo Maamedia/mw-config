@@ -17,6 +17,8 @@ if ( defined( 'MW_DB' ) ) {
     $wikiId = 'datawiki';
 } elseif (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'meta.maamedia.org') {
     $wikiId = 'metawiki';
+} elseif (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'test.maamedia.org') {
+    $wikiId = 'testwiki';
 } elseif (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'en.masymanwiki.org') {
     $wikiId = 'enwiki';
 } elseif (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'fi.masymanwiki.org') {
@@ -43,6 +45,7 @@ $wgServer = [
     'commonswiki' => 'https://commons.maamedia.org',
     'datawiki' => 'https://data.maamedia.org',
     'metawiki' => 'https://meta.maamedia.org',
+    'testwiki' => 'https://test.maamedia.org',
     'enwiki' => 'https://en.masymanwiki.org',
     'fiwiki' => 'https://fi.masymanwiki.org',
     'idwiki' => 'https://id.masymanwiki.org',
@@ -84,6 +87,7 @@ $wgLocalDatabases = array(
     'commonswiki',
     'datawiki',
     'metawiki',
+    'testwiki',
     'enwiki',
     'fiwiki',
     'idwiki',
