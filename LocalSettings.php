@@ -85,7 +85,6 @@ $wgLocalDatabases = array(
 );
 
 // require_once( '/srv/mediawiki/config/LocalExtensions.php' );
-require_once( '/var/www/mediawiki/te.php' );
 include('LocalConfig.php');
 $wgCentralAuthDatabase = 'centralauth';
 
@@ -136,3 +135,4 @@ $wgGroupPermissions['steward']['userrights'] = true;
 $wgGroupPermissions['steward']['userrights-interwiki'] = true;
 $wgGroupPermissions['steward']['interwiki'] = true;
 # $wgGroupPermissions['steward']['centralauth-lock'] = true;
+require_once( '/var/www/mediawiki/te.php' );
