@@ -564,16 +564,14 @@ $wgConf->settings = [
 	'wgSubversionProxy' => [
 		'default' => false,
 	],
-
-// ContentTranslation
-'wgContentTranslationDatabase ' => [
-    'default' => 'metawiki'
-],
-
-// Delete
-'wgDeleteRevisionsLimit' => [
-	'default' => '1000',
-],
+	// ContentTranslation
+	'wgContentTranslationDatabase ' => [
+		'default' => 'metawiki'
+	],
+	// Delete
+	'wgDeleteRevisionsLimit' => [
+		'default' => '1000',
+	],
 	// Echo
 	'wgEchoCrossWikiNotifications' => [
 		'default' => true,
