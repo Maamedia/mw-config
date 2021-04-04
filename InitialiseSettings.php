@@ -153,198 +153,175 @@ $wgConf->settings = [
 	// 'wgSharedDB' => [
 	//     'default' => 'centralauth',
 	// ],
-
-'wgSharedDB' => [
-    'default' => 'centralauth',
-],
-
-'wgSharedTables' => [
-    'default' => [  'wikiuser',     'abuse_filter',
-                                    'abuse_filter_action',
-                                    'abuse_filter_history',
-                                    'abuse_filter_log',
-                                    'cu_changes',
-                                    'cu_log',
-                                    'cn_notices',
-                                    'cn_notice_countries',
-                                    'cn_assignments',
-                                    'cn_notice_languages',
-                                    'nl_notice_id_language',
-                                    'cn_notice_regions',
-                                    'cn_template_mixins',
-                                    'cn_notice_mixins',
-                                    'cn_notice_projects',
-                                    'cn_template_log',
-                                    'cn_notice_log',
-                                    'cn_notice_mobile_carriers',
-                                    'cn_known_mobile_carriers',
-                                    'cn_template_devices',
-                                    'cn_known_devices',
-                                    'cn_templates',  
-                                    'globalblocking', 
-                                    'globalblocks',
-                                    'global_block_whitelist',
-                                    'globalnames',
-                                    'globaluser',
-                                    'global_preferences', 
-                                    'global_group_permissions',  
-                                    'global_group_restrictions',
-                                    'interwiki',
-                                    'renameuser_queue',
-                                    'renameuser_status',
-                                    'spoofuser',
-                                    'wikiset',
-                ],
-],
-
-// Namespaces
-'wgExtraNamespaces' => [
-	'metawiki' => [
-		200 => 'Grants', 
-		201 => 'Grants_talk',
-		202 => 'Research',
-		203 => 'Research_talk',
-		206 => 'Iberocoop',
-		207 => 'Iberocoop_talk',
-	    208 => 'Meta',
-	    209 => 'Meta_talk',
-	    210 => 'Bug',
-	    211 => 'Bug_talk',
-	    212 => 'Feedback',
-	    213 => 'Feedback_talk',
-    ],
-    'fiwiki' => [
-        222 => 'Aihe',
-        223 => 'Keskustelu_aiheesta',
-    ],
-],
-
-'wgMetaNamespace' => [
-	// Defaults
-	'metawiki' => 'Meta',
-],
-
-// Skin //
-'wgUseCombinedLoginLink' => [
-    'default' => true,
-],
-
-'wgVectorUseIconWatch' => [
-    'default' => true,
-],
-
-'wgVectorUseSimpleSearch' => [
-    'default' => true,
-],
-
-'wgAdvancedSearchHighlighting' => [
-    'default' => true,
-],
-
-
-// Images //
-
-'wgSharedUploadBaseUrl' => [
-    'default' => 'https://commons.maamedia.org',
-],
-
-'wgUseSharedUploads' => [
-    'default' => true,
-],
-
-'wgSharedUploadPath' => [
-    'default' => 'https://commons.maamedia.org/images',
-],
-
-'wgSharedUploadDBname' => [
-    'default' => 'commonswiki',
-],
-
-'wgSharedUploadDirectory' => [
-    'default' => 'images',
-],
-
-'wgRepositoryBaseUrl' => [
-    'default' => 'https://commons.maamedia.org/wiki/File:',
-],
-
-'wgFileExtensions' => [
-    'default' => [
-        'svg',
-        'png',
-        'jpg',
-        'jpeg',
-        'pdf',
-    ],
-],
-
-'wgUploadNavigationUrl' => [
-    'default' => false,
-    'commonswiki' => 'https://commons.maamedia.org/wiki/Special:UploadWizard?uselang=$lang',
-],
-
-// Recent Changes
-'wgUseRCPatrol' => [
-    'default' => true,
-    
-],
-
-// Extensions Config Starterd
-
-// AbuseFilter
-'wgAbuseFilterActions' => [
-    'default' => [
-    	'block' => true,
-    	'blockautopromote' => true,
-    	'degroup' => true,
-    	'disallow' => true,
-    	'rangeblock' => false,
-    	'tag' => true,
-    	'throttle' => true,
-    	'warn' => true,
-    ],
-],
-'wgUseGlobalAbuseFilters' => [
-	'default' => true,
-],
-'wgAbuseFilterCentralDB' => [
-	'default' => 'metawiki',
-],
-'wgAbuseFilterIsCentral' => [
-	'default' => false,
-	'metawiki' => true,
-],
-'wgAbuseFilterBlockDuration' => [
-	'default' => 'indefinte',
-],
-'wgAbuseFilterAnonBlockDuration' => [
-	'default' => 2592000,
-],
-'wgAbuseFilterRestrictions' => [
-	'default' => [
-	'blockautopromote' => true,
-	'block' => true,
-	'degroup' => true,
-	'rangeblock' => true,
+	'wgSharedDB' => [
+		'default' => 'centralauth',
 	],
-],
-'wgAbuseFilterNotifications' => [
-	'default' => 'udp',
-],
-'wgAbuseFilterLogPrivateDetailsAccess' => [
-	'default' => true,
-],
-'wgAbuseFilterPrivateDetailsForceReason' => [
-	'default' => true,
-],
-'wgAbuseFilterDefaultWarningMessage' => [
-    'default' => 'abusefilter-warning',
-],
-
-// AdvancedMeta
-'wgDefaultRobotPolic' => [
-    'default' => 'index,follow',
-],
+	'wgSharedTables' => [
+		'default' => [ 'wikiuser',  'abuse_filter',
+			      'abuse_filter_action',
+			      'abuse_filter_history',
+			      'abuse_filter_log',
+			      'cu_changes',
+			      'cu_log',
+			      'cn_notices',
+			      'cn_notice_countries',
+			      'cn_assignments',
+			      'cn_notice_languages',
+			      'nl_notice_id_language',
+			      'cn_notice_regions',
+			      'cn_template_mixins',
+			      'cn_notice_mixins',
+			      'cn_notice_projects',
+			      'cn_template_log',
+			      'cn_notice_log',
+			      'cn_notice_mobile_carriers',
+			      'cn_known_mobile_carriers',
+			      'cn_template_devices',
+			      'cn_known_devices',
+			      'cn_templates',  
+			      'globalblocking',
+			      'globalblocks',
+			      'global_block_whitelist',
+			      'globalnames',
+			      'globaluser',
+			      'global_preferences', 
+			      'global_group_permissions',  
+			      'global_group_restrictions',
+			      'interwiki',
+			      'renameuser_queue',
+			      'renameuser_status',
+			      'spoofuser',
+			      'wikiset',
+			     ],
+	],
+	// Namespaces
+	'wgExtraNamespaces' => [
+		'metawiki' => [
+			200 => 'Grants', 
+			201 => 'Grants_talk',
+			202 => 'Research',
+			203 => 'Research_talk',
+			206 => 'Iberocoop',
+			207 => 'Iberocoop_talk',
+			208 => 'Meta',
+			209 => 'Meta_talk',
+			210 => 'Bug',
+			211 => 'Bug_talk',
+			212 => 'Feedback',
+			213 => 'Feedback_talk',
+		],
+		'fiwiki' => [
+			222 => 'Aihe',
+			223 => 'Keskustelu_aiheesta',
+		],
+	],
+	'wgMetaNamespace' => [
+		// Defaults
+		'metawiki' => 'Meta',
+	],
+	// Skin //
+	'wgUseCombinedLoginLink' => [
+		'default' => true,
+	],
+	'wgVectorUseIconWatch' => [
+		'default' => true,
+	],
+	'wgVectorUseSimpleSearch' => [
+		'default' => true,
+	],
+	'wgAdvancedSearchHighlighting' => [
+		'default' => true,
+	],
+	// Images //
+	'wgSharedUploadBaseUrl' => [
+		'default' => 'https://commons.maamedia.org',
+	],
+	'wgUseSharedUploads' => [
+		'default' => true,
+	],
+	'wgSharedUploadPath' => [
+		'default' => 'https://commons.maamedia.org/images',
+	],
+	'wgSharedUploadDBname' => [
+		'default' => 'commonswiki',
+	],
+	'wgSharedUploadDirectory' => [
+		'default' => 'images',
+	],
+	'wgRepositoryBaseUrl' => [
+		'default' => 'https://commons.maamedia.org/wiki/File:',
+	],
+	'wgFileExtensions' => [
+		'default' => [
+			'svg',
+			'png',
+			'jpg',
+			'jpeg',
+			'pdf',
+		],
+	],
+	'wgUploadNavigationUrl' => [
+		'default' => false,
+		'commonswiki' => 'https://commons.maamedia.org/wiki/Special:UploadWizard?uselang=$lang',
+	],
+	// Recent Changes
+	'wgUseRCPatrol' => [
+		'default' => true,
+	],
+	// Extensions Config Starterd
+	// AbuseFilter
+	'wgAbuseFilterActions' => [
+		'default' => [
+			'block' => true,
+			'blockautopromote' => true,
+			'degroup' => true,
+			'disallow' => true,
+			'rangeblock' => false,
+			'tag' => true,
+			'throttle' => true,
+			'warn' => true,
+		],
+	],
+	'wgUseGlobalAbuseFilters' => [
+		'default' => true,
+	],
+	'wgAbuseFilterCentralDB' => [
+		'default' => 'metawiki',
+	],
+	'wgAbuseFilterIsCentral' => [
+		'default' => false,
+		'metawiki' => true,
+	],
+	'wgAbuseFilterBlockDuration' => [
+		'default' => 'indefinte',
+	],
+	'wgAbuseFilterAnonBlockDuration' => [
+		'default' => 2592000,
+	],
+	'wgAbuseFilterRestrictions' => [
+		'default' => [
+			'blockautopromote' => true,
+			'block' => true,
+			'degroup' => true,
+			'rangeblock' => true,
+		],
+	],
+	'wgAbuseFilterNotifications' => [
+		'default' => 'udp',
+	],
+	'wgAbuseFilterLogPrivateDetailsAccess' => [
+		'default' => true,
+	],
+	'wgAbuseFilterPrivateDetailsForceReason' => [
+		'default' => true,
+	],
+	'wgAbuseFilterDefaultWarningMessage' => [
+		'default' => 'abusefilter-warning',
+	],
+	// AdvancedMeta
+	'wgDefaultRobotPolic' => [
+		'default' => 'index,follow',
+	],
 'wgNamespaceRobotPolicies' => [
     NS_TALK => 'noindex',
 ],
