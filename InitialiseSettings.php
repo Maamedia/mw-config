@@ -1,5 +1,6 @@
 <?php
 // MW-Setting //
+include('LocalExtensions.php');
 include('cachesystem.php');
 $wgConf->settings = [
 	'wgServer' => [
