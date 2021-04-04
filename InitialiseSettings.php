@@ -1291,45 +1291,44 @@ $wgConf->settings = [
 				'movefile' => true,
 				'suppressredirect' => true,
 			],
-        'autopatrolled' => [
-            'mass-upload' => true,
-		    'move-rootuserpages' => true,
-        ],
-        'image-reviewer' => [
-            'mass-upload' => true,
-		    'move-rootuserpages' => true,
-            'autopatrol' => true,
-            'patrol' => true,
-        ],
-        'confirmed' => [
-            'flow-edit-post' => true,
-		    'editsemiprotected' => true,
-		    'move' => true,
-		    'autoconfirmed' => true,
-		    'reupload' => true,
-		    'skipcaptcha' => true,
-		    'transcode-reset' => true,
-		    'upload' => true,
-		    'abusefilter-log-detail' => true,
-        ],
-    ],
-    'enwiki' => [
-        'transwiki' => [
-            'oathauth-enable' => true,
-            'import' => true,
-        ],
-    ],
-],
-
-'+wgRevokePermissions' => [
-    'default' => [],
-],
-	'wgRestrictionLevels' => [
-	'default' => [
-		'',
-		'autoconfirmed', // semi-protection level on
-		'sysop',
+			'autopatrolled' => [
+				'mass-upload' => true,
+				'move-rootuserpages' => true,
+			],
+			'image-reviewer' => [
+				'mass-upload' => true,
+				'move-rootuserpages' => true,
+				'autopatrol' => true,
+				'patrol' => true,
+			],
+			'confirmed' => [
+				'flow-edit-post' => true,
+				'editsemiprotected' => true,
+				'move' => true,
+				'autoconfirmed' => true,
+				'reupload' => true,
+				'skipcaptcha' => true,
+				'transcode-reset' => true,
+				'upload' => true,
+				'abusefilter-log-detail' => true,
+			],
+		],
+		'enwiki' => [
+			'transwiki' => [
+				'oathauth-enable' => true,
+				'import' => true,
+			],
+		],
 	],
-        'metawiki' => [ '', 'autoconfirmed', 'autopatrol', 'patrol', 'rollback', 'bot', 'sysop' ],
-],
+	'+wgRevokePermissions' => [
+		'default' => [],
+	],
+	'wgRestrictionLevels' => [
+		'default' => [
+			'',
+			'autoconfirmed', // semi-protection level on
+			'sysop',
+		],
+		'metawiki' => [ '', 'autoconfirmed', 'autopatrol', 'patrol', 'rollback', 'bot', 'sysop' ],
+	],
 ];
