@@ -696,7 +696,7 @@ $wgConf->settings = [
 		'default' => true,
 	],
 	'wgCentralAuthCookieDomain' => [
-		'default' => $wmgHostname,
+		'default' => '',
 	],
 	'wgCentralAuthCreateOnView' => [
 		'default' =>  true,
