@@ -1116,7 +1116,12 @@ $wgConf->settings = [
 ],
 
 'wgPasswordSender' => [
-    'default' => 'wiki@maamedia.org',
+    'default' => 'noreply@maamedia.org',
+],
+
+'wgNoReplyAddress' => [
+    'default' => 'noreply@maamedia.org',
+
 ],
 
 'wgEnotifUserTalk' => [
@@ -1149,16 +1154,7 @@ $wgConf->settings = [
 'wgEnotifFromEditor' => [
     'default' => true,
 ],
-
-'wgNoReplyAddress' => [
-    'default' => 'wiki@maamedia.org',
-
-],
-
-'wgEmergencyContact' => [
-    'default' => 'stewards@maamedia.org',
-],
-
+	
 'wgEnotifImpersonal' => [
     'default' => true,
 ],
