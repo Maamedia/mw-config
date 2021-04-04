@@ -322,279 +322,248 @@ $wgConf->settings = [
 	'wgDefaultRobotPolic' => [
 		'default' => 'index,follow',
 	],
-'wgNamespaceRobotPolicies' => [
-    NS_TALK => 'noindex',
-],
-'wgArticleRobotPolicies ' => [
-    'Main Page' => 'index',
-],
-
-// Babel
-'wgUseBabel' => [
-    'default' => true,
-],
-'wgBabelCategoryNames' => [
-	'default' => [ // T66168
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
+	'wgNamespaceRobotPolicies' => [
+		NS_TALK => 'noindex',
 	],
-],
-'wgBabelMainCategory' => [
-	'default' => false,
-	'metawiki' => 'User %code%',
-],
-'wgBabelDefaultLevel' => [
-	'default' => 'N',
-],
+	'wgArticleRobotPolicies ' => [
+		'Main Page' => 'index',
+	],
 
-'wgRightsText' => [
-    'default' => 'Mdsdlkfj'
-],
-
-// RatePage //
-'wgRPAddSidebarSection' => [
-    'default' => true,
-],
-// BetaFeatures //
-'wgVisualEditorEnableWikitextBetaFeature' => [
-    'default' => true,
-],
-
-'wgVisualEditorEnableBetaFeature' => [
-    'default' => true,
-],
-
-'wgVisualEditorEnableDiffPageBetaFeature' => [
-    'default' => true,
-],
-
-'wgFlowEnableOptInBetaFeature' => [
-    'default' => true,
-],
-
-'wgMediaViewerIsInBeta' => [
-    'default' => true,
-],
-
-// Checkuser
-'wgCheckUserGBtoollink' => [
-	'centralDB' => 'metawiki',
-	'groups' => [ 'steward', 'staff' ]
-],
-
-'wgCheckUserForceSummary' => [
-    'default' => true,
-],
-
-'wgCheckUserCIDRLimit' => [ 
-    'IPv4' => 16,
-    'IPv6' => 32
-],
-
-'wgCheckUserCAMultiLock' => [
-    'centralDB' => 'metawiki',
-    'groups' => [ 'steward' ]
-],
-
-'wgCheckUserCAtoollink ' => [ 
-    'default' => 'metawiki',
-],
-
-'wgCheckUserEnableSpecialInvestigate' => [
-    'default' => true,
-],
-
-// Timezone //
-'wgLocaltimezone' => [
-	'default' => 'UTC'
-],
-
-// CirrusSearch
-'wgCirrusSearchWikimediaExtraPlugin' => [
-	'default' => [
-		'regex' => [
-			'build',
-			'use',
+	// Babel
+	'wgUseBabel' => [
+		'default' => true,
+	],
+	'wgBabelCategoryNames' => [
+		'default' => [ // T6616
+			'0' => 'User %code%-0',
+			'1' => 'User %code%-1',
+			'2' => 'User %code%-2',
+			'3' => 'User %code%-3',
+			'4' => 'User %code%-4',
+			'5' => 'User %code%-5',
+			'N' => 'User %code%-N',
 		],
-		'super_detect_noop' => true,
-		'documentVersion' => true,
-		'token_count_router' => true,
-		'term_freq' => true
-	]
-],
+	],
+	'wgBabelMainCategory' => [
+		'default' => false,
+	'metawiki' => 'User %code%',
+	],
+	'wgBabelDefaultLevel' => [
+		'default' => 'N',
+	],
+	'wgRightsText' => [
+		'default' => ''
+	],
 
-'wgCirrusSearchWMFExtraFeatures' => [
-	'default' => [
-		'ores_articletopics' => [
-			'build' => true,
-			'use' => true,
+	// RatePage //
+	'wgRPAddSidebarSection' => [
+		'default' => true,
+	],
+	// BetaFeatures //
+	'wgVisualEditorEnableWikitextBetaFeature' => [
+		'default' => true,
+	],
+
+	'wgVisualEditorEnableBetaFeature' => [
+		'default' => true,
+	],
+	'wgVisualEditorEnableDiffPageBetaFeature' => [
+		'default' => true,
+	],
+	'wgFlowEnableOptInBetaFeature' => [
+		'default' => true,
+	],
+	'wgMediaViewerIsInBeta' => [
+		'default' => true,
+	],
+
+	// Checkuser
+	'wgCheckUserGBtoollink' => [
+	'centralDB' => 'metawiki'
+	'groups' => [ 'steward', 'staff' 
+		    ],
+	],
+	'wgCheckUserForceSummary' => [
+		'default' => true,
+	],
+	'wgCheckUserCIDRLimit' => [ 
+		'IPv4' => 16,
+		'IPv6' => 32
+	],
+	'wgCheckUserCAMultiLock' => [
+		'centralDB' => 'metawiki',
+		'groups' => [ 'steward' ]
+	],
+	'wgCheckUserCAtoollink ' => [ 
+		'default' => 'metawiki',
+	],
+	'wgCheckUserEnableSpecialInvestigate' => [
+		'default' => true,
+	],
+
+	// Timezone //
+	'wgLocaltimezone' => [
+		'default' => 'UTC'
+	],
+
+	// CirrusSearch
+	'wgCirrusSearchWikimediaExtraPlugin' => [
+		'default' => [
+			'regex' => [
+				'build',
+				'use',
+			],
+			'super_detect_noop' => true,
+			'documentVersion' => true,
+			'token_count_router' => true,
+			'term_freq' => true
 		]
-	]
-],
-
-'wgCirrusSearchDropDelayedJobsAfter' => [
-	'default' => 60 * 60 * 2
-],
-
-'wgCirrusSearchUseExperimentalHighlighter' => [
-	'default' => true
-],
-
-'wgCirrusSearchOptimizeIndexForExperimentalHighlighter' => [
-	'default' => true
-],
-
-'wgCirrusSearchTextcatConfig' => [
-	'default' => [
-		'maxNgrams' => 9000,
-		'maxReturnedLanguages' => 1,
-		'resultsRatio' => 1.06,
-		'minInputLength' => 3,
-		'maxProportion' => 0.85,
-		'langBoostScore' => 0.14,
-		'numBoostedLangs' => 2,
 	],
-],
-
-'wgCirrusSearchFiletypeAliases' => [
-	'default' => [
-		"pdf" => "office",
-		"ppt" => "office",
-		"doc" => "office",
-		"jpg" => "bitmap",
-		"image" => "bitmap",
-		"webp" => "bitmap",
-		"mp3" => "audio",
-		"svg" => "drawing"
-	]
-],
-
-'wgCirrusSearchNewCrossProjectPage' => [
-	'default' => true
-],
-
-'wgCirrusSearchNumCrossProjectSearchResults' => [
-	'default' => 1
-],
-
-'wgCirrusSearchFetchConfigFromApi' => [
-	'default' => true
-],
-
-'wgCirrusSearchRescoreProfiles' => [
-	'default' => []
-],
-
-'wgCirrusSearchMasterTimeout' => [
-	'default' => '5m'
-],
-
-'wgCirrusSearchSearchShardTimeout' => [
-	'default' => [
-		"comp_suggest" => "5s",
-		"prefix" => "5s",
-		"default" => "10s",
-		"regex" => "15s",
+	'wgCirrusSearchWMFExtraFeatures' => [
+		'default' => [
+			'ores_articletopics' => [
+				'build' => true,
+				'use' => true,
+			],
+		],
 	],
-],
-
-
-'wgCirrusSearchClientSideSearchTimeout' => [
-	'default' => [
-		"comp_suggest" => 10,
-		"prefix" => 10,
-		// GET requests timeout at 60s, give some room to treat request timeout (T216860)
-		"default" => 40,
-		"regex" => 50,
+	'wgCirrusSearchDropDelayedJobsAfter' => [
+		'default' => 60 * 60 * 2
 	],
-],
-
-
-'wgCirrusSearchCrossClusterSearch' => [
-	'default' => true
-],
-
-'wgCirrusSearchSanityCheck' => [
-	'default' => true
-],
-
-'wgCirrusSearchClusterOverrides' => [
-	'default' => [],
-],
-
-'wgCirrusSearchWriteClusters' => [
-	'default' => [ 'eqiad', 'codfw', 'cloudelastic' ],
-	'private' => [ 'eqiad', 'codfw' ],
-],
-
-'wgCirrusSearchReplicaGroup' => [
-	'default' => [
-		'type' => 'roundrobin',
-		'groups' => [ 'psi', 'omega' ]
+	'wgCirrusSearchUseExperimentalHighlighter' => [
+		'default' => true
 	],
-	'cirrussearch-big-indices' => 'chi',
-],
+	'wgCirrusSearchOptimizeIndexForExperimentalHighlighter' => [
+		'default' => true
+	],
+	'wgCirrusSearchTextcatConfig' => [
+		'default' => [
+			'maxNgrams' => 9000,
+			'maxReturnedLanguages' => 1,
+			'resultsRatio' => 1.06,
+			'minInputLength' => 3,
+			'maxProportion' => 0.85,
+			'langBoostScore' => 0.14,
+			'numBoostedLangs' => 2,
+		],
+	],
+	'wgCirrusSearchFiletypeAliases' => [
+		'default' => [
+			"pdf" => "office",
+			"ppt" => "office",
+			"doc" => "office",
+			"jpg" => "bitmap",
+			"image" => "bitmap",
+			"webp" => "bitmap",
+			"mp3" => "audio",
+			"svg" => "drawing"
+		],
+	],
+	'wgCirrusSearchNewCrossProjectPage' => [
+		'default' => true
+	],
+	'wgCirrusSearchNumCrossProjectSearchResults' => [
+		'default' => 1
+	],
+	'wgCirrusSearchFetchConfigFromApi' => [
+		'default' => true
+	],
+	'wgCirrusSearchRescoreProfiles' => [
+		'default' => []
+	],
+	'wgCirrusSearchMasterTimeout' => [
+		'default' => '5m'
+	],
+	'wgCirrusSearchSearchShardTimeout' => [
+		'default' => [
+			"comp_suggest" => "5s",
+			"prefix" => "5s",
+			"default" => "10s",
+			"regex" => "15s",
+		],
+	],
 
-'wgCirrusSearchPreferRecentDefaultDecayPortion' => [
-	'default' => 0,
-	'metawiki' => 0.6,
-],
 
-'wgCirrusSearchWeights' => [
-	'default' => [],
-	'codewiki' => [
+	'wgCirrusSearchClientSideSearchTimeout' => [
+		'default' => [
+			"comp_suggest" => 10,
+			"prefix" => 10,
+			// GET requests timeout at 60s, give some room to treat request timeout (T216860)
+			"default" => 40,
+			"regex" => 50,
+		],
+	],
+
+
+	'wgCirrusSearchCrossClusterSearch' => [
+		'default' => true
+	],
+
+	'wgCirrusSearchSanityCheck' => [
+		'default' => true
+	],
+
+	'wgCirrusSearchClusterOverrides' => [
+		'default' => [],
+	],
+	'wgCirrusSearchWriteClusters' => [
+		'default' => [ 'eqiad', 'codfw', 'cloudelastic' ],
+		'private' => [ 'eqiad', 'codfw' ],
+	],
+	'wgCirrusSearchReplicaGroup' => [
+		'default' => [
+			'type' => 'roundrobin',
+			'groups' => [ 'psi', 'omega' ]
+		],
+		'cirrussearch-big-indices' => 'chi',
+	],
+	'wgCirrusSearchPreferRecentDefaultDecayPortion' => [
+		'default' => 0,
+		'metawiki' => 0.6,
+	],
+	'wgCirrusSearchWeights' => [
+		'default' => [],
+		'codewiki' => [
 		'title' => 25.0,
+		],
 	],
-],
+	'wgCirrusSearchConnectionAttempts' => [
+		'default' => 3
+	],
+	'wgCirrusSearchMoreLikeThisTTL' => [
+		'default' => 86400
+	],
+	'wgCirrusSearchRefreshInterval' => [
+		'default' => 30,
+	],
+	'wgCirrusSearchMaxPhraseTokens' => [
+		'default' => 10,
+	],
+	'wgCirrusSearchUseIcuFolding' => [
+		'default' => 'default',
+	],
+	'wgCirrusSearchAllFields' => [
+		'default' => [ 'build' => true, 'use' => true ],
+	],
+	'wgCirrusSearchNearMatchWeight' => [
+		'default' => 10, //T257922
+	],
 
-'wgCirrusSearchConnectionAttempts' => [
-	'default' => 3
-],
+	// CodeEditor
+	'wgCodeEditorEnableCore' => [
+		'default' => true,
+	],
+	'wgScribuntoUseCodeEditor' => [
+		'default' => true,
+	],
 
-'wgCirrusSearchMoreLikeThisTTL' => [
-	'default' => 86400
-],
-
-'wgCirrusSearchRefreshInterval' => [
-	'default' => 30,
-],
-
-'wgCirrusSearchMaxPhraseTokens' => [
-	'default' => 10,
-],
-
-'wgCirrusSearchUseIcuFolding' => [
-	'default' => 'default',
-],
-
-'wgCirrusSearchAllFields' => [
-	'default' => [ 'build' => true, 'use' => true ],
-],
-
-'wgCirrusSearchNearMatchWeight' => [
-	'default' => 10, //T257922
-],
-
-// CodeEditor
-'wgCodeEditorEnableCore' => [
-    'default' => true,
-],
-'wgScribuntoUseCodeEditor' => [
-    'default' => true,
-],
-
-// CodeReview
-'wgSubversionUser' => [
-    'default' => false,
-],
-'wgSubversionProxy' => [
-    'default' => false,
-],
+	// CodeReview
+	'wgSubversionUser' => [
+		'default' => false,
+	],
+	'wgSubversionProxy' => [
+		'default' => false,
+	],
 
 // ContentTranslation
 'wgContentTranslationDatabase ' => [
