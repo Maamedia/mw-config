@@ -1026,302 +1026,271 @@ $wgConf->settings = [
 
 
 // Thumbnail prerendering at upload time
-'wgUploadThumbnailRenderMap' => [
-	'default' => [ 320, 640, 800, 1024, 1280, 1920 ],
-	'private' => [],
-],
-
-'wgUploadThumbnailRenderMethod' => [
-	'default' => 'http',
-],
-
-'wgWPBEnablePageImagesBanners' => [
-	'default' => false,
-],
-
-'wgWPBEnableHeadingOverride' => [
-	'default' => true,
-],
-
-// Email //
-'wgEnableEmail' => [
-    'default' => true,
-],
-
-'wgEnableUserEmail' => [
-    'default' => true,
-],
-
-'wgEmergencyContact' => [
-    'default' => 'stewards@maamedia.org',
-],
-
-'wgPasswordSender' => [
-    'default' => 'noreply@maamedia.org',
-],
-
-'wgNoReplyAddress' => [
-    'default' => 'noreply@maamedia.org',
-
-],
-
-'wgEnotifUserTalk' => [
-    'default' => true,
-],
-
-'wgEnotifWatchlist' => [
-    'default' => true,
-],
-
-'wgEmailAuthentication' => [
-    'default' => true,
-],
-
-'wgUserEmailUseReplyTo' => [
-    'default' => true,
-],
-'wgEnableUserEmailBlacklist' => [
-    'default' => true,
-],
-
-'wgEnotifUserTalk' => [
-    'default' => true,
-],
-
-'wgEnotifRevealEditorAddress' => [
-    'default' => true,
-],
-
-'wgEnotifFromEditor' => [
-    'default' => true,
-],
-	
-'wgEnotifImpersonal' => [
-    'default' => true,
-],
-
-
-// Namespace //
-
-'wgSiteNotice' => [
-    'default' => '',
-],
-
-// Permissions
-'wgAddGroups' => [
+	'wgUploadThumbnailRenderMap' => [
+		'default' => [ 320, 640, 800, 1024, 1280, 1920 ],
+		'private' => [],
+	],
+	'wgUploadThumbnailRenderMethod' => [
+		'default' => 'http',
+	],
+	'wgWPBEnablePageImagesBanners' => [
+		'default' => false,
+	],
+	'wgWPBEnableHeadingOverride' => [
+		'default' => true,
+	],
+	// Email //
+	'wgEnableEmail' => [
+		'default' => true,
+	],
+	'wgEnableUserEmail' => [
+		'default' => true,
+	],
+	'wgEmergencyContact' => [
+		'default' => 'stewards@maamedia.org',
+	],
+	'wgPasswordSender' => [
+		'default' => 'noreply@maamedia.org',
+	],
+	'wgNoReplyAddress' => [
+		'default' => 'noreply@maamedia.org',
+	],
+	'wgEnotifUserTalk' => [
+		'default' => true,
+	],
+	'wgEnotifWatchlist' => [
+		'default' => true,
+	],
+	'wgEmailAuthentication' => [
+		'default' => true,
+	],
+	'wgUserEmailUseReplyTo' => [
+		'default' => true,
+	],
+	'wgEnableUserEmailBlacklist' => [
+		'default' => true,
+	],
+	'wgEnotifUserTalk' => [
+		'default' => true,
+	],
+	'wgEnotifRevealEditorAddress' => [
+		'default' => true,
+	],
+	'wgEnotifFromEditor' => [
+		'default' => true,
+	],
+	'wgEnotifImpersonal' => [
+		'default' => true,
+	],
+	// Namespace //
+	'wgSiteNotice' => [
+		'default' => '',
+	],
+	// Permissions
+	'wgAddGroups' => [
 	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
 	// changes to the default across all overrides --Andrew 2009-04-28
-	'default' => [
-		'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'reviewer', 'editor', 'flow-bot' , 'ipblock-exempt', 'translation-admin'],
-		'sysop' => [ 'rollbacker', 'editor', 'reviewer', 'confirmed', 'autoreview' ],
+		'default' => [
+			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'reviewer', 'editor', 'flow-bot' , 'ipblock-exempt', 'translation-admin'],
+			'sysop' => [ 'rollbacker', 'editor', 'reviewer', 'confirmed', 'autoreview' ],
 		],
-		
-	'+commonswiki' => [
-	    'checkuser' => [ 'ipblock-exempt' ],
-	    'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'reviewer', 'editor', 'flow-bot', 'image-reviewer', 'ipblock-exempt' ],
-	    'image-reviewer' => [ 'image-reviewer' ],
-	    ],
-],
-
-'wgRemoveGroups' => [
-	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
-	// changes to the default across all overrides --Andrew 2009-04-28
-	'default' => [
-		'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bot', 'confirmed', 'flow-bot', 'editor', 'reviewer', 'ipblock-exempt', 'translation-admin' ],
-		'sysop' => [ 'autoreview', 'editor', 'rollbacker', 'confirmed' ]
-		],
-		
-	'commonswiki' => [
-	    'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bot', 'confirmed', 'flow-bot', 'editor', 'reviewer', 'ipblock-exempt', 'image-reviewer' ],
-	    'checkuser' => [ 'ipblock-exempt' ],
-	    ],
-],
-
-'+wgGroupPermissions' => [
-    'default' => [
-        '*' => [
-		    'autocreateaccount' => true,
-		    'move' => false,
-		    'abusefilter-log' => false,
-		    'abusefilter-hide-log' => false,
-		    'abusefilter-hidden-log' => false,
-		    'flow-hide' => false,
-		    'centralauth-merge' => false,
-		    'writeapi' => false,
-		    'codereview-use' => false,
-		    'move' => false,
-		    'createtalk' => false,
-		    'abusefilter-view' => false,
-		],
-		'user' => [
-		    'codereview-add-tag' => false,
-		    'reupload-shared' => false,
-		    'changetags' => false,
-		    'editcontentmodel' => false,
-		    'torunblocked' => false,
-		    'codereview-set-status' => false,
-		    'move-rootuserpages' => false,
-		    'move-categorypages' => false,
-		    'reupload' => false,
-		    'mwoauthmanagemygrants' => false,
-		    'codereview-link-user' => false,
-		    'codereview-remove-tag' => false,
-		    'movefile' => false,
-		    'flow-lock' => false,
-		    'codereview-signoff' => false,
-		    'move' => false,
-		    'autocreateaccount' => true,
-		    'createaccount' => false,
-		    'noratelimit' => false,
-		    'noratelimit' => false,
-		    'noratelimit' => false,
-		    'noratelimit' => false,
-		],
-        'autoconfirmed' => [
-		    'autoconfirmed' => true,
-		    'abusefilter-log-detail' => true,
-		    'transcode-reset' => true,
-		    'skipcaptcha' => true,
-		    'autopatrol' => true,true
-		],
-		'bot' => [
-		    'autoreview' => false,
-		    'noratelimit' => true,
-		    'changetags' => true,
-		    'move-rootuserpages' => true,
-		],
-		'rollbacker' => [
-		    'rollback' => true,
-		],
-		'checkuser' => [
-		    'oathauth-enable' => true,
-		    'abusefilter-privatedetails' => true,
-		    'abusefilter-privatedetails-log' => true,
-		    'checkuser-log' => true,
-		    'checkuser' => true,
-		],
-		'sysop' => [
-		    'abusefilter-log' => true,
-		    'oathauth-verify-user' => false,
-		    'unblockself' => false,
-		    'newsletter-restore' => false,
-		    'newsletter-create' => true,
-		    'reupload-own' => true,
-		    'edituser-exempt' => false,
-		    'override-antispoof' => true,
-		    'newsticker' => false,
-		    'advancedmeta-edit' => false,
-		    'centralnotice-admin' => false,
-		    'oathauth-disable-for-user' => false,
-		],
-		'bureaucrat' => [
-		    'override-antispoof' => true,
-		    'renameuser' => false,
-		    'userrights' => false,
-		    'edituser' => false,
-		    'protectsite' => false,
-		    'advancedmeta-edit' => false,
-		],
-		'ipblock-exempt' => [
-		    'ipblock-exempt' => true,
-		    'torunblocked' => true,
+		'+commonswiki' => [
+			'checkuser' => [ 'ipblock-exempt' ],
+			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'reviewer', 'editor', 'flow-bot', 'image-reviewer', 'ipblock-exempt' ],
+			'image-reviewer' => [ 'image-reviewer' ],
 		],
 	],
-	'metawiki' => [
-        'centralnoticeadmin' => [
-            'centralnotice-admin' => true,
-		    'autoreview' => true,
-		    'editinterface' => true,
-		    'noratelimit' => true,
-		    'protect' => true,
-		    'oathauth-enable' => true,
-		    'banner-protect' => true,
-        ],
-        'transwiki' => [
-            'oathauth-enable' => true,
-            'import' => true,
-        ],
-        'steward' => [
-            'renameuser' => true,
-		    'globalblock' => true,
-		    'globalgrouppermissions' => true,
-		    'globalgroupmembership' => true,
-		    'centralauth-lock' => true,
-		    'browsearchive' => true,
-		    'centralauth-usermerge' => true,
-		    'centralauth-rename' => true,
-		    'centralauth-unmerge' => true,
-		    'centralauth-merge' => true,
-		    'centralauth-oversight' => true,
-		    'userrights' => true,
-		    'userrights-interwiki' => true,
-		    'centralauth-createlocal' => true,
-		    'noratelimit' => true,
-		    'oathauth-verify-user' => true,
-		    'abusefilter-privatedetails' => true,
-		    'bigdelete' => true,
-		    'abusefilter-modify-global' => true,
-		    'oathauth-view-log' => true,
-		  ],
-		 'ipblock-exempt' => [
-		     'ipblock-exempt' => true,
-		     'torunblocked' => true,
-		  ], 
-		 'checkuser' => [
-		     'oathauth-enable' => true,
-		     'abusefilter-privatedetails' => true,
-		     'abusefilter-privatedetails-log' => true
-		  ],
-		  
-		  'autopatroller' => [
-		      'autopatrol' => true,
-		      
-		  ],
-		  'translation-admin' => [
-		      'pagelang' => true,
-		      'translate-manage' => true,
-		      'oathauth-enable' => true,
-		      'autopatrol' => true,
-		      'translate-import' => true,
-		      'pagetranslation' => true,
-		      'banner-protect' => true,
- 		  ],
- 		  
- 		  'confirmed' => [
- 		      'editsemiprotected' => true,
- 		      'move' => true,
- 		      'autoconfirmed' => true,
- 		      'skipcaptcha' => true,
- 		      'transcode-reset' => true,
- 		      'abusefilter-log-detail' => true,
- 		 ],
- 		 
- 		 'interface-admin' => [
- 		     'oathauth-enable' => true,
- 		 ],
- 		 
- 		 'oauthadmin' => [
- 		     'oathauth-enable' => true,
- 		     'autopatrol' => true,
- 		     'mwoauthmanageconsumer' => true,
- 		 ],
- 		 
- 		 'suppress' => [
- 		     'oathauth-enable' => true,
- 		 ],
- 		 
- 		 'patroller' => [
- 		     'autopatrol' => true,
- 		     'patrol' => true,
- 		     'rollback' => true,
- 		     'patrolmarks' => true,
- 		 ],
-    ],
-	'commonswiki' => [
-        'filemover' => [
-            'movefile' => true,
-		    'suppressredirect' => true,
-        ],
+	'wgRemoveGroups' => [
+	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
+	// changes to the default across all overrides --Andrew 2009-04-28
+		'default' => [
+			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bot', 'confirmed', 'flow-bot', 'editor', 'reviewer', 'ipblock-exempt', 'translation-admin' ],
+			'sysop' => [ 'autoreview', 'editor', 'rollbacker', 'confirmed' ]
+		],
+		'commonswiki' => [
+			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bot', 'confirmed', 'flow-bot', 'editor', 'reviewer', 'ipblock-exempt', 'image-reviewer' ],
+			'checkuser' => [ 'ipblock-exempt' ],
+		],
+	],
+	'+wgGroupPermissions' => [
+		'default' => [
+			'*' => [
+				'autocreateaccount' => true,
+				'move' => false,
+				'abusefilter-log' => false,
+				'abusefilter-hide-log' => false,
+				'abusefilter-hidden-log' => false,
+				'flow-hide' => false,
+				'centralauth-merge' => false,
+				'writeapi' => false,
+				'codereview-use' => false,
+				'move' => false,
+				'createtalk' => false,
+				'abusefilter-view' => false,
+			],
+			'user' => [
+				'codereview-add-tag' => false,
+				'reupload-shared' => false,
+				'changetags' => false,
+				'editcontentmodel' => false,
+				'torunblocked' => false,
+				'codereview-set-status' => false,
+				'move-rootuserpages' => false,
+				'move-categorypages' => false,
+				'reupload' => false,
+				'mwoauthmanagemygrants' => false,
+				'codereview-link-user' => false,
+				'codereview-remove-tag' => false,
+				'movefile' => false,
+				'flow-lock' => false,
+				'codereview-signoff' => false,
+				'move' => false,
+				'autocreateaccount' => true,
+				'createaccount' => false,
+				'noratelimit' => false,
+				'noratelimit' => false,
+				'noratelimit' => false,
+				'noratelimit' => false,
+			],
+			'autoconfirmed' => [
+				'autoconfirmed' => true,
+				'abusefilter-log-detail' => true,
+				'transcode-reset' => true,
+				'skipcaptcha' => true,
+				'autopatrol' => tr
+				
+			],
+			'bot' => [
+				'autoreview' => false,
+				'noratelimit' => true,
+				'changetags' => true,
+				'move-rootuserpages' => true,
+			],
+			'rollbacker' => [
+				'rollback' => true,
+			],
+			'checkuser' => [
+				'oathauth-enable' => true,
+				'abusefilter-privatedetails' => true,
+				'abusefilter-privatedetails-log' => true,
+				'checkuser-log' => true,
+				'checkuser' => true,
+			],
+			'sysop' => [
+				'abusefilter-log' => true,
+				'oathauth-verify-user' => false,
+				'unblockself' => false,
+				'newsletter-restore' => false,
+				'newsletter-create' => true,
+				'reupload-own' => true,
+				'edituser-exempt' => false,
+				'override-antispoof' => true,
+				'newsticker' => false,
+				'advancedmeta-edit' => false,
+				'centralnotice-admin' => false,
+				'oathauth-disable-for-user' => false,
+			],
+			'bureaucrat' => [
+				'override-antispoof' => true,
+				'renameuser' => false,
+				'userrights' => false,
+				'edituser' => false,
+				'protectsite' => false,
+				'advancedmeta-edit' => false,
+			],
+			'ipblock-exempt' => [
+				'ipblock-exempt' => true,
+				'torunblocked' => true,
+			],
+		],
+		'metawiki' => [
+			'centralnoticeadmin' => [
+				'centralnotice-admin' => true,
+				'autoreview' => true,
+				'editinterface' => true,
+				'noratelimit' => true,
+				'protect' => true,
+				'oathauth-enable' => true,
+				'banner-protect' => true,
+			],
+			'transwiki' => [
+				'oathauth-enable' => true,
+				'import' => true,
+			],
+			'steward' => [
+				'renameuser' => true,
+				'globalblock' => true,
+				'globalgrouppermissions' => true,
+				'globalgroupmembership' => true,
+				'centralauth-lock' => true,
+				'browsearchive' => true,
+				'centralauth-usermerge' => true,
+				'centralauth-rename' => true,
+				'centralauth-unmerge' => true,
+				'centralauth-merge' => true,
+				'centralauth-oversight' => true,
+				'userrights' => true,
+				'userrights-interwiki' => true,
+				'centralauth-createlocal' => true,
+				'noratelimit' => true,
+				'oathauth-verify-user' => true,
+				'abusefilter-privatedetails' => true,
+				'bigdelete' => true,
+				'abusefilter-modify-global' => true,
+				'oathauth-view-log' => true,
+			],
+			'ipblock-exempt' => [
+				'ipblock-exempt' => true,
+				'torunblocked' => true,
+			], 
+			'checkuser' => [
+				'oathauth-enable' => true,
+				'abusefilter-privatedetails' => true,
+				'abusefilter-privatedetails-log' => true
+			],
+			'autopatroller' => [
+				'autopatrol' => true,
+			],
+			'translation-admin' => [
+				'pagelang' => true,
+				'translate-manage' => true,
+				'oathauth-enable' => true,
+				'autopatrol' => true,
+				'translate-import' => true,
+				'pagetranslation' => true,
+				'banner-protect' => true,
+			],
+			'confirmed' => [
+				'editsemiprotected' => true,
+				'move' => true,
+				'autoconfirmed' => true,
+				'skipcaptcha' => true,
+				'transcode-reset' => true,
+				'abusefilter-log-detail' => true,
+			],
+			'interface-admin' => [
+				'oathauth-enable' => true,
+			],
+			'oauthadmin' => [
+				'oathauth-enable' => true,
+				'autopatrol' => true,
+				'mwoauthmanageconsumer' => true,
+			],
+			'suppress' => [
+				'oathauth-enable' => true,
+			],
+			'patroller' => [
+				'autopatrol' => true,
+				'patrol' => true,
+				'rollback' => true,
+				'patrolmarks' => true,
+			],
+		],
+		'commonswiki' => [
+			'filemover' => [
+				'movefile' => true,
+				'suppressredirect' => true,
+			],
         'autopatrolled' => [
             'mass-upload' => true,
 		    'move-rootuserpages' => true,
@@ -1355,8 +1324,7 @@ $wgConf->settings = [
 '+wgRevokePermissions' => [
     'default' => [],
 ],
-
-'wgRestrictionLevels' => [
+	'wgRestrictionLevels' => [
 	'default' => [
 		'',
 		'autoconfirmed', // semi-protection level on
@@ -1364,6 +1332,4 @@ $wgConf->settings = [
 	],
         'metawiki' => [ '', 'autoconfirmed', 'autopatrol', 'patrol', 'rollback', 'bot', 'sysop' ],
 ],
-
-
 ];
