@@ -114,40 +114,9 @@ $wgConf->settings = [
     'default' => 'mysql',
 ],
 
-'wgMainCacheType' => [
-    "redis",
-],
-
-'wgParserCacheType' => [
-    "redis",
-],
-
-'wgMessageCacheType' => [
-    "redis",
-],
-
-'wgSessionsInObjectCache ' => [
-    'default' => true,
-],
-
-'wgSessionCacheType' => [
-    'default' => CACHE_MEMCACHED,
-],
-
 'wgMemCachedServers' => [
-    'default' => ['127.0.0.1:11211'],
+    'default' => [ $wgMemCachedServersIP ],
 ],
-
-'wgObjectCaches' => [
-    "redis" => [
-		'class'	   => 'RedisBagOStuff',
-		'servers'	 => [ "/var/run/redis/redis.sock" ],
-		// 'password'	=> $wmgRedisPassword,
-		'loggroup'	=> 'redis',
-		'reportDupes' => false,
-		],
-],
-
 
 # Shared memory settings
 
@@ -224,7 +193,7 @@ $wgConf->settings = [
 ],
 
 'wgSharedTables' => [
-    'default' => [  'wikiuser',    'abuse_filter',
+    'default' => [  'wikiuser',     'abuse_filter',
                                     'abuse_filter_action',
                                     'abuse_filter_history',
                                     'abuse_filter_log',
