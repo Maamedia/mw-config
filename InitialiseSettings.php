@@ -30,9 +30,9 @@ $wgConf->settings = [
 		'datawiki' => 'Data Wiki',
 		'metawiki' => 'Meta Wiki',
 		'testwiki' => 'Test Wiki',
-		'enwiki' => 'English Masymanwiki',
-		'fiwiki' => 'Finnish Masymanwiki',
-		'idwiki' => 'Indonesian Masymanwiki',
+		'enwiki' => 'Masymanwiki',
+		'fiwiki' => 'Masymanwiki',
+		'idwiki' => 'Masymanwiki',
 	],
 	'wgLanguageCode' => [
 		'default' => 'en',
