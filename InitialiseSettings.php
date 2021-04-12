@@ -430,7 +430,12 @@ $wgConf->settings = [
 		'fiwiki' => 'Europe/Helsinki', // T31
 		'idwiki' => 'Asia/Jakarta', // T31
 	],
-
+	
+	//UniversalLanguageSelector //
+	'wgULSPosition' => [
+		'default' => 'interlanguage',
+	],
+	
 	// CirrusSearch
 	'wgCirrusSearchWikimediaExtraPlugin' => [
 		'default' => [
