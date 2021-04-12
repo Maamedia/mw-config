@@ -425,7 +425,10 @@ $wgConf->settings = [
 
 	// Timezone //
 	'wgLocaltimezone' => [
-		'default' => 'UTC'
+		'default' => 'UTC',
+		
+		'fiwiki' => 'Europe/Helsinki', // T31
+		'idwiki' => 'Asia/Jakarta', // T31
 	],
 
 	// CirrusSearch
