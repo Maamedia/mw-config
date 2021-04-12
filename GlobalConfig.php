@@ -6,6 +6,7 @@ $wgWBClientSettings['repositories']['']['repoDatabase'] = 'datawiki';
 $wgWBClientSettings['repositories']['']['changesDatabase'] = 'datawiki';
 $wgWBClientSettings['siteLinkGroups'] = [ 'Datawiki' ];
 $wgWBClientSettings['TOOLBAR'] = [ 'Wiki' ];
+$wgWBClientSettings['repoSiteName'] = 'DataWiki';
 
 
 // Documentation for Wikibase: https://www.mediawiki.org/wiki/Wikibase/Installation/Advanced_configuration#Configuration
