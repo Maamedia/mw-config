@@ -7,6 +7,7 @@ wfLoadExtensions( [
 	'CheckUser',
 	'ConfirmEdit',
 	'DismissableSiteNotice',
+	'DiscussionTools', // T31
 	'Echo',
 	'EventLogging',
 	'EventStreamConfig',
