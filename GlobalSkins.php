@@ -5,6 +5,7 @@ wfLoadSkins( [
     'Timeless',
     'MinervaNeue',
     'Modern',
+    'Citizen,
 ] );
 
 // $wgMFDefaultSkinClass = "SkinMinerva";
