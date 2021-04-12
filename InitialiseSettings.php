@@ -686,11 +686,11 @@ $wgConf->settings = [
 	], //T31 end
 	
 	'wgMFManifestBackgroundColor' => [
-		'default' => 'green',
+		'default' => '#008000',
  	],
 	
 	'wgMFManifestThemeColor' => [
-		'default' => 'green',
+		'default' => '#008000',
 	],
 	// CentralAuth // !becarefull
 	
