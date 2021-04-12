@@ -675,6 +675,23 @@ $wgConf->settings = [
 		'default' => 'metawiki',
 	],
 	
+	// MobileFrontend and MinervaNeue
+	// T31 start
+	'wgMFEnableBeta' => [
+		'default' => true,
+	],
+
+	'wgMFBetaFeedbackLink' => [
+		'default' => 'https://meta.maamedia.org/wiki/Feedback/MobileFrontend_Beta',
+	], //T31 end
+	
+	'wgMFManifestBackgroundColor' => [
+		'default' => 'green',
+ 	],
+	
+	'wgMFManifestThemeColor' => [
+		'default' => 'green',
+	],
 	// CentralAuth // !becarefull
 	
 
