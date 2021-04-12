@@ -325,7 +325,6 @@ $wgConf->settings = [
 		'commonswiki' => true,
 		'datawiki' => true,
 		'enwiki' => true,
-		'metawiki' => true,
 	],
 	'wgDefaultRobotPolic' => [
 		'default' => 'index,follow',
