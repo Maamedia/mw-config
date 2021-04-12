@@ -17,7 +17,6 @@ wfLoadExtensions( [
 	'GlobalUserPage',
 	'Interwiki',
 	'LocalisationUpdate',
-        'MaamediaMessages',
 	'Nuke',
 	'OATHAuth',
 	'OAuth',
