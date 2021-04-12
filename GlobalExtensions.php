@@ -1,5 +1,6 @@
 <?php
 wfLoadExtensions( [	
+	'3D',
     	'AbuseFilter',
 //	'AntiSpoof',
 	'BetaFeatures',
@@ -22,6 +23,7 @@ wfLoadExtensions( [
 	'OATHAuth',
 	'OAuth',
 	'ParserFunctions',
+	'ProtectSite',
 	'PdfHandler',
 	'RelatedArticles',
 	'Renameuser',
