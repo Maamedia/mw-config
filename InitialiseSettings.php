@@ -584,7 +584,11 @@ $wgConf->settings = [
 		'default' => [ 'build' => true, 'use' => true ],
 	],
 	'wgCirrusSearchNearMatchWeight' => [
-		'default' => 10, //T257922
+		'default' => 10, 
+	],
+	
+	'wgCirrusSearchEnableRegex' => [
+		'default' => true, //T31
 	],
 
 	// CodeEditor
