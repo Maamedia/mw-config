@@ -61,3 +61,6 @@ if ( $wgDBname === 'datawiki' ) {
 	$wgWBRepoSettings['formatterUrlProperty'] = 'P1';
 }
 */
+
+$wgVisualEditorEnableWikitext = true;
+$wgDefaultUserOptions['visualeditor-newwikitext'] = 1;
