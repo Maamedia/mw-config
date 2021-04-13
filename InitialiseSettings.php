@@ -41,6 +41,10 @@ $wgConf->settings = [
 	],
 	'wgLocalInterwiki' => [
 		'default' => '$lang',
+	], 
+	'wgInterwikiMagic' => [
+		'default' => true,
+		'metawiki' => false,
 	],
 	'wgScriptPath' => [
 		'default' => '',
