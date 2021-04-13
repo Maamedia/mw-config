@@ -63,4 +63,4 @@ if ( $wgDBname === 'datawiki' ) {
 */
 
 $wgVisualEditorEnableWikitext = true;
-$wgDefaultUserOptions['visualeditor-newwikitext'] = 1;
+$wgDefaultUserOptions['visualeditor-newwikitext'] = 0;
