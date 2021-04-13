@@ -381,6 +381,10 @@ $wgConf->settings = [
 	'wgRPAddSidebarSection' => [
 		'default' => true,
 	],
+	
+	'wgVisualEditorEnableWikitext' => [
+		'default' => true,
+	],
 	// BetaFeatures //
 	'wgVisualEditorEnableWikitextBetaFeature' => [
 		'default' => true,
