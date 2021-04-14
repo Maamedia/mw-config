@@ -274,10 +274,6 @@ $wgConf->settings = [
 	
 	// All Extensions Started bellow
 	// AbuseFilter
-	'wmgUseUniversalLanguageSelector' => [ //testing//
-		'default' => true,
-		'metawiki' => false,
-	],
 	'wgAbuseFilterActions' => [
 		'default' => [
 			'block' => true,
@@ -851,6 +847,24 @@ $wgConf->settings = [
 			'src'  => 'MediaWiki:Titleblacklist'
 		],
 	],
+	
+	// TemplateData
+	'wmgUseTemplateData' => [ //testing//
+		'default' => true,
+	],
+	// TemplateSandbox
+	'wmgUseTemplateSandbox' => [ //testing//
+		'default' => true,
+	],
+	// TemplateStyles
+	'wmgUseTemplateStyles' => [ //testing//
+		'default' => true,
+	],
+	// TemplateWizard 
+	'wmgUseTemplateWizard' => [ //testing//
+		'default' => true,
+	],
+	
 	// Transle
 	'wgTranslateUseSandbox' => [
 		'default' => true,
