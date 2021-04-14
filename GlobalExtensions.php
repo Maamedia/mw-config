@@ -60,6 +60,7 @@ wfLoadExtensions( [
 	'SyntaxHighlight_GeSHi',
 	'TorBlock',
 	'TwoColConflict',
+	'Translate',
 	'TextExtracts',
 	'TemplateSandbox',
 	'TemplateStyles',
