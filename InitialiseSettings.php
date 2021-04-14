@@ -908,6 +908,7 @@ $wgConf->settings = [
 	// TemplateData
 	'wmgUseTemplateData' => [ 
 		'default' => true,
+		'idwiki' => false,
 	],
 	// TemplateSandbox
 	'wmgUseTemplateSandbox' => [ 
