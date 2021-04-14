@@ -35,6 +35,7 @@ wfLoadExtensions( [
 	'SyntaxHighlight_GeSHi',
 	'TorBlock',
 	'TemplateStyles',
+	'TemplateData',
 	'TemplateWizard',
 	'UserMerge',
 	'UniversalLanguageSelector',
