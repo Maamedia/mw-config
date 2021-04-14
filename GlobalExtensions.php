@@ -60,7 +60,7 @@ wfLoadExtensions( [
 	'SyntaxHighlight_GeSHi',
 	'TorBlock',
 	'TwoColConflict',
-	'Translate',
+//	'Translate', // InitialiseSettings.php line 926
 	'TextExtracts',
 	'TemplateSandbox',
 	'TemplateStyles',
