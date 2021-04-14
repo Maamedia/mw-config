@@ -274,6 +274,10 @@ $wgConf->settings = [
 	
 	// All Extensions Started bellow
 	// AbuseFilter
+	'wmgUseAbuseFilter' => [ //testing//
+		'default' => false,
+		'metawiki' => true,
+	],
 	'wgAbuseFilterActions' => [
 		'default' => [
 			'block' => true,
