@@ -27,8 +27,8 @@ $wgConf->settings = [
 	'wgSitename' => [
 		'default' => '',
 		'commonswiki' => 'Commons Wiki',
-		'datawiki' => 'Data Wiki',
-		'metawiki' => 'Meta Wiki',
+		'datawiki' => 'DataWiki',
+		'metawiki' => 'Meta',
 		'testwiki' => 'Test Wiki',
 		'enwiki' => 'Masymanwiki',
 		'fiwiki' => 'Masymanwiki',
@@ -135,10 +135,6 @@ $wgConf->settings = [
 	],
 	'wgDisableCounters ' => [
 		'default' => true,
-	],
-	'wmgUseUploadWizard' => 
-		'default' => true,
-		'metawiki' => false,
 	],
 	'wgMiserMode ' => [
 		'default' => true,
