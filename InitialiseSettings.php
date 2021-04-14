@@ -136,6 +136,10 @@ $wgConf->settings = [
 	'wgDisableCounters ' => [
 		'default' => true,
 	],
+	'wmgUseUploadWizard' => 
+		'default' => true,
+		'metawiki' => false,
+	],
 	'wgMiserMode ' => [
 		'default' => true,
 	],
