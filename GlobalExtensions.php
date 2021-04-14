@@ -14,6 +14,7 @@ wfLoadExtensions( [
 	'DiscussionTools',
 	'DismissableSiteNotice',
 	'Echo',
+	'Elastica',
 	'EventLogging',
 	'EventStreamConfig',
 	'GlobalBlocking',
