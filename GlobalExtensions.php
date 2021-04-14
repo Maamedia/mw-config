@@ -2,7 +2,6 @@
 wfLoadExtensions( [	
     	'AbuseFilter',
 //	'AntiSpoof',
-	'BetaFeatures',
 	'CentralNotice',
 	'CheckUser',
 	'ConfirmEdit',
@@ -22,8 +21,6 @@ wfLoadExtensions( [
 	'OATHAuth',
 	'OAuth',
 	'ParserFunctions',
-	'PdfHandler',
-	'RelatedArticles',
 	'Renameuser',
 	'Scribunto',
 	'SpamBlacklist',
