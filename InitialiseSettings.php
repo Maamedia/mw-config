@@ -389,6 +389,7 @@ $wgConf->settings = [
 	'wgVisualEditorEnableWikitext' => [
 		'default' => true,
 	],
+	
 	// BetaFeatures //
 	'wgVisualEditorEnableWikitextBetaFeature' => [
 		'default' => true,
@@ -406,12 +407,34 @@ $wgConf->settings = [
 	'wgMediaViewerIsInBeta' => [
 		'default' => true,
 	],
+	
+	// CentralNotice
+	'wgNoticeInfrastructure' => [ 
+		'default' => true,
+	],
+	'wgNoticeProjects' => [ 
+		'centralnoticeproject' => true,
+	],
+	'wgNoticeProject' => [ 
+		'centralnoticeproject' => true,
+	],
+	'wgCentralHost' => [ 
+		'default' => 'localhost',
+	],
+	'wgCentralDBname' => [ 
+		'default' => 'metawiki',
+	],
+	'wgCentralSelectedBannerDispatcher' => [ 
+		'default' => 'https://meta.maamedia.org/index.php?title=Special:BannerLoader',
+	],
 
 	// Checkuser
+	'wgCUDMaxAge' => [
+		'default' => 7776000, //in seconds (default = 3 months)
+	],
 	'wgCheckUserGBtoollink' => [
-	'centralDB' => 'metawiki',
-	'groups' => [ 'steward', 'staff' 
-		    ],
+		'centralDB' => 'metawiki',
+		'groups' => [ 'steward', 'staff' ],
 	],
 	'wgCheckUserForceSummary' => [
 		'default' => true,
@@ -610,11 +633,39 @@ $wgConf->settings = [
 	'wgContentTranslationDatabase ' => [
 		'default' => 'metawiki'
 	],
+	
+	// DismissableSiteNotice
+	'wgDismissableSiteNoticeForAnons' => [
+		'default' => true,
+	],
+	
 	// Delete
 	'wgDeleteRevisionsLimit' => [
 		'default' => '1000',
 	],
+	
 	// Echo
+	'wgNotifyTypeAvailabilityByCategory' => [
+	// Otherwise, a user->user email could trigger an additional redundant notification email.
+		'emailuser' => [
+			'web' => true,
+			'email' => false,
+		],
+		'mention-failure' => [
+			'web' => true,
+			'email' => false,
+		],
+		'mention-success' => [
+			'web' => true,
+			'email' => false,
+		],
+	],
+	'wgEchoDefaultUserSubscriptions' => [
+		'default' => [],
+	],
+	'wgEchoEnableEmailBatch' => [
+		'default' => true,
+	],
 	'wgEchoCrossWikiNotifications' => [
 		'default' => true,
 	],
@@ -630,11 +681,36 @@ $wgConf->settings = [
 	'wgEchoMentionStatusNotifications' => [
 		'default' => true,
 	],
-	'wgEchoEnableEmailBatch' => [
+	
+	// Global Blocking //
+	'wgGlobalBlockingDatabase' => [
+		'default' =>  'centralauth',
+	],
+	'wgGlobalBlockingBlockXFF' => [
+		'default' =>  true,
+	],
+	'wgApplyGlobalBlocks' => [
+		'default' => true,
+		'metawiki' => false,
+	],
+	
+	// GlobalCssJs //
+	'wgGlobalCssJsConfig' => [
+		'wiki' => 'metawiki',
+		'source' => 'metawiki',
+	],
+	'wgUseGlobalSiteCssJs' => [
 		'default' => true,
 	],
-	'wgEchoDefaultUserSubscriptions' => [
-		'default' => [],
+	'wgAllowUserCss' => [
+		'default' => true, 
+	],
+	'wgAllowUserJs' => [
+		'default' => true, 
+	],
+	'wgResourceLoaderSources' => [
+		'apiScript' => 'https://meta.maamedia.org/api.php', 
+		'loadScript' => 'https://meta.maamedia.org/load.php'
 	],
 
 	// GlobalContributions
@@ -654,44 +730,6 @@ $wgConf->settings = [
 		'default' => 'https://meta.maamedia.org/api.php',
 	],
 
-	// GlobalCssJs //
-	'wgUseGlobalSiteCssJs' => [
-		'default' => true,
-	],
-	'wgAllowUserCss' => [
-		'default' => true, 
-	],
-	'wgAllowUserJs' => [
-		'default' => true, 
-	],
-	'wgResourceLoaderSources' => [
-		'apiScript' => 'https://meta.maamedia.org/api.php', 
-		'loadScript' => 'https://meta.maamedia.org/load.php'
-	],
-
-	// Global Blocking //
-	'wgGlobalBlockingDatabase' => [
-		'default' =>  'centralauth',
-	],
-	'wgGlobalBlockingBlockXFF' => [
-		'default' =>  true,
-	],
-	'wgApplyGlobalBlocks' => [
-		'default' => true,
-		'metawiki' => true,
-	],
-
-	// RelatedArticles //
-	'wgRelatedArticlesUseCirrusSearch' => [
-		'default' => true,
-	],
-	'wgRelatedArticlesOnlyUseCirrusSearch' => [
-		'default' => true,
-	],
-	'wgRelatedArticlesDescriptionSource' => [
-		'default' => 'metawiki',
-	],
-	
 	// MobileFrontend and MinervaNeue
 	// T31 start
 	'wgMFEnableBeta' => [
@@ -783,6 +821,9 @@ $wgConf->settings = [
 	'wgScribuntoDefaultEngine' => [
 		'default' => 'luastandalone',
 	],
+	'wgScribuntoEngineConf' => [
+		'luastandalone' => [ 'memoryLimit' => 209715200, ],
+	],
 	'wgScribuntoUseGeSHi' => [
 		'default' => true,
 	],
@@ -792,8 +833,8 @@ $wgConf->settings = [
 	'wgPygmentizePath' => [
 		'default' => 'extensions/SyntaxHighlight_GeSHi/pygments/pygmentize',
 	],
+	
 	// Interwiki //
-
 	'wgInterwikiCentralDB' => [
 		'default' => 'metawiki',
 	],
@@ -840,6 +881,18 @@ $wgConf->settings = [
 		'default' => false,
 		'metawiki' => true,
 	],
+	
+	// RelatedArticles //
+	'wgRelatedArticlesUseCirrusSearch' => [
+		'default' => true,
+	],
+	'wgRelatedArticlesOnlyUseCirrusSearch' => [
+		'default' => true,
+	],
+	'wgRelatedArticlesDescriptionSource' => [
+		'default' => 'metawiki',
+	],
+	
 	// TitleBlacklist //
 	'wgBlacklistSettings' => [
 		[
@@ -849,23 +902,26 @@ $wgConf->settings = [
 	],
 	
 	// TemplateData
-	'wmgUseTemplateData' => [ //testing//
+	'wmgUseTemplateData' => [ 
 		'default' => true,
 	],
 	// TemplateSandbox
-	'wmgUseTemplateSandbox' => [ //testing//
+	'wmgUseTemplateSandbox' => [ 
 		'default' => true,
 	],
 	// TemplateStyles
-	'wmgUseTemplateStyles' => [ //testing//
+	'wmgUseTemplateStyles' => [ 
 		'default' => true,
 	],
 	// TemplateWizard 
-	'wmgUseTemplateWizard' => [ //testing//
+	'wmgUseTemplateWizard' => [ 
 		'default' => true,
 	],
 	
-	// Transle
+	// Transle 
+	'wmgUseTemplateWizard' => [ 
+		'default' => true,
+	],
 	'wgTranslateUseSandbox' => [
 		'default' => true,
 	],
