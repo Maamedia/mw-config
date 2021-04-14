@@ -1,6 +1,5 @@
-<?php
+<?php // This is a default global extension, new extensions can be add to localextensions.php
 wfLoadExtensions( [	
-	'3D',
     	'AbuseFilter',
 //	'AntiSpoof',
 	'BetaFeatures',
@@ -8,7 +7,6 @@ wfLoadExtensions( [
 	'CheckUser',
 	'ConfirmEdit',
 	'DismissableSiteNotice',
-	'DiscussionTools', // T31
 	'Echo',
 	'EventLogging',
 	'EventStreamConfig',
@@ -17,13 +15,13 @@ wfLoadExtensions( [
 	'GlobalPreferences',
 	'GlobalUsage',
 	'GlobalUserPage',
+	'ImageMap',
 	'Interwiki',
 	'LocalisationUpdate',
 	'Nuke',
 	'OATHAuth',
 	'OAuth',
 	'ParserFunctions',
-	'ProtectSite',
 	'PdfHandler',
 	'RelatedArticles',
 	'Renameuser',
@@ -33,7 +31,6 @@ wfLoadExtensions( [
 	'TorBlock',
 	'UserMerge',
 	'WikiEditor',
-	// 'cldr'
 ] );
 $wgScribuntoDefaultEngine = 'luastandalone';
 $wgScribuntoUseGeSHi = true;
