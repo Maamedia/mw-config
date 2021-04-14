@@ -1273,3 +1273,4 @@ $wgConf->settings = [
 		'metawiki' => [ '', 'autoconfirmed', 'autopatrol', 'patrol', 'rollback', 'bot', 'sysop' ],
 	],
 ];
+require_once( '/var/www/mediawiki/LocalExtensions.php' );
