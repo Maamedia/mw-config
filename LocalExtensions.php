@@ -5,14 +5,6 @@ if ( $wmgUse3D ) {
 	wfLoadExtension( '3D' );
 }
 
-if ( $wmgUseAbuseFilter ) {
-	wfLoadExtension( 'AbuseFilter' );
-}
-
-if ( $wmgUseAntiSpoof ) {
-	wfLoadExtension( 'AntiSpoof' );
-}
-
 if ( $wmgUseAdvancedMeta ) {
 	wfLoadExtension( 'AdvancedMeta' );
 }
@@ -101,10 +93,6 @@ if ( $wmgUseGadgets ) {
 	wfLoadExtension( 'Gadgets' );
 }
 
-if ( $wmgUseGlobalUserPage ) {
-	wfLoadExtension( 'GlobalUserPage' );
-}
-
 if ( $wmgUseGraph ) {
 	wfLoadExtension( 'Graph' );
 }
@@ -161,7 +149,7 @@ if ( $wmgUsePdfHandler ) {
 	wfLoadExtension( 'PdfHandler' );
 }
 
-if ( $wmgUsePdfHandler ) {
+if ( $wmgUseProtectSite ) {
 	wfLoadExtension( 'ProtectSite' );
 }
 
@@ -171,10 +159,6 @@ if ( $wmgUseRelatedArticles ) {
 
 if ( $wmgUseReplaceText ) {
 	wfLoadExtension( 'ReplaceText' );
-}
-
-if ( $wmgUseSyntaxHighlightGeSHi ) {
-	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 }
 
 if ( $wmgUseTemplateData ) {
