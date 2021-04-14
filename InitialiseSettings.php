@@ -748,11 +748,6 @@ $wgConf->settings = [
 		'default' => '#008000',
 	],
 	
-	// UploadWizard //
-	'wmgUseUploadWizard' => 
-		'default' => false,
-		'commonswiki' => true,
-	],
 	// CentralAuth // !becarefull
 	
 
