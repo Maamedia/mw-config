@@ -274,9 +274,9 @@ $wgConf->settings = [
 	
 	// All Extensions Started bellow
 	// AbuseFilter
-	'wmgUseAbuseFilter' => [ //testing//
-		'default' => false,
-		'metawiki' => true,
+	'wmgUseUniversalLanguageSelector' => [ //testing//
+		'default' => true,
+		'metawiki' => false,
 	],
 	'wgAbuseFilterActions' => [
 		'default' => [
