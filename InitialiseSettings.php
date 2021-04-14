@@ -535,6 +535,9 @@ $wgConf->settings = [
 	'wgCirrusSearchMasterTimeout' => [
 		'default' => '5m'
 	],
+	'wgCirrusSearchInterwikiProv' => [
+		'default' => true,
+	],
 	'wgCirrusSearchSearchShardTimeout' => [
 		'default' => [
 			"comp_suggest" => "5s",
@@ -1093,6 +1096,25 @@ $wgConf->settings = [
 	],
 	'wgEnotifImpersonal' => [
 		'default' => true,
+	],
+	
+	'wgCapitalLinks' => [ //T31
+		'default' => true,
+	],
+	
+	'wgLegacyEncoding' => [
+	'default' => false,
+	'enwiki' => 'windows-1252',
+	],
+	
+	'wgEnableAsyncUploads' => [
+	'default' => false,
+	'commonswiki' => true,
+	],
+	
+	'wgAllowCrossOrigin' => [
+	'default' => true,
+
 	],
 	// Namespace //
 	'wgSiteNotice' => [
