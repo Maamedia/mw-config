@@ -2,7 +2,9 @@
 wfLoadExtensions( [	
 	'3D',
     	'AbuseFilter',
+	'AdvancedSearch',
 //	'AntiSpoof',
+	'CirrusSearch',
 	'CentralNotice',
 	'CentralAuth',
 	'CheckUser',
@@ -12,6 +14,7 @@ wfLoadExtensions( [
 	'DiscussionTools',
 	'DismissableSiteNotice',
 	'Echo',
+	'ElasticSearch',
 	'EventLogging',
 	'EventStreamConfig',
 	'GlobalBlocking',
