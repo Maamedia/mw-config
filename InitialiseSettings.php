@@ -927,8 +927,8 @@ $wgConf->settings = [
 	
 	// Translate
 	'wmgUseTranslate' => [ 
-		'default' => true,
-		'idwiki' => false,
+		'default' => false,
+		'metawiki' => true,
 	],
 	'wgTranslateUseSandbox' => [
 		'default' => true,
@@ -967,6 +967,12 @@ $wgConf->settings = [
 	],
 	'wgTranslateUsePreSaveTransform' => [
 		'default' => true,
+	],
+	
+	// UploadWizard //
+	'wmgUseUploadWizard' => [ 
+		'default' => false,
+		'metawiki' => true,
 	],
 
 	// VisualEditor //
