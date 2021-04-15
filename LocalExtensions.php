@@ -209,6 +209,10 @@ if ( $wmgUseUploadsLink ) {
 	wfLoadExtension( 'UploadsLink' );
 }
 
+if ( $wmgUseUploadWizard ) {
+	wfLoadExtension( 'UploadWizard' );
+}
+
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 }
