@@ -972,7 +972,7 @@ $wgConf->settings = [
 	// UploadWizard //
 	'wmgUseUploadWizard' => [ 
 		'default' => false,
-		'metawiki' => true,
+		'commonswiki' => true,
 	],
 
 	// VisualEditor //
