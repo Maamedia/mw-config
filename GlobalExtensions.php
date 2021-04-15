@@ -59,6 +59,7 @@ wfLoadExtensions( [
 	'SpamBlacklist',
 	'SyntaxHighlight_GeSHi',
 	'TorBlock',
+        'Translate',
 	'TwoColConflict',
 	'TextExtracts',
 	'TemplateSandbox',
