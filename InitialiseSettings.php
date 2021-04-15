@@ -907,8 +907,8 @@ $wgConf->settings = [
 	
 	// TemplateData
 	'wmgUseTemplateData' => [ 
-		'default' => true,
-		'idwiki' => false,
+		'default' => false,
+		'metawiki' => true,
 	],
 	// TemplateSandbox
 	'wmgUseTemplateSandbox' => [ 
@@ -916,11 +916,13 @@ $wgConf->settings = [
 	],
 	// TemplateStyles
 	'wmgUseTemplateStyles' => [ 
-		'default' => true,
+		'default' => false,
+		'metawiki' => true,
 	],
 	// TemplateWizard 
 	'wmgUseTemplateWizard' => [ 
-		'default' => true,
+		'default' => false,
+		'metawiki' => true,
 	],
 	
 	// Translate
