@@ -12,6 +12,7 @@ wfLoadExtensions( [
 	'CentralNotice',
 	'CentralAuth',
 	'CheckUser',
+	'CharInsert', 
 	'CommonsMetadata',
 	'CodeEditor',
 	'CodeMirror',
