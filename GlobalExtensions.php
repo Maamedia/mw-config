@@ -50,6 +50,7 @@ wfLoadExtensions( [
 	'ParserFunctions',
 	'PagedTiffHandler',
 	'PageImages',
+	'PageViewInfo',
 	'ProtectSite',
 	'Popups',
 	'Poem',
@@ -61,6 +62,8 @@ wfLoadExtensions( [
 	'SyntaxHighlight_GeSHi',
 	'TorBlock',
         'Translate',
+	'TranslationNotifications',
+	'TimedMediaHandler'.
 	'TwoColConflict',
 	'TextExtracts',
 	'TemplateSandbox',
