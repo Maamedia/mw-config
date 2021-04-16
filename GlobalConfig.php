@@ -9,8 +9,8 @@ $wgWBClientSettings['TOOLBAR'] = [ 'Wiki' ];
 $wgWBClientSettings['repoSiteName'] = 'DataWiki';
 
 $wgResourceLoaderSources['metawiki'] = [
-	'apiScript' => '//meta.maamedia.org/w/api.php',
-	'loadScript' => '//meta.maamedia.org/w/load.php',
+	'apiScript' => '//meta.maamedia.org/api.php',
+	'loadScript' => '//meta.maamedia.org/load.php',
 ];
 
 $wgGlobalCssJsConfig = [
