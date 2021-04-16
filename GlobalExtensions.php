@@ -62,7 +62,6 @@ wfLoadExtensions( [
 	'SyntaxHighlight_GeSHi',
 	'TorBlock',
         'Translate',
-	'TranslationNotifications',
 	'TimedMediaHandler'.
 	'TwoColConflict',
 	'TextExtracts',
