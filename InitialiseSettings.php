@@ -71,6 +71,7 @@ $wgConf->settings = [
 	],
 	'wgDBuser' => [
 		'default' => 'wikiuser',
+	],
 	'wgAuthenticationTokenVersion' => [
 		'default' => '1',
 	],
