@@ -40,6 +40,7 @@ wfLoadExtensions( [
 	'LocalisationUpdate',
 	'LoginNotify',
 	'Linter',
+	'MaamediaMessages',
 	'MobileFrontend',
 	'MultimediaViewer',
 	'MassMessage',
