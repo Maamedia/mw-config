@@ -1107,18 +1107,21 @@ $wgConf->settings = [
 	],
 	
 	'wgLegacyEncoding' => [
-	'default' => false,
-	'enwiki' => 'windows-1252',
+		'default' => false,
+		'enwiki' => 'windows-1252',
 	],
 	
 	'wgEnableAsyncUploads' => [
-	'default' => false,
-	'commonswiki' => true,
+		'default' => false,
+		'commonswiki' => true,
 	],
 	
 	'wgAllowCrossOrigin' => [
-	'default' => true,
-
+		'default' => true,
+	],
+	
+	'wgWatchlistExpiry' => [
+		'default' => true,
 	],
 	// Namespace //
 	'wgSiteNotice' => [
