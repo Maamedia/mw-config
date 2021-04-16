@@ -698,12 +698,6 @@ $wgConf->settings = [
 	],
 	
 	// GlobalCssJs //
-	'wgGlobalCssJsConfig' => [
-		'default' => [
-			'wiki' => false,
-			'source' => 'metawiki',
-		],
-	],
 	'wgUseGlobalSiteCssJs' => [
 		'default' => true,
 	],
