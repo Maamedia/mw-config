@@ -8,6 +8,10 @@ $wgWBClientSettings['siteLinkGroups'] = [ 'Datawiki' ];
 $wgWBClientSettings['TOOLBAR'] = [ 'Wiki' ];
 $wgWBClientSettings['repoSiteName'] = 'DataWiki';
 
+$wgGlobalCssJsConfig = array(
+	'wiki' => 'metawiki',
+	'source' => 'metawiki',
+);
 
 // Documentation for Wikibase: https://www.mediawiki.org/wiki/Wikibase/Installation/Advanced_configuration#Configuration
 
