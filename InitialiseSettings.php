@@ -700,7 +700,7 @@ $wgConf->settings = [
 	// GlobalCssJs //
 	'wgGlobalCssJsConfig' => [
 		'default' => [
-			'wiki' => '$wgDBname',
+			'wiki' => 'wgDBname',
 			'source' => 'metawiki',
 		],
 	],
