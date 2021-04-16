@@ -71,7 +71,6 @@ $wgConf->settings = [
 	],
 	'wgDBuser' => [
 		'default' => 'wikiuser',
-	],
 	'wgAuthenticationTokenVersion' => [
 		'default' => '1',
 	],
@@ -83,14 +82,6 @@ $wgConf->settings = [
 	],
 	'wgCompressRevisions' => [
 		'default' => false,
-	],
-	'+wgResourceLoaderSources' => [
-		'default' => [ 
-			'metawiki' => [
-				'apiScript' => '//meta.maamedia.org/api.php',
-				'loadScript' => '//meta.maamedia.org/load.php',
-			],
-		],
 	],
 	'wgDBTableOptions' => [
 		'default' => 'ENGINE=InnoDB, DEFAULT CHARSET=binary',
@@ -706,12 +697,6 @@ $wgConf->settings = [
 	],
 	'wgAllowUserJs' => [
 		'default' => true, 
-	],
-	'wgResourceLoaderSources' => [
-		'default' => [
-			'apiScript' => 'https://meta.maamedia.org/api.php', 
-			'loadScript' => 'https://meta.maamedia.org/load.php'
-		],
 	],
 
 	// GlobalContributions
