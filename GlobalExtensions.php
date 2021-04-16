@@ -3,7 +3,6 @@ wfLoadExtensions( [
 	'3D',
     	'AbuseFilter',
 	'AdvancedSearch',
-	'ArticleCreationWorkflow'
 //	'AntiSpoof',
 	'Babel',
 	'BetaFeatures',
