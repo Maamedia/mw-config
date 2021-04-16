@@ -983,6 +983,13 @@ $wgConf->settings = [
 		],
 
 	],
+	'wgSiteLogoWordmark' => [
+		'fiwiki' => [
+			'src' => '/images/b/b0/Masymanwiki_Logo.png',
+			'width' => 119,
+			'height' => 18,
+	],
+	],
 	'wgFavicon' => [
 		'default' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
 		'commonswiki' => '/images/4/4a/Maamedia_Commons_Logo-2.png',
