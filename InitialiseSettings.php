@@ -699,8 +699,10 @@ $wgConf->settings = [
 	
 	// GlobalCssJs //
 	'wgGlobalCssJsConfig' => [
-		'wiki' => 'metawiki',
-		'source' => 'metawiki',
+		'default' => [
+			'wiki' => 'metawiki',
+			'source' => 'metawiki',
+		],
 	],
 	'wgUseGlobalSiteCssJs' => [
 		'default' => true,
@@ -712,8 +714,10 @@ $wgConf->settings = [
 		'default' => true, 
 	],
 	'wgResourceLoaderSources' => [
-		'apiScript' => 'https://meta.maamedia.org/api.php', 
-		'loadScript' => 'https://meta.maamedia.org/load.php'
+		'default' => [
+			'apiScript' => 'https://meta.maamedia.org/api.php', 
+			'loadScript' => 'https://meta.maamedia.org/load.php'
+		],
 	],
 
 	// GlobalContributions
