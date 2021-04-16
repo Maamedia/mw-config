@@ -9,7 +9,7 @@ $wgWBClientSettings['TOOLBAR'] = [ 'Wiki' ];
 $wgWBClientSettings['repoSiteName'] = 'DataWiki';
 
 $wgGlobalCssJsConfig = array(
-	'wiki' => '$wgDBname',
+	'wiki' => '$wgServer',
 	'source' => 'metawiki',
 );
 
