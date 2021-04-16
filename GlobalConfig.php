@@ -8,10 +8,15 @@ $wgWBClientSettings['siteLinkGroups'] = [ 'Datawiki' ];
 $wgWBClientSettings['TOOLBAR'] = [ 'Wiki' ];
 $wgWBClientSettings['repoSiteName'] = 'DataWiki';
 
-$wgGlobalCssJsConfig = array(
-	'wiki' => '$wgServer',
-	'source' => 'metawiki',
-);
+$wgResourceLoaderSources['metawiki'] = [
+	'apiScript' => '//meta.maamedia.org/w/api.php',
+	'loadScript' => '//meta.v.org/w/load.php',
+];
+
+$wgGlobalCssJsConfig = [
+	'wiki' => 'metawiki', // database name
+	'source' => 'metawiki', // ResourceLoader source name
+];
 
 // Documentation for Wikibase: https://www.mediawiki.org/wiki/Wikibase/Installation/Advanced_configuration#Configuration
 
