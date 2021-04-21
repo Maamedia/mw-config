@@ -64,6 +64,7 @@ wfLoadExtensions( [
 	'TorBlock',
         'Translate',
 	'TranslationNotifications',
+	'Thanks',
 	'TwoColConflict',
 	'TextExtracts',
 	'TemplateSandbox',
