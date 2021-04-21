@@ -1119,6 +1119,9 @@ $wgConf->settings = [
 			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'reviewer', 'editor', 'flow-bot' , 'ipblock-exempt', 'translation-admin'],
 			'sysop' => [ 'rollbacker', 'editor', 'reviewer', 'confirmed', 'autoreview' ],
 		],
+		'+idwiki' => [
+			'bureaucrat' => [ 'sysop' ],
+		],
 		'+commonswiki' => [
 			'checkuser' => [ 'ipblock-exempt' ],
 			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'reviewer', 'editor', 'flow-bot', 'image-reviewer', 'ipblock-exempt' ],
