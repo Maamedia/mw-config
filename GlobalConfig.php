@@ -18,6 +18,9 @@ $wgGlobalCssJsConfig = [
 	'source' => 'metawiki', // ResourceLoader source name
 ];
 
+$wgAddGroups['bureaucrat'] = true;
+$wgAddGroups['bureaucrat'] = [ 'sysop', 'bot' ];
+
 // Documentation for Wikibase: https://www.mediawiki.org/wiki/Wikibase/Installation/Advanced_configuration#Configuration
 
 // You should only need to set $wgWBClientSettings['repoUrl'], $wgWBClientSettings['repoDatabase'] and $wgWBClientSettings['changesDatabase']
