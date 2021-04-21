@@ -12,6 +12,7 @@ $wgResourceLoaderSources['metawiki'] = [
 	'apiScript' => '//meta.maamedia.org/api.php',
 	'loadScript' => '//meta.maamedia.org/load.php',
 ];
+$wgGroupPermissions['bureaucrat']['userrights'] = false;
 
 $wgGlobalCssJsConfig = [
 	'wiki' => 'metawiki', // database name
