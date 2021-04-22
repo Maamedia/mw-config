@@ -183,10 +183,8 @@ if ( $wmgUseTextExtracts ) {
 
 if ( $wmgUseTranslate ) {
 	wfLoadExtension( 'Translate' );
-}
-
-if ( $wmgUseTranslationNotifications ) {
 	wfLoadExtension( 'TranslationNotifications' );
+	wfLoadExtension( 'UniversalLanguageSelector' );
 }
 
 if ( $wmgUseThanks ) {
@@ -199,10 +197,6 @@ if ( $wmgUseTimedMediaHandler ) {
 
 if ( $wmgUseTwoColConflict ) {
 	wfLoadExtension( 'TwoColConflict' );
-}
-
-if ( $wmgUseUniversalLanguageSelector ) {
-	wfLoadExtension( 'UniversalLanguageSelector' );
 }
 
 if ( $wmgUseUploadsLink ) {
