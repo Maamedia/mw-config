@@ -56,6 +56,15 @@ $wgConf->settings = [
 	'wgDefaultSkin' => [
 		'default' => 'vector',
 	],
+	// extensions
+	'wmgUseTranslate' => [
+		'default' => false,
+		'metawiki' => true,
+	],
+	'wmgUseTranslationNotifications' => [
+		'default' => false,
+		'metawiki' => true,
+	],
 	// Debugging //
 	'wgShowExceptionDetails' => [
 		'default' => true,
@@ -1367,14 +1376,6 @@ $wgConf->settings = [
 			'sysop',
 		],
 		'metawiki' => [ '', 'autoconfirmed', 'autopatrol', 'patrol', 'rollback', 'bot', 'sysop' ],
-	],
-	'wmgUseTranslate' => [
-		'default' => false,
-		'metawiki' => true,
-	],
-	'wmgUseTranslationNotifications' => [
-		'default' => false,
-		'metawiki' => true,
 	],
 ];
 $wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
