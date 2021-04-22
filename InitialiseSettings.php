@@ -265,6 +265,12 @@ $wgConf->settings = [
 	],
 	
 	// All Extensions Started bellow
+	'wmgUse3D' => [ 
+		'default' => true,
+		'idwiki' => false,
+	],
+	
+	
 	// AbuseFilter
 	'wgAbuseFilterActions' => [
 		'default' => [
