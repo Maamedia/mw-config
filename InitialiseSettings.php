@@ -290,6 +290,10 @@ $wgConf->settings = [
 		'enwiki' => true,
 		'metawiki' => true,
 	],
+	'wmgUseContentTranslation' => [
+		'default' => false,
+		'enwiki' => true,
+	],
 	'wmgUseTranslate' => [
 		'default' => true,
 		'idwiki' => false,
