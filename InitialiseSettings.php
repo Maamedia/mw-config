@@ -1365,6 +1365,12 @@ $wgConf->settings = [
 				'import' => true,
 			],
 		],
+		'idwiki' => [
+			'user' => [
+				'createaccount' => false,
+				'edit' => false,
+			],
+		],
 	],
 	'+wgRevokePermissions' => [
 		'default' => [],
