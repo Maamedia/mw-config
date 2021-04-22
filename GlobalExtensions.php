@@ -64,6 +64,7 @@ wfLoadExtensions( [
 	'TextExtracts',
 	'TemplateSandbox',
 	'TemplateStyles',
+	'Translate',
 	'TemplateData',
 	'TemplateWizard',
 	'UserMerge',
