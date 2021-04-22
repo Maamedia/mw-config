@@ -294,10 +294,6 @@ $wgConf->settings = [
 		'default' => false,
 		'enwiki' => true,
 	],
-	'wmgUseTranslate' => [
-		'default' => true,
-		'idwiki' => false,
-	],
 	'wmgUseUniversalLanguageSelector' => [
 		'default' => false,
 		'metawiki' => true,
@@ -1371,6 +1367,10 @@ $wgConf->settings = [
 			'sysop',
 		],
 		'metawiki' => [ '', 'autoconfirmed', 'autopatrol', 'patrol', 'rollback', 'bot', 'sysop' ],
+	],
+	'wmgUseTranslate' => [
+		'default' => false,
+		'metawiki' => true,
 	],
 ];
 require_once( '/var/www/mediawiki/LocalExtensions.php' );
