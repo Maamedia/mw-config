@@ -412,7 +412,10 @@ $wgConf->settings = [
 	'wgVisualEditorEnableWikitextBetaFeature' => [
 		'default' => true,
 	],
-
+	
+	'wgDiscussionToolsBeta' => [
+		'default' => true,
+	],
 	'wgVisualEditorEnableBetaFeature' => [
 		'default' => true,
 	],
