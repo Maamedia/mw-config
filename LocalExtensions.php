@@ -69,6 +69,10 @@ if ( $wmgUseContactPage ) {
 	wfLoadExtension( 'ContactPage' );
 }
 
+if ( $wmgUseContentTranslation ) {
+	wfLoadExtension( 'ContentTranslation' );
+}
+
 if ( $wmgUseDisambiguator ) {
 	wfLoadExtension( 'Disambiguator' );
 }
