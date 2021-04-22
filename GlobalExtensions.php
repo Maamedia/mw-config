@@ -1,9 +1,7 @@
 <?php // This is a default global extension, new extensions can be add to localextensions.php
 wfLoadExtensions( [	
     	'AbuseFilter',
-	'AdvancedSearch',
 //	'AntiSpoof',
-	'Babel',
 	'BetaFeatures',
 	'CirrusSearch',
 	'Cite',
@@ -69,7 +67,6 @@ wfLoadExtensions( [
 	'TemplateData',
 	'TemplateWizard',
 	'UserMerge',
-	'UploadWizard',
 	'VisualEditor',
 	'WikiEditor',
 ] );
