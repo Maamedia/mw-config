@@ -895,6 +895,12 @@ $wgConf->settings = [
 		],
 	],
 	
+	// Translate
+	
+	'wmgUseTranslate' => [
+		'default' => false,
+		'metawiki' => true,
+	],
 	'wgTranslateUseSandbox' => [
 		'default' => true,
 	],
