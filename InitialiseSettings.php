@@ -56,15 +56,6 @@ $wgConf->settings = [
 	'wgDefaultSkin' => [
 		'default' => 'vector',
 	],
-	// extensions
-	'wmgUseTranslate' => [
-		'default' => false,
-		'metawiki' => true,
-	],
-	'wmgUseTranslationNotifications' => [
-		'default' => false,
-		'metawiki' => true,
-	],
 	// Debugging //
 	'wgShowExceptionDetails' => [
 		'default' => true,
@@ -198,6 +189,15 @@ $wgConf->settings = [
 			      'spoofuser',
 			      'wikiset',
 			     ],
+	],
+	// extensions
+	'wmgUseTranslate' => [ 
+		'default' => false,
+		'metawiki' => true,
+	],
+	'wmgUseTranslationNotifications' => [ 
+		'default' => false,
+		'metawiki' => true,
 	],
 	// Namespaces
 	'wgExtraNamespaces' => [
