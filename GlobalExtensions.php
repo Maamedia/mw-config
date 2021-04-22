@@ -14,7 +14,6 @@ wfLoadExtensions( [
 	'CodeEditor',
 	'CodeMirror',
 	'ConfirmEdit',
-	'ContentTranslation',
 	'DiscussionTools',
 	'Disambiguator',
 	'DismissableSiteNotice',
