@@ -1377,4 +1377,5 @@ $wgConf->settings = [
 		'metawiki' => true,
 	],
 ];
+$wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
 require_once( '/var/www/mediawiki/LocalExtensions.php' );
