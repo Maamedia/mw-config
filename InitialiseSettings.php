@@ -266,9 +266,37 @@ $wgConf->settings = [
 	],
 	
 	// All Extensions Started bellow
-	'wmgUse3D' => [ 
+	'wmgUse3D' => [
 		'default' => true,
 		'idwiki' => false,
+	],
+	'wmgUseAdvancedMeta' => [
+		'default' => false,
+		'commonswiki' => true,
+		'datawiki' => true,
+		'enwiki' => true,
+	],
+	'wmgUseAdvancedSearch' => [
+		'default' => false,
+		'commonswiki' => true,
+		'datawiki' => true,
+		'enwiki' => true,
+		'metawiki' => true,
+	],
+	'wmgUseBabel' => [
+		'default' => false,
+		'commonswiki' => true,
+		'datawiki' => true,
+		'enwiki' => true,
+		'metawiki' => true,
+	],
+	'wmgUseTranslate' => [
+		'default' => true,
+		'idwiki' => false,
+	],
+	'wmgUseUploadWizard' => [
+		'default' => false,
+		'commonswiki' => true,
 	],
 	
 	
@@ -323,12 +351,6 @@ $wgConf->settings = [
 	],
 	
 	// AdvancedMeta
-	'wmgUseAdvancedMeta' => [
-		'default' => false,
-		'commonswiki' => true,
-		'datawiki' => true,
-		'enwiki' => true,
-	],
 	'wgDefaultRobotPolic' => [
 		'default' => 'index,follow',
 	],
@@ -339,22 +361,6 @@ $wgConf->settings = [
 		'Main Page' => 'index',
 	],
 	// AdvancedSearch
-	'wmgUseAdvancedSearch' => [
-		'default' => false,
-		'commonswiki' => true,
-		'datawiki' => true,
-		'enwiki' => true,
-		'metawiki' => true,
-	],
-
-	// Babel
-	'wmgUseBabel' => [
-		'default' => false,
-		'commonswiki' => true,
-		'datawiki' => true,
-		'enwiki' => true,
-		'metawiki' => true,
-	],
 	'wgUseBabel' => [
 		'default' => true,
 	],
@@ -744,11 +750,6 @@ $wgConf->settings = [
 	
 	// CentralAuth // !becarefull
 	
-
-	'wmgUseCentralAuth' => [
-		'default' => true,
-		'ldapwikiwiki' => false,
-	],
 	'wgCentralAuthDatabase' => [
 		'default' => 'centralauth',
 	],
@@ -897,10 +898,6 @@ $wgConf->settings = [
 	],
 	
 	// Translate
-	'wmgUseTranslate' => [
-		'default' => true,
-		'idwiki' => false,
-	],
 	
 	'wgTranslateUseSandbox' => [
 		'default' => true,
@@ -941,11 +938,6 @@ $wgConf->settings = [
 		'default' => true,
 	],
 	
-	// UploadWizard //
-	'wmgUseUploadWizard' => [ 
-		'default' => false,
-		'commonswiki' => true,
-	],
 
 	// VisualEditor //
 	'wgVisualEditorEnableDiffPage' => [
