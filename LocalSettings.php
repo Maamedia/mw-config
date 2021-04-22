@@ -96,7 +96,6 @@ $wgLocalVirtualHosts = array( $wgHostCentral );
 $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefined';
 include('cachesystem.php');
 include('GlobalSkins.php');
-include('GlobalExtensions.php');
 include('GlobalConfig.php');
 include('InitialiseSettings.php');
 function efGetSiteParams( $conf, $wiki ) {
