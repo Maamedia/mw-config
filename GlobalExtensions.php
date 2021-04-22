@@ -2,6 +2,7 @@
 wfLoadExtensions( [	
     	'AbuseFilter',
 //	'AntiSpoof',
+        'Babel',
 	'BetaFeatures',
 	'CirrusSearch',
 	'Cite',
