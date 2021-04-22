@@ -187,6 +187,9 @@ if ( $wmgUseTextExtracts ) {
 
 if ( $wmgUseTranslate ) {
 	wfLoadExtension( 'Translate' );
+}
+
+if ( $wmgUseTranslationNotifications ) {
 	wfLoadExtension( 'TranslationNotifications' );
 }
 
