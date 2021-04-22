@@ -294,6 +294,10 @@ $wgConf->settings = [
 		'default' => true,
 		'idwiki' => false,
 	],
+	'wmgUseUniversalLanguageSelector' => [
+		'default' => false,
+		'metawiki' => true,
+	],
 	'wmgUseUploadWizard' => [
 		'default' => false,
 		'commonswiki' => true,
