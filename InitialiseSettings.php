@@ -1372,5 +1372,9 @@ $wgConf->settings = [
 		'default' => false,
 		'metawiki' => true,
 	],
+	'wmgUseTranslationNotifications' => [
+		'default' => false,
+		'metawiki' => true,
+	],
 ];
 require_once( '/var/www/mediawiki/LocalExtensions.php' );
