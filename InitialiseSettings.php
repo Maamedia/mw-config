@@ -1,6 +1,7 @@
 <?php
 // MW-Setting //
 include('cachesystem.php');
+require_once( '/var/www/mediawiki/GlobalExtensions.php' );
 $wgConf->settings = [
 	'wgServer' => [
 		// if you want to allow also usage of https, just use '//localhost'
