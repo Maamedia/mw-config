@@ -1138,7 +1138,7 @@ $wgConf->settings = [
 	// changes to the default across all overrides --Andrew 2009-04-28
 		'default' => [
 			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'reviewer', 'editor', 'flow-bot' , 'ipblock-exempt', 'translation-admin'],
-			'sysop' => [ 'rollbacker', 'editor', 'reviewer', 'confirmed', 'autoreview', 'patroller', 'rollbacker', 'transwiki' ],
+			'sysop' => [ 'rollbacker', 'editor', 'reviewer', 'confirmed', 'autoreview', 'patroller', 'transwiki', 'ipblock-exempt', 'autopatrolled' ],
 		],
 		'+idwiki' => [
 			'bureaucrat' => [ 'sysop' ],
