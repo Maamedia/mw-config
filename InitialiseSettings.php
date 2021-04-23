@@ -1216,6 +1216,10 @@ $wgConf->settings = [
 			'transwiki' => [
 				'import' => true,
 			],
+			
+			'autopatrolled' => 
+				'autopatrol' => true,
+			],
 			'bot' => [
 				'autoreview' => false,
 				'noratelimit' => true,
