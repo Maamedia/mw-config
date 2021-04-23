@@ -21,7 +21,7 @@ $wgGlobalCssJsConfig = [
 
 $wgAddGroups['bureaucrat'] = true;
 $wgAddGroups['bureaucrat'] = [ 'sysop', 'bot' ];
-$wgAddGroups['sysop'] = [ 'patroller', 'bot' ];
+$wgAddGroups['sysop'][] = 'bot';
 
 // Documentation for Wikibase: https://www.mediawiki.org/wiki/Wikibase/Installation/Advanced_configuration#Configuration
 
