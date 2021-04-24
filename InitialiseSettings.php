@@ -1197,9 +1197,6 @@ $wgConf->settings = [
 				'autocreateaccount' => true,
 				'createaccount' => false,
 				'noratelimit' => false,
-				'noratelimit' => false,
-				'noratelimit' => false,
-				'noratelimit' => false,
 			],
 			'autoconfirmed' => [
 				'autoconfirmed' => true,
@@ -1211,8 +1208,7 @@ $wgConf->settings = [
 			],
 			'rollbacker' => [
 				'rollback' => true,
-			],
-			
+			],			
 			'transwiki' => [
 				'import' => true,
 			],
@@ -1329,6 +1325,10 @@ $wgConf->settings = [
 				'skipcaptcha' => true,
 				'transcode-reset' => true,
 				'abusefilter-log-detail' => true,
+			],
+			
+			'flood' => [
+				'bot' => true,
 			],
 			'interface-admin' => [
 				'oathauth-enable' => true,
