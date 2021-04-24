@@ -1311,7 +1311,11 @@ $wgConf->settings = [
 				'abusefilter-modify-global' => true,
 				'oathauth-view-log' => true,
 			],
-			
+			'uploader' => [
+				'reupload' => true,
+				'reupload-own' => true,
+				'upload' => true,
+			],
 			'massmessage-sender' => [
 				'autopatrol' => true,
 				'massmessage' => true,
@@ -1320,6 +1324,10 @@ $wgConf->settings = [
 				'ipblock-exempt' => true,
 				'torunblocked' => true,
 			], 
+			
+			'rollbacker' => [
+				'rollback' => true,
+			],
 			'checkuser' => [
 				'oathauth-enable' => true,
 				'abusefilter-privatedetails' => true,
