@@ -14,6 +14,7 @@ wfLoadExtensions( [
 	'CheckUser',
 	'CharInsert', 
 	'CommonsMetadata',
+	'Collection',
 	'CodeEditor',
 	'CodeMirror',
 	'ConfirmEdit',
