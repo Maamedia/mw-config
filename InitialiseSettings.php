@@ -1296,6 +1296,11 @@ $wgConf->settings = [
 				'abusefilter-modify-global' => true,
 				'oathauth-view-log' => true,
 			],
+			
+			'massmessage-sender' => [
+				'autopatrol' => true,
+				'massmessage' => true,
+			],
 			'ipblock-exempt' => [
 				'ipblock-exempt' => true,
 				'torunblocked' => true,
