@@ -1164,6 +1164,10 @@ $wgConf->settings = [
 			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bot', 'confirmed', 'flow-bot', 'editor', 'reviewer', 'ipblock-exempt', 'image-reviewer' ],
 			'checkuser' => [ 'ipblock-exempt' ],
 		],
+		
+		'metawiki' => [
+			'bureaucrat' => [ 'flood' ],
+		],
 	],
 	'+wgGroupPermissions' => [
 		'default' => [
