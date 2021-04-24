@@ -1137,7 +1137,7 @@ $wgConf->settings = [
 	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
 	// changes to the default across all overrides --Andrew 2009-04-28
 		'default' => [
-			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'reviewer', 'editor', 'flow-bot' , 'ipblock-exempt', 'translation-admin'],
+			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'reviewer', 'editor', 'flow-bot' , 'ipblock-exempt', 'translation-admin', 'uploader'],
 			'sysop' => [ 'rollbacker', 'editor', 'reviewer', 'confirmed', 'autoreview', 'patroller', 'transwiki', 'ipblock-exempt', 'massmessage-sender', 'autopatroller' ],
 		],
 		'+idwiki' => [
@@ -1157,7 +1157,7 @@ $wgConf->settings = [
 	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
 	// changes to the default across all overrides --Andrew 2009-04-28
 		'default' => [
-			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bot', 'confirmed', 'flow-bot', 'editor', 'reviewer', 'ipblock-exempt', 'translation-admin' ],
+			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bot', 'confirmed', 'flow-bot', 'editor', 'reviewer', 'ipblock-exempt', 'translation-admin', 'uploader' ],
 			'sysop' => [ 'autoreview', 'confirmed', 'patroller', 'transwiki', 'ipblock-exempt', 'massmessage-sender', 'autopatroller' ]
 		],
 		'commonswiki' => [
@@ -1166,7 +1166,7 @@ $wgConf->settings = [
 		],
 		
 		'metawiki' => [
-			'bureaucrat' => [ 'flood', 'flow-bot', 'sysop', 'bureaucrat', 'bot', 'interface-admin', 'translation-admin' ],
+			'bureaucrat' => [ 'flood', 'flow-bot', 'sysop', 'bureaucrat', 'bot', 'interface-admin', 'translation-admin', 'confirmed' ],
 		],
 	],
 	'+wgGroupPermissions' => [
@@ -1262,6 +1262,17 @@ $wgConf->settings = [
 			'ipblock-exempt' => [
 				'ipblock-exempt' => true,
 				'torunblocked' => true,
+			],
+			'import' => [
+				'oathauth-enable' => true,
+				'importupload' => true,
+				'import' => true,
+ 			],
+			
+			'uploader' => [
+				'reupload' => true,
+				'reupload-own' => true,
+				'upload' => true,
 			],
 		],
 		'metawiki' => [
