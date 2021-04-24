@@ -1148,6 +1148,10 @@ $wgConf->settings = [
 			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'reviewer', 'editor', 'flow-bot', 'image-reviewer', 'ipblock-exempt' ],
 			'image-reviewer' => [ 'image-reviewer' ],
 		],
+		
+		'+metawiki' => [
+			'bureaucrat' => [ 'flood' ],
+		],
 	],
 	'wgRemoveGroups' => [
 	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
