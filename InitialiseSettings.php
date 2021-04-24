@@ -1166,7 +1166,7 @@ $wgConf->settings = [
 		],
 		
 		'metawiki' => [
-			'bureaucrat' => [ 'flood' ],
+			'bureaucrat' => [ 'flood', 'flow-bot', 'sysop', 'bureaucrat', 'bot', 'interface-admin', 'translation-admin' ],
 		],
 	],
 	'+wgGroupPermissions' => [
