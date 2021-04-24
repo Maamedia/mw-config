@@ -1150,11 +1150,17 @@ $wgConf->settings = [
 		],
 		
 		'+metawiki' => [
-			'bureaucrat' => [ 'flood' ],
+			'bureaucrat' => [ 'flood', 'uploader', 'rollbacker' ],
 		],
 	],
 	
 	'wgGroupsAddToSelf' =>  [
+		'default' => [
+			'sysop' => [ 'flood', 'translation-admin' ],
+		],
+	],
+	
+	'wgGroupsRemoveFromSelf' => [
 		'default' => [
 			'sysop' => [ 'flood', 'translation-admin' ],
 		],
@@ -1172,7 +1178,7 @@ $wgConf->settings = [
 		],
 		
 		'metawiki' => [
-			'bureaucrat' => [ 'flood', 'flow-bot', 'sysop', 'bureaucrat', 'bot', 'interface-admin', 'translation-admin', 'confirmed', 'rollbacker' ],
+			'bureaucrat' => [ 'flood', 'flow-bot', 'sysop', 'bureaucrat', 'bot', 'interface-admin', 'translation-admin', 'confirmed', 'rollbacker', 'uploader' ],
 			'sysop' => [ 'confirmed', 'rollbacker', 'massmessage-sender', 'patroller', 'autopatroller', 'ipblock-exempt', 'transwiki' ],
 		],
 	],
