@@ -1248,6 +1248,9 @@ $wgConf->settings = [
 			'rollbacker' => [
 				'rollback' => true,
 			],
+			'reviewer' => [
+				'stablesettings' => true,
+			],
 			'checkuser' => [
 				'oathauth-enable' => true,
 				'abusefilter-privatedetails' => true,
@@ -1329,6 +1332,10 @@ $wgConf->settings = [
 				'editinterface' => false,
 				'editsitejson' => false,
 				'oathauth-disable-for-user' => false,
+				'stablesettings' => true,
+			],
+			'reviewer' => [
+				'stablesettings' => true,
 			],
 			'steward' => [
 				'renameuser' => true,
