@@ -1008,7 +1008,10 @@ $wgConf->settings = [
 
 	// Copyright
 	'wgRightsPage' => [
-		'default' => '',
+		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
+	],
+	'wgRightsUrl' => [
+		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
 	],
 	'wgDiff3' => [
 		'default' => '/usr/bin/diff3',
