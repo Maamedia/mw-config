@@ -397,7 +397,7 @@ $wgConf->settings = [
 		'default' => 'N',
 	],
 	'wgRightsText' => [
-		'default' => ''
+		'default' => 'TestTest'
 	],
 
 	// RatePage //
