@@ -1305,6 +1305,21 @@ $wgConf->settings = [
 				'oathauth-enable' => true,
 				'import' => true,
 			],
+			'bureaucrat' => [
+				'protectsite' => false,
+				'renameuser' => false,
+				'edituser' => false,
+			],
+			'sysop' => [
+				'edituser-exempt' => false,
+				'unblockself' => false,
+				'oathauth-verify-user' => false,
+				'abusefilter-log-private' => false,
+				'centralnotice-admin' => false,
+				'editinterface' => false,
+				'editsitejson' => false,
+				'oathauth-disable-for-user' => false,
+			],
 			'steward' => [
 				'renameuser' => true,
 				'globalblock' => true,
