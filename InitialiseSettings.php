@@ -1266,6 +1266,13 @@ $wgConf->settings = [
 				'advancedmeta-edit' => false,
 				'centralnotice-admin' => false,
 				'oathauth-disable-for-user' => false,
+				'unblockself' => false,
+				'oathauth-verify-user' => false,
+				'abusefilter-log-private' => false,
+				'centralnotice-admin' => false,
+				'editinterface' => false,
+				'editsitejson' => false,
+				'oathauth-disable-for-user' => false,
 			],
 			'bureaucrat' => [
 				'override-antispoof' => true,
