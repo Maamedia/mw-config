@@ -13,6 +13,7 @@ $wgResourceLoaderSources['metawiki'] = [
 	'loadScript' => '//meta.maamedia.org/load.php',
 ];
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
+$wgRightsText = "our special license";
 
 $wgGlobalCssJsConfig = [
 	'wiki' => 'metawiki', // database name
