@@ -2,6 +2,8 @@
 // MW-Setting //
 include('cachesystem.php');
 require_once( '/var/www/mediawiki/GlobalExtensions.php' );
+require_once( '/var/www/mediawiki/flaggedrevs.php' );
+
 $wgConf->settings = [
 	'wgServer' => [
 		// if you want to allow also usage of https, just use '//localhost'
@@ -1153,7 +1155,7 @@ $wgConf->settings = [
 		],
 		
 		'+metawiki' => [
-			'bureaucrat' => [ 'flood', 'uploader', 'rollbacker' ],
+			'bureaucrat' => [ 'flood', 'uploader', 'rollbacker', 'reviewer' ],
 		],
 	],
 	
@@ -1172,8 +1174,8 @@ $wgConf->settings = [
 	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
 	// changes to the default across all overrides --Andrew 2009-04-28
 		'default' => [
-			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bot', 'confirmed', 'flow-bot', 'editor', 'reviewer', 'ipblock-exempt', 'translation-admin', 'uploader' ],
-			'sysop' => [ 'autoreview', 'confirmed', 'patroller', 'transwiki', 'ipblock-exempt', 'massmessage-sender', 'autopatroller' ]
+			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bot', 'confirmed', 'flow-bot', 'editor', 'reviewer', 'ipblock-exempt', 'translation-admin', 'uploader', 'reviewer' ],
+			'sysop' => [ 'autoreview', 'confirmed', 'patroller', 'transwiki', 'ipblock-exempt', 'massmessage-sender', 'autopatroller', 'editor' ]
 		],
 		'commonswiki' => [
 			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bot', 'confirmed', 'flow-bot', 'editor', 'reviewer', 'ipblock-exempt', 'image-reviewer' ],
@@ -1181,8 +1183,8 @@ $wgConf->settings = [
 		],
 		
 		'metawiki' => [
-			'bureaucrat' => [ 'flood', 'flow-bot', 'sysop', 'bureaucrat', 'bot', 'interface-admin', 'translation-admin', 'confirmed', 'rollbacker', 'uploader' ],
-			'sysop' => [ 'confirmed', 'rollbacker', 'massmessage-sender', 'patroller', 'autopatroller', 'ipblock-exempt', 'transwiki' ],
+			'bureaucrat' => [ 'flood', 'flow-bot', 'sysop', 'bureaucrat', 'bot', 'interface-admin', 'translation-admin', 'confirmed', 'rollbacker', 'uploader', 'editor', 'reviewer' ],
+			'sysop' => [ 'confirmed', 'rollbacker', 'massmessage-sender', 'patroller', 'autopatroller', 'ipblock-exempt', 'transwiki', 'editor' ],
 		],
 	],
 	'+wgGroupPermissions' => [
