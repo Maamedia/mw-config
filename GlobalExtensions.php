@@ -26,7 +26,6 @@ wfLoadExtensions( [
 	'EventLogging',
 	'EventStreamConfig',
 	'Flow',
-	'FlaggedRevs',
 	'Gadgets',
 	'GlobalBlocking',
 	'GlobalCssJs',
