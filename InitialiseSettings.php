@@ -2,7 +2,6 @@
 // MW-Setting //
 include('cachesystem.php');
 require_once( '/var/www/mediawiki/GlobalExtensions.php' );
-require_once( '/var/www/mediawiki/flaggedrevs.php' );
 
 $wgConf->settings = [
 	'wgServer' => [
