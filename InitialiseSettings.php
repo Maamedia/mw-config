@@ -1136,6 +1136,19 @@ $wgConf->settings = [
 	'wgSiteNotice' => [
 		'default' => '',
 	],
+	
+	// Footer
+	 '+wgFooterIcons' => [
+ 		'default' => [
+ 			'poweredby' => [
+ 				'maamedia' => [
+ 					'src' => "https://commons.maamedia.org/images/5/59/Powered_by_Maamedia.png",
+ 					'url' => 'https://meta.maamedia.org/wiki/',
+ 					'alt' => 'Maamedia Wiki'
+ 				]
+ 			]
+ 		]
+ 	],
 	// Permissions
 	'wgAutoConfirmAge' => [
 		'default' => 259200,
