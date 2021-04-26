@@ -719,6 +719,13 @@ $wgConf->settings = [
 		'metawiki' => false,
 	],
 	
+	// Kartographer 
+	'wgKartographerEnableMapFrame' => [
+		'default' => true,
+	],
+	'wgKartographerMapServer' => [
+		'default' => "https://maps.wikimedia.org"
+	],
 	// GlobalCssJs //
 	'wgUseGlobalSiteCssJs' => [
 		'default' => true,
