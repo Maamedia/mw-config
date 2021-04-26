@@ -37,6 +37,7 @@ wfLoadExtensions( [
 	'InputBox',
 	'Interwiki',
 	'JsonConfig',
+	'Kartographer',
 	'LocalisationUpdate',
 	'LoginNotify',
 	'Linter',
