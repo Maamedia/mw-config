@@ -719,13 +719,6 @@ $wgConf->settings = [
 		'metawiki' => false,
 	],
 	
-	// Kartographer 
-	'wgKartographerEnableMapFrame' => [
-		'default' => true,
-	],
-	'wgKartographerMapServer' => [
-		'default' => "https://maps.wikimedia.org"
-	],
 	// GlobalCssJs //
 	'wgUseGlobalSiteCssJs' => [
 		'default' => true,
@@ -872,7 +865,6 @@ $wgConf->settings = [
 
 	'wgKartographerWikivoyageMode' => [
 		'default' => false,
-		'metawiki' => true,
 	],
 	'wgKartographerUseMarkerStyle' => [
 		'default' => false,
@@ -884,7 +876,6 @@ $wgConf->settings = [
 	],
 	'wgKartographerEnableMapFrame' => [
 		'default' => true,
-		'metawiki' => false,
 	],
 	'wgKartographerUsePageLanguage' => [
 		'default' => true,
@@ -895,7 +886,6 @@ $wgConf->settings = [
 
 	'wgUseKartographer' => [
 		'default' => true,
-		'metawiki' => false,
 	],
 	'wgUseMapSources' => [
 		'default' => false,
