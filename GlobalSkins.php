@@ -5,7 +5,6 @@ wfLoadSkins( [
     'Timeless',
     'MinervaNeue',
     'Modern',
-    'WikimediaApiPortal',
 ] );
 
 // $wgMFDefaultSkinClass = "SkinMinerva";
