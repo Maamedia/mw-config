@@ -73,6 +73,7 @@ wfLoadExtensions( [
 	'TemplateData',
 	'TemplateWizard',
 	'UserMerge',
+	'UploadWizard',
         'UniversalLanguageSelector',
 	'VisualEditor',
 	'WikiEditor',
