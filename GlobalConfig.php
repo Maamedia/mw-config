@@ -14,6 +14,8 @@ $wgResourceLoaderSources['metawiki'] = [
 ];
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
 $wgRightsText = "our special license";
+$wgEnableUploads = true;
+
 
 $wgGlobalCssJsConfig = [
 	'wiki' => 'metawiki', // database name
