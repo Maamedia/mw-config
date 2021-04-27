@@ -1157,6 +1157,9 @@ $wgConf->settings = [
 	'wgAutoConfirmAge' => [
 		'default' => 259200,
 	],
+	'wgActiveUserDays' => [
+		'default' => 30,
+	],
 	'wgAddGroups' => [
 	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
 	// changes to the default across all overrides --Andrew 2009-04-28
