@@ -638,7 +638,9 @@ $wgConf->settings = [
 	'wgCirrusSearchEnableRegex' => [
 		'default' => true, //T31
 	],
-
+	'wgCirrusSearchEnableCrossProjectSearch' => [
+		'default' => true,
+	],
 	// CodeEditor
 	'wgCodeEditorEnableCore' => [
 		'default' => true,
@@ -1132,6 +1134,11 @@ $wgConf->settings = [
 	// Namespace //
 	'wgSiteNotice' => [
 		'default' => '',
+	],
+	'wgNamespacesToBeSearchedDefault' => [
+		'default' => [ 0 => 1 ],
+		'+commonswiki' => [ 6 => 1, 12 => 1, 14 => 1, 100 => 1, 106 => 1 ],
+		'+metawiki' => [ 12 => 1, 200 => 1, 202 => 1 ],
 	],
 	
 	// Footer
