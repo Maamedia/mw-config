@@ -28,6 +28,7 @@ if ( $wikiId == 'datawiki' ) {
     'fiwiki',
     'svwiki',
     'nowiki',
+    'zhwiki',
     ];
     $wgExtraInterlanguageLinkPrefixes = [
     'metawiki',
@@ -44,6 +45,7 @@ if ( $wikiId == 'datawiki' ) {
     'fiwiki',
     'svwiki',
     'nowiki',
+    'zhwiki',
     ];
 } elseif ( $wikiId == 'commonswiki' ) {  
     $wgSecretKey = $wgSecretKeycommonswiki;
@@ -75,6 +77,7 @@ if ( $wikiId == 'datawiki' ) {
     'fiwiki',
     'svwiki',
     'nowiki',
+    'zhwiki',
     ];
     $wgExtraInterlanguageLinkPrefixes = [
     'metawiki',
@@ -91,6 +94,7 @@ if ( $wikiId == 'datawiki' ) {
     'fiwiki',
     'svwiki',
     'nowiki',
+    'zhwiki',
     ];
 } elseif ( $wikiId == 'testwiki' ) {  
     $wgSecretKey = $wgSecretKeytestwiki;
