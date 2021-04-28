@@ -15,6 +15,7 @@ $wgConf->settings = [
 		'enwiki' => 'https://en.masymanwiki.org',
 		'fiwiki' => 'https://fi.masymanwiki.org',
 		'idwiki' => 'https://id.masymanwiki.org',
+		'zhwiki' => 'https://zh.masymanwiki.org',
 		],
 	'wgCanonicalServer' => [
 		'default' => 'https://localhost',
@@ -25,6 +26,7 @@ $wgConf->settings = [
 		'enwiki' => 'https://en.masymanwiki.org',
 		'fiwiki' => 'https://fi.masymanwiki.org',
 		'idwiki' => 'https://id.masymanwiki.org',
+		'zhwiki' => 'https://zh.masymanwiki.org',
 	],
 	'wgSitename' => [
 		'default' => '',
@@ -35,11 +37,13 @@ $wgConf->settings = [
 		'enwiki' => 'Masymanwiki',
 		'fiwiki' => 'Masymanwiki',
 		'idwiki' => 'Masymanwiki',
+		'zhwiki' => 'Masymanwiki',
 	],
 	'wgLanguageCode' => [
 		'default' => 'en',
 		'fiwiki' => 'fi',
 		'idwiki' => 'id',
+		'idwiki' => 'zh',
 	],
 	'wgLocalInterwiki' => [
 		'default' => '$lang',
@@ -799,6 +803,7 @@ $wgConf->settings = [
 		'en.masymanwiki.org' => 'enwiki',
 		'fi.masymanwiki.org' => 'fiwiki',
 		'id.masymanwiki.org' => 'idwiki',
+		'zh.masymanwiki.org' => 'zhwiki',
 	],
 
 	/*
@@ -975,6 +980,7 @@ $wgConf->settings = [
 		'enwiki' => '/images/b/b0/Masymanwiki_Logo.png',
 		'fiwiki' => '/images/b/b0/Masymanwiki_Logo.png',
 		'idwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+		'zhwiki' => '/images/b/b0/Masymanwiki_Logo.png',
 			'wordmark' => [
 			'src' => "/images/b/b0/Masymanwiki_Logo.png",
 			'1x' => "/images/b/b0/Masymanwiki_Logo.png", // optional if you want to support browsers with SVG support with an SVG logo.
@@ -1003,6 +1009,7 @@ $wgConf->settings = [
 		'enwiki' => '/images/b/b0/Masymanwiki_Logo.png',
 		'fiwiki' => '/images/b/b0/Masymanwiki_Logo.png',
 		'idwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+		'zhwiki' => '/images/b/b0/Masymanwiki_Logo.png',
 	],
 
 	// Copyright
