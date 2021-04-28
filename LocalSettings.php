@@ -25,6 +25,8 @@ if ( defined( 'MW_DB' ) ) {
     $wikiId = 'fiwiki';
 } elseif (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'id.masymanwiki.org') {
     $wikiId = 'idwiki';
+} elseif (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'zh.masymanwiki.org') {
+    $wikiId = 'zhwiki';
 } else {
     echo 'Unable to determine $wikiId'."\n";
     exit(1);
@@ -49,6 +51,7 @@ $wgServer = [
     'enwiki' => 'https://en.masymanwiki.org',
     'fiwiki' => 'https://fi.masymanwiki.org',
     'idwiki' => 'https://id.masymanwiki.org',
+    'zhwiki' => 'https://zh.masymanwiki.org',
 ];
 
 ## The URL path to static resources (images, scripts, etc.)
@@ -82,6 +85,7 @@ $wgLocalDatabases = array(
     'enwiki',
     'fiwiki',
     'idwiki',
+    'zhwiki',
 );
 
 // require_once( '/srv/mediawiki/config/LocalExtensions.php' );
