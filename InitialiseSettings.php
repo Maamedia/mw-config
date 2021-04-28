@@ -43,7 +43,7 @@ $wgConf->settings = [
 		'default' => 'en',
 		'fiwiki' => 'fi',
 		'idwiki' => 'id',
-		'idwiki' => 'zh',
+		'zhwiki' => 'zh',
 	],
 	'wgLocalInterwiki' => [
 		'default' => '$lang',
