@@ -1462,6 +1462,12 @@ $wgConf->settings = [
 				'rollback' => true,
 				'patrolmarks' => true,
 			],
+			'user' => [
+				'torunblocked' => false,
+				'editcontentmodel' => false,
+				'mwoauthmanagemygrants' => false,
+				'movefile' => false,
+			],
 		],
 		'commonswiki' => [
 			'filemover' => [
