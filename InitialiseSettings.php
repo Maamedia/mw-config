@@ -1162,7 +1162,7 @@ $wgConf->settings = [
  				'maamedia' => [
  					'src' => "https://commons.maamedia.org/images/5/59/Powered_by_Maamedia.png",
  					'url' => 'https://maamedia.org/',
- 					'alt' => 'Maamedia Wiki'
+ 					'alt' => 'Maamedia Wiki',
 					'height' => "132",
  				]
  			]
