@@ -233,6 +233,9 @@ $wgConf->settings = [
 		// Defaults
 		'metawiki' => 'Meta',
 	],
+	'wgLocalisationUpdateDirectory' => [
+		'default' => "$IP/cache",
+	],
 	// Skin //
 	'wgUseCombinedLoginLink' => [
 		'default' => true,
