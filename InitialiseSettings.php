@@ -1164,6 +1164,7 @@ $wgConf->settings = [
  					'url' => 'https://maamedia.org/',
  					'alt' => 'Maamedia Wiki',
 					'height' => "132",
+					'width' => "132",
  				]
  			]
  		]
