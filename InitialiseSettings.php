@@ -1508,7 +1508,7 @@ $wgConf->settings = [
 			'autoconfirmed', // semi-protection level on
 			'sysop',
 		],
-		'metawiki' => [ '', 'autoconfirmed', 'autopatrol', 'patrol', 'rollback', 'bot', 'sysop' ],
+		'metawiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop', 'editeditorprotected', 'editautoreviewprotected', 'editextendedsemiprotected', 'edittrustedprotected' ],
 	],
 ];
 $wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
