@@ -224,6 +224,10 @@ $wgConf->settings = [
 			222 => 'Aihe',
 			223 => 'Keskustelu_aiheesta',
 		],
+		'zhwiki' => [
+			224 => 'Portal',
+			225 => 'Portal_talk',
+		],
 	],
 	'wgMetaNamespace' => [
 		// Defaults
