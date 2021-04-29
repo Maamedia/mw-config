@@ -1161,9 +1161,9 @@ $wgConf->settings = [
  			'poweredby' => [
  				'maamedia' => [
  					'src' => "https://commons.maamedia.org/images/5/59/Powered_by_Maamedia.png",
- 					'url' => 'https://meta.maamedia.org/wiki/',
+ 					'url' => 'https://maamedia.org/',
  					'alt' => 'Maamedia Wiki'
-					'height' => '132',
+					'height' => "132",
  				]
  			]
  		]
