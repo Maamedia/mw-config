@@ -1358,6 +1358,7 @@ $wgConf->settings = [
 				'protectsite' => false,
 				'renameuser' => false,
 				'edituser' => false,
+				'edittrustedprotected' => true,
 			],
 			'sysop' => [
 				'edituser-exempt' => false,
@@ -1394,6 +1395,7 @@ $wgConf->settings = [
 				'bigdelete' => true,
 				'abusefilter-modify-global' => true,
 				'oathauth-view-log' => true,
+				'edittrustedprotected' => true,
 			],
 			'uploader' => [
 				'reupload' => true,
