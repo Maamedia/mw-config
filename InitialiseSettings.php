@@ -1522,4 +1522,4 @@ $wgConf->settings = [
 	],
 ];
 $wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
-require_once( '/var/www/mediawiki/LocalExtensions.php' );
+// require_once( '/var/www/mediawiki/LocalExtensions.php' ); undefine variabel
