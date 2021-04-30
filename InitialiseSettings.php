@@ -1147,7 +1147,7 @@ $wgConf->settings = [
 	],
 	// Namespace //
 	'wgSiteNotice' => [
-		'default' => '',
+		'default' => '{{Maintenance}}',
 	],
 	'wgNamespacesToBeSearchedDefault' => [
 		'default' => [ 0 => 1 ],
