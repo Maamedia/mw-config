@@ -1503,7 +1503,7 @@ $wgConf->settings = [
 			],
 		],
 		'idwiki' => [
-			'user' => [
+			'*' => [
 				'createaccount' => false,
 				'edit' => false,
 			],
