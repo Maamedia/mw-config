@@ -1,5 +1,5 @@
 <?php // This is a default global extension, new extensions can be add to localextensions.php
-/*
+
 wfLoadExtensions( [
 	'3D',
     	'AbuseFilter',
@@ -81,11 +81,12 @@ wfLoadExtensions( [
 	'VisualEditor',
 	'WikiEditor',
 ] );
-*/
+
 $wgScribuntoDefaultEngine = 'luastandalone';
 $wgScribuntoUseGeSHi = true;
 $wgScribuntoUseCodeEditor = true;
 // Ivestigating
+/*
 wfLoadExtensions( [
 //	'3D',
     	'AbuseFilter',
@@ -166,3 +167,4 @@ wfLoadExtensions( [
 	'VisualEditor',
 	'WikiEditor',
 ] );
+*/
