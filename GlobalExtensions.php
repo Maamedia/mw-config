@@ -153,7 +153,7 @@ wfLoadExtensions( [
 	'Thanks',
 	'TimedMediaHandler',
 	'TitleBlacklist',
-// 	'TwoColConflict',
+ 	'TwoColConflict',
 	'TextExtracts',
 	'TemplateSandbox',
 	'TemplateStyles',
