@@ -1155,20 +1155,20 @@ $wgConf->settings = [
 		'+metawiki' => [ 12 => 1, 200 => 1, 202 => 1 ],
 	],
 	
-// 	// Footer
-// 	 '+wgFooterIcons' => [
-//  		'default' => [
-//  			'poweredby' => [
-//  				'maamedia' => [
-//  					'src' => "https://commons.maamedia.org/images/5/59/Powered_by_Maamedia.png",
-//  					'url' => 'https://maamedia.org/',
-//  					'alt' => 'Maamedia Wiki',
-// 					'height' => "132",
-// 					'width' => "132",
-//  				]
-//  			]
-//  		]
-//  	],
+ 	// Footer
+	 'wgFooterIcons' => [
+ 		'default' => [
+ 			'poweredby' => [
+				'maamedia' => [
+ 					'src' => "https://commons.maamedia.org/images/5/59/Powered_by_Maamedia.png",
+					'url' => 'https://maamedia.org/',
+  					'alt' => 'Maamedia Wiki',
+					'height' => "132",
+ 					'width' => "132",
+  				]
+  			]
+  		]
+	],
 	// Permissions
 	'wgAutoConfirmAge' => [
 		'default' => 259200,
