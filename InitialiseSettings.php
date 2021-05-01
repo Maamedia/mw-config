@@ -510,8 +510,8 @@ $wgConf->settings = [
 			'use' => false,
 			'type' => 'anywords',
 			'limit' => 10,
+		],
 	],
-
 	'wgCirrusSearchWikimediaExtraPlugin' => [
 		'default' => [
 			'regex' => [
