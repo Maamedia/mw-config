@@ -501,6 +501,9 @@ $wgConf->settings = [
 	],
 	
 	// CirrusSearch
+	'wgCirrusSearchUseCompletionSuggester' => [
+	'default' => 'yes',
+	],
 	'wgCirrusSearchWikimediaExtraPlugin' => [
 		'default' => [
 			'regex' => [
