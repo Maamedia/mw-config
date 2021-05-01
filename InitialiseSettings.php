@@ -1156,7 +1156,7 @@ $wgConf->settings = [
 	],
 	
  	// Footer
-	 'wgFooterIcons' => [
+	 '+wgFooterIcons' => [
  		'default' => [
  			'poweredby' => [
 				'maamedia' => [
