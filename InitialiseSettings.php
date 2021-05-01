@@ -1507,10 +1507,22 @@ $wgConf->settings = [
 				'createaccount' => false,
 				'edit' => false,
 			],
+			'user' => [
+				'createaccount' => false,
+			],
 		],
 	],
 	'+wgRevokePermissions' => [
 		'default' => [],
+		'idwiki' => [
+			'*' => [
+				'createaccount' => true,
+				'edit' => true,
+			],
+			'user' => [
+				'createaccount' => true,
+			],
+		],
 	],
 	'wgRestrictionLevels' => [
 		'default' => [
