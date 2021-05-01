@@ -1521,5 +1521,4 @@ $wgConf->settings = [
 		'metawiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop', 'editeditorprotected', 'editautoreviewprotected', 'editextendedsemiprotected', 'edittrustedprotected' ],
 	],
 ];
-$wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
 // require_once( '/var/www/mediawiki/LocalExtensions.php' ); undefine variabel
