@@ -942,7 +942,7 @@ $wgConf->settings = [
 		'default' => true,
 	],
 	'wgTranslateDocumentationLanguageCode' => [
-		'default' => true,
+		'default' => 'qqq',
 	],
 	'wgNoticeUseTranslateExtension' => [
 		'default' => true,  
