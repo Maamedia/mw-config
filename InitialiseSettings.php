@@ -1515,8 +1515,8 @@ $wgConf->settings = [
 		],
 		'idwiki' => [
 			'*' => [
-				'createaccount' => false,
-				'edit' => false,
+				'createaccount' => true,
+				'edit' => true,
 			],
 			'user' => [
 				'createaccount' => false,
@@ -1526,10 +1526,6 @@ $wgConf->settings = [
 	'+wgRevokePermissions' => [
 		'default' => [],
 		'idwiki' => [
-			'*' => [
-				'createaccount' => true,
-				'edit' => true,
-			],
 			'user' => [
 				'createaccount' => true,
 			],
