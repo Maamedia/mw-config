@@ -21,6 +21,18 @@ $wgGlobalCssJsConfig = [
 	'wiki' => 'metawiki', // database name
 	'source' => 'metawiki', // ResourceLoader source name
 ];
+$wgAdvancedSearchHighlighting = true;
+$wgCirrusSearchWikimediaExtraPlugin[ 'regex' ] = [
+	'build',
+	'use',
+	'use_extra_timeout',
+];
+$wgCirrusSearchUseExperimentalHighlighter = true;
+$wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
+$wgCirrusSearchElasticQuirks = [
+	'query_string_max_determinized_states' => true,
+];
+$wgCirrusSearchServers = [ $privESService ];
 
 $wgAddGroups['bureaucrat'] = true;
 $wgAddGroups['bureaucrat'] = [ 'sysop', 'bot' ];
