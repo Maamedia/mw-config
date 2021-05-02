@@ -43,7 +43,7 @@ wfLoadExtensions( [
 	'LoginNotify',
 	'Linter',
 	'MaamediaMessages',
-	'MaamediaStaff'
+	'MaamediaStaff',
 	'MaamediaTags',
 	'MobileFrontend',
 	'MultimediaViewer',
