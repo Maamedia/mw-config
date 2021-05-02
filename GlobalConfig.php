@@ -20,7 +20,6 @@ $wgEnableUploads = true;
 $wgMaamediaTagsAttributes['a'] = [ 'href', 'class' ];
 $wgMaamediaTagsAttributes['img'] = [ 'src', 'style' ];
 
-$wgMaamediaStaffEditsMessagePrefix = "mm";
 $wgGlobalCssJsConfig = [
 	'wiki' => 'metawiki', // database name
 	'source' => 'metawiki', // ResourceLoader source name
