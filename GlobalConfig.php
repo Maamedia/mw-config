@@ -16,6 +16,8 @@ $wgGroupPermissions['bureaucrat']['userrights'] = false;
 $wgRightsText = "our special license";
 $wgEnableUploads = true;
 
+// MaamediaTags //
+$wgMaamediaTagsAttributes['a'] = [ 'href', 'class' ];
 
 $wgGlobalCssJsConfig = [
 	'wiki' => 'metawiki', // database name
