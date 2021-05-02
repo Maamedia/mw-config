@@ -877,6 +877,10 @@ $wgConf->settings = [
 		'default' => 'metawiki',
 	],
 
+	// MaamediaTags //
+	'wgMaamediaTagsAttributes' => [
+		'default' => ['a'] => [ 'href', 'class' ],
+	],
 	// SpamBlacklist //
 	'wgBlacklistSettings' => [
 		'spam' => [
