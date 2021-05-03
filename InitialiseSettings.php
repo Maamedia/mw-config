@@ -992,6 +992,16 @@ $wgConf->settings = [
 	'wgHiddenPrefs' => [
 		'usebetatoolbar' => true,
 	],
+	
+	// Maamedia Extensions //
+	'wgMaamediaMessagesLogEmailConditions' => [
+		'default' => [
+			'masm-supportsafety' => [
+				'group' => 'masm-supportsafety', 
+				'email' => 'mito@maamedia.org',
+			],
+		],
+	],
 	// Logo //
 	'wgLogo' => [
 		'default' => '/images/1/1a/Maamedia_Logo.png',
