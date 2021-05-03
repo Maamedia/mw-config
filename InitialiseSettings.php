@@ -1374,9 +1374,6 @@ $wgConf->settings = [
 				'edituser' => false,
 				'edittrustedprotected' => true,
 			],
-                        'user' => [
-                                'translate' => true,
-                        ],
 			'sysop' => [
 				'edituser-exempt' => false,
 				'unblockself' => false,
@@ -1482,6 +1479,7 @@ $wgConf->settings = [
 				'editcontentmodel' => false,
 				'mwoauthmanagemygrants' => false,
 				'movefile' => false,
+                                'translate' => true,
 			],
 		],
 		'commonswiki' => [
