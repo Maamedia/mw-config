@@ -29,6 +29,7 @@ if ( $wikiId == 'datawiki' ) {
     'svwiki',
     'nowiki',
     'zhwiki',
+    'officewiki',
     ];
     $wgExtraInterlanguageLinkPrefixes = [
     'metawiki',
@@ -46,6 +47,7 @@ if ( $wikiId == 'datawiki' ) {
     'svwiki',
     'nowiki',
     'zhwiki',
+    'officewiki',
     ];
 } elseif ( $wikiId == 'commonswiki' ) {  
     $wgSecretKey = $wgSecretKeycommonswiki;
@@ -78,6 +80,7 @@ if ( $wikiId == 'datawiki' ) {
     'svwiki',
     'nowiki',
     'zhwiki',
+    'officewiki',
     ];
     $wgExtraInterlanguageLinkPrefixes = [
     'metawiki',
@@ -95,6 +98,7 @@ if ( $wikiId == 'datawiki' ) {
     'svwiki',
     'nowiki',
     'zhwiki',
+    'officewiki',
     ];
 } elseif ( $wikiId == 'testwiki' ) {  
     $wgSecretKey = $wgSecretKeytestwiki;
@@ -141,6 +145,15 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'zhwiki';
+} elseif ( $wikiId == 'officewiki' ) {  
+    $wgSecretKey = $wgSecretKeyofficewiki;
+    $wgUpgradeKey = $wgUpgradeKeyofficewiki;
+    // Wikibase
+    $wgEnableWikibaseRepo = false;
+    $wgEnableWikibaseClient = true;
+    require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
+    require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
+    $wgWBClientSettings['siteGlobalID'] = 'officewiki';
 } else { #metawiki  
     $wgSecretKey = $wgSecretKeymetawiki;
     $wgUpgradeKey = $wgUpgradeKeymetawiki;
