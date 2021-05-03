@@ -1272,6 +1272,7 @@ $wgConf->settings = [
 				'autocreateaccount' => true,
 				'createaccount' => false,
 				'noratelimit' => false,
+                                'translate' => true,
 			],
 			'autoconfirmed' => [
 				'autoconfirmed' => true,
@@ -1373,6 +1374,9 @@ $wgConf->settings = [
 				'edituser' => false,
 				'edittrustedprotected' => true,
 			],
+                        'user' => [
+                                'translate' => true,
+                        ],
 			'sysop' => [
 				'edituser-exempt' => false,
 				'unblockself' => false,
