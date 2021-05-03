@@ -16,6 +16,7 @@ $wgConf->settings = [
 		'fiwiki' => 'https://fi.masymanwiki.org',
 		'idwiki' => 'https://id.masymanwiki.org',
 		'zhwiki' => 'https://zh.masymanwiki.org',
+		'officewiki' => 'https://office.maamedia.org',
 		],
 	'wgCanonicalServer' => [
 		'default' => 'https://localhost',
@@ -27,6 +28,7 @@ $wgConf->settings = [
 		'fiwiki' => 'https://fi.masymanwiki.org',
 		'idwiki' => 'https://id.masymanwiki.org',
 		'zhwiki' => 'https://zh.masymanwiki.org',
+		'officewiki' => 'https://office.maamedia.org',
 	],
 	'wgSitename' => [
 		'default' => '',
@@ -38,6 +40,7 @@ $wgConf->settings = [
 		'fiwiki' => 'Masymanwiki',
 		'idwiki' => 'Masymanwiki',
 		'zhwiki' => 'Masymanwiki',
+		'officewiki' => 'Maamedia Office'
 	],
 	'wgLanguageCode' => [
 		'default' => 'en',
@@ -1522,6 +1525,12 @@ $wgConf->settings = [
 			],
 			'user' => [
 				'createaccount' => false,
+			],
+		],
+		'officewiki' => [
+			'*' => [
+				'createaccount' => false,
+				'edit' => false,
 			],
 		],
 	],
