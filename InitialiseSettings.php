@@ -1590,10 +1590,25 @@ $wgConf->settings = [
 			'user' => [
 				'autocreateaccount' => true,
 			],
+			'sysop' => [
+				'maamediastaffedit' => true,
+				'createpage' => true,
+				'edit' => true,
+			],
 		],
 	],
 	'+wgRevokePermissions' => [
 		'default' => [],
+		'metawiki' => [
+			'sysop' => [
+				'oathauth-disable-for-user' => true,
+				'centralnotice-admin' => true,
+				'edituser-exempt' => true,
+				'abusefilter-modify-restricted' => true,
+				'oathauth-verify-user' => true,
+				'oathauth-view-log' => true,
+			],
+		],
 		'idwiki' => [
 			'user' => [
 				'createaccount' => true,
@@ -1603,12 +1618,18 @@ $wgConf->settings = [
 			'*' => [
 				'edit' => true,
 				'createpage' => true,
+				'createtalk' => true,
 				'createaccount' => true,
 			],
 			
 			 'user' => [
 				'movepage' => true,
 			 ],
+			 'sysop' => [
+				 'centralnotice-admin' => true,
+				 'edituser-exempt' => true,
+				 'oathauth-disable-for-user' => true,
+			],
 		], 
 
 	],
