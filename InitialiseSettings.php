@@ -1568,11 +1568,11 @@ $wgConf->settings = [
 			'*' => [
 				'createaccount' => true,
 				'createpage' => true,
-				'autocreateaccount' => true,
 			],
 			'user' => [
 				'createaccount' => true,
 				'movepage' => true,
+				'autocreateaccount' => true,
 			],
 		],
 
