@@ -1508,7 +1508,7 @@ $wgConf->settings = [
                                 'translate' => true,
 			],
 		],
-		'officewiki' => [
+		'+officewiki' => [
 			'*' => [
 				'createaccount' => false,
 				'createpage' => false,
