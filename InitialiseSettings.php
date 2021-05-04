@@ -1568,6 +1568,7 @@ $wgConf->settings = [
 			'*' => [
 				'edit' => true,
 				'createpage' => true,
+				'createaccount' => true,
 			],
 			'user' => [
 				'movepage' => true,
