@@ -837,6 +837,7 @@ $wgConf->settings = [
 		'fi.masymanwiki.org' => 'fiwiki',
 		'id.masymanwiki.org' => 'idwiki',
 		'zh.masymanwiki.org' => 'zhwiki',
+		'office.maamedia.org' => 'officewiki',
 	],
 
 	/*
