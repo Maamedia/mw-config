@@ -89,6 +89,7 @@ $wgLocalDatabases = array(
     'fiwiki',
     'idwiki',
     'zhwiki',
+    'officewiki',
 );
 
 // require_once( '/srv/mediawiki/config/LocalExtensions.php' );
