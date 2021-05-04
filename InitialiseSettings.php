@@ -1567,16 +1567,17 @@ $wgConf->settings = [
 				'createaccount' => true,
 			],
 		],
-		//* 'officewiki' => [
-			//'*' => [
-				//'edit' => true,
-				//'createpage' => true,
-				//'createaccount' => true,
-			//],
-			//'user' => [
-				//'movepage' => true,
-			//],
-		//], 
+		 'officewiki' => [
+			'*' => [
+				'edit' => true,
+				'createpage' => true,
+				'createaccount' => true,
+			],
+			
+			 'user' => [
+				'movepage' => true,
+			 ],
+		], 
 
 	],
 	'wgRestrictionLevels' => [
