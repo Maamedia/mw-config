@@ -231,10 +231,17 @@ $wgConf->settings = [
 			224 => 'Portal',
 			225 => 'Portal_talk',
 		],
+		'officewiki' => [
+			250 => 'Legal',
+			251 => 'Legal_talk',
+			252 => 'Policy',
+			253 => 'Policy_talk',
+		],
 	],
 	'wgMetaNamespace' => [
 		// Defaults
 		'metawiki' => 'Meta',
+		'officewiki' => 'Maamedia',
 	],
 	'wgLocalisationUpdateDirectory' => [
 		'default' => "$IP/cache",
@@ -287,12 +294,14 @@ $wgConf->settings = [
 	// Recent Changes
 	'wgUseRCPatrol' => [
 		'default' => true,
+		'officewiki' => false,
 	],
 	
 	// All Extensions Started bellow
 	'wmgUse3D' => [
 		'default' => true,
 		'idwiki' => false,
+		'officewiki' => false,
 	],
 	'wmgUseAdvancedMeta' => [
 		'default' => false,
@@ -306,6 +315,7 @@ $wgConf->settings = [
 		'datawiki' => true,
 		'enwiki' => true,
 		'metawiki' => true,
+		'officewiki' => true,
 	],
 	'wmgUseBabel' => [
 		'default' => false,
@@ -317,6 +327,7 @@ $wgConf->settings = [
 	'wmgUseContentTranslation' => [
 		'default' => false,
 		'enwiki' => true,
+		'metawiki' => true,
 	],
 	'wmgUseUniversalLanguageSelector' => [
 		'default' => false,
@@ -720,6 +731,7 @@ $wgConf->settings = [
 	],
 	'wgEchoCrossWikiNotifications' => [
 		'default' => true,
+		'officewiki' => false,
 	],
 	'wgEchoSharedTrackingDB' => [
 		'default' => 'metawiki'
@@ -1056,6 +1068,7 @@ $wgConf->settings = [
 
 	'wgEnableUploads' => [
 		'default' => true,
+		'officewiki' => false,
 	],
 	'wgUploadDirectory' => [
 		'default' => 'images',
@@ -1493,6 +1506,17 @@ $wgConf->settings = [
 				'mwoauthmanagemygrants' => false,
 				'movefile' => false,
                                 'translate' => true,
+			],
+		],
+		'officewiki' => [
+			'*' => [
+				'createaccount' => false,
+				'createpage' => false,
+				'autocreateaccount' => false,
+			],
+			'user' => [
+				'createaccount' => false,
+				'movepage' => false,
 			],
 		],
 		'commonswiki' => [
