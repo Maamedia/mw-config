@@ -1553,8 +1553,7 @@ $wgConf->settings = [
 		],
 		'officewiki' => [
 			'*' => [
-				'createaccount' => false,
-				'edit' => false,
+				'autocreateaccount' => true,
 			],
 		],
 	],
@@ -1567,11 +1566,10 @@ $wgConf->settings = [
 		],
 		'officewiki' => [
 			'*' => [
-				'createaccount' => true,
+				'edit' => true,
 				'createpage' => true,
 			],
 			'user' => [
-				'createaccount' => true,
 				'movepage' => true,
 			],
 		],
