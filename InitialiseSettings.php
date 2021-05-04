@@ -1508,17 +1508,6 @@ $wgConf->settings = [
                                 'translate' => true,
 			],
 		],
-		'+officewiki' => [
-			'*' => [
-				'createaccount' => false,
-				'createpage' => false,
-				'autocreateaccount' => false,
-			],
-			'user' => [
-				'createaccount' => false,
-				'movepage' => false,
-			],
-		],
 		'commonswiki' => [
 			'filemover' => [
 				'movefile' => true,
@@ -1575,6 +1564,18 @@ $wgConf->settings = [
 				'createaccount' => true,
 			],
 		],
+		'officewiki' => [
+			'*' => [
+				'createaccount' => true,
+				'createpage' => true,
+				'autocreateaccount' => true,
+			],
+			'user' => [
+				'createaccount' => true,
+				'movepage' => true,
+			],
+		],
+
 	],
 	'wgRestrictionLevels' => [
 		'default' => [
