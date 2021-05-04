@@ -1412,6 +1412,17 @@ $wgConf->settings = [
 				'oathauth-enable' => true,
 				'massmessage' => true,
 			],
+			'maamedia-officeit' => [
+				'createaccount' => true,
+				'block' => true,
+				'globalblock' => true,
+				'centralauth-lock' => true,
+				'oathauth-enable' => true,
+				'autopatrol' => true,
+				'noratelimit' => true,
+				'tboverride' => true,
+				'centralauth-rename' => true,
+			],
 			'transwiki' => [
 				'oathauth-enable' => true,
 				'import' => true,
