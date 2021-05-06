@@ -35,7 +35,6 @@ $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
 $wgCirrusSearchElasticQuirks = [
 	'query_string_max_determinized_states' => true,
 ];
-$wgCirrusSearchServers = [ $privESService ];
 
 $wgAddGroups['bureaucrat'] = true;
 $wgAddGroups['bureaucrat'] = [ 'sysop', 'bot' ];
