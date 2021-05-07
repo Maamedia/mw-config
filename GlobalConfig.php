@@ -36,6 +36,12 @@ $wgCirrusSearchElasticQuirks = [
 	'query_string_max_determinized_states' => true,
 ];
 
+$wgVectorPrintLogo = [
+	'url' => 'https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
+	'width' => 174,
+	'height' => 27
+];
+
 $wgAddGroups['bureaucrat'] = true;
 $wgAddGroups['bureaucrat'] = [ 'sysop', 'bot' ];
 $wgAddGroups['sysop'][] = 'bot';
