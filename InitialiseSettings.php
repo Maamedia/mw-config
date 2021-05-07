@@ -64,6 +64,9 @@ $wgConf->settings = [
 	'wgDefaultSkin' => [
 		'default' => 'vector',
 	],
+	'wgVectorDefaultSkinVersion' => [
+		'default' => '1',
+	],
 	// Debugging //
 	'wgShowExceptionDetails' => [
 		'default' => true,
