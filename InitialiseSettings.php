@@ -262,9 +262,7 @@ $wgConf->settings = [
 	'wgDefaultSkin' => [
 		'default' => 'vector',
 	],
-	'wgVectorDefaultSkinVersion' => [
-		'default' => '2',
-	],
+
 	// Images //
 	'wgSharedUploadBaseUrl' => [
 		'default' => 'https://commons.maamedia.org',
