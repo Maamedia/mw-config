@@ -259,7 +259,19 @@ $wgConf->settings = [
 	'wgDefaultSkin' => [
 		'default' => 'vector',
 	],
-
+	'wgWordmark' => [
+		'default' => [
+			'src' => 'images/1/1a/Maamedia_Logo.png', 
+			'width' => 127,
+			'height' => 63,
+		],
+		'metawiki' => [
+			'src' => '/images/b/b0/Masymanwiki_Logo.png', 
+			'width' => 127,
+			'height' => 63,
+		],
+	],
+	
 	// Images //
 	'wgSharedUploadBaseUrl' => [
 		'default' => 'https://commons.maamedia.org',
