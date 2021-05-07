@@ -256,9 +256,6 @@ $wgConf->settings = [
 	'wgAdvancedSearchHighlighting' => [
 		'default' => true,
 	],
-	'wgVectorResponsive' => [
-		'default' => true,
-	],
 	'wgDefaultSkin' => [
 		'default' => 'vector',
 	],
