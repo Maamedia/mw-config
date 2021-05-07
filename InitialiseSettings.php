@@ -61,12 +61,6 @@ $wgConf->settings = [
 	'wgArticlePath' => [
 		'default' => '/wiki/$1',
 	],
-	'wgDefaultSkin' => [
-		'default' => 'vector',
-	],
-	'wgVectorDefaultSkinVersion' => [
-		'default' => '1',
-	],
 	// Debugging //
 	'wgShowExceptionDetails' => [
 		'default' => true,
@@ -261,6 +255,15 @@ $wgConf->settings = [
 	],
 	'wgAdvancedSearchHighlighting' => [
 		'default' => true,
+	],
+	'wgVectorResponsive' => [
+		'default' => true,
+	],
+	'wgDefaultSkin' => [
+		'default' => 'vector',
+	],
+	'wgVectorDefaultSkinVersion' => [
+		'default' => '2',
 	],
 	// Images //
 	'wgSharedUploadBaseUrl' => [
