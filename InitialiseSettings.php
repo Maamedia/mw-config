@@ -2,12 +2,12 @@
 // MW-Setting //
 include('cachesystem.php');
 require_once( '/var/www/mediawiki/GlobalExtensions.php' );
-
+lodsjfldsjfldsfljdslfjdfjlkdsjflkdsjflkdjfl
 $wgConf->settings = [
 	'wgServer' => [
 		// if you want to allow also usage of https, just use '//localhost'
 		// and set 'http://localhost' at 'wgCanonicalServer'
-		'default' => 'https://localhost',
+		'default' => 'https://localhost',ds
 		'commonswiki' => 'https://commons.maamedia.org',
 		'datawiki' => 'https://data.maamedia.org',
 		'metawiki' => 'https://meta.maamedia.org',
