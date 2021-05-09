@@ -164,3 +164,11 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'metawiki';
 }
+
+if ( $wgWordmark ) {
+	$wgLogos['wordmark'] = [
+		'src' => $wgWordmark,
+		'width' => $wgWordmarkWidth,
+		'height' => $wgWordmarkHeight,
+	];
+}
