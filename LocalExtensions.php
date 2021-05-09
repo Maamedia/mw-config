@@ -125,6 +125,18 @@ if ( $wmgUseMassMessage ) {
 	wfLoadExtension( 'MassMessage' );
 }
 
+if ( $wmgUseMaamediaStaff ) {
+	wfLoadExtension( 'MaamediaStaff' );
+}
+
+if ( $wmgUseMaamediaMessages ) {
+	wfLoadExtension( 'MaamediaMessages' );
+}
+
+if ( $wmgUseMaamediaTags) {
+	wfLoadExtension( 'MaamediaTags' );
+}
+
 if ( $wmgUseMultimediaViewer ) {
 	wfLoadExtension( 'MultimediaViewer' );
 }
