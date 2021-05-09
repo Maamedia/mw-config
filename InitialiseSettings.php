@@ -204,6 +204,11 @@ $wgConf->settings = [
 		'default' => false,
 		'metawiki' => true,
 	],
+	'wmgUseNewsletter' => [
+		'default' => false,
+		'metawiki' => true,
+		'datawiki' => true,
+	],
 	// Namespaces
 	'wgExtraNamespaces' => [
 		'metawiki' => [
@@ -1028,6 +1033,7 @@ $wgConf->settings = [
 			],
 		],
 	],
+	
 	// Logo //
 	'wgLogo' => [
 		'default' => '/images/1/1a/Maamedia_Logo.png',
