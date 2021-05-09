@@ -1198,7 +1198,7 @@ $wgConf->settings = [
 	],
 	// Namespace //
 	'wgSiteNotice' => [
-		'default' => '<div style="font-size: 160%">Hello! Maamedia will upgrade all of its wikis to MediaWiki version 1.36 on the night of May 7th — May 8th. So it is not possible to use wikis. You can find more information at [[maamedia:|www.maamedia.org]].</div>',
+		'default' => '',
 	],
 	'wgNamespacesToBeSearchedDefault' => [
 		'default' => [ 0 => 1 ],
