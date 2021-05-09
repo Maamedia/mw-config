@@ -172,3 +172,15 @@ if ( $wgWordmark ) {
 		'height' => $wgWordmarkHeight,
 	];
 }
+
+# LocalisationUpdate
+if ( $wmfRealm !== 'labs' ) {
+	wfLoadExtension( 'LocalisationUpdate' );
+}
+$wgLocalisationUpdateDirectory = "/var/www/mediawiki/cache/l10n_cache-$wmgVersionNumber";
+$wgLocalisationUpdateRepository = 'local';
+$wgLocalisationUpdateRepositories['local'] = [
+	'mediawiki' => '/var/www/mediawiki/languages/i18n/%PATH%',
+	'extension' => '/var/www/mediawiki/extensions/%NAME%/%PATH%',
+	'skin' => '/var/www/mediawiki/skins/%NAME%/%PATH%',
+];
