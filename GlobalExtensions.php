@@ -2,10 +2,10 @@
 
 wfLoadExtensions( [
 //	'3D',
-    	'AbuseFilter',
+	'AbuseFilter',
 	'AdvancedSearch',
 //	'AntiSpoof',
-        'Babel',
+	'Babel',
 	'BetaFeatures',
 	'CirrusSearch',
 	'Cite',
@@ -17,13 +17,14 @@ wfLoadExtensions( [
 	'CommonsMetadata',
 	'CodeEditor',
 	'CodeMirror',
-	'ConfirmEdit',
+	'ConfirmEdit', 'ConfirmEdit/FancyCaptcha',
 	'DiscussionTools',
 	'Disambiguator',
 	'DismissableSiteNotice',
 	'Echo',
 	'Elastica',
 	'EditUser',
+	'EventBus',
 	'EventLogging',
 	'EventStreamConfig',
 	'Flow',
@@ -79,7 +80,7 @@ wfLoadExtensions( [
 	'TemplateWizard',
 	'UserMerge',
 	'UploadWizard',
-        'UniversalLanguageSelector',
+	'UniversalLanguageSelector',
 	'VisualEditor',
 	'WikiEditor',
 ] );
@@ -87,3 +88,4 @@ $wgScribuntoDefaultEngine = 'luastandalone';
 $wgScribuntoUseGeSHi = true;
 $wgScribuntoUseCodeEditor = true;
 // Ivestigating
+$wgFragmentMode = [ 'html5' ];
