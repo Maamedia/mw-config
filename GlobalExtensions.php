@@ -50,6 +50,7 @@ wfLoadExtensions( [
 	'MultimediaViewer',
 	'MassMessage',
 	'Nuke',
+        'Newsletter',
 	'NewUserMessage',
 	'OATHAuth',
 	'OAuth',
