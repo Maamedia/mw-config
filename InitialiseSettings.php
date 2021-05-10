@@ -383,6 +383,9 @@ $wgConf->settings = [
 		'default' => true,
 		'officewiki' => false,
 	],
+	'wmgEnhancedRecentChanges' => [
+		'default' => false,
+	],
 	
 	// All Extensions Started bellow
 	'wmgUse3D' => [
