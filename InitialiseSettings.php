@@ -204,11 +204,6 @@ $wgConf->settings = [
 		'default' => false,
 		'metawiki' => true,
 	],
-	'wmgUseNewsletter' => [
-		'default' => false,
-		'metawiki' => true,
-		'datawiki' => true,
-	],
 	// Namespaces
 	'wgExtraNamespaces' => [
 		'metawiki' => [
@@ -710,6 +705,25 @@ $wgConf->settings = [
 	'wgSubversionProxy' => [
 		'default' => false,
 	],
+
+	// ConfirmEdit
+
+	'wgCaptchaDirectory' => [
+		'default' => $wgCaptchaDirectoryFC,
+	],
+
+	'wgCaptchaDirectoryLevels' => [
+		'default' => 0,
+	],
+
+	'wgCaptchaSecret' => [
+		'default' => $wgCaptchaSecretFC,
+	],
+
+	'wgCaptchaClass' => [
+		'default' => 'FancyCaptcha',
+	],
+	
 	// ContentTranslation
 	'wgContentTranslationDatabase ' => [
 		'default' => 'metawiki'
@@ -1033,7 +1047,6 @@ $wgConf->settings = [
 			],
 		],
 	],
-	
 	// Logo //
 	'wgLogo' => [
 		'default' => '/images/1/1a/Maamedia_Logo.png',
@@ -1204,7 +1217,7 @@ $wgConf->settings = [
 	],
 	// Namespace //
 	'wgSiteNotice' => [
-		'default' => '',
+		'default' => '<div style="font-size: 160%">Hello! Maamedia will upgrade all of its wikis to MediaWiki version 1.36 on the night of May 7th — May 8th. So it is not possible to use wikis. You can find more information at [[maamedia:|www.maamedia.org]].</div>',
 	],
 	'wgNamespacesToBeSearchedDefault' => [
 		'default' => [ 0 => 1 ],
