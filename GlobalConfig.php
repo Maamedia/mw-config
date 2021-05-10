@@ -1,4 +1,5 @@
 <?php
+
 $wgWBClientSettings['repoUrl'] = 'https://data.maamedia.org';
 $wgWBClientSettings['repoScriptPath'] = '';
 $wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
@@ -7,6 +8,17 @@ $wgWBClientSettings['repositories']['']['changesDatabase'] = 'datawiki';
 $wgWBClientSettings['siteLinkGroups'] = [ 'Datawiki' ];
 $wgWBClientSettings['TOOLBAR'] = [ 'Wiki' ];
 $wgWBClientSettings['repoSiteName'] = 'DataWiki';
+$wgWBClientSettings['repositories'] = [
+		'' => [
+			'repoDatabase' => 'datawiki',
+			'baseUri' => $wgWBClientSettings['repoUrl'] . '/entity',
+			'entityNamespaces' => [
+				'item' => NS_MAIN,
+				'property' => NS_MAIN
+			],
+			'prefixMapping' => [ '' => '' ],
+		]
+];
 
 $wgResourceLoaderSources['metawiki'] = [
 	'apiScript' => '//meta.maamedia.org/api.php',
