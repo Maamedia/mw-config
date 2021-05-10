@@ -1141,10 +1141,17 @@ $wgConf->settings = [
 		'zhwiki' => [
 			'1x' => '/images/b/b0/Masymanwiki_Logo.png',
 		],
-			'wordmark' => [
+		'wordmark' => [
+			'default' => [
 				'src' => '/images/1/1a/Maamedia_Logo.png',
-				'1x' => '/images/1/1a/Maamedia_Logo.png',
+				'1x' => '/images/1/1a/Maamedia_Logo.png',					
 			],
+		'testwiki' => [
+			'src' => '/images/b/b0/Masymanwiki_Logo.png',
+			'1x' => '/images/b/b0/Masymanwiki_Logo.png',
+		],
+
+		],
 	],
 	'wgFavicon' => [
 		'default' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
