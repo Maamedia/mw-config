@@ -342,6 +342,7 @@ $wgConf->settings = [
 		'default' => false,
 		'enwiki' => true,
 		'metawiki' => true,
+		'commonswiki',
 	],
 	'wmgUseUniversalLanguageSelector' => [
 		'default' => false,
