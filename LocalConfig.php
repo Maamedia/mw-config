@@ -100,6 +100,7 @@ if ( $wikiId == 'datawiki' ) {
     'zhwiki',
     'officewiki',
     ];
+    include('/var/www/mediawiki/GlobalConfig.php');
 } elseif ( $wikiId == 'testwiki' ) {  
     $wgSecretKey = $wgSecretKeytestwiki;
     $wgUpgradeKey = $wgUpgradeKeytestwiki;
@@ -109,6 +110,7 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'testwiki';
+    include('/var/www/mediawiki/GlobalConfig.php');
 } elseif ( $wikiId == 'enwiki' ) {  
     $wgSecretKey = $wgSecretKeyenwiki;
     $wgUpgradeKey = $wgUpgradeKeyenwiki;
@@ -118,6 +120,7 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'enwiki';
+    include('/var/www/mediawiki/GlobalConfig.php');
 } elseif ( $wikiId == 'idwiki' ) {  
     $wgSecretKey = $wgSecretKeyidwiki;
     $wgUpgradeKey = $wgUpgradeKeyidwiki;
@@ -127,6 +130,7 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'idwiki';
+    include('/var/www/mediawiki/GlobalConfig.php');
 } elseif ( $wikiId == 'fiwiki' ) {  
     $wgSecretKey = $wgSecretKeyfiwiki;
     $wgUpgradeKey = $wgUpgradeKeyfiwiki;
@@ -136,6 +140,7 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'fiwiki';
+    include('/var/www/mediawiki/GlobalConfig.php');
 } elseif ( $wikiId == 'zhwiki' ) {  
     $wgSecretKey = $wgSecretKeyzhwiki;
     $wgUpgradeKey = $wgUpgradeKeyzhwiki;
@@ -145,6 +150,7 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'zhwiki';
+    include('/var/www/mediawiki/GlobalConfig.php');
 } elseif ( $wikiId == 'officewiki' ) {  
     $wgSecretKey = $wgSecretKeyofficewiki;
     $wgUpgradeKey = $wgUpgradeKeyofficewiki;
@@ -154,6 +160,7 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'officewiki';
+    include('/var/www/mediawiki/GlobalConfig.php');
 } else { #metawiki  
     $wgSecretKey = $wgSecretKeymetawiki;
     $wgUpgradeKey = $wgUpgradeKeymetawiki;
@@ -163,24 +170,5 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'metawiki';
+    include('/var/www/mediawiki/GlobalConfig.php');
 }
-
-if ( $wgWordmark ) {
-	$wgLogos['wordmark'] = [
-		'src' => $wgWordmark,
-		'width' => $wgWordmarkWidth,
-		'height' => $wgWordmarkHeight,
-	];
-}
-
-# LocalisationUpdate
-if ( $wmfRealm !== 'labs' ) {
-	wfLoadExtension( 'LocalisationUpdate' );
-}
-$wgLocalisationUpdateDirectory = "/var/www/mediawiki/cache/l10n_cache-$wmgVersionNumber";
-$wgLocalisationUpdateRepository = 'local';
-$wgLocalisationUpdateRepositories['local'] = [
-	'mediawiki' => '/var/www/mediawiki/languages/i18n/%PATH%',
-	'extension' => '/var/www/mediawiki/extensions/%NAME%/%PATH%',
-	'skin' => '/var/www/mediawiki/skins/%NAME%/%PATH%',
-];
