@@ -172,3 +172,10 @@ if ( $wikiId == 'datawiki' ) {
     $wgWBClientSettings['siteGlobalID'] = 'metawiki';
     include('/var/www/mediawiki/GlobalConfig.php');
 }
+if ( $wgWordmark ) {
+	$wgLogos['wordmark'] = [
+		'src' => $wgWordmark,
+		'width' => $wgWordmarkWidth,
+		'height' => $wgWordmarkHeight,
+	];
+}
