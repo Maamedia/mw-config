@@ -1117,14 +1117,30 @@ $wgConf->settings = [
 	],
 	// Logo //
 	'wgLogos' => [
-		'default' => '/images/1/1a/Maamedia_Logo.png',
-		'commonswiki' => '/images/c/cb/Maamedia_Commons_Logo.png',
-		'datawiki' => '/images/6/62/Maamedia_Data-Wiki_Logo.png',
-		'metawiki' => '/images/b/bc/Wiki.png',
-		'enwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-		'fiwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-		'idwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-		'zhwiki' => '/images/b/b0/Masymanwiki_Logo.png',
+		'default' => [
+			'1x' => '/images/1/1a/Maamedia_Logo.png',
+		],
+		'commonswiki' => [ 
+			'1x' => '/images/c/cb/Maamedia_Commons_Logo.png',
+		],
+		'datawiki' => [
+			'1x' => '/images/6/62/Maamedia_Data-Wiki_Logo.png',
+		],
+		'metawiki' => [
+			'1x' => '/images/b/bc/Wiki.png',
+		],
+		'enwiki' => [
+			'1x' => '/images/b/b0/Masymanwiki_Logo.png',
+		],
+		'fiwiki' => [
+			'1x' => '/images/b/b0/Masymanwiki_Logo.png',
+		],
+		'idwiki' => [
+			'1x' => '/images/b/b0/Masymanwiki_Logo.png',
+		],
+		'zhwiki' => [
+			'1x' => '/images/b/b0/Masymanwiki_Logo.png',
+		],
 	],
 	'wgFavicon' => [
 		'default' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
