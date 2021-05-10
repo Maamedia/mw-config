@@ -210,9 +210,7 @@ $wgConf->settings = [
 		],
 	],
 	'wgWordmark' => [
-		'default' => [
-			'src' => '/images/1/1a/Maamedia_Logo.png',
-		],
+		'default' => '/images/1/1a/Maamedia_Logo.png',
 	],
 
 	// extensions
