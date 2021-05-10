@@ -1116,7 +1116,7 @@ $wgConf->settings = [
 		],
 	],
 	// Logo //
-	'wgLogo' => [
+	'wgLogos' => [
 		'default' => '/images/1/1a/Maamedia_Logo.png',
 		'commonswiki' => '/images/c/cb/Maamedia_Commons_Logo.png',
 		'datawiki' => '/images/6/62/Maamedia_Data-Wiki_Logo.png',
@@ -1125,18 +1125,6 @@ $wgConf->settings = [
 		'fiwiki' => '/images/b/b0/Masymanwiki_Logo.png',
 		'idwiki' => '/images/b/b0/Masymanwiki_Logo.png',
 		'zhwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-			'wordmark' => [
-			'src' => "/images/b/b0/Masymanwiki_Logo.png",
-			'1x' => "/images/b/b0/Masymanwiki_Logo.png", // optional if you want to support browsers with SVG support with an SVG logo.
-			'width' => 135,
-			'height' => 20,
-	],
-			'tagline' => [
-			'src' => "/images/b/b0/Masymanwiki_Logo.png",
-			'width' => 135,
-			'height' => 15,
-		],
-
 	],
 	'wgFavicon' => [
 		'default' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
