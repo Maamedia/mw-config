@@ -315,6 +315,14 @@ $wgConf->settings = [
 			'logged_in' => true,
 			'logged_out' => true,
 		],
+		'metawiki' => [
+			'logged_in' => true,
+			'logged_out' => false,
+		],
+		'fiwiki' => [
+			'logged_in' => true,
+			'logged_out' => false,
+		],
 	],
 	'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 		'default' => false,
