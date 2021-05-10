@@ -209,6 +209,12 @@ $wgConf->settings = [
 		'AbuseFilter' => 'debug',
 		],
 	],
+	'wgWordmark' => [
+		'default' => [
+			'src' => '/images/1/1a/Maamedia_Logo.png',
+		],
+	],
+
 	// extensions
 	'wmgUseTranslate' => [ 
 		'default' => false,
