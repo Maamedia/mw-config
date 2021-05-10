@@ -306,6 +306,38 @@ $wgConf->settings = [
 		'default' => '1', // Legacy Vector (old Vector)
 		'testwiki' => '2', // Responsive Vector
 	],
+	'wgVectorLanguageInHeader' => [
+		'default' => [
+			'logged_in' => false,
+			'logged_out' => false,
+		],
+		'testwiki' => [
+			'logged_in' => true,
+			'logged_out' => true,
+		],
+	],
+	'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
+		'default' => false,
+		'testwiki' => true,
+	],
+	'wgVectorMaxWidthOptions' => [
+		'default' => [
+			"exclude" => [
+				"mainpage" => false,
+				"querystring" => [
+					"action" => "history",
+					"diff" => "*",
+			],
+			"namespaces" => [
+				NS_SPECIAL,
+				NS_CATEGORY,
+			],
+		],
+		"include" => [
+			"Special:Preferences",
+			],
+		],
+	],
 	// Images //
 	'wgSharedUploadBaseUrl' => [
 		'default' => 'https://commons.maamedia.org',
@@ -402,6 +434,7 @@ $wgConf->settings = [
 	],
 	'wgUseGlobalAbuseFilters' => [
 		'default' => true,
+		'testwiki' => false,
 	],
 	'wgAbuseFilterCentralDB' => [
 		'default' => 'metawiki',
@@ -464,7 +497,7 @@ $wgConf->settings = [
 	],
 	'wgBabelMainCategory' => [
 		'default' => false,
-	'metawiki' => 'User %code%',
+		'metawiki' => 'User %code%',
 	],
 	'wgBabelDefaultLevel' => [
 		'default' => 'N',
