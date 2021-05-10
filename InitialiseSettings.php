@@ -1090,17 +1090,6 @@ $wgConf->settings = [
 		],
 
 	],
-	'wgSiteLogoWordmark' => [
-		'default' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
-		'commonswiki' => '/images/4/4a/Maamedia_Commons_Logo-2.png',
-		'datawiki' => '/images/6/62/Maamedia_Data-Wiki_Logo.png',
-		'metawiki' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
-		'enwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-		'fiwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-		'idwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-		'zhwiki' => '/images/b/b0/Masymanwiki_Logo.png',
-	],
-
 	'wgFavicon' => [
 		'default' => '/images/7/75/Maamedia_Meta-Wiki_logo-n.png',
 		'commonswiki' => '/images/4/4a/Maamedia_Commons_Logo-2.png',
