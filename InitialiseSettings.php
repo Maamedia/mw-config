@@ -290,7 +290,22 @@ $wgConf->settings = [
 			'height' => 63,
 		],
 	],
-	
+	'wgVectorResponsive' => [
+		'default' => false, // Not use Responsive Vector
+		'testwiki' => true, // Use Responsive Vector
+	],
+	'wgVectorDefaultSkinVersion' => [
+		'default' => '1', // Legacy Vector (old Vector)
+		'testwiki' => '2', // Responsive Vector
+	],
+	'wgVectorDefaultSkinVersionForExistingAccounts' => [
+		'default' => '1', // Legacy Vector (old Vector)
+		'testwiki' => '2', // Responsive Vector
+	],	
+	'wgVectorDefaultSkinVersionForNewAccounts' => [
+		'default' => '1', // Legacy Vector (old Vector)
+		'testwiki' => '2', // Responsive Vector
+	],
 	// Images //
 	'wgSharedUploadBaseUrl' => [
 		'default' => 'https://commons.maamedia.org',
