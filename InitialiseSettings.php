@@ -116,6 +116,11 @@ $wgConf->settings = [
 	'wgEnableParserCache' => [
 		'default' => true,
 	],
+	'wgExtensionEntryPointListFiles' => [
+		'default' => [
+			'/var/www/mediawiki/config/wikiversions.json'
+		],
+	],
 	'wgCachePages' => [
 		'default' => true,
 	],
