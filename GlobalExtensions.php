@@ -62,6 +62,7 @@ wfLoadExtensions( [
 	'Poem',
 	'Renameuser',
 	'ReplaceText',
+	'Score',
 	'Scribunto',
 	'SiteMatrix',
 	'SpamBlacklist',
