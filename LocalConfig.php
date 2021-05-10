@@ -181,13 +181,15 @@ if ( $wgWordmark ) {
 }
 
 # Sitematrix
-$wgSiteMatrixSites = [
-	'wiki' => [
-		'name' => 'Masymanwiki',
-		'host' => 'www.masymanwiki.org',
-		'prefix' => 'w',
-	],
-],
+if ($wgSiteMatrixSites) {
+	$wgSiteMatrixSites = [
+		'wiki' => [
+			'name' => 'Masymanwiki',
+			'host' => 'www.masymanwiki.org',
+			'prefix' => 'w',
+		];
+	];
+}
 $wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( 'closed' );
 $wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( 'private' );
 $wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( 'fishbowl' );
