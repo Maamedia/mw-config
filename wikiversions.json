@@ -1,0 +1,12 @@
+{
+    "metawiki": "php-1.36.0-maamedia.1",
+    "commonswiki": "php-1.36.0-maamedia.1",
+    "testwiki": "php-1.36.4-maamedia.2",
+    "datawiki": "php-1.36.0-maamediadata.1",
+    "zhwiki": "php-1.36.0-maamedia.1",
+    "enwiki": "php-1.36.1-maamedia.1",
+    "fiwiki": "php-1.36.0-maamedia.1",
+    "idwiki": "php-1.36.0-maamedia.1",
+    "officewiki": "php-1.36.0-maamedia.1"
+
+}
