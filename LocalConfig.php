@@ -179,3 +179,17 @@ if ( $wgWordmark ) {
 		'height' => $wgWordmarkHeight,
 	];
 }
+
+# Sitematrix
+$wgSiteMatrixSites = [
+	'wiki' => [
+		'name' => 'Masymanwiki',
+		'host' => 'www.masymanwiki.org',
+		'prefix' => 'w',
+	],
+],
+$wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( 'closed' );
+$wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( 'private' );
+$wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( 'fishbowl' );
+$wgSiteMatrixNonGlobalSites = MWWikiversions::readDbListFile( 'nonglobal' );
+
