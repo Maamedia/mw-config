@@ -44,13 +44,6 @@ $wgCirrusSearchWikimediaExtraPlugin[ 'regex' ] = [
 ];
 
 
-$wgVectorPrintLogo = [
-	'url' => 'https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
-	'width' => 174,
-	'height' => 27
-];
-
-
 
 $wgCirrusSearchUseExperimentalHighlighter = true;
 $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
