@@ -200,6 +200,15 @@ $wgConf->settings = [
 			      'wikiset',
 			     ],
 	],
+	
+	'wmgMonologChannels' => [
+	// When changing the default, please also update the -labs settings to ensure that the
+	// logging on the beta cluster includes at least the same data that production includes
+	'default' => [
+		'404' => 'debug',
+		'AbuseFilter' => 'debug',
+		],
+	],
 	// extensions
 	'wmgUseTranslate' => [ 
 		'default' => false,
