@@ -170,6 +170,7 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'metawiki';
+    wfLoadExtension( 'JsonConfig' );
     include('/var/www/mediawiki/GlobalConfig.php');
 }
 if ( $wgWordmark ) {
