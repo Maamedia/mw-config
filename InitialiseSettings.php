@@ -1320,8 +1320,8 @@ $wgConf->settings = [
  					'src' => "https://commons.maamedia.org/images/5/59/Powered_by_Maamedia.png",
 					'url' => 'https://maamedia.org/',
   					'alt' => 'Maamedia Wiki',
-					'height' => "47",
- 					'width' => "132",
+					'height' => "31",
+ 					'width' => "88",
   				]
   			]
   		]
