@@ -51,7 +51,6 @@ wfLoadExtensions( [
 	'MassMessage',
 	'Nuke',
         'Newsletter',
-	'NewUserMessage',
 	'OATHAuth',
 	'OAuth',
 	'ParserFunctions',
