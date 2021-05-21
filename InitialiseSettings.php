@@ -41,6 +41,9 @@ $wgConf->settings = [
 	],
 	'wgLanguageCode' => [
 		'default' => 'en',
+		'fiwiki' => 'fi',
+		'idwiki' => 'id',
+		'zhwiki' => 'zh',
 	],
 	'wgScriptPath' => [
 		'default' => '',
@@ -1197,6 +1200,7 @@ $wgConf->settings = [
 
 	'wgEnableUploads' => [
 		'default' => true,
+		'officewiki' => false,
 	],
 	'wgUploadDirectory' => [
 		'default' => 'images',
