@@ -1,7 +1,7 @@
 <?php
 // MW-Setting //
 include('cachesystem.php');
-require_once( '/var/www/mediawiki/GlobalExtensions.php' );
+require_once( '/var/www/html/mediawiki/GlobalExtensions.php' );
 
 $wgConf->settings = [
 	'wgServer' => [
@@ -11,7 +11,6 @@ $wgConf->settings = [
 		'commonswiki' => 'https://commons.maamedia.org',
 		'datawiki' => 'https://data.maamedia.org',
 		'metawiki' => 'https://meta.maamedia.org',
-		'testwiki' => 'https://test.maamedia.org',
 		'enwiki' => 'https://en.masymanwiki.org',
 		'fiwiki' => 'https://fi.masymanwiki.org',
 		'idwiki' => 'https://id.masymanwiki.org',
@@ -23,7 +22,6 @@ $wgConf->settings = [
 		'commonswiki' => 'https://commons.maamedia.org',
 		'datawiki' => 'https://data.maamedia.org',
 		'metawiki' => 'https://meta.maamedia.org',
-		'testwiki' => 'https://test.maamedia.org',
 		'enwiki' => 'https://en.masymanwiki.org',
 		'fiwiki' => 'https://fi.masymanwiki.org',
 		'idwiki' => 'https://id.masymanwiki.org',
@@ -35,7 +33,6 @@ $wgConf->settings = [
 		'commonswiki' => 'Commons Wiki',
 		'datawiki' => 'DataWiki',
 		'metawiki' => 'Meta',
-		'testwiki' => 'Test Wiki',
 		'enwiki' => 'Masymanwiki',
 		'fiwiki' => 'Masymanwiki',
 		'idwiki' => 'Masymanwiki',
@@ -44,16 +41,6 @@ $wgConf->settings = [
 	],
 	'wgLanguageCode' => [
 		'default' => 'en',
-		'fiwiki' => 'fi',
-		'idwiki' => 'id',
-		'zhwiki' => 'zh',
-	],
-	'wgLocalInterwiki' => [
-		'default' => '$lang',
-	], 
-	'wgInterwikiMagic' => [
-		'default' => true,
-		'metawiki' => false,
 	],
 	'wgScriptPath' => [
 		'default' => '',
@@ -73,7 +60,7 @@ $wgConf->settings = [
 	],
 	// Database Configuration //
 	'wgDBserver' => [
-		'default' => '127.0.0.1',
+		'default' => 'localhost',
 	],
 	'wgDBuser' => [
 		'default' => 'wikiuser',
@@ -100,7 +87,7 @@ $wgConf->settings = [
 		'default' => 'mysql',
 	],
 	'wgMemCachedServers' => [
-		'default' => [ $wgMemCachedServersIP ],
+		'default' => [''],
 	],
 	
 	# Shared memory settings
@@ -118,7 +105,7 @@ $wgConf->settings = [
 	],
 	'wgExtensionEntryPointListFiles' => [
 		'default' => [
-			'/var/www/mediawiki/config/wikiversions.json'
+			'/var/www/html/mediawiki/wikiversions.json'
 		],
 	],
 	'wgCachePages' => [
@@ -163,7 +150,8 @@ $wgConf->settings = [
 		'default' => 'centralauth',
 	],
 	'wgSharedTables' => [
-		'default' => [ 'wikiuser',  'abuse_filter',
+		'default' => [ 'wikiuser',
+		          'abuse_filter',
 			      'abuse_filter_action',
 			      'abuse_filter_history',
 			      'abuse_filter_log',
@@ -786,7 +774,7 @@ $wgConf->settings = [
 	],
 
 	// ConfirmEdit
-
+/*
 	'wgCaptchaDirectory' => [
 		'default' => $wgCaptchaDirectoryFC,
 	],
@@ -802,7 +790,7 @@ $wgConf->settings = [
 	'wgCaptchaClass' => [
 		'default' => 'FancyCaptcha',
 	],
-	
+*/	
 	// ContentTranslation
 	'wgContentTranslationDatabase ' => [
 		'default' => 'metawiki'
@@ -943,7 +931,6 @@ $wgConf->settings = [
 		'commons.maamedia.org' => 'commonswiki',
 		'data.maamedia.org' => 'datawiki',
 		'meta.maamedia.org' => 'metawiki',
-		'test.maamedia.org' => 'testwiki',
 		'en.masymanwiki.org' => 'enwiki',
 		'fi.masymanwiki.org' => 'fiwiki',
 		'id.masymanwiki.org' => 'idwiki',
@@ -1003,6 +990,28 @@ $wgConf->settings = [
 	'wgInterwikiCentralDB' => [
 		'default' => 'metawiki',
 	],
+	'wgLocalInterwiki' => [
+		'default' => '$lang',
+	], 
+	/*
+	'wgInterwikiCentralInterlanguageDB' => [
+		'default' => 'metawiki',
+	],
+	'wgExtraInterlanguageLinkPrefixes' => [
+        'metawiki',
+        'testwiki',
+        'commonswiki',
+        'datawiki',
+        'enwiki',
+        'idwiki',
+        'fiwiki',
+        'zhwiki',
+        'officewiki',
+	], 
+	'wgInterwikiViewOnly' => [
+		'default' => true,
+	],
+	*/
 
 	// SpamBlacklist //
 	'wgBlacklistSettings' => [
@@ -1188,7 +1197,6 @@ $wgConf->settings = [
 
 	'wgEnableUploads' => [
 		'default' => true,
-		'officewiki' => false,
 	],
 	'wgUploadDirectory' => [
 		'default' => 'images',
