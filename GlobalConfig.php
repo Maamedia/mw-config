@@ -24,6 +24,7 @@ $wgResourceLoaderSources['metawiki'] = [
 	'apiScript' => '//meta.maamedia.org/api.php',
 	'loadScript' => '//meta.maamedia.org/load.php',
 ];
+
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
 $wgRightsText = "our special license";
 $wgEnableUploads = true;
@@ -108,4 +109,4 @@ if ( $wgDBname === 'datawiki' ) {
 */
 
 $wgVisualEditorEnableWikitext = true;
-$wgDefaultUserOptions['visualeditor-newwikitext'] = 0;
+# $wgDefaultUserOptions['visualeditor-newwikitext'] = 0;
