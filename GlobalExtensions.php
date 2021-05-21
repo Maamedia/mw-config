@@ -43,6 +43,7 @@ wfLoadExtensions( [
 	'LocalisationUpdate',
 	'LoginNotify',
 	'Linter',
+	'ManageWiki',
 	'MaamediaMessages',
 	'MaamediaTags',
 	'MobileFrontend',
