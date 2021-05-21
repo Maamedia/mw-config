@@ -777,13 +777,13 @@ $wgConf->settings = [
 	],
 
 	// ConfirmEdit
-/*
+
 	'wgCaptchaDirectory' => [
 		'default' => $wgCaptchaDirectoryFC,
 	],
 
 	'wgCaptchaDirectoryLevels' => [
-		'default' => 0,
+		'default' => $wgCaptchaDirectoryLevelsFC,
 	],
 
 	'wgCaptchaSecret' => [
@@ -791,9 +791,9 @@ $wgConf->settings = [
 	],
 
 	'wgCaptchaClass' => [
-		'default' => 'FancyCaptcha',
+		'default' => $wgCaptchaClass,
 	],
-*/	
+	
 	// ContentTranslation
 	'wgContentTranslationDatabase ' => [
 		'default' => 'metawiki'
