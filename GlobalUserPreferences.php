@@ -7,6 +7,10 @@
 $wgDefaultUserOptions['echo-show-alert'] = true;
 $wgDefaultUserOptions['echo-email-frequency'] = '0';
 
+// RecentChanges
+$wgDefaultUserOptions['usenewrc'] = '0';
+
+
 // VisualEditor
 $wgDefaultUserOptions['visualeditor-enable'] = 1;
 $wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
