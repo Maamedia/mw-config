@@ -26,7 +26,7 @@ $wgWBClientSettings['repositories'] = [
 			'entitNamespaces' => [ 'item' => 0, 'property' => 120 ],
 		],
 ];
-'wgWikibaseRepoForeignRepositories' => [
+/* 'wgWikibaseRepoForeignRepositories' => [
 	'default' => [],
 	'commonswiki' => [
 		'd' => [
@@ -38,7 +38,7 @@ $wgWBClientSettings['repositories'] = [
 		],
 	],
 ],
-
+*/
 
 $wgResourceLoaderSources['metawiki'] = [
 	'apiScript' => '//meta.maamedia.org/api.php',
