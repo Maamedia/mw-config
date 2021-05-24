@@ -760,6 +760,9 @@ $wgConf->settings = [
 	'wgCirrusSearchEnableCrossProjectSearch' => [
 		'default' => true,
 	],
+	'wgCirrusSearchIndexBaseName' => [
+		'default' => 'datawiki'
+	],
 	// CodeEditor
 	'wgCodeEditorEnableCore' => [
 		'default' => true,
