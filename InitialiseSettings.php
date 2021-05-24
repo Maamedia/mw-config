@@ -1354,6 +1354,7 @@ $wgConf->settings = [
 		],
 		'metawiki' => [
 			'extendedconfirmed',
+			'templateeditor',
 		],
 	],
 	'wgAutoConfirmAge' => [
@@ -1591,9 +1592,7 @@ $wgConf->settings = [
 				'editsitejson' => false,
 				'oathauth-disable-for-user' => false,
 				'stablesettings' => true,
-			],
-			'reviewer' => [
-				'stablesettings' => true,
+				'templateeditor' => true,
 			],
 			'steward' => [
 				'renameuser' => true,
@@ -1787,7 +1786,7 @@ $wgConf->settings = [
 			'autoconfirmed', // semi-protection level on
 			'sysop',
 		],
-		'metawiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop', 'editeditorprotected', 'editautoreviewprotected', 'editextendedsemiprotected', 'edittrustedprotected' ],
+		'metawiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop', 'editeditorprotected', 'editautoreviewprotected', 'editextendedsemiprotected', 'edittrustedprotected', 'extendedconfirmed', 'templateeditor' ],
 	],
 ];
 // require_once( '/var/www/mediawiki/LocalExtensions.php' ); undefine variabel
