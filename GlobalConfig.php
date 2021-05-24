@@ -23,7 +23,10 @@ $wgWBClientSettings['repositories'] = [
 			'baseUri' => $wgWBClientSettings['repoUrl'] . '/entity',
 			'supportedEntityTypes' => [ 'item', 'property' ],
 			'prefixMapping' => [],
-			'entitNamespaces' => [ 'item' => 0, 'property' => 120 ],
+			'entitNamespaces' => [
+				'item' => 0,
+				'property' => 120
+			],
 		],
 ];
 /* 'wgWikibaseRepoForeignRepositories' => [
