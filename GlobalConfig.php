@@ -18,7 +18,27 @@ $wgWBClientSettings['repositories'] = [
 			],
 			'prefixMapping' => [ '' => '' ],
 		]
+		'commonswiki' => [
+			'repoDatabase' => 'datawiki',
+			'baseUri' => $wgWBClientSettings['repoUrl'] . '/entity',
+			'supportedEntityTypes' => [ 'item', 'property' ],
+			'prefixMapping' => [],
+			'entitNamespaces' => [ 'item' => 0, 'property' => 120 ],
+		],
 ];
+'wgWikibaseRepoForeignRepositories' => [
+	'default' => [],
+	'commonswiki' => [
+		'd' => [
+			'repoDatabase' => 'datawiki',
+			'baseUri' => 'https://data.maamedia.org/entity/',
+			'supportedEntityTypes' => [ 'item', 'property' ],
+			'prefixMapping' => [],
+			'entityNamespaces' => [ 'item' => 0, 'property' => 120 ]
+		],
+	],
+],
+
 
 $wgResourceLoaderSources['metawiki'] = [
 	'apiScript' => '//meta.maamedia.org/api.php',
