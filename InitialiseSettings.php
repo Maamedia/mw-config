@@ -1206,10 +1206,10 @@ $wgConf->settings = [
 		'default' => 'images',
 	],
 	'wgUseImageMagick' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgImageMagickConvertCommand' => [
-		'default' => '/usr/bin/convert_keylist',
+		'default' => '/usr/bin/convert',
 	],
 	'wgSVGConverter' => [
 		'default' => 'ImageMagick',
