@@ -1346,6 +1346,13 @@ $wgConf->settings = [
   		]
 	],
 	// Permissions
+	'wgAvailableRights' => [
+		'default' => [],
+		'enwiki' => [
+			'templateeditor',
+			'extendedconfirmed',
+		],
+	],
 	'wgAutoConfirmAge' => [
 		'default' => 259200,
 	],
