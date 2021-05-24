@@ -1209,7 +1209,7 @@ $wgConf->settings = [
 		'default' => true,
 	],
 	'wgImageMagickConvertCommand' => [
-		'default' => '/usr/bin/convert',
+		'default' => '/usr/bin/convert_keylist',
 	],
 	'wgSVGConverter' => [
 		'default' => 'ImageMagick',
