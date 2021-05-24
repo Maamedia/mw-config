@@ -8,13 +8,15 @@ $wgWBClientSettings['repositories']['']['changesDatabase'] = 'datawiki';
 $wgWBClientSettings['siteLinkGroups'] = [ 'maamedia' ];
 $wgWBClientSettings['TOOLBAR'] = [ 'Wiki' ];
 $wgWBClientSettings['repoSiteName'] = 'DataWiki';
+$wgWBRepoSettings['entityNamespaces']['item'] = 120;
+$wgWBRepoSettings['entityNamespaces']['property'] = 122;
 $wgWBClientSettings['repositories'] = [
 		'' => [
 			'repoDatabase' => 'datawiki',
 			'baseUri' => $wgWBClientSettings['repoUrl'] . '/entity',
 			'entityNamespaces' => [
-				'item' => NS_MAIN,
-				'property' => NS_MAIN
+				'item' => 120,
+				'property' => 122
 			],
 			'prefixMapping' => [ '' => '' ],
 		]
