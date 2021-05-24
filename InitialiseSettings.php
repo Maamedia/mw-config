@@ -1233,7 +1233,7 @@ $wgConf->settings = [
 		'default' => true,
 	],
 	'wgShellLocale' => [
-		'default' => 'en_US.utf8',
+		'default' => 'C.UTF-8',
 	],
 	// Thumbnail prerendering at upload time
 	'wgUploadThumbnailRenderMap' => [
