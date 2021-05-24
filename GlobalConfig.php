@@ -54,9 +54,6 @@ $wgCirrusSearchElasticQuirks = [
 $wgAddGroups['bureaucrat'] = true;
 $wgAddGroups['bureaucrat'] = [ 'sysop', 'bot' ];
 $wgAddGroups['sysop'][] = 'bot';
-$wgDefaultUserOptions['usenewrc'] = '0';
-$wgDefaultUserOptions['usenewrc'] = 0;
-$wgDefaultUserOptions['usenewrc'] = false;
 
 
 
