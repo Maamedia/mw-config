@@ -18,16 +18,6 @@ $wgWBClientSettings['repositories'] = [
 			],
 			'prefixMapping' => [ '' => '' ],
 		]
-		'commonswiki' => [
-			'repoDatabase' => 'datawiki',
-			'baseUri' => $wgWBClientSettings['repoUrl'] . '/entity',
-			'supportedEntityTypes' => [ 'item', 'property' ],
-			'prefixMapping' => [],
-			'entitNamespaces' => [
-				'item' => 0,
-				'property' => 120
-			],
-		]
 ];
 /* 'wgWikibaseRepoForeignRepositories' => [
 	'default' => [],
