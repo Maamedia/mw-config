@@ -253,6 +253,10 @@ $wgConf->settings = [
 	'wgLocalisationUpdateDirectory' => [
 		'default' => "$IP/cache",
 	],
+	'wgCountCategorizedImagesAsUsed' => [
+		'default' => false,
+		'commonswiki' => true,
+	],
 	// Skin //
 	'wgUseCombinedLoginLink' => [
 		'default' => true,
@@ -1352,7 +1356,7 @@ $wgConf->settings = [
 	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
 	// changes to the default across all overrides --Andrew 2009-04-28
 		'default' => [
-			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'reviewer', 'editor', 'flow-bot' , 'ipblock-exempt', 'translation-admin', 'uploader'],
+			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'flow-bot' , 'ipblock-exempt', 'translation-admin', 'uploader', 'translationadmin' ],
 			'sysop' => [ 'rollbacker', 'editor', 'confirmed', 'autoreview', 'patroller', 'transwiki', 'ipblock-exempt', 'massmessage-sender', 'autopatroller' ],
 		],
 		'+idwiki' => [
@@ -1360,12 +1364,12 @@ $wgConf->settings = [
 		],
 		'+commonswiki' => [
 			'checkuser' => [ 'ipblock-exempt' ],
-			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'reviewer', 'editor', 'flow-bot', 'image-reviewer', 'ipblock-exempt' ],
+			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'reviewer', 'editor', 'flow-bot', 'image-reviewer', 'ipblock-exempt', 'translationadmin' ],
 			'image-reviewer' => [ 'image-reviewer' ],
 		],
 		
 		'+metawiki' => [
-			'bureaucrat' => [ 'flood', 'uploader', 'rollbacker', 'reviewer' ],
+			'bureaucrat' => [ 'flood', 'uploader', 'rollbacker', 'reviewer', 'translation-admin', 'ipblock-exempt' ],
 		],
 	],
 	
