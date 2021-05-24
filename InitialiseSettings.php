@@ -1352,6 +1352,9 @@ $wgConf->settings = [
 			'templateeditor',
 			'extendedconfirmed',
 		],
+		'metawiki' => [
+			'extendedconfirmed',
+		],
 	],
 	'wgAutoConfirmAge' => [
 		'default' => 259200,
