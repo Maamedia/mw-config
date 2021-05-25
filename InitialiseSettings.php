@@ -250,6 +250,9 @@ $wgConf->settings = [
 		'metawiki' => 'Meta',
 		'officewiki' => 'Maamedia',
 	],
+	'wgExtraSignatureNamespaces' => [
+		'metawiki' => 'Meta',
+	],
 	'wgLocalisationUpdateDirectory' => [
 		'default' => "$IP/cache",
 	],
@@ -520,7 +523,7 @@ $wgConf->settings = [
 	'wgVisualEditorEnableWikitext' => [
 		'default' => true,
 	],
-	
+
 	// BetaFeatures //
 	'wgVisualEditorEnableWikitextBetaFeature' => [
 		'default' => true,
