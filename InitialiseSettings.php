@@ -252,6 +252,7 @@ $wgConf->settings = [
 	],
 	'wgExtraSignatureNamespaces' => [
 		'default' => [ NS_PROJECT, NS_HELP ],
+		'+metawiki' => [ 208 ], // 208 is "Meta" namespace.
 	],
 	'wgLocalisationUpdateDirectory' => [
 		'default' => "$IP/cache",
