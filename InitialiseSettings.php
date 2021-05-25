@@ -567,7 +567,7 @@ $wgConf->settings = [
 		'default' => 7776000, //in seconds (default = 3 months)
 	],
 	'wgCheckUserGBtoollink' => [
-		'centralDB' => 'metawiki',
+		'centralDB' => 'centralauth',
 		'groups' => [ 'steward', 'staff' ],
 	],
 	'wgCheckUserForceSummary' => [
@@ -582,7 +582,7 @@ $wgConf->settings = [
 		'groups' => [ 'steward' ]
 	],
 	'wgCheckUserCAtoollink ' => [ 
-		'default' => 'metawiki',
+		'default' => 'centralauth',
 	],
 	'wgCheckUserEnableSpecialInvestigate' => [
 		'default' => true,
