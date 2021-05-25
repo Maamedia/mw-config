@@ -251,7 +251,7 @@ $wgConf->settings = [
 		'officewiki' => 'Maamedia',
 	],
 	'wgExtraSignatureNamespaces' => [
-		'metawiki' => 'Meta',
+		'default' => [ NS_PROJECT, NS_HELP ],
 	],
 	'wgLocalisationUpdateDirectory' => [
 		'default' => "$IP/cache",
