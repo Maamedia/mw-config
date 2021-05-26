@@ -101,7 +101,7 @@ if ( $wikiId == 'datawiki' ) {
     'zhwiki',
     'officewiki',
     ];
-    include('/var/www/mediawiki/GlobalConfig.php');
+    include('/var/www/html/mediawiki/GlobalConfig.php');
 } elseif ( $wikiId == 'enwiki' ) {  
     $wgSecretKey = $wgSecretKeyenwiki;
     $wgUpgradeKey = $wgUpgradeKeyenwiki;
@@ -111,7 +111,7 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'enwiki';
-    include('/var/www/mediawiki/GlobalConfig.php');
+    include('/var/www/html/mediawiki/GlobalConfig.php');
 } elseif ( $wikiId == 'fiwiki' ) {  
     $wgSecretKey = $wgSecretKeyfiwiki;
     $wgUpgradeKey = $wgUpgradeKeyfiwiki;
@@ -121,7 +121,7 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'fiwiki';
-    include('/var/www/mediawiki/GlobalConfig.php');
+    include('/var/www/html/mediawiki/GlobalConfig.php');
 } elseif ( $wikiId == 'idwiki' ) {  
     $wgSecretKey = $wgSecretKeyidwiki;
     $wgUpgradeKey = $wgUpgradeKeyidwiki;
@@ -131,7 +131,7 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'idwiki';
-    include('/var/www/mediawiki/GlobalConfig.php');
+    include('/var/www/html/mediawiki/GlobalConfig.php');
 } elseif ( $wikiId == 'zhwiki' ) {  
     $wgSecretKey = $wgSecretKeyzhwiki;
     $wgUpgradeKey = $wgUpgradeKeyzhwiki;
@@ -141,7 +141,7 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'zhwiki';
-    include('/var/www/mediawiki/GlobalConfig.php');
+    include('/var/www/html/mediawiki/GlobalConfig.php');
 } elseif ( $wikiId == 'officewiki' ) {  
     $wgSecretKey = $wgSecretKeyofficewiki;
     $wgUpgradeKey = $wgUpgradeKeyofficewiki;
@@ -151,7 +151,7 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'officewiki';
-    include('/var/www/mediawiki/GlobalConfig.php');
+    include('/var/www/html/mediawiki/GlobalConfig.php');
 } else { #metawiki  
     $wgSecretKey = $wgSecretKeymetawiki;
     $wgUpgradeKey = $wgUpgradeKeymetawiki;
@@ -162,7 +162,7 @@ if ( $wikiId == 'datawiki' ) {
     require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
     $wgWBClientSettings['siteGlobalID'] = 'metawiki';
     wfLoadExtension( 'JsonConfig' );
-    include('/var/www/mediawiki/GlobalConfig.php');
+    include('/var/www/html/mediawiki/GlobalConfig.php');
 }
 /*
 if ( $wgWordmark ) {
