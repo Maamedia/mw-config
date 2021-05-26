@@ -252,7 +252,7 @@ if ( $wmgUseWikibaseRepository ) {
 
 if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
-	require_once "/var/www/mediawiki/Wikibase.php";
+	require_once "/var/www/html/mediawiki/Wikibase.php";
 }
 // Skin only
 
