@@ -1732,6 +1732,26 @@ $wgConf->settings = [
 				'oathauth-enable' => true,
 				'import' => true,
 			],
+			'rollbacker' => [
+				'rollback' => true,
+				'skipcaptcha' => true,
+			],
+			'bureaucrat' => [
+				'edituser' => false,
+				'renameuser' => false,
+				'protectsite' => false,
+			],
+			'sysop' => [
+				'edituser-exempt' => false,
+			],
+			'user' => [
+				'torunblocked' => false,
+				'editcontentmodel' => false,
+				'mwoauthmanagemygrants' => false,
+				'flow-lock' => false,
+				'move-rootuserpages' => false,
+				'editsemiprotected' => true,
+			],
 		],
 		'idwiki' => [
 			'*' => [
