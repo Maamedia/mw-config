@@ -1378,6 +1378,7 @@ $wgConf->settings = [
 			'bureaucrat' => [ 'sysop' ],
 		],
 		'+enwiki' => [
+			'bureaucrat' => [ 'rollbacker' ],
 			'sysop' => [ 'rollbacker' ],
 		],
 		'+commonswiki' => [
@@ -1418,7 +1419,8 @@ $wgConf->settings = [
 			'bureaucrat' => [ 'flood', 'flow-bot', 'sysop', 'bureaucrat', 'bot', 'interface-admin', 'translation-admin', 'confirmed', 'rollbacker', 'uploader', 'editor', 'reviewer' ],
 			'sysop' => [ 'confirmed', 'rollbacker', 'massmessage-sender', 'patroller', 'autopatroller', 'ipblock-exempt', 'transwiki', 'editor' ],
 		],
-		'enwiki' => [
+		'+enwiki' => [
+			'bureaucrat' => [ 'flood', 'flow-bot', 'sysop', 'bureaucrat', 'rollbacker', 'massmessage-sender', 'transwiki', 'translation-admin', 'translationadmin', 'interface-admin', 'uploader', 'bot', 'ipblock-exempt' ],
 			'sysop' => [ 'rollbacker' ],
 		],
 	],
