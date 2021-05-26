@@ -1371,11 +1371,14 @@ $wgConf->settings = [
 	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
 	// changes to the default across all overrides --Andrew 2009-04-28
 		'default' => [
-			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'flow-bot' , 'ipblock-exempt', 'translation-admin', 'uploader', 'translationadmin' ],
+			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed', 'flow-bot' , 'ipblock-exempt', 'translation-admin', 'uploader', 'translationadmin', 'rollbacker', 'massmessage-sender', 'transwiki' ],
 			'sysop' => [ 'rollbacker', 'editor', 'confirmed', 'autoreview', 'patroller', 'transwiki', 'ipblock-exempt', 'massmessage-sender', 'autopatroller' ],
 		],
 		'+idwiki' => [
 			'bureaucrat' => [ 'sysop' ],
+		],
+		'+enwiki' => [
+			'sysop' => [ 'rollbacker' ],
 		],
 		'+commonswiki' => [
 			'checkuser' => [ 'ipblock-exempt' ],
@@ -1403,7 +1406,7 @@ $wgConf->settings = [
 	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
 	// changes to the default across all overrides --Andrew 2009-04-28
 		'default' => [
-			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bot', 'confirmed', 'flow-bot', 'editor', 'reviewer', 'ipblock-exempt', 'translation-admin', 'uploader', 'reviewer' ],
+			'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bot', 'confirmed', 'flow-bot', 'ipblock-exempt', 'translation-admin', 'uploader', 'rollbacker', 'massmessage-sender', 'transwiki' ],
 			'sysop' => [ 'autoreview', 'confirmed', 'patroller', 'transwiki', 'ipblock-exempt', 'massmessage-sender', 'autopatroller', 'editor' ]
 		],
 		'commonswiki' => [
@@ -1414,6 +1417,9 @@ $wgConf->settings = [
 		'metawiki' => [
 			'bureaucrat' => [ 'flood', 'flow-bot', 'sysop', 'bureaucrat', 'bot', 'interface-admin', 'translation-admin', 'confirmed', 'rollbacker', 'uploader', 'editor', 'reviewer' ],
 			'sysop' => [ 'confirmed', 'rollbacker', 'massmessage-sender', 'patroller', 'autopatroller', 'ipblock-exempt', 'transwiki', 'editor' ],
+		],
+		'enwiki' => [
+			'sysop' => [ 'rollbacker' ],
 		],
 	],
 	'+wgGroupPermissions' => [
@@ -1601,7 +1607,7 @@ $wgConf->settings = [
 			'steward' => [
 				'renameuser' => true,
 				'globalblock' => true,
-				'globalgrouppermissions' => true,
+				'globalgrouppermissions' => false,
 				'globalgroupmembership' => true,
 				'centralauth-lock' => true,
 				'browsearchive' => true,
