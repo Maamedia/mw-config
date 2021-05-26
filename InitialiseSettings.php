@@ -1378,8 +1378,8 @@ $wgConf->settings = [
 			'bureaucrat' => [ 'sysop' ],
 		],
 		'+enwiki' => [
-			'bureaucrat' => [ 'rollbacker' ],
-			'sysop' => [ 'rollbacker' ],
+			'bureaucrat' => [ 'rollbacker', 'massmessage-sender' ],
+			'sysop' => [ 'rollbacker', 'massmessage-sender', 'transwiki' ],
 		],
 		'+commonswiki' => [
 			'checkuser' => [ 'ipblock-exempt' ],
@@ -1421,7 +1421,7 @@ $wgConf->settings = [
 		],
 		'+enwiki' => [
 			'bureaucrat' => [ 'flood', 'flow-bot', 'sysop', 'bureaucrat', 'rollbacker', 'massmessage-sender', 'transwiki', 'translation-admin', 'translationadmin', 'interface-admin', 'uploader', 'bot', 'ipblock-exempt' ],
-			'sysop' => [ 'rollbacker' ],
+			'sysop' => [ 'rollbacker', 'massmessage-sender', 'transwiki' ],
 		],
 	],
 	'+wgGroupPermissions' => [
@@ -1751,6 +1751,10 @@ $wgConf->settings = [
 				'flow-lock' => false,
 				'move-rootuserpages' => false,
 				'editsemiprotected' => true,
+			],
+			'massmessage-sender' => [
+				'autopatrol' => true,
+				'massmessage' => true,
 			],
 		],
 		'idwiki' => [
