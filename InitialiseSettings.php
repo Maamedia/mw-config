@@ -802,7 +802,7 @@ $wgConf->settings = [
 	],
 
 	'wgCaptchaClass' => [
-		'default' => $wgCaptchaClass,
+		'default' => $wgCaptchaClassFC,
 	],
 	
 	// ContentTranslation
