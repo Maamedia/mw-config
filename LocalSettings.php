@@ -37,9 +37,6 @@ $wgScriptPath = "";
 $wgArticlePath = "/wiki/$1";
 
 ## The protocol and server name to use in fully-qualified URLs
-/*
-$wgServer = "https://" . str_replace("wiki", "", $wikiId) . ".maamedia.org";
-*/
 $wgServer = [
     // if you want to allow also usage of https, just use '//localhost'
     // and set 'http://localhost' at 'wgCanonicalServer'
