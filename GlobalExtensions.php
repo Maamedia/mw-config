@@ -1,4 +1,4 @@
-<?php // This is a default global extension, new extensions can be add to localextensions.php
+<?php // This is a default global extension, new extensions can be add to localextensions.php //
 
 wfLoadExtensions( [
 //	'3D',
