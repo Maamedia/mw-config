@@ -1,6 +1,5 @@
 <?php
 // MW-Setting //
-// This is Discord bot test. //
 include('cachesystem.php');
 require_once( '/var/www/html/mediawiki/GlobalExtensions.php' );
 
