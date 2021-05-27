@@ -1086,28 +1086,28 @@ $wgConf->settings = [
 		],
 	],
 	
-	// Translate
+	// Translate /- Investigate
 	
 	'wgTranslateUseSandbox' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgTranslateDocumentationLanguageCode' => [
-		'default' => 'qqq',
+		'default' => false,
 	],
 	'wgNoticeUseTranslateExtension' => [
 		'default' => true,  
 	],
 	'wgTranslateNewsletterPreference' => [
-		'default' => true,
+		'default' => false,
 	],
 	
 	'wgContentTranslationTranslateInTarget' => [
 		'default' => true,
 	],
 	
-	'wgTranslateTranslationDefaultService' => [
-		'default' => true,
-	],
+// 	'wgTranslateTranslationDefaultService' => [
+// 		'default' => true,
+// 	],
 	
 	'wgTranslationNotificationsContactMethods' => [
 		'email' => true,
@@ -1115,16 +1115,16 @@ $wgConf->settings = [
 		'talkpage-elsewhere' => false,
 	],
 	'wgTranslateCheckBlacklist' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgTranslateWorkflowStates' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgTranslateDelayedMessageIndexRebuild' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgTranslateUsePreSaveTransform' => [
-		'default' => true,
+		'default' => false,
 	],
 	
 
