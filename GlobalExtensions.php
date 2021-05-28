@@ -18,7 +18,6 @@ wfLoadExtensions( [
 	'CodeMirror',
 	'CommonsMetadata',
 	'ConfirmEdit', 'ConfirmEdit/FancyCaptcha',
-	'Discord',
 	'DiscussionTools',
 	'Disambiguator',
 	'DismissableSiteNotice',
