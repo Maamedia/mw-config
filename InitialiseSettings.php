@@ -810,6 +810,11 @@ $wgConf->settings = [
 		'default' => 'metawiki'
 	],
 	
+	// Discord
+	'wgDiscordWebhookURL' => [
+		'default' => [ $wgDiscordWebhookURLlink ],
+	],
+	
 	// DismissableSiteNotice
 	'wgDismissableSiteNoticeForAnons' => [
 		'default' => true,
