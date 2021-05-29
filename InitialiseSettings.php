@@ -62,7 +62,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 	'wgDebugLogFile' => [
-		'default' => '/var/www/html/mediawiki/debug-{$wgDBname}.log',
+		'default' => '/var/www/html/mediawiki-log/debug-{$wgDBname}.log',
 	],
 	// Database Configuration //
 	'wgDBserver' => [
