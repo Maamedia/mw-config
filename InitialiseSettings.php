@@ -61,9 +61,6 @@ $wgConf->settings = [
 	'wgShowDebug' => [
 		'default' => false,
 	],
-	'wgDebugLogFile' => [
-		'default' => '/var/www/html/mediawiki/debug-all.log',
-	],
 	// Database Configuration //
 	'wgDBserver' => [
 		'default' => 'localhost',
