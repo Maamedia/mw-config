@@ -17,12 +17,10 @@ $wgWBClientSettings['repositories'] = [
 			'entityNamespaces' => [
 				'item' => NS_MAIN,
 				'property' => NS_MAIN
-				'item' => 120,
-				'property' => 122
 			],
 			'prefixMapping' => [ '' => '' ],
-		],
-	],
+		]
+	]
 ];
 /* 'wgWikibaseRepoForeignRepositories' => [
 	'default' => [],
