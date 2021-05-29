@@ -21,8 +21,8 @@ $wgWBClientSettings['repositories'] = [
 				'property' => 122
 			],
 			'prefixMapping' => [ '' => '' ],
-		]
-	]
+		],
+	],
 ];
 /* 'wgWikibaseRepoForeignRepositories' => [
 	'default' => [],
