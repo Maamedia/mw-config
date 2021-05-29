@@ -5,7 +5,7 @@ $wgWBClientSettings['repoScriptPath'] = '';
 $wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
 $wgWBClientSettings['repositories']['']['repoDatabase'] = 'datawiki';
 $wgWBClientSettings['repositories']['']['changesDatabase'] = 'datawiki';
-$wgWBClientSettings['siteLinkGroups'] = [ 'maamedia' ];
+$wgWBClientSettings['siteLinkGroups'] = [ 'Datawiki' ];
 $wgWBClientSettings['TOOLBAR'] = [ 'Wiki' ];
 $wgWBClientSettings['repoSiteName'] = 'DataWiki';
 $wgWBRepoSettings['entityNamespaces']['item'] = 120;
@@ -15,42 +15,14 @@ $wgWBClientSettings['repositories'] = [
 			'repoDatabase' => 'datawiki',
 			'baseUri' => $wgWBClientSettings['repoUrl'] . '/entity',
 			'entityNamespaces' => [
+				'item' => NS_MAIN,
+				'property' => NS_MAIN
 				'item' => 120,
 				'property' => 122
 			],
 			'prefixMapping' => [ '' => '' ],
 		]
 ];
-$wgWBClientSettings['siteLinksGroups'] = [
-	'maamedia'
-];
-$wgWBClientSettings['repoNamespaces'] = [
-	'wikibase-item' => 'Item',
-	'wikibase-property' => 'Property'
-];
-if ( $wgDBname === 'datawiki' ) {
-	$wgWBRepoSettings['statementSections'] = [
-		'item' => [
-			'statements' => null,
-			'identifiers' => [
-				'type' => 'dataType',
-				'dataTypes' => [
-					'external-id',
-				],
-			],
-		],
-		'property' => [
-			'statements' => null,
-			'constraints' => [
-				'type' => 'propertySet',
-				'propertyIds' => [
-					'P23',
-				],
-			],
-		],
-	];
-}
-
 /* 'wgWikibaseRepoForeignRepositories' => [
 	'default' => [],
 	'commonswiki' => [
