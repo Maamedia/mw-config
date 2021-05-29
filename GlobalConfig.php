@@ -8,6 +8,18 @@ $wgWBClientSettings['repositories']['']['changesDatabase'] = 'datawiki';
 $wgWBClientSettings['siteLinkGroups'] = [ 'Datawiki' ];
 $wgWBClientSettings['TOOLBAR'] = [ 'Wiki' ];
 $wgWBClientSettings['repoSiteName'] = 'DataWiki';
+$wgWBClientSettings['repositories'] = [
+		'' => [
+			'repoDatabase' => 'datawiki',
+			'baseUri' => $wgWBClientSettings['repoUrl'] . '/entity',
+			'entityNamespaces' => [
+				'item' => NS_MAIN,
+				'property' => NS_MAIN
+			],
+			'prefixMapping' => [ '' => '' ],
+		]
+];
+
 /* 'wgWikibaseRepoForeignRepositories' => [
 	'default' => [],
 	'commonswiki' => [
