@@ -1384,7 +1384,7 @@ $wgConf->settings = [
 		],
 		'+enwiki' => [
 			'bureaucrat' => [ 'rollbacker', 'massmessage-sender', 'ipblock-exempt' ],
-			'sysop' => [ 'rollbacker', 'massmessage-sender', 'transwiki', 'ipblock-exempt' ],
+			'sysop' => [ 'rollbacker', 'massmessage-sender', 'transwiki', 'ipblock-exempt', 'autopatroller'],
 		],
 		'+commonswiki' => [
 			'checkuser' => [ 'ipblock-exempt' ],
@@ -1764,6 +1764,9 @@ $wgConf->settings = [
                         'ipblock-exempt' => [
                                  'ipblock-exempt' => true,
                         ],
+                        'autopatroller' => [
+				'autopatrol' => true,
+			],
 		],
 		'idwiki' => [
 			'*' => [
