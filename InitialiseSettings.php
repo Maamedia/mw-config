@@ -1762,6 +1762,7 @@ $wgConf->settings = [
 				'massmessage' => true,
 			],
                         'ipblock-exempt' => [
+                                 'torunblocked' => true, 
                                  'ipblock-exempt' => true,
                         ],
                         'autopatroller' => [
