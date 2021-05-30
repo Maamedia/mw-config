@@ -1,6 +1,6 @@
 <?php
 
-// Set up extensions for use on wikis that are not global or not all used, this extension just for add to some wiki
+// Set up extensions for use on wikis that are not global or not all used, this extension just for add to some wiki.
 if ( $wmgUse3D ) {
 	wfLoadExtension( '3D' );
 }
