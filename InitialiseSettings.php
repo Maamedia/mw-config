@@ -1,5 +1,5 @@
 <?php
-// MW-Setting //
+// MW-Settings //
 include('cachesystem.php');
 require_once( '/var/www/html/mediawiki/GlobalExtensions.php' );
 
