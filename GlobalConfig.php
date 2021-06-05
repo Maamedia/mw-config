@@ -35,10 +35,6 @@ $wgWBClientSettings['repositories'] = [
 */
 // WIKIBASE END //
 
-$wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
-$wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
-$wgLocalisationCacheConf['manualRecache'] = true;
-
 
 $wgResourceLoaderSources['metawiki'] = [
 	'apiScript' => '//meta.maamedia.org/api.php',
