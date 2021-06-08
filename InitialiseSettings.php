@@ -1839,7 +1839,7 @@ $wgConf->settings = [
 			'sysop',
 		],
 		'metawiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop', 'editeditorprotected', 'editautoreviewprotected', 'editextendedsemiprotected', 'edittrustedprotected', 'extendedconfirmed', 'templateeditor' ],
-	        'enwiki' => ['', 'autoconfirmed', 'sysop', 'extendedconfirmed', 'templateeditor' ], 
+	        'enwiki' => ['', 'autoconfirmed', 'sysop', 'extendedconfirmed', 'templateeditor', 'editextendedsemiprotected' ], 
         ],
 ];
 // require_once( '/var/www/mediawiki/LocalExtensions.php' ); undefine variabel
