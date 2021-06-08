@@ -1767,11 +1767,11 @@ $wgConf->settings = [
                         ],
                         'autopatroller' => [
 				'autopatrol' => true,
-			]
+			],
                         'extendedconfirmed' => [
                                 'editsemiprotected'=> true, 
                                 'move' => true,
-                        ] 
+                        ],
 		],
 		'idwiki' => [
 			'*' => [
