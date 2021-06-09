@@ -46,7 +46,7 @@ $wgConf->settings = [
 		'zhwiki' => 'zh',
 	],
 	'wgScriptPath' => [
-		'default' => '',
+		'default' => '/w',
 	],
 	'wgArticlePath' => [
 		'default' => '/wiki/$1',
