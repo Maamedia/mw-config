@@ -1767,7 +1767,7 @@ $wgConf->settings = [
                         ],
                         'autopatroller' => [
 				'autopatrol' => true,
-				'editautopatrolprotected' = true,
+				'editautopatrolprotected' => true,
 			],
                         'extendedconfirmed' => [
                                 'editsemiprotected'=> true, 
