@@ -1772,6 +1772,7 @@ $wgConf->settings = [
                         'extendedconfirmed' => [
                                 'editsemiprotected'=> true, 
                                 'move' => true,
+				'editextendedsemiprotected' => true,
                         ],
 		],
 		'idwiki' => [
