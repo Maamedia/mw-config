@@ -1767,6 +1767,7 @@ $wgConf->settings = [
                         ],
                         'autopatroller' => [
 				'autopatrol' => true,
+				'editautopatrolprotected' = true,
 			],
                         'extendedconfirmed' => [
                                 'editsemiprotected'=> true, 
@@ -1838,7 +1839,8 @@ $wgConf->settings = [
 			'autoconfirmed', // semi-protection level on
 			'sysop',
 		],
-		'metawiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop', 'editeditorprotected', 'editautoreviewprotected', 'editextendedsemiprotected', 'edittrustedprotected', 'extendedconfirmed', 'templateeditor' ],
+		'metawiki' => [ '', 'autoconfirmed', '
+', 'patrol', 'rollback', 'bot', 'sysop', 'editeditorprotected', 'editautoreviewprotected', 'editextendedsemiprotected', 'edittrustedprotected', 'extendedconfirmed', 'templateeditor' ],
 	        'enwiki' => ['', 'autoconfirmed', 'sysop', 'extendedconfirmed', 'editautopatrolprotected', 'templateeditor', 'editextendedsemiprotected' ], 
         ],
 ];
