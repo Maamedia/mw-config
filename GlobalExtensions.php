@@ -80,6 +80,7 @@ wfLoadExtensions( [
 	'UploadWizard',
 	'UserMerge',
 	'VisualEditor',
+	'WebAuthn',
 	'WikiEditor',
 ] );
 $wgScribuntoDefaultEngine = 'luastandalone';
