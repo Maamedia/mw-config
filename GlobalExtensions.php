@@ -6,6 +6,7 @@ wfLoadExtensions( [
 	'Babel',
 	'BetaFeatures',
 	'CentralAuth',
+	'CentralNotice',
 	'CharInsert',
 	'CheckUser', 
 	'CirrusSearch',
