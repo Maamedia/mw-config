@@ -551,16 +551,19 @@ $wgConf->settings = [
 		'default' => true,
 	],
 	'wgNoticeProjects' => [ 
-		'centralnoticeproject' => true,
+		'Masymanwikis' => true,
 	],
 	'wgNoticeProject' => [ 
-		'centralnoticeproject' => true,
+		'Masymanwikis' => true,
 	],
 	'wgCentralHost' => [ 
 		'default' => 'localhost',
 	],
 	'wgCentralDBname' => [ 
 		'default' => 'metawiki',
+	],
+	'wgCentralNoticeApiUrl' => [ 
+		'default' => 'https://meta.maamedia.org/api.php',
 	],
 	'wgCentralSelectedBannerDispatcher' => [ 
 		'default' => 'https://meta.maamedia.org/index.php?title=Special:BannerLoader',
