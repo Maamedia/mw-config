@@ -32,6 +32,7 @@ wfLoadExtensions( [
 	'GlobalUsage',
 	'GlobalUserPage',
 	'GuidedTour',
+	'GrowthExperiments',
 	'ImageMap',
 	'InputBox',
 	'Interwiki',
