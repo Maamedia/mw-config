@@ -551,13 +551,15 @@ $wgConf->settings = [
 		'default' => true,
 	],
 	'wgNoticeProjects' => [ 
-		'Masymanwikis' => true,
+		'masymanwikis' => true,
+		'idwiki' => true,
 	],
 	'wgNoticeProject' => [ 
-		'Masymanwikis' => true,
+		'masymanwikis' => true,
+		'idwiki' => true,
 	],
 	'wgCentralHost' => [ 
-		'default' => 'localhost',
+		'default' => '//meta.maamedia.org',
 	],
 	'wgCentralDBname' => [ 
 		'default' => 'metawiki',
