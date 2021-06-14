@@ -550,13 +550,27 @@ $wgConf->settings = [
 	'wgNoticeInfrastructure' => [ 
 		'default' => true,
 	],
-	'wgNoticeProjects' => [ 
-		'masymanwikis' => true,
-		'idwiki' => true,
+	'wgNoticeProjects' => [
+		'enwiki' => 'Masymanwikis',
+		'default' => '$site',
+		'commonswiki' => 'Maamediaikis',
+		'datawiki' => 'Maamediaikis',
+		'metawiki' => 'Maamediaikis',
+		'fiwiki' => 'Masymanwikis',
+		'idwiki' => 'Masymanwikis',
+		'zhwiki' => 'Masymanwikis',
+		'officewiki' => 'Maamediaikis'
 	],
 	'wgNoticeProject' => [ 
-		'masymanwikis' => true,
-		'idwiki' => true,
+		'enwiki' => 'Masymanwikis',
+		'default' => '$site',
+		'commonswiki' => 'Maamediaikis',
+		'datawiki' => 'Maamediaikis',
+		'metawiki' => 'Maamediaikis',
+		'fiwiki' => 'Masymanwikis',
+		'idwiki' => 'Masymanwikis',
+		'zhwiki' => 'Masymanwikis',
+		'officewiki' => 'Maamediaikis'
 	],
 	'wgCentralHost' => [ 
 		'default' => '//meta.maamedia.org',
@@ -569,6 +583,14 @@ $wgConf->settings = [
 	],
 	'wgCentralSelectedBannerDispatcher' => [ 
 		'default' => 'https://meta.maamedia.org/index.php?title=Special:BannerLoader',
+	],
+	'wgCentralNoticeLoader' => [
+		'default' => true, // *gulp* -- bv 2008-11-03
+	],
+	'wgEventLoggingStreamNames' => [
+		'default' => [
+			'eventlogging_CentralNoticeTiming',
+		],
 	],
 
 	// Checkuser
