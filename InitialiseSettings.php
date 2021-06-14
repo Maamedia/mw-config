@@ -550,27 +550,23 @@ $wgConf->settings = [
 	'wgNoticeInfrastructure' => [ 
 		'default' => true,
 	],
-	'wgNoticeProjects' => [
-		'enwiki' => 'Masymanwikis',
-		'default' => '$site',
-		'commonswiki' => 'Maamediaikis',
-		'datawiki' => 'Maamediaikis',
-		'metawiki' => 'Maamediaikis',
-		'fiwiki' => 'Masymanwikis',
-		'idwiki' => 'Masymanwikis',
-		'zhwiki' => 'Masymanwikis',
-		'officewiki' => 'Maamediaikis'
+	'wgNoticeProjects' => [ 
+		'default' => [ 
+			'masymanwikis',
+			'maamediawikis',
+			'commonswikis',
+		],
 	],
 	'wgNoticeProject' => [ 
-		'enwiki' => 'Masymanwikis',
+		'enwiki' => 'masymanwikis',
 		'default' => '$site',
-		'commonswiki' => 'Maamediaikis',
-		'datawiki' => 'Maamediaikis',
-		'metawiki' => 'Maamediaikis',
-		'fiwiki' => 'Masymanwikis',
-		'idwiki' => 'Masymanwikis',
-		'zhwiki' => 'Masymanwikis',
-		'officewiki' => 'Maamediaikis'
+		'fiwiki' => 'masymanwikis',
+		'idwiki' => 'masymanwikis',
+		'zhwiki' => 'masymanwikis',
+		'commonswiki' => 'commonswikis',
+		'datawiki' => 'maamediawikis',
+		'metawiki' => 'maamediawikis',
+		'officewiki' => 'maamediawikis'
 	],
 	'wgCentralHost' => [ 
 		'default' => '//meta.maamedia.org',
@@ -586,11 +582,6 @@ $wgConf->settings = [
 	],
 	'wgCentralNoticeLoader' => [
 		'default' => true, // *gulp* -- bv 2008-11-03
-	],
-	'wgEventLoggingStreamNames' => [
-		'default' => [
-			'eventlogging_CentralNoticeTiming',
-		],
 	],
 
 	// Checkuser
