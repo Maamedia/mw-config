@@ -48,6 +48,7 @@ $wgEnableUploads = true;
 // MaamediaTags //
 $wgMaamediaTagsAttributes['a'] = [ 'href', 'class' ];
 $wgMaamediaTagsAttributes['img'] = [ 'src', 'style' ];
+$wgMaamediaTagsAttributes['style'] = [ 'type', 'media' ];
 
 $wgGlobalCssJsConfig = [
 	'wiki' => 'metawiki', // database name
