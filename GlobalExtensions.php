@@ -46,6 +46,7 @@ wfLoadExtensions( [
 	'MaamediaMessages',
 	'MaamediaVoice',
 	'MaamediaTags',
+	'MediaSearch',
 	'MobileFrontend',
 	'MultimediaViewer',
 	'MassMessage',
