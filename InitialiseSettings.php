@@ -208,7 +208,6 @@ $wgConf->settings = [
 	'wmgUseTranslate' => [ 
 		'default' => false,
 		'metawiki' => true,
-		'datawiki' => true,
 	],
 	'wmgUseTranslationNotifications' => [ 
 		'default' => false,
