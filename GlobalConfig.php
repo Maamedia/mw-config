@@ -129,3 +129,4 @@ if ( $wgDBname === 'datawiki' ) {
 
 $wgVisualEditorEnableWikitext = true;
 # $wgDefaultUserOptions['visualeditor-newwikitext'] = 0;
+$wgDefaultUserOptions['usenewrc'] =0;
